@@ -21,8 +21,9 @@ public:
   // Main render function
   void renderGradientBox(std::vector<char> &text, float progress, int wpm,
                          float accuracy, int errors, int timeRemaining);
-  void renderTextProgress(std::vector<char> &targetText,
-                          std::vector<char> &typedText);
+  void renderTextProgress(int charIndex, char ch, bool success);
+
+  void testComplete();
 
 private:
   int height;

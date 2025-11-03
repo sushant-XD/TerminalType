@@ -1,9 +1,9 @@
 #include "input_validation.h"
 
-inputValidator::inputValidator(std::vector<char> &fileChars,
-                               terminalCtrl &terminalManager)
+inputValidator::inputValidator(terminalCtrl &terminalManager)
     : terminalManager(terminalManager), fileBuffer(fileChars),
-      characterCount(0), correctCount(0) {
+      characterCount(0), correctCount(0), lastCorrectCharIndex(0),
+      invalidCharacterCount(0) {
   inputBuffer = {};
 }
 
@@ -19,24 +19,45 @@ inputValidator::~inputValidator() {
  * wrong 2) Backspace clicked when incorrect chracter was pressed should count
  * as wrong
  * */
-void inputValidator::getInputAndCompare(char ch) {
+int inputValidator::getInputAndCompare(state_t &state, char ch) {
   if (ch == '\b' || ch == 127) {
-    if (inputBuffer.empty()) {
-      return;
+    if (!state.userInputSequence.empty()) {
+      state.userInputSequence.pop_back();
+
+      if (state.incorrectCount > 0) {
+        state.incorrectCount--;
+      } else if (state.correctCount > 0) {
+        state.correctCount--;
+      }
+
+      if (state.charCount > 0)
+        state.charCount--;
+
+      state.currentKeyStatus = BACKSPACE;
     }
-
-    inputBuffer.pop_back();
-    characterCount--;
-    terminalManager.writeToTerminal(const_cast<char *>(BACKSPACE), 3);
-    return;
+    return 0;
   }
-  inputBuffer.push_back(ch);
-  terminalManager.writeToTerminal(&ch, 1);
 
-  if (ch == fileBuffer[characterCount]) {
-    correctCount++;
+  state.userInputSequence.push_back(ch);
+  if (state.incorrectCount > 0) {
+    state.incorrectCount++;
+    state.currentKeyStatus = INCORRECT;
+  } else {
+    if (ch == state.targetSequence[state.charCount]) {
+      state.correctCount++;
+      state.currentKeyStatus = CORRECT;
+    } else {
+      state.incorrectCount++;
+      state.currentKeyStatus = INCORRECT;
+    }
   }
-  characterCount++;
+  state.charCount++;
+
+  if (ch == ' ' && state.incorrectCount == 0) {
+    state.userInputSequence.clear();
+  }
+
+  return 0;
 }
 
 result_t inputValidator::getResult(int time) {

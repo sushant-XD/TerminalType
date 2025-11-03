@@ -15,7 +15,7 @@ fileOps::~fileOps() {
   }
 }
 
-error_e fileOps::setup() {
+error_e fileOps::setup(state_t &state) {
   inFile.open(fileName);
   if (!inFile.is_open()) {
     std::cout << "Unable to open file" << fileName << std::endl;
@@ -31,6 +31,8 @@ error_e fileOps::setup() {
     std::cout << "Too Small File. " << std::endl;
     return FILE_SIZE_ERROR;
   }
+
+  state.targetText = characters;
   return OK;
 }
 

@@ -8,8 +8,9 @@ using namespace std::chrono;
 int main(int argc, char *argv[]) {
   config_t config;
   std::fstream inFile;
-  std::vector<char> userInput;
+  state_t state;
 
+  state.isRunning = false;
   if (argc == 1) {
     if (!configure(config)) {
       return 1;
@@ -24,40 +25,43 @@ int main(int argc, char *argv[]) {
   terminalCtrl terminalManager;
 
   // TODO: handle incorrect setup, give chance to user to re-enter
-  fileManager.setup();
+  fileManager.setup(state);
 
-  inputValidator inputValidator(fileManager.characters, terminalManager);
-  screenState renderManager(terminalManager);
-  renderManager.renderGradientBox(fileManager.characters, 0, 0, 0, 0, 0);
+  inputValidator inputValidator(terminalManager);
+  screenState renderManager(state, terminalManager);
+  renderManager.renderGradientBox();
   auto timeIntervalms = milliseconds(config.time * 1000);
   char tempChar;
-
-  // TODO: handle backspace
-  int i = 0;
-  int correctCount = 0;
-  std::cout << std::endl;
-
-  bool started = false;
   steady_clock::time_point startTime;
 
   while (true) {
     tempChar = terminalManager.getCharacter();
-    if (!started) {
+    if (!state.isRunning) {
       startTime = steady_clock::now();
-      started = true;
+      state.isRunning = true;
     }
-    inputValidator.getInputAndCompare(tempChar);
-    renderManager.renderTextProgress(fileManager.characters,
-                                     inputValidator.inputBuffer);
-    if (started && duration_cast<milliseconds>(steady_clock::now() -
-                                               startTime) >= timeIntervalms) {
+
+    inputValidator.getInputAndCompare(state, tempChar);
+    if (ret == 1) {
+      renderManager.renderTextProgress(inputValidator.characterCount,
+                                       inputValidator.currentOriginalCharacter,
+                                       true);
+    } else if (ret == 2) {
+      renderManager.renderTextProgress(inputValidator.characterCount,
+                                       inputValidator.currentOriginalCharacter,
+                                       false);
+    }
+
+    if (gameState.isRunning &&
+        duration_cast<milliseconds>(steady_clock::now() - startTime) >=
+            timeIntervalms) {
       break;
     }
   }
 
   int time = duration_cast<milliseconds>(timeIntervalms).count() / 1000;
   result_t res = inputValidator.getResult(time);
-
+  renderManager.testComplete();
   std::cout << "\n\n============================ Test Complete ========="
             << std::endl;
   inputValidator.print_result();

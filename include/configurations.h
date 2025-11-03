@@ -37,6 +37,19 @@ typedef struct result_s {
   int accuracy;
 } result_t;
 
+enum keyStroke_e { BACKSPACE = 0, CORRECT, INCORRECT };
+
+typedef struct state_s {
+  bool isRunning;
+  result_t result;
+  int correctCount;
+  int charCount;
+  int incorrectCount;
+  keyStroke_e currentKeyStatus;
+  std::vector<char> targetSequence; // not implemented right now
+  std::vector<char> userInputSequence;
+} state_t;
+
 /* Constants */
 static constexpr level_e DEFAULT_LEVEL = EASY;
 static constexpr int DEFAULT_TIME = 10;

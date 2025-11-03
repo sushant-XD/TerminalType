@@ -82,28 +82,28 @@ void screenState::renderGradientBox(std::vector<char> &text, float progress,
   }
   drawStats(timeRemaining, wpm, 0);
 
+  std::cout << BBLACK;
   for (int i = 0; i < text.size(); i++) {
     std::cout << text[i];
   }
-  std::cout << std::endl;
+  std::cout << CRESET << '\n';
+  std::cout << "\x1B[5F";
+  std::flush(std::cout);
 }
 
-void screenState::renderTextProgress(std::vector<char> &targetText,
-                                     std::vector<char> &typedText) {
-  int col = typedText.size() - 1;
-  moveCursor(6, col);
-  std::cout << "\r"; // return to line start (overwrite)
-  for (size_t i = 0; i < targetText.size(); ++i) {
-    if (i < typedText.size()) {
-      if (typedText[i] == targetText[i]) {
-        std::cout << GREEN << targetText[i] << CRESET;
-      } else {
-        std::cout << RED << targetText[i] << CRESET;
-      }
-    } else {
-      std::cout << WHITE << targetText[i] << CRESET;
-    }
+void screenState::testComplete() {
+  // std::cout << "\x1B[u";
+  std::flush(std::cout);
+}
+
+void screenState::renderTextProgress(int charIndex, char ch, bool success) {
+  int row = 6;
+  int col = charIndex % width;
+  moveCursor(row, col);
+  if (success) {
+    terminalManager.writeToTerminal((char *)GREEN, sizeof(GREEN));
+  } else {
+    terminalManager.writeToTerminal((char *)RED, sizeof(RED));
   }
-  // std::cout.flush();
-  moveCursor((targetText.size() + 5) / height, 1);
+  terminalManager.writeToTerminal(&ch, 1);
 }
