@@ -16,6 +16,4 @@
 void print_usage();
 bool configure(int size, char **args, config_s &config);
 bool configure(config_s &config);
-void print_welcome_screen(int width);
 void print_config(config_s &config);
-void print_settings(int width, config_s &config);

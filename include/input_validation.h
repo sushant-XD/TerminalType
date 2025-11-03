@@ -14,9 +14,10 @@ public:
   result_t getResult(int time);
   void print_result();
 
+  std::vector<char> inputBuffer;
+
 private:
   std::vector<char> fileBuffer;
-  std::vector<char> inputBuffer;
   result_t res = {};
   terminalCtrl &terminalManager;
   int characterCount;

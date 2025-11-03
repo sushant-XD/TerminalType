@@ -22,17 +22,13 @@ int main(int argc, char *argv[]) {
 
   fileOps fileManager(config.filePathAbs);
   terminalCtrl terminalManager;
+
   // TODO: handle incorrect setup, give chance to user to re-enter
   fileManager.setup();
-  int width = terminalManager.getTerminalWidth();
-  print_welcome_screen(width);
-  print_settings(width, config);
-  std::cout << std::string(3, ' ') << BBLACK << std::string(width - 4, '-')
-            << COLOR_RESET << std::endl;
-  fileManager.printFileContents();
 
   inputValidator inputValidator(fileManager.characters, terminalManager);
-
+  screenState renderManager(terminalManager);
+  renderManager.renderGradientBox(fileManager.characters, 0, 0, 0, 0, 0);
   auto timeIntervalms = milliseconds(config.time * 1000);
   char tempChar;
 
@@ -51,6 +47,8 @@ int main(int argc, char *argv[]) {
       started = true;
     }
     inputValidator.getInputAndCompare(tempChar);
+    renderManager.renderTextProgress(fileManager.characters,
+                                     inputValidator.inputBuffer);
     if (started && duration_cast<milliseconds>(steady_clock::now() -
                                                startTime) >= timeIntervalms) {
       break;
@@ -64,42 +62,6 @@ int main(int argc, char *argv[]) {
             << std::endl;
   inputValidator.print_result();
   return 0;
-}
-
-void print_welcome_screen(int width) {
-  int padding = 2;
-  int actualWidth = width - (padding * 3);
-  std::string title = "Terminal Typing Test";
-  int leftRightMargin = (actualWidth - title.size()) / 2;
-  std::cout << std::string(padding, ' ') << "+" << std::string(actualWidth, '-')
-            << "+" << std::endl;
-  // std::cout << std::string(padding, ' ') << "|" << std::string(actualWidth, '
-  // ') << "|" << std::endl;
-  std::cout << std::string(padding, ' ') << "|"
-            << std::string(leftRightMargin, ' ') << title
-            << std::string(leftRightMargin, ' ') << "|" << std::endl;
-  // std::cout << std::string(padding, ' ') << "|" << std::string(actualWidth, '
-  // ') << "|" << std::endl;
-  std::cout << std::string(padding, ' ') << "+" << std::string(actualWidth, '-')
-            << "+" << std::endl;
-}
-
-void print_settings(int width, config_s &config) {
-  int padding = 4;
-  int innerPadding = 6;
-  int actualWidth = width - (padding * 2);
-
-  std::string left = "Time: " + std::to_string(config.time) + "s";
-  std::string right = "Level: " + std::to_string(config.level);
-  std::string middle = "|";
-
-  int totalContentWidth =
-      left.size() + middle.size() + right.size() + innerPadding * 2;
-  int sideSpace = (actualWidth - totalContentWidth) / 2;
-
-  std::cout << std::string(sideSpace, ' ') << left
-            << std::string(innerPadding, ' ') << middle
-            << std::string(innerPadding, ' ') << right << std::endl;
 }
 
 bool configure(int size, char **args, config_s &config) {

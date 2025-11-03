@@ -9,7 +9,7 @@
 #define CORRECT_TEXT_COLOR GREEN
 
 screenState::screenState(terminalCtrl &terminalManager)
-    : terminalManager(terminalManager) {
+    : terminalManager(terminalManager), initialSetupComplete(false) {
   clearTerminal();
   height = terminalManager.getTerminalHeight();
   width = terminalManager.getTerminalWidth();
@@ -47,39 +47,63 @@ void screenState::drawHeader(std::string content) {
   std::cout << BoxChars::T_RIGHT << CRESET << std::endl;
 }
 
+void screenState::drawStats(int timeRemaining, int speed, int level) {
+  int padding = 4;
+  int innerPadding = 6;
+  int actualWidth = width - (padding * 2);
+
+  std::string left = "Time Remaining: " + std::to_string(timeRemaining) + "s";
+  std::string right = "Level: " + std::to_string(level);
+  std::string middle = "|";
+
+  int totalContentWidth =
+      left.size() + middle.size() + right.size() + innerPadding * 2;
+  int sideSpace = (actualWidth - totalContentWidth) / 2;
+
+  std::cout << std::string(sideSpace, ' ') << left
+            << std::string(innerPadding, ' ') << middle
+            << std::string(innerPadding, ' ') << right << std::endl;
+}
+
 void screenState::drawEmptyLine() {
   std::cout << BORDER_COLOR << BoxChars::VERTICAL << CRESET
             << std::string(width - 2, ' ') << BORDER_COLOR << BoxChars::VERTICAL
             << CRESET << std::endl;
 }
 
-void screenState::drawText(std::vector<char> &text) {
-  // Calculate usable width for text
-  int usableWidth = width - outerCommonPaddingLR * 2 - 2; // -2 for borders
-
-  // Convert vector to string for easier handling
-  std::string textStr(text.begin(), text.end());
-
-  // Word wrap the text
-  std::vector<std::string> lines = wrapText(textStr, usableWidth);
-
-  // Draw each line
-  for (const auto &line : lines) {
-    int leftPadding = outerCommonPaddingLR;
-    int rightPadding = width - line.size() - leftPadding - 2;
-
-    std::cout << BORDER_COLOR << BoxChars::VERTICAL << CRESET
-              << std::string(leftPadding, ' ') << WHITE << line << CRESET
-              << std::string(rightPadding, ' ') << BORDER_COLOR
-              << BoxChars::VERTICAL << CRESET << std::endl;
-  }
-}
-
 // Complete gradient box render function
 void screenState::renderGradientBox(std::vector<char> &text, float progress,
                                     int wpm, float accuracy, int errors,
                                     int timeRemaining) {
-  clearTerminal();
-  drawHeader("Terminal Typing Test");
-  drawEmptyLine();
+  if (!initialSetupComplete) {
+    clearTerminal();
+    drawHeader("Terminal Typing Test");
+    drawEmptyLine();
+  }
+  drawStats(timeRemaining, wpm, 0);
+
+  for (int i = 0; i < text.size(); i++) {
+    std::cout << text[i];
+  }
+  std::cout << std::endl;
+}
+
+void screenState::renderTextProgress(std::vector<char> &targetText,
+                                     std::vector<char> &typedText) {
+  int col = typedText.size() - 1;
+  moveCursor(6, col);
+  std::cout << "\r"; // return to line start (overwrite)
+  for (size_t i = 0; i < targetText.size(); ++i) {
+    if (i < typedText.size()) {
+      if (typedText[i] == targetText[i]) {
+        std::cout << GREEN << targetText[i] << CRESET;
+      } else {
+        std::cout << RED << targetText[i] << CRESET;
+      }
+    } else {
+      std::cout << WHITE << targetText[i] << CRESET;
+    }
+  }
+  // std::cout.flush();
+  moveCursor((targetText.size() + 5) / height, 1);
 }

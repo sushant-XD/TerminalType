@@ -1,0 +1,5 @@
+/home/sushant/Projects/TerminalType/build/CMakeFiles/edit_cache.dir
+/home/sushant/Projects/TerminalType/build/CMakeFiles/rebuild_cache.dir
+/home/sushant/Projects/TerminalType/build/src/CMakeFiles/termtype.dir
+/home/sushant/Projects/TerminalType/build/src/CMakeFiles/edit_cache.dir
+/home/sushant/Projects/TerminalType/build/src/CMakeFiles/rebuild_cache.dir
