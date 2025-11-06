@@ -1,18 +1,9 @@
 #include "input_validation.h"
 
 inputValidator::inputValidator(terminalCtrl &terminalManager)
-    : terminalManager(terminalManager), fileBuffer(fileChars),
-      characterCount(0), correctCount(0), lastCorrectCharIndex(0),
-      invalidCharacterCount(0) {
-  inputBuffer = {};
-}
+    : terminalManager(terminalManager), res() {}
 
-inputValidator::~inputValidator() {
-  characterCount = 0;
-  correctCount = 0;
-  fileBuffer = {};
-  inputBuffer = {};
-}
+inputValidator::~inputValidator() {}
 
 /*TODO: Fix a few things after rudimentary implementation
  * 1) Backspace clicked when correct character was pressed shouldn't count as
@@ -33,7 +24,7 @@ int inputValidator::getInputAndCompare(state_t &state, char ch) {
       if (state.charCount > 0)
         state.charCount--;
 
-      state.currentKeyStatus = BACKSPACE;
+      state.currentKeyStatus = keyStroke::BACKSPACE;
     }
     return 0;
   }
@@ -41,14 +32,14 @@ int inputValidator::getInputAndCompare(state_t &state, char ch) {
   state.userInputSequence.push_back(ch);
   if (state.incorrectCount > 0) {
     state.incorrectCount++;
-    state.currentKeyStatus = INCORRECT;
+    state.currentKeyStatus = keyStroke::INCORRECT;
   } else {
     if (ch == state.targetSequence[state.charCount]) {
       state.correctCount++;
-      state.currentKeyStatus = CORRECT;
+      state.currentKeyStatus = keyStroke::CORRECT;
     } else {
       state.incorrectCount++;
-      state.currentKeyStatus = INCORRECT;
+      state.currentKeyStatus = keyStroke::INCORRECT;
     }
   }
   state.charCount++;
@@ -62,23 +53,23 @@ int inputValidator::getInputAndCompare(state_t &state, char ch) {
 
 result_t inputValidator::getResult(int time) {
   res.result_id = 0;
-  res.timeTaken = time;
-  res.level = EASY;
-  res.correct_characters = correctCount;
-  res.total_characters = characterCount;
-  if (res.total_characters == 0) {
-    res.accuracy = 0;
-  } else {
-    res.accuracy = 100 * (static_cast<float>((res.correct_characters) * 1.0 /
-                                             res.total_characters));
-  }
+  // res.timeTaken = time;
+  // res.level = EASY;
+  // res.correct_characters = correctCount;
+  // res.total_characters = characterCount;
+  // if (res.total_characters == 0) {
+  //   res.accuracy = 0;
+  // } else {
+  //   res.accuracy = 100 * (static_cast<float>((res.correct_characters) * 1.0 /
+  //                                            res.total_characters));
+  // }
   return res;
 }
 
 void inputValidator::print_result() {
-  std::cout << "Time Taken:          " << res.timeTaken << std::endl;
-  std::cout << "Level:               " << res.level << std::endl;
-  std::cout << "Correct Characters:  " << res.correct_characters << "/"
-            << res.total_characters << std::endl;
-  std::cout << "Accuracy:            " << res.accuracy << "%" << std::endl;
+  // std::cout << "Time Taken:          " << res.timeTaken << std::endl;
+  // std::cout << "Level:               " << res.level << std::endl;
+  // std::cout << "Correct Characters:  " << res.correct_characters << "/"
+  //           << res.total_characters << std::endl;
+  // std::cout << "Accuracy:            " << res.accuracy << "%" << std::endl;
 }

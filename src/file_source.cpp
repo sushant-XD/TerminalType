@@ -32,7 +32,7 @@ error_e fileOps::setup(state_t &state) {
     return FILE_SIZE_ERROR;
   }
 
-  state.targetText = characters;
+  state.targetSequence = characters;
   return OK;
 }
 

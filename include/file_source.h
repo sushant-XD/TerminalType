@@ -10,7 +10,7 @@ public:
   fileOps(std::string fileNameAbs);
   ~fileOps();
 
-  error_e setup();
+  error_e setup(state_t &state);
   error_e readFileContents();
 
   // getters for word count and character counts

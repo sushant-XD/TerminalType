@@ -1,5 +1,6 @@
 #pragma once
 
+#include <chrono>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -37,7 +38,12 @@ typedef struct result_s {
   int accuracy;
 } result_t;
 
-enum keyStroke_e { BACKSPACE = 0, CORRECT, INCORRECT };
+enum class keyStroke { BACKSPACE = 0, CORRECT, INCORRECT };
+
+typedef struct screen_s {
+  int width;
+  int height;
+} screen_t;
 
 typedef struct state_s {
   bool isRunning;
@@ -45,9 +51,14 @@ typedef struct state_s {
   int correctCount;
   int charCount;
   int incorrectCount;
-  keyStroke_e currentKeyStatus;
+  keyStroke currentKeyStatus;
+  screen_t ws;                      // not used right now
   std::vector<char> targetSequence; // not implemented right now
   std::vector<char> userInputSequence;
+
+  std::chrono::steady_clock::time_point startTime;
+  int totalTimeSeconds;
+  int remainingTimeSeconds;
 } state_t;
 
 /* Constants */

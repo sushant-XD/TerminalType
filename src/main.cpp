@@ -1,6 +1,5 @@
 #include "main.h"
 #include <chrono>
-#include <thread>
 
 using namespace std::chrono_literals;
 using namespace std::chrono;
@@ -21,47 +20,39 @@ int main(int argc, char *argv[]) {
     }
   }
 
+  state.totalTimeSeconds = config.time;
+  state.remainingTimeSeconds = config.time;
+
   fileOps fileManager(config.filePathAbs);
   terminalCtrl terminalManager;
-
-  // TODO: handle incorrect setup, give chance to user to re-enter
   fileManager.setup(state);
-
   inputValidator inputValidator(terminalManager);
-  screenState renderManager(state, terminalManager);
-  renderManager.renderGradientBox();
-  auto timeIntervalms = milliseconds(config.time * 1000);
-  char tempChar;
-  steady_clock::time_point startTime;
+  screenState renderManager(terminalManager);
 
+  renderManager.renderGradientBox(state);
+
+  char tempChar;
   while (true) {
     tempChar = terminalManager.getCharacter();
     if (!state.isRunning) {
-      startTime = steady_clock::now();
+      state.startTime = steady_clock::now();
       state.isRunning = true;
     }
 
+    auto elapsed =
+        duration_cast<seconds>(steady_clock::now() - state.startTime);
+    state.remainingTimeSeconds = state.totalTimeSeconds - elapsed.count();
     inputValidator.getInputAndCompare(state, tempChar);
-    if (ret == 1) {
-      renderManager.renderTextProgress(inputValidator.characterCount,
-                                       inputValidator.currentOriginalCharacter,
-                                       true);
-    } else if (ret == 2) {
-      renderManager.renderTextProgress(inputValidator.characterCount,
-                                       inputValidator.currentOriginalCharacter,
-                                       false);
-    }
-
-    if (gameState.isRunning &&
-        duration_cast<milliseconds>(steady_clock::now() - startTime) >=
-            timeIntervalms) {
+    renderManager.renderTextProgress(state);
+    renderManager.updateStats(state);
+    if (elapsed.count() >= state.totalTimeSeconds) {
       break;
     }
   }
 
-  int time = duration_cast<milliseconds>(timeIntervalms).count() / 1000;
-  result_t res = inputValidator.getResult(time);
-  renderManager.testComplete();
+  state.isRunning = false;
+  // result_t res = inputValidator.getResult(time);
+  // renderManager.testComplete();
   std::cout << "\n\n============================ Test Complete ========="
             << std::endl;
   inputValidator.print_result();

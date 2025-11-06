@@ -4,10 +4,7 @@
 #include "box_chars.h"
 #include "configurations.h"
 #include "terminal_ctrl.h"
-
-inline void moveCursor(int row, int col) {
-  std::cout << "\033[" << row << ";" << col << "H";
-}
+#include <chrono>
 class screenState {
 public:
   screenState(terminalCtrl &terminalManager);
@@ -19,15 +16,18 @@ public:
   void drawEmptyLine();
 
   // Main render function
-  void renderGradientBox(std::vector<char> &text, float progress, int wpm,
-                         float accuracy, int errors, int timeRemaining);
-  void renderTextProgress(int charIndex, char ch, bool success);
+  void updateStats(state_t &state);
+  void renderGradientBox(state_t &state);
+  void renderTextProgress(state_t &state);
 
-  void testComplete();
+  // void testComplete();
 
 private:
+  void moveCursor(int row, int col);
   int height;
+  int statsRow;
   int width;
+  int textStartLine;
   terminalCtrl &terminalManager;
 
   bool initialSetupComplete;
@@ -35,5 +35,5 @@ private:
   int outerCommonPaddingLR;
   int linSpacing;
   int inputBoxPaddingLR;
-  std::vector<std::string> wrapText(const std::string &text, int maxWidth);
+  std::vector<std::string> wrapText(state_t &state);
 };

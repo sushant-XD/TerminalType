@@ -48,6 +48,8 @@ src/CMakeFiles/termtype.dir/design.cpp.o: /home/sushant/Projects/TerminalType/sr
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
@@ -110,6 +112,7 @@ src/CMakeFiles/termtype.dir/design.cpp.o: /home/sushant/Projects/TerminalType/sr
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -136,13 +139,13 @@ src/CMakeFiles/termtype.dir/design.cpp.o: /home/sushant/Projects/TerminalType/sr
   /usr/include/c++/15/bits/ostream.h \
   /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
   /usr/include/c++/15/bits/range_access.h \
   /usr/include/c++/15/bits/refwrap.h \
   /usr/include/c++/15/bits/requires_hosted.h \
-  /usr/include/c++/15/bits/sstream.tcc \
   /usr/include/c++/15/bits/std_abs.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_bvector.h \
@@ -165,12 +168,15 @@ src/CMakeFiles/termtype.dir/design.cpp.o: /home/sushant/Projects/TerminalType/sr
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/chrono \
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
   /usr/include/c++/15/cstring \
+  /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/cwctype \
   /usr/include/c++/15/debug/assertions.h \
@@ -186,10 +192,11 @@ src/CMakeFiles/termtype.dir/design.cpp.o: /home/sushant/Projects/TerminalType/sr
   /usr/include/c++/15/iosfwd \
   /usr/include/c++/15/iostream \
   /usr/include/c++/15/istream \
+  /usr/include/c++/15/limits \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/pstl_config.h \
-  /usr/include/c++/15/sstream \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
   /usr/include/c++/15/string \
@@ -228,6 +235,7 @@ src/CMakeFiles/termtype.dir/design.cpp.o: /home/sushant/Projects/TerminalType/sr
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/string.h \
@@ -244,7 +252,8 @@ src/CMakeFiles/termtype.dir/design.cpp.o: /home/sushant/Projects/TerminalType/sr
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h
+  /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h
 
 src/CMakeFiles/termtype.dir/file_source.cpp.o: /home/sushant/Projects/TerminalType/src/file_source.cpp \
   /home/sushant/Projects/TerminalType/include/configurations.h \
@@ -279,6 +288,8 @@ src/CMakeFiles/termtype.dir/file_source.cpp.o: /home/sushant/Projects/TerminalTy
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
@@ -330,6 +341,7 @@ src/CMakeFiles/termtype.dir/file_source.cpp.o: /home/sushant/Projects/TerminalTy
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/codecvt.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
@@ -358,6 +370,7 @@ src/CMakeFiles/termtype.dir/file_source.cpp.o: /home/sushant/Projects/TerminalTy
   /usr/include/c++/15/bits/ostream.h \
   /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
@@ -386,11 +399,14 @@ src/CMakeFiles/termtype.dir/file_source.cpp.o: /home/sushant/Projects/TerminalTy
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/chrono \
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/cwctype \
   /usr/include/c++/15/debug/assertions.h \
@@ -407,9 +423,11 @@ src/CMakeFiles/termtype.dir/file_source.cpp.o: /home/sushant/Projects/TerminalTy
   /usr/include/c++/15/iosfwd \
   /usr/include/c++/15/iostream \
   /usr/include/c++/15/istream \
+  /usr/include/c++/15/limits \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
   /usr/include/c++/15/string \
@@ -448,6 +466,7 @@ src/CMakeFiles/termtype.dir/file_source.cpp.o: /home/sushant/Projects/TerminalTy
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/sys/cdefs.h \
@@ -458,7 +477,8 @@ src/CMakeFiles/termtype.dir/file_source.cpp.o: /home/sushant/Projects/TerminalTy
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h
+  /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h
 
 src/CMakeFiles/termtype.dir/input_validation.cpp.o: /home/sushant/Projects/TerminalType/src/input_validation.cpp \
   /home/sushant/Projects/TerminalType/include/ansi_color_codes.h \
@@ -506,6 +526,8 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o: /home/sushant/Projects/Termi
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
@@ -568,6 +590,7 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o: /home/sushant/Projects/Termi
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -594,6 +617,7 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o: /home/sushant/Projects/Termi
   /usr/include/c++/15/bits/ostream.h \
   /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
@@ -622,12 +646,15 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o: /home/sushant/Projects/Termi
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/chrono \
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
   /usr/include/c++/15/cstring \
+  /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/cwctype \
   /usr/include/c++/15/debug/assertions.h \
@@ -643,9 +670,11 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o: /home/sushant/Projects/Termi
   /usr/include/c++/15/iosfwd \
   /usr/include/c++/15/iostream \
   /usr/include/c++/15/istream \
+  /usr/include/c++/15/limits \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
   /usr/include/c++/15/string \
@@ -684,6 +713,7 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o: /home/sushant/Projects/Termi
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/string.h \
@@ -700,7 +730,8 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o: /home/sushant/Projects/Termi
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h
+  /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h
 
 src/CMakeFiles/termtype.dir/main.cpp.o: /home/sushant/Projects/TerminalType/src/main.cpp \
   /home/sushant/Projects/TerminalType/include/ansi_color_codes.h \
@@ -1035,6 +1066,8 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o: /home/sushant/Projects/Terminal
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
@@ -1097,6 +1130,7 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o: /home/sushant/Projects/Terminal
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/chrono.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -1123,6 +1157,7 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o: /home/sushant/Projects/Terminal
   /usr/include/c++/15/bits/ostream.h \
   /usr/include/c++/15/bits/ostream.tcc \
   /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/parse_numbers.h \
   /usr/include/c++/15/bits/postypes.h \
   /usr/include/c++/15/bits/predefined_ops.h \
   /usr/include/c++/15/bits/ptr_traits.h \
@@ -1151,12 +1186,15 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o: /home/sushant/Projects/Terminal
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/chrono \
   /usr/include/c++/15/clocale \
   /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
+  /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
   /usr/include/c++/15/cstring \
+  /usr/include/c++/15/ctime \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/cwctype \
   /usr/include/c++/15/debug/assertions.h \
@@ -1172,9 +1210,11 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o: /home/sushant/Projects/Terminal
   /usr/include/c++/15/iosfwd \
   /usr/include/c++/15/iostream \
   /usr/include/c++/15/istream \
+  /usr/include/c++/15/limits \
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/ratio \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
   /usr/include/c++/15/string \
@@ -1213,6 +1253,7 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o: /home/sushant/Projects/Terminal
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/string.h \
@@ -1229,7 +1270,8 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o: /home/sushant/Projects/Terminal
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \
-  /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h
+  /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
+  /usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h
 
 src/termtype: /lib64/ld-linux-x86-64.so.2 \
   /lib64/libc.so.6 \
@@ -1288,23 +1330,17 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 
 /usr/include/c++/15/locale:
 
-/usr/include/c++/15/limits:
-
 /usr/include/c++/15/ext/aligned_buffer.h:
-
-/usr/include/c++/15/ctime:
 
 /usr/include/c++/15/codecvt:
 
-/usr/include/c++/15/chrono:
-
 /usr/include/c++/15/bits/unique_ptr.h:
+
+/usr/include/c++/15/bits/sstream.tcc:
 
 /usr/include/c++/15/bits/shared_ptr.h:
 
 /usr/include/c++/15/bits/quoted_string.h:
-
-/usr/include/c++/15/bits/parse_numbers.h:
 
 /usr/include/c++/15/bits/locale_facets_nonio.tcc:
 
@@ -1316,15 +1352,17 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 
 /usr/include/c++/15/bits/fs_ops.h:
 
-/usr/include/bits/types/struct_timespec.h:
+/home/sushant/Projects/TerminalType/src/main.cpp:
 
-/usr/include/c++/15/bits/locale_facets.tcc:
+/home/sushant/Projects/TerminalType/include/input_validation.h:
 
-/usr/include/bits/waitflags.h:
+/home/sushant/Projects/TerminalType/src/input_validation.cpp:
 
-/usr/lib64/libc.so:
+/usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h:
 
-/usr/include/ctype.h:
+/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
+
+/usr/include/c++/15/fstream:
 
 /usr/include/bits/types/locale_t.h:
 
@@ -1362,6 +1400,16 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 
 /usr/include/bits/unistd_ext.h:
 
+/usr/include/bits/types/struct_timespec.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/c++/15/bits/locale_facets.tcc:
+
+/usr/lib64/libc.so:
+
+/usr/include/ctype.h:
+
 /usr/include/bits/types/struct_sched_param.h:
 
 /usr/include/c++/15/bits/cxxabi_init_exception.h:
@@ -1379,6 +1427,10 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 /usr/lib64/crtn.o:
 
 /usr/include/c++/15/bits/ios_base.h:
+
+/usr/include/c++/15/sstream:
+
+/usr/include/wchar.h:
 
 /usr/include/c++/15/bits/alloc_traits.h:
 
@@ -1416,13 +1468,21 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 
 /usr/include/bits/stdlib-float.h:
 
-/usr/include/bits/termios.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/15/crtend.o:
-
-/usr/include/c++/15/bits/stl_iterator_base_types.h:
-
 /usr/include/bits/termios-tcflow.h:
+
+/usr/include/c++/15/bits/functional_hash.h:
+
+/usr/include/c++/15/ext/type_traits.h:
+
+/usr/include/bits/termios-struct.h:
+
+/usr/include/bits/termios-c_lflag.h:
+
+/usr/include/bits/types/sigset_t.h:
+
+/home/sushant/Projects/TerminalType/src/design.cpp:
+
+/usr/include/bits/termios-misc.h:
 
 /usr/include/c++/15/bits/locale_classes.tcc:
 
@@ -1433,10 +1493,6 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 /usr/include/libintl.h:
 
 /usr/include/bits/endianness.h:
-
-/usr/include/c++/15/cstdint:
-
-/usr/include/asm/ioctls.h:
 
 /usr/include/bits/confname.h:
 
@@ -1457,16 +1513,6 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 /usr/include/c++/15/bits/fstream.tcc:
 
 /usr/include/c++/15/bits/memoryfwd.h:
-
-/usr/include/bits/types/sigset_t.h:
-
-/home/sushant/Projects/TerminalType/src/design.cpp:
-
-/usr/include/wchar.h:
-
-/usr/include/c++/15/sstream:
-
-/usr/include/bits/termios-misc.h:
 
 /usr/include/c++/15/iomanip:
 
@@ -1498,12 +1544,6 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 
 /usr/include/bits/typesizes.h:
 
-/usr/include/c++/15/filesystem:
-
-/usr/include/c++/15/bits/requires_hosted.h:
-
-/usr/include/c++/15/cstdlib:
-
 /usr/include/bits/struct_mutex.h:
 
 /usr/include/c++/15/bits/streambuf.tcc:
@@ -1513,12 +1553,6 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 /usr/include/bits/termios-c_iflag.h:
 
 /usr/include/c++/15/cerrno:
-
-/home/sushant/Projects/TerminalType/src/main.cpp:
-
-/usr/include/c++/15/bits/locale_facets.h:
-
-/usr/include/bits/types/wint_t.h:
 
 /usr/include/asm/ioctl.h:
 
@@ -1542,6 +1576,20 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 
 /usr/include/alloca.h:
 
+/usr/include/bits/termios.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/15/crtend.o:
+
+/usr/include/c++/15/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/15/bits/this_thread_sleep.h:
+
+/home/sushant/Projects/TerminalType/include/main.h:
+
+/usr/include/bits/stdint-least.h:
+
+/usr/include/c++/15/bits/move.h:
+
 /usr/include/asm-generic/errno.h:
 
 /home/sushant/Projects/TerminalType/include/box_chars.h:
@@ -1555,8 +1603,6 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 /usr/include/c++/15/type_traits:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/gthr.h:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
 
 /home/sushant/Projects/TerminalType/include/terminal_ctrl.h:
 
@@ -1590,10 +1636,6 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/error_constants.h:
 
-/usr/include/bits/termios-c_lflag.h:
-
-/usr/include/bits/termios-struct.h:
-
 /usr/include/bits/pthreadtypes-arch.h:
 
 /usr/include/gnu/stubs.h:
@@ -1614,6 +1656,10 @@ src/CMakeFiles/termtype.dir/design.cpp.o:
 
 /usr/include/linux/close_range.h:
 
+/usr/include/asm/errno.h:
+
+/usr/include/bits/stdint-uintn.h:
+
 /usr/include/bits/types/struct_timeval.h:
 
 /usr/include/features.h:
@@ -1630,8 +1676,6 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o:
 
 /usr/include/bits/types/time_t.h:
 
-/home/sushant/Projects/TerminalType/src/input_validation.cpp:
-
 /usr/include/asm-generic/ioctls.h:
 
 /usr/include/bits/termios-c_cflag.h:
@@ -1640,17 +1684,15 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o:
 
 /usr/include/c++/15/bits/stringfwd.h:
 
-/usr/include/c++/15/bits/functional_hash.h:
+/usr/include/bits/types/wint_t.h:
 
-/usr/include/c++/15/ext/type_traits.h:
+/usr/include/c++/15/bits/locale_facets.h:
 
-/usr/include/c++/15/bits/move.h:
+/usr/include/c++/15/filesystem:
 
-/usr/include/c++/15/bits/this_thread_sleep.h:
+/usr/include/c++/15/bits/requires_hosted.h:
 
-/home/sushant/Projects/TerminalType/include/main.h:
-
-/usr/include/bits/stdint-least.h:
+/usr/include/c++/15/cstdlib:
 
 /usr/include/linux/sched/types.h:
 
@@ -1666,15 +1708,13 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o:
 
 /usr/include/c++/15/bits/ostream.h:
 
-/usr/include/c++/15/fstream:
-
 /usr/include/c++/15/bits/ostream.tcc:
+
+/usr/include/c++/15/bits/parse_numbers.h:
 
 /usr/include/c++/15/bits/postypes.h:
 
 /usr/include/c++/15/bits/range_access.h:
-
-/usr/include/c++/15/bits/sstream.tcc:
 
 /usr/include/c++/15/bits/std_abs.h:
 
@@ -1724,11 +1764,19 @@ src/CMakeFiles/termtype.dir/input_validation.cpp.o:
 
 /usr/include/c++/15/bits/vector.tcc:
 
+/usr/include/c++/15/chrono:
+
 /usr/include/c++/15/concepts:
+
+/usr/include/asm/ioctls.h:
+
+/usr/include/c++/15/cstdint:
 
 /usr/include/c++/15/cstdio:
 
 /usr/include/c++/15/cstring:
+
+/usr/include/c++/15/ctime:
 
 /usr/include/bits/getopt_core.h:
 
@@ -1759,6 +1807,8 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o:
 /usr/include/c++/15/ios:
 
 /usr/include/c++/15/iosfwd:
+
+/usr/include/c++/15/limits:
 
 /usr/include/linux/errno.h:
 
@@ -1816,9 +1866,9 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o:
 
 /usr/include/linux/posix_types.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h:
-
 /usr/include/c++/15/bits/locale_classes.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/15/include/stdint.h:
 
 /usr/include/linux/stddef.h:
 
@@ -1869,11 +1919,3 @@ src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o:
 /usr/include/c++/15/x86_64-redhat-linux/bits/c++locale.h:
 
 /usr/include/c++/15/bits/codecvt.h:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h:
-
-/home/sushant/Projects/TerminalType/include/input_validation.h:
-
-/usr/include/asm/errno.h:
-
-/usr/include/bits/stdint-uintn.h:
