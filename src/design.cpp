@@ -132,7 +132,6 @@ void screenState::updateStats(state_t &state) {
     int wpm = timeInMinutes > 0 ? (state.correctCount / 5) / timeInMinutes : 0;
 
     // Clear the line
-    terminalManager.writeToTerminal((char *)"\033[2K", 4); // Clear entire line
 
     // Recreate the same formatting as drawStats()
     int padding = 4;
@@ -153,12 +152,21 @@ void screenState::updateStats(state_t &state) {
                             std::string(innerPadding, ' ') + middle +
                             std::string(innerPadding, ' ') + right;
 
+    int displayIndex = state.charCount;
+    int rem = displayIndex / width;
+    int inputRow = textStartLine + rem;
+    int inputCol = displayIndex % width;
+
     // Move to stats line
+    hideCursor();
     moveCursor(statsRow, 0);
+    terminalManager.writeToTerminal((char *)"\033[2K", 4); // Clear entire line
     spdlog::info("Moved Cursor to position: {} 0", statsRow);
     terminalManager.writeToTerminal((char *)statsLine.c_str(),
                                     statsLine.length());
     terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
+    moveCursor(inputRow, inputCol);
+    showCursor();
   }
 }
 
@@ -217,7 +225,7 @@ void screenState::renderTextProgress(state_t &state) {
   if (state.currentKeyStatus == keyStroke::BACKSPACE) {
     moveCursor(row, col);
   }
-  spdlog::info("Text Render Process complete");
+  spdlog::info("Text Render progress complete");
 }
 
 void screenState::testComplete() {}
@@ -249,6 +257,22 @@ void screenState::moveCursor(int row, int col) {
   terminalManager.writeToTerminal(buffer, len);
 }
 
-void screenState::showCursor() { terminalManager.writeToTerminal(); }
+void screenState::saveCursor() {
+  terminalManager.writeToTerminal(const_cast<char *>(SAVE_CURSOR.data()),
+                                  SAVE_CURSOR.size());
+}
 
-void screenState::hideCursor() {}
+void screenState::restoreCursor() {
+  terminalManager.writeToTerminal(const_cast<char *>(RESTORE_CURSOR.data()),
+                                  RESTORE_CURSOR.size());
+}
+
+void screenState::showCursor() {
+  terminalManager.writeToTerminal(const_cast<char *>(SHOW_CURSOR.data()),
+                                  SHOW_CURSOR.size());
+}
+
+void screenState::hideCursor() {
+  terminalManager.writeToTerminal(const_cast<char *>(HIDE_CURSOR.data()),
+                                  HIDE_CURSOR.size());
+}

@@ -52,9 +52,10 @@ typedef struct state_s {
   int charCount;
   int incorrectCount;
   keyStroke currentKeyStatus;
-  std::vector<char> targetSequence; // not implemented right now
+  std::vector<char> targetSequence;
   std::vector<char> userInputSequence;
 
+  screen_t ws; // window size
   std::chrono::steady_clock::time_point startTime;
   int totalTimeSeconds;
   int remainingTimeSeconds;

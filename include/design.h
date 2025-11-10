@@ -6,8 +6,10 @@
 #include "terminal_ctrl.h"
 #include <chrono>
 
-static constexpr *char SHOW_CURSOR = "";
-static constexpr *char HIDE_CURSOR = "";
+static constexpr std::string_view SHOW_CURSOR = "\033[?25h";
+static constexpr std::string_view HIDE_CURSOR = "\033[?25l";
+static constexpr std::string_view SAVE_CURSOR = "\033[s";
+static constexpr std::string_view RESTORE_CURSOR = "\033[u";
 
 class screenState {
 public:
@@ -29,6 +31,11 @@ public:
 
   void appendToBuffer(std::vector<char> &buffer, const char *data);
   void appendToBuffer(std::vector<char> &buffer, const std::string &data);
+
+  void saveCursor();
+  void restoreCursor();
+  void showCursor();
+  void hideCursor();
 
 private:
   void moveCursor(int row, int col);

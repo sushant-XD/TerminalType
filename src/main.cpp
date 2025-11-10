@@ -82,8 +82,8 @@ int main(int argc, char *argv[]) {
   }
 
   state.isRunning = false;
-  std::cout << "\n\n============================ Test Complete ========="
-            << std::endl;
+  // renderManager.clearTerminal();
+  std::cout << "\n\n Test Complete " << std::endl;
   std::this_thread::sleep_for(duration(1s));
   renderManager.clearTerminal();
   return 0;
