@@ -274,6 +274,30 @@ terminal_ctrl.cpp.s:
 	cd /home/sushant/Projects/TerminalType/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/termtype.dir/build.make src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.s
 .PHONY : terminal_ctrl.cpp.s
 
+uiWidgets.o: uiWidgets.cpp.o
+.PHONY : uiWidgets.o
+
+# target to build an object file
+uiWidgets.cpp.o:
+	cd /home/sushant/Projects/TerminalType/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/termtype.dir/build.make src/CMakeFiles/termtype.dir/uiWidgets.cpp.o
+.PHONY : uiWidgets.cpp.o
+
+uiWidgets.i: uiWidgets.cpp.i
+.PHONY : uiWidgets.i
+
+# target to preprocess a source file
+uiWidgets.cpp.i:
+	cd /home/sushant/Projects/TerminalType/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/termtype.dir/build.make src/CMakeFiles/termtype.dir/uiWidgets.cpp.i
+.PHONY : uiWidgets.cpp.i
+
+uiWidgets.s: uiWidgets.cpp.s
+.PHONY : uiWidgets.s
+
+# target to generate assembly for a file
+uiWidgets.cpp.s:
+	cd /home/sushant/Projects/TerminalType/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/termtype.dir/build.make src/CMakeFiles/termtype.dir/uiWidgets.cpp.s
+.PHONY : uiWidgets.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -301,6 +325,9 @@ help:
 	@echo "... terminal_ctrl.o"
 	@echo "... terminal_ctrl.i"
 	@echo "... terminal_ctrl.s"
+	@echo "... uiWidgets.o"
+	@echo "... uiWidgets.i"
+	@echo "... uiWidgets.s"
 .PHONY : help
 
 

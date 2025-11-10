@@ -1,4 +1,5 @@
 #include "terminal_ctrl.h"
+#include <cstdio>
 #include <termios.h>
 
 terminalCtrl::terminalCtrl() {
@@ -59,4 +60,38 @@ int terminalCtrl::getTerminalHeight() {
   struct winsize ws;
   ioctl(output_fd, TIOCGWINSZ, &ws);
   return ws.ws_row ? ws.ws_row : 20; // set default to 20
+}
+
+void terminalCtrl::getCurrentCursorPosition(int &row, int &col) {
+  char inp[] = "\033[6n";
+  writeToTerminal(inp, sizeof(inp));
+  char buffer[32];
+  int bytes_read = read(STDIN_FILENO, buffer, sizeof(buffer));
+  if (bytes_read != 0) {
+    buffer[bytes_read] = '\0';
+    sscanf(buffer, "\033[%d;%dR", &row, &col);
+  }
+}
+
+void terminalCtrl::moveCursor(int row, int col) {
+  char buffer[32];
+  int len = snprintf(buffer, sizeof(buffer), "\033[%d;%dH", row, col);
+  writeToTerminal(buffer, len);
+}
+
+void terminalCtrl::saveCursor() {
+  writeToTerminal(const_cast<char *>(SAVE_CURSOR.data()), SAVE_CURSOR.size());
+}
+
+void terminalCtrl::restoreCursor() {
+  writeToTerminal(const_cast<char *>(RESTORE_CURSOR.data()),
+                  RESTORE_CURSOR.size());
+}
+
+void terminalCtrl::showCursor() {
+  writeToTerminal(const_cast<char *>(SHOW_CURSOR.data()), SHOW_CURSOR.size());
+}
+
+void terminalCtrl::hideCursor() {
+  writeToTerminal(const_cast<char *>(HIDE_CURSOR.data()), HIDE_CURSOR.size());
 }

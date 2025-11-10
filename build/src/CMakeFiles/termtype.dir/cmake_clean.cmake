@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/termtype.dir/main.cpp.o.d"
   "CMakeFiles/termtype.dir/terminal_ctrl.cpp.o"
   "CMakeFiles/termtype.dir/terminal_ctrl.cpp.o.d"
+  "CMakeFiles/termtype.dir/uiWidgets.cpp.o"
+  "CMakeFiles/termtype.dir/uiWidgets.cpp.o.d"
   "termtype"
   "termtype.pdb"
 )

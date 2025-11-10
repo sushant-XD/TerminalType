@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sushant/Projects/TerminalType/src/logging.cpp" "src/CMakeFiles/termtype.dir/logging.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/logging.cpp.o.d"
   "/home/sushant/Projects/TerminalType/src/main.cpp" "src/CMakeFiles/termtype.dir/main.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/main.cpp.o.d"
   "/home/sushant/Projects/TerminalType/src/terminal_ctrl.cpp" "src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o.d"
+  "/home/sushant/Projects/TerminalType/src/uiWidgets.cpp" "src/CMakeFiles/termtype.dir/uiWidgets.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/uiWidgets.cpp.o.d"
   "" "src/termtype" "gcc" "src/CMakeFiles/termtype.dir/link.d"
   )
 
