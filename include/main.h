@@ -13,6 +13,7 @@
 #include <string>
 #include <thread>
 
+void initializeState(state_t &state);
 void print_usage();
 bool configure(int size, char **args, config_s &config);
 bool configure(config_s &config);

@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/termtype.dir/file_source.cpp.o.d"
   "CMakeFiles/termtype.dir/input_validation.cpp.o"
   "CMakeFiles/termtype.dir/input_validation.cpp.o.d"
+  "CMakeFiles/termtype.dir/logging.cpp.o"
+  "CMakeFiles/termtype.dir/logging.cpp.o.d"
   "CMakeFiles/termtype.dir/main.cpp.o"
   "CMakeFiles/termtype.dir/main.cpp.o.d"
   "CMakeFiles/termtype.dir/terminal_ctrl.cpp.o"

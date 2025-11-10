@@ -5,6 +5,10 @@
 #include "configurations.h"
 #include "terminal_ctrl.h"
 #include <chrono>
+
+static constexpr *char SHOW_CURSOR = "";
+static constexpr *char HIDE_CURSOR = "";
+
 class screenState {
 public:
   screenState(terminalCtrl &terminalManager);
@@ -19,8 +23,12 @@ public:
   void updateStats(state_t &state);
   void renderGradientBox(state_t &state);
   void renderTextProgress(state_t &state);
+  void testComplete();
+  void setTerminalBackground();
+  void get_and_print_result(state_t &state);
 
-  // void testComplete();
+  void appendToBuffer(std::vector<char> &buffer, const char *data);
+  void appendToBuffer(std::vector<char> &buffer, const std::string &data);
 
 private:
   void moveCursor(int row, int col);

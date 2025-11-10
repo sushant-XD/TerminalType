@@ -202,6 +202,30 @@ input_validation.cpp.s:
 	cd /home/sushant/Projects/TerminalType/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/termtype.dir/build.make src/CMakeFiles/termtype.dir/input_validation.cpp.s
 .PHONY : input_validation.cpp.s
 
+logging.o: logging.cpp.o
+.PHONY : logging.o
+
+# target to build an object file
+logging.cpp.o:
+	cd /home/sushant/Projects/TerminalType/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/termtype.dir/build.make src/CMakeFiles/termtype.dir/logging.cpp.o
+.PHONY : logging.cpp.o
+
+logging.i: logging.cpp.i
+.PHONY : logging.i
+
+# target to preprocess a source file
+logging.cpp.i:
+	cd /home/sushant/Projects/TerminalType/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/termtype.dir/build.make src/CMakeFiles/termtype.dir/logging.cpp.i
+.PHONY : logging.cpp.i
+
+logging.s: logging.cpp.s
+.PHONY : logging.s
+
+# target to generate assembly for a file
+logging.cpp.s:
+	cd /home/sushant/Projects/TerminalType/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/termtype.dir/build.make src/CMakeFiles/termtype.dir/logging.cpp.s
+.PHONY : logging.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -268,6 +292,9 @@ help:
 	@echo "... input_validation.o"
 	@echo "... input_validation.i"
 	@echo "... input_validation.s"
+	@echo "... logging.o"
+	@echo "... logging.i"
+	@echo "... logging.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

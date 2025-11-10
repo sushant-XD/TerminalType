@@ -1,0 +1,40 @@
+[2025-11-09 13:11:31.629] [my_app_logger] [info] Starting Code
+[2025-11-09 13:11:31.629] [my_app_logger] [info] Total Time: 10 Remaining Time: 10
+[2025-11-09 13:11:31.629] [my_app_logger] [info] Height of terminal: 30, width of terminal: 120
+[2025-11-09 13:11:31.629] [my_app_logger] [info] terminal cleared
+[2025-11-09 13:11:31.629] [my_app_logger] [info] Moved Cursor to position 0 0
+[2025-11-09 13:11:31.630] [my_app_logger] [info] Header drawing complete
+[2025-11-09 13:11:31.630] [my_app_logger] [info] Moved Cursor to position: 3 0
+[2025-11-09 13:11:31.630] [my_app_logger] [info] Empty line drawing complete
+[2025-11-09 13:11:31.630] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:31.630] [my_app_logger] [info] Stats line drawing complete
+[2025-11-09 13:11:31.630] [my_app_logger] [info] Moved cursor to position 6 0
+[2025-11-09 13:11:31.630] [my_app_logger] [info] Render Gradient Setup complete
+[2025-11-09 13:11:31.630] [my_app_logger] [info] Initial Screen Rendering Complete
+[2025-11-09 13:11:32.289] [my_app_logger] [info] a key Correct. Correct Count: 1
+[2025-11-09 13:11:32.289] [my_app_logger] [info] Character Count: 1
+[2025-11-09 13:11:32.289] [my_app_logger] [info] Moved to position 6 0
+[2025-11-09 13:11:32.289] [my_app_logger] [info] Text Render Process complete
+[2025-11-09 13:11:32.494] [my_app_logger] [info]   key Correct. Correct Count: 2
+[2025-11-09 13:11:32.494] [my_app_logger] [info] Character Count: 2
+[2025-11-09 13:11:32.494] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-09 13:11:32.494] [my_app_logger] [info] Moved to position 6 1
+[2025-11-09 13:11:32.494] [my_app_logger] [info] Text Render Process complete
+[2025-11-09 13:11:33.199] [my_app_logger] [info] b key Incorrect. Does not match: a. Incorrect Count: 1
+[2025-11-09 13:11:33.199] [my_app_logger] [info] Character Count: 3
+[2025-11-09 13:11:33.199] [my_app_logger] [info] Moved to position 6 2
+[2025-11-09 13:11:33.199] [my_app_logger] [info] Text Render Process complete
+[2025-11-09 13:11:33.292] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:33.579] [my_app_logger] [info] Back Key Pressed
+[2025-11-09 13:11:33.579] [my_app_logger] [info] IncorrectCount decreased to: 0
+[2025-11-09 13:11:33.579] [my_app_logger] [info] Character Count decreased to: 2
+[2025-11-09 13:11:33.579] [my_app_logger] [info] Moved to position 6 2
+[2025-11-09 13:11:33.579] [my_app_logger] [info] Text Render Process complete
+[2025-11-09 13:11:34.293] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:35.297] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:36.299] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:37.300] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:38.302] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:39.306] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:40.308] [my_app_logger] [info] Moved Cursor to position: 5 0
+[2025-11-09 13:11:41.309] [my_app_logger] [info] Moved Cursor to position: 5 0

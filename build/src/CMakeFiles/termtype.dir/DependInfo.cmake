@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sushant/Projects/TerminalType/src/design.cpp" "src/CMakeFiles/termtype.dir/design.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/design.cpp.o.d"
   "/home/sushant/Projects/TerminalType/src/file_source.cpp" "src/CMakeFiles/termtype.dir/file_source.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/file_source.cpp.o.d"
   "/home/sushant/Projects/TerminalType/src/input_validation.cpp" "src/CMakeFiles/termtype.dir/input_validation.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/input_validation.cpp.o.d"
+  "/home/sushant/Projects/TerminalType/src/logging.cpp" "src/CMakeFiles/termtype.dir/logging.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/logging.cpp.o.d"
   "/home/sushant/Projects/TerminalType/src/main.cpp" "src/CMakeFiles/termtype.dir/main.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/main.cpp.o.d"
   "/home/sushant/Projects/TerminalType/src/terminal_ctrl.cpp" "src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o" "gcc" "src/CMakeFiles/termtype.dir/terminal_ctrl.cpp.o.d"
   "" "src/termtype" "gcc" "src/CMakeFiles/termtype.dir/link.d"

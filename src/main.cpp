@@ -1,10 +1,13 @@
 #include "main.h"
+#include "logging.h"
 #include <chrono>
-
+#include <spdlog/spdlog.h>
+#include <thread>
 using namespace std::chrono_literals;
 using namespace std::chrono;
 
 int main(int argc, char *argv[]) {
+
   config_t config;
   std::fstream inFile;
   state_t state;
@@ -19,10 +22,18 @@ int main(int argc, char *argv[]) {
       return 1;
     }
   }
+  try {
+    init_logger("my_app_logger", "logs/logTest.log", spdlog::level::info);
+  } catch (const spdlog::spdlog_ex &ex) {
+    return 1;
+  }
 
+  initializeState(state);
+  spdlog::info("Starting Code");
   state.totalTimeSeconds = config.time;
   state.remainingTimeSeconds = config.time;
 
+  spdlog::info("Total Time: {} Remaining Time: {}", config.time, config.time);
   fileOps fileManager(config.filePathAbs);
   terminalCtrl terminalManager;
   fileManager.setup(state);
@@ -30,33 +41,64 @@ int main(int argc, char *argv[]) {
   screenState renderManager(terminalManager);
 
   renderManager.renderGradientBox(state);
+  spdlog::info("Initial Screen Rendering Complete");
 
+  std::chrono::steady_clock::time_point statsUpdateTime;
   char tempChar;
   while (true) {
-    tempChar = terminalManager.getCharacter();
-    if (!state.isRunning) {
-      state.startTime = steady_clock::now();
-      state.isRunning = true;
-    }
 
+    tempChar = terminalManager.getCharacter();
+    while (!state.isRunning) {
+      tempChar = terminalManager.getCharacter();
+      if (tempChar != '\0') {
+        state.startTime = steady_clock::now();
+        statsUpdateTime = steady_clock::now();
+        state.isRunning = true;
+      }
+    }
+    if (tempChar != '\0') {
+      inputValidator.getInputAndCompare(state, tempChar);
+    }
+    // Only calculate elapsed time if the timer has started
     auto elapsed =
         duration_cast<seconds>(steady_clock::now() - state.startTime);
     state.remainingTimeSeconds = state.totalTimeSeconds - elapsed.count();
-    inputValidator.getInputAndCompare(state, tempChar);
-    renderManager.renderTextProgress(state);
-    renderManager.updateStats(state);
+
+    // Check if time is up BEFORE rendering
     if (elapsed.count() >= state.totalTimeSeconds) {
       break;
     }
+
+    if (tempChar != '\0') {
+      renderManager.renderTextProgress(state);
+    }
+    if (duration_cast<seconds>(steady_clock::now() - statsUpdateTime) >=
+        duration(1s)) {
+      renderManager.updateStats(state);
+      statsUpdateTime = steady_clock::now();
+    }
+    // Small sleep to prevent busy-waiting and reduce CPU usage
+    std::this_thread::sleep_for(5ms);
   }
 
   state.isRunning = false;
-  // result_t res = inputValidator.getResult(time);
-  // renderManager.testComplete();
   std::cout << "\n\n============================ Test Complete ========="
             << std::endl;
-  inputValidator.print_result();
+  std::this_thread::sleep_for(duration(1s));
+  renderManager.clearTerminal();
   return 0;
+}
+
+void initializeState(state_t &state) {
+  state.isRunning = false;
+  state.result = {};
+  state.correctCount = 0;
+  state.incorrectCount = 0;
+  state.charCount = 0;
+  state.currentKeyStatus = keyStroke::CORRECT;
+  state.userInputSequence = std::vector<char>(10, '\0');
+  state.totalTimeSeconds = 0;
+  state.remainingTimeSeconds = 0;
 }
 
 bool configure(int size, char **args, config_s &config) {

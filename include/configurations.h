@@ -52,7 +52,6 @@ typedef struct state_s {
   int charCount;
   int incorrectCount;
   keyStroke currentKeyStatus;
-  screen_t ws;                      // not used right now
   std::vector<char> targetSequence; // not implemented right now
   std::vector<char> userInputSequence;
 

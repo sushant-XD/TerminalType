@@ -10,9 +10,6 @@ public:
   ~inputValidator();
   int getInputAndCompare(state_t &state, char ch);
 
-  result_t getResult(int time);
-  void print_result();
-
 private:
   result_t res;
   terminalCtrl &terminalManager;

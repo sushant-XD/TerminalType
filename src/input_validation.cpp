@@ -1,4 +1,5 @@
 #include "input_validation.h"
+#include <spdlog/spdlog.h>
 
 inputValidator::inputValidator(terminalCtrl &terminalManager)
     : terminalManager(terminalManager), res() {}
@@ -12,17 +13,22 @@ inputValidator::~inputValidator() {}
  * */
 int inputValidator::getInputAndCompare(state_t &state, char ch) {
   if (ch == '\b' || ch == 127) {
+    spdlog::info("Back Key Pressed");
     if (!state.userInputSequence.empty()) {
       state.userInputSequence.pop_back();
 
       if (state.incorrectCount > 0) {
         state.incorrectCount--;
+        spdlog::info("IncorrectCount decreased to: {}", state.incorrectCount);
       } else if (state.correctCount > 0) {
         state.correctCount--;
+        spdlog::info("CorrectCount decreased to: {}", state.correctCount);
       }
 
-      if (state.charCount > 0)
+      if (state.charCount > 0) {
         state.charCount--;
+        spdlog::info("Character Count decreased to: {}", state.charCount);
+      }
 
       state.currentKeyStatus = keyStroke::BACKSPACE;
     }
@@ -32,44 +38,29 @@ int inputValidator::getInputAndCompare(state_t &state, char ch) {
   state.userInputSequence.push_back(ch);
   if (state.incorrectCount > 0) {
     state.incorrectCount++;
+    spdlog::info("{} key incorrect. Incorrect Count: {}", ch,
+                 state.incorrectCount);
     state.currentKeyStatus = keyStroke::INCORRECT;
   } else {
     if (ch == state.targetSequence[state.charCount]) {
       state.correctCount++;
+
+      spdlog::info("{} key Correct. Correct Count: {}", ch, state.correctCount);
       state.currentKeyStatus = keyStroke::CORRECT;
     } else {
       state.incorrectCount++;
+      spdlog::info("{} key Incorrect. Does not match: {}. Incorrect Count: {}",
+                   ch, state.targetSequence[state.charCount],
+                   state.incorrectCount);
       state.currentKeyStatus = keyStroke::INCORRECT;
     }
   }
   state.charCount++;
-
+  spdlog::info("Character Count: {}", state.charCount);
   if (ch == ' ' && state.incorrectCount == 0) {
     state.userInputSequence.clear();
+    spdlog::info("Cleared userInputSequence. Correct word detected.");
   }
 
   return 0;
-}
-
-result_t inputValidator::getResult(int time) {
-  res.result_id = 0;
-  // res.timeTaken = time;
-  // res.level = EASY;
-  // res.correct_characters = correctCount;
-  // res.total_characters = characterCount;
-  // if (res.total_characters == 0) {
-  //   res.accuracy = 0;
-  // } else {
-  //   res.accuracy = 100 * (static_cast<float>((res.correct_characters) * 1.0 /
-  //                                            res.total_characters));
-  // }
-  return res;
-}
-
-void inputValidator::print_result() {
-  // std::cout << "Time Taken:          " << res.timeTaken << std::endl;
-  // std::cout << "Level:               " << res.level << std::endl;
-  // std::cout << "Correct Characters:  " << res.correct_characters << "/"
-  //           << res.total_characters << std::endl;
-  // std::cout << "Accuracy:            " << res.accuracy << "%" << std::endl;
 }

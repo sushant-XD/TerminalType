@@ -19,6 +19,8 @@ terminalCtrl::~terminalCtrl() {
 void terminalCtrl::setTerminalNonBlocking() {
   terminal_settings.c_lflag &= ~ICANON; // enable non-canonical mode
   terminal_settings.c_lflag &= ~(ECHO | ECHOE | ECHOK | ECHONL);
+  terminal_settings.c_cc[VMIN] = 0;
+  terminal_settings.c_cc[VTIME] = 0;
   if (tcsetattr(input_fd, TCSANOW, &terminal_settings)) {
     // if setattr failed
     resetTerminal();
@@ -32,8 +34,11 @@ void terminalCtrl::setTerminalNonBlocking() {
 // characters)
 char terminalCtrl::getCharacter() {
   char tmpBuf[bufSize];
-  read(input_fd, tmpBuf, bufSize);
-  return tmpBuf[0];
+  size_t bytesRead = read(input_fd, tmpBuf, bufSize);
+  if (bytesRead > 0) {
+    return tmpBuf[0];
+  }
+  return '\0';
 }
 
 void terminalCtrl::writeToTerminal(char *ch, int size) {
