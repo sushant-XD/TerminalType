@@ -134,6 +134,7 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
   terminalManager.hideCursor();
   for (int i = 0; i < height; i++) {
     terminalManager.moveCursor(startRow + i, startCol);
+    spdlog::debug("Moving Cursor to: {}", startRow + i, startCol);
     for (int j = 0; j < width; j++) {
       if (i == 0) { // Top edge
         if (j == 0) {
@@ -165,9 +166,12 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
           // This is the interior space - print text if available
           int textLineIndex = i - 1; // Adjust for top border
           int textCharIndex = j - 1; // Adjust for left border
-
+          spdlog::debug("TextlineIndex: {} textCharIndex: {} textLines Size: "
+                        "{} textLine particular size",
+                        textLineIndex, textCharIndex, textLines.size(),
+                        textLines[textLineIndex].size());
           if (textLineIndex < textLines.size() &&
-              textCharIndex < textLines[textLineIndex].length()) {
+              !textLines[textLineIndex].empty()) {
             // Calculate padding for center alignment
             int padding = 0;
             if (centerAlign) {
@@ -176,11 +180,13 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
 
             if (textCharIndex >= padding &&
                 textCharIndex < padding + textLines[textLineIndex].length()) {
-              std::string chStr(
-                  1, textLines[textLineIndex][textCharIndex - padding]);
-              terminalManager.writeToTerminal((char *)chStr.c_str(),
-                                              chStr.length());
+              terminalManager.writeToTerminal(
+                  &textLines[textLineIndex][textCharIndex - padding], 1);
+              spdlog::debug("Printing {} at {}{}",
+                            textLines[textLineIndex][textCharIndex - padding],
+                            i, j);
             } else {
+              spdlog::debug("Printing space at {}{}", i, j);
               terminalManager.writeToTerminal(" ", 1);
             }
           } else {

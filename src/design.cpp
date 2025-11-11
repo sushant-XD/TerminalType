@@ -97,6 +97,10 @@ void screenState::renderGradientBox(state_t &state) {
   uiWidget mainScreen(terminalWidth, terminalHeight, terminalManager);
   uiWidget header(windowWidth, windowHeight, terminalManager);
   uiWidget stats(windowWidth, windowHeight, terminalManager);
+  uiWidget mainTextBox(windowWidth, windowHeight, terminalManager);
+
+  std::string displayText(state.targetSequence.begin(),
+                          state.targetSequence.end());
 
   mainScreen.drawBox(windowStartCol, windowStartRow, windowWidth, windowHeight,
                      true, borderShape::SHARP_SINGLE, (char *)BLUE, false);
@@ -106,7 +110,10 @@ void screenState::renderGradientBox(state_t &state) {
   stats.drawBoxWithText(windowStartCol + 1, StatsStartRow, windowWidth - 2, 3,
                         statsContent, true, borderShape::SHARP_SINGLE,
                         (char *)WHITE, (char *)WHITE, true);
-
+  mainTextBox.drawBoxWithText(
+      windowStartCol + 1, displayTextStartRow, windowWidth - 2,
+      displayText.length() / (windowWidth - 2), displayText, true,
+      borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, true);
   spdlog::info("Render Gradient Setup complete");
 }
 
