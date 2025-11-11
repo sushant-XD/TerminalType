@@ -125,8 +125,14 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
   this->initialPosRow = startRow;
   this->width = width;
   this->height = height;
+  if (textLines.size() > 1) {
+
+    this->textStartCol = startCol;
+  } else {
+    int padding = (innerWidth - textLines[0].length()) / 2;
+    this->textStartCol = padding;
+  }
   this->textStartRow = startRow + 1;
-  this->textStartCol = 2;
   this->endRow = startRow + height;
   this->initialText = text;
 
@@ -134,7 +140,6 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
   terminalManager.hideCursor();
   for (int i = 0; i < height; i++) {
     terminalManager.moveCursor(startRow + i, startCol);
-    spdlog::debug("Moving Cursor to: {}", startRow + i, startCol);
     for (int j = 0; j < width; j++) {
       if (i == 0) { // Top edge
         if (j == 0) {
@@ -166,10 +171,6 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
           // This is the interior space - print text if available
           int textLineIndex = i - 1; // Adjust for top border
           int textCharIndex = j - 1; // Adjust for left border
-          spdlog::debug("TextlineIndex: {} textCharIndex: {} textLines Size: "
-                        "{} textLine particular size",
-                        textLineIndex, textCharIndex, textLines.size(),
-                        textLines[textLineIndex].size());
           if (textLineIndex < textLines.size() &&
               !textLines[textLineIndex].empty()) {
             // Calculate padding for center alignment
@@ -182,11 +183,7 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
                 textCharIndex < padding + textLines[textLineIndex].length()) {
               terminalManager.writeToTerminal(
                   &textLines[textLineIndex][textCharIndex - padding], 1);
-              spdlog::debug("Printing {} at {}{}",
-                            textLines[textLineIndex][textCharIndex - padding],
-                            i, j);
             } else {
-              spdlog::debug("Printing space at {}{}", i, j);
               terminalManager.writeToTerminal(" ", 1);
             }
           } else {

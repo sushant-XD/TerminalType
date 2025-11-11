@@ -12,7 +12,15 @@
 using namespace std::chrono;
 
 screenState::screenState(terminalCtrl &terminalManager)
-    : terminalManager(terminalManager) {
+    : terminalManager(terminalManager),
+      mainScreen(terminalManager.getTerminalWidth(),
+                 terminalManager.getTerminalWidth(), terminalManager),
+      header(terminalManager.getTerminalWidth(),
+             terminalManager.getTerminalWidth(), terminalManager),
+      stats(terminalManager.getTerminalWidth(),
+            terminalManager.getTerminalWidth(), terminalManager),
+      mainTextBox(terminalManager.getTerminalWidth(),
+                  terminalManager.getTerminalWidth(), terminalManager) {
   clearTerminal();
   terminalHeight = terminalManager.getTerminalHeight();
   terminalWidth = terminalManager.getTerminalWidth();
@@ -46,42 +54,13 @@ void screenState::updateStats(state_t &state) {
     float timeInMinutes = elapsed.count() / 60.0f;
     int wpm = timeInMinutes > 0 ? (state.correctCount / 5) / timeInMinutes : 0;
 
-    // Clear the line
-
-    // Recreate the same formatting as drawStats()
-    int padding = 4;
-    int innerPadding = 6;
-    int actualWidth = windowWidth - (padding * 2);
-
-    std::string left =
-        "Time Remaining: " + std::to_string(state.remainingTimeSeconds) + "s";
-    std::string right = "WPM: " + std::to_string(wpm);
-    std::string middle = "|";
-
-    int totalContentWidth =
-        left.size() + middle.size() + right.size() + innerPadding * 2;
-    int sideSpace = (actualWidth - totalContentWidth) / 2;
-
-    // Build the line exactly like drawStats does
-    std::string statsLine = std::string(sideSpace, ' ') + left +
-                            std::string(innerPadding, ' ') + middle +
-                            std::string(innerPadding, ' ') + right;
-
-    int displayIndex = state.charCount;
-    int rem = displayIndex / windowWidth;
-    int inputRow = 6 + rem;
-    int inputCol = displayIndex % windowWidth;
-
-    // Move to stats line
-    terminalManager.hideCursor();
-    terminalManager.moveCursor(StatsStartRow, 0);
-    terminalManager.writeToTerminal((char *)"\033[2K", 4); // Clear entire line
-    spdlog::info("Moved Cursor to position: {} 0", StatsStartRow);
-    terminalManager.writeToTerminal((char *)statsLine.c_str(),
-                                    statsLine.length());
-    terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
-    terminalManager.moveCursor(inputRow, inputCol);
-    terminalManager.showCursor();
+    std::string statsContent =
+        "Time Remaining: " + std::to_string(state.remainingTimeSeconds) +
+        "    |    WPM: " + std::to_string(wpm);
+    int StatsStartRow = stats.getTextStartRow();
+    int StatsStartCol = stats.getTextStartColumn();
+    stats.updateText((char *)statsContent.c_str(), StatsStartRow, StatsStartCol,
+                     statsContent.size(), (char *)WHITE);
   }
 }
 
@@ -94,26 +73,20 @@ void screenState::renderGradientBox(state_t &state) {
   std::string statsContent =
       "Time: " + std::to_string(state.totalTimeSeconds) + "    |    Level: 0";
 
-  uiWidget mainScreen(terminalWidth, terminalHeight, terminalManager);
-  uiWidget header(windowWidth, windowHeight, terminalManager);
-  uiWidget stats(windowWidth, windowHeight, terminalManager);
-  uiWidget mainTextBox(windowWidth, windowHeight, terminalManager);
-
   std::string displayText(state.targetSequence.begin(),
                           state.targetSequence.end());
 
   mainScreen.drawBox(windowStartCol, windowStartRow, windowWidth, windowHeight,
-                     true, borderShape::SHARP_SINGLE, (char *)BLUE, false);
+                     true, borderShape::SHARP_SINGLE, (char *)BLUE, true);
   header.drawBoxWithText(windowStartCol + 1, headerStartRow, windowWidth - 2, 3,
                          headerTitle, true, borderShape::SHARP_SINGLE,
                          (char *)WHITE, (char *)WHITE, true);
   stats.drawBoxWithText(windowStartCol + 1, StatsStartRow, windowWidth - 2, 3,
                         statsContent, true, borderShape::SHARP_SINGLE,
-                        (char *)WHITE, (char *)WHITE, true);
+                        (char *)WHITE, (char *)WHITE, false);
   mainTextBox.drawBoxWithText(
-      windowStartCol + 1, displayTextStartRow, windowWidth - 2,
-      displayText.length() / (windowWidth - 2), displayText, true,
-      borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, true);
+      windowStartCol + 1, displayTextStartRow, windowWidth - 2, 6, displayText,
+      true, borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
   spdlog::info("Render Gradient Setup complete");
 }
 
@@ -132,23 +105,19 @@ void screenState::renderTextProgress(state_t &state) {
     return;
   }
 
-  int rem = displayIndex / StatsStartRow;
-  int row = 6 + rem;
-  int col = displayIndex % windowWidth;
-  terminalManager.moveCursor(row, col);
-  spdlog::info("Moved to position {} {}", row, col);
+  int currentTextRow = mainTextBox.getTextStartRow();
+  int currentTextCol = mainTextBox.getTextStartColumn() + displayIndex + 1;
+
   if (state.currentKeyStatus == keyStroke::CORRECT) {
-    terminalManager.writeToTerminal((char *)GREEN, strlen(GREEN));
+    mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
+                           currentTextRow, currentTextCol, 1, (char *)GREEN);
   } else if (state.currentKeyStatus == keyStroke::INCORRECT) {
-    terminalManager.writeToTerminal((char *)RED, strlen(RED));
+
+    mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
+                           currentTextRow, currentTextCol, 1, (char *)RED);
   } else if (state.currentKeyStatus == keyStroke::BACKSPACE) {
-    terminalManager.writeToTerminal((char *)WHITE, strlen(WHITE));
-  }
-  terminalManager.writeToTerminal((char *)&state.targetSequence[displayIndex],
-                                  1);
-  terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
-  if (state.currentKeyStatus == keyStroke::BACKSPACE) {
-    terminalManager.moveCursor(row, col);
+    mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
+                           currentTextRow, currentTextCol, 1, (char *)WHITE);
   }
   spdlog::info("Text Render progress complete");
 }

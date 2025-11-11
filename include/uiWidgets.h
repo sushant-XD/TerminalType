@@ -1,6 +1,6 @@
 #pragma once
+#include "box_chars.h"
 #include "configurations.h"
-#include "design.h"
 #include "terminal_ctrl.h"
 #include <spdlog/spdlog.h>
 #include <string>
@@ -52,6 +52,10 @@ public:
   uiError erase();
 
   int getEndRow() { return endRow; }
+  int getTextStartRow() { return textStartRow; }
+  int getTextStartColumn() { return textStartCol; }
+  int getInitialPositionRow() { return initialPosRow; }
+  int getInitialPositionColumn() { return initialPosCol; }
 
 private:
   bool widgetDrawn;

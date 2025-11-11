@@ -1,789 +1,256 @@
-[2025-11-11 11:22:02.941] [my_app_logger] [info] Starting Code
-[2025-11-11 11:22:02.941] [my_app_logger] [info] Total Time: 10 Remaining Time: 10
-[2025-11-11 11:22:02.941] [my_app_logger] [debug] Height of terminal: 30,windowWidth of terminal: 120
-[2025-11-11 11:22:02.941] [my_app_logger] [debug] Height of Window: 25windowWidth of Window: 100 Start Position: 1,1
-[2025-11-11 11:22:02.941] [my_app_logger] [info] terminal cleared
-[2025-11-11 11:22:02.953] [my_app_logger] [info] Text Lines: Terminal Typing Test
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Moving Cursor to: 2
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Moving Cursor to: 3
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 0 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 11
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 1 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 12
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 2 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 13
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 3 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 14
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 4 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 15
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 5 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 16
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 6 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 17
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 7 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 18
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 8 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 19
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 9 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 110
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 10 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 111
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 11 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 112
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 12 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 113
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 13 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 114
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 14 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 115
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 15 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 116
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 16 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 117
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 17 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 118
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 18 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 119
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 19 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 120
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 20 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 121
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 21 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 122
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 22 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 123
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 23 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 124
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 24 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 125
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 25 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 126
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 26 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 127
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 27 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 128
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 28 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 129
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 29 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 130
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 30 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 131
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 31 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 132
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 32 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 133
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 33 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 134
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 34 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 135
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 35 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] Printing space at 136
-[2025-11-11 11:22:02.953] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 36 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 137
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 37 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 138
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 38 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing T at 139
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 39 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing e at 140
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 40 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing r at 141
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 41 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing m at 142
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 42 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing i at 143
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 43 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing n at 144
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 44 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing a at 145
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 45 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing l at 146
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 46 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing   at 147
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 47 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing T at 148
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 48 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing y at 149
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 49 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing p at 150
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 50 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing i at 151
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 51 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing n at 152
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 52 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing g at 153
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 53 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing   at 154
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 54 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing T at 155
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 55 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing e at 156
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 56 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing s at 157
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 57 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing t at 158
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 58 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 159
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 59 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 160
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 60 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 161
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 61 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 162
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 62 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 163
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 63 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 164
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 64 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 165
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 65 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 166
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 66 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 167
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 67 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 168
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 68 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 169
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 69 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 170
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 70 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 171
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 71 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 172
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 72 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 173
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 73 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 174
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 74 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 175
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 75 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 176
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 76 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 177
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 77 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 178
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 78 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 179
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 79 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 180
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 80 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 181
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 81 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 182
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 82 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 183
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 83 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 184
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 84 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 185
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 85 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 186
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 86 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 187
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 87 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 188
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 88 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 189
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 89 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 190
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 90 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 191
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 91 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 192
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 92 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 193
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 93 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 194
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 94 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 195
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 95 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Printing space at 196
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Moving Cursor to: 4
-[2025-11-11 11:22:02.954] [my_app_logger] [info] Text Lines: Time: 10 | Level: 0
-[2025-11-11 11:22:02.954] [my_app_logger] [debug] Moving Cursor to: 5
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Moving Cursor to: 6
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 0 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 11
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 1 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 12
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 2 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 13
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 3 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 14
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 4 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 15
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 5 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 16
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 6 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 17
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 7 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 18
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 8 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 19
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 9 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 110
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 10 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 111
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 11 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 112
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 12 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 113
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 13 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 114
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 14 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 115
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 15 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 116
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 16 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 117
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 17 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 118
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 18 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 119
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 19 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 120
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 20 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 121
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 21 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 122
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 22 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 123
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 23 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 124
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 24 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 125
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 25 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 126
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 26 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 127
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 27 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 128
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 28 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 129
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 29 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 130
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 30 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 131
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 31 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 132
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 32 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 133
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 33 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 134
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 34 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 135
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 35 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 136
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 36 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 137
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 37 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 138
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 38 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing T at 139
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 39 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing i at 140
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 40 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing m at 141
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 41 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing e at 142
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 42 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing : at 143
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 43 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing   at 144
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 44 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing 1 at 145
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 45 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing 0 at 146
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 46 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing   at 147
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 47 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing | at 148
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 48 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing   at 149
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 49 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing L at 150
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 50 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing e at 151
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 51 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing v at 152
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 52 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing e at 153
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 53 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing l at 154
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 54 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing : at 155
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 55 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing   at 156
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 56 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing 0 at 157
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 57 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 158
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 58 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 159
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 59 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 160
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 60 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 161
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 61 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 162
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 62 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 163
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 63 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 164
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 64 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 165
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 65 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 166
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 66 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 167
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 67 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 168
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 68 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 169
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 69 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 170
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 70 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 171
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 71 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.955] [my_app_logger] [debug] Printing space at 172
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 72 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 173
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 73 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 174
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 74 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 175
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 75 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 176
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 76 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 177
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 77 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 178
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 78 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 179
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 79 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 180
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 80 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 181
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 81 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 182
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 82 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 183
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 83 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 184
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 84 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 185
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 85 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 186
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 86 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 187
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 87 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 188
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 88 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 189
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 89 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 190
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 90 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 191
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 91 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 192
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 92 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 193
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 93 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 194
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 94 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 195
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 95 textLines Size: 1 textLine particular size
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Printing space at 196
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Moving Cursor to: 7
-[2025-11-11 11:22:02.956] [my_app_logger] [warning] Text too long, will be truncated to fit in box
-[2025-11-11 11:22:02.956] [my_app_logger] [info] Text Lines: a about all also and as at be because but by can come could day do even find first for from get
-[2025-11-11 11:22:02.956] [my_app_logger] [debug] Moving Cursor to: 8
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Moving Cursor to: 9
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 0 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 11
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 1 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 12
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 2 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 13
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 3 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing b at 14
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 4 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing o at 15
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 5 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing u at 16
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 6 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing t at 17
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 7 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 18
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 8 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 19
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 9 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing l at 110
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 10 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing l at 111
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 11 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 112
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 12 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 113
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 13 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing l at 114
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 14 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing s at 115
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 15 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing o at 116
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 16 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 117
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 17 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 118
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 18 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing n at 119
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 19 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing d at 120
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 20 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 121
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 21 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 122
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 22 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing s at 123
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 23 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 124
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 24 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 125
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 25 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing t at 126
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 26 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 127
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 27 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing b at 128
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 28 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing e at 129
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 29 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 130
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 30 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing b at 131
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 31 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing e at 132
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 32 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing c at 133
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 33 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 134
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 34 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing u at 135
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 35 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing s at 136
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 36 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing e at 137
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 37 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 138
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 38 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing b at 139
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 39 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing u at 140
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 40 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing t at 141
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 41 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 142
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 42 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing b at 143
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 43 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing y at 144
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 44 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 145
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 45 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing c at 146
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 46 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 147
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 47 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing n at 148
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 48 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 149
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 49 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing c at 150
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 50 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing o at 151
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 51 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing m at 152
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 52 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing e at 153
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 53 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 154
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 54 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing c at 155
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 55 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing o at 156
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 56 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing u at 157
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 57 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing l at 158
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 58 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing d at 159
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 59 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 160
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 60 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing d at 161
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 61 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing a at 162
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 62 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing y at 163
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 63 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 164
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 64 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing d at 165
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 65 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing o at 166
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 66 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 167
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 67 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing e at 168
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 68 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing v at 169
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 69 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing e at 170
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 70 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing n at 171
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 71 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 172
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 72 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing f at 173
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 73 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing i at 174
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 74 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing n at 175
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 75 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing d at 176
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 76 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 177
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 77 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing f at 178
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 78 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing i at 179
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 79 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing r at 180
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 80 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing s at 181
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 81 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing t at 182
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 82 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing   at 183
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 83 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] Printing f at 184
-[2025-11-11 11:22:02.957] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 84 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing o at 185
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 85 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing r at 186
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 86 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 187
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 87 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing f at 188
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 88 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing r at 189
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 89 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing o at 190
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 90 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing m at 191
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 91 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 192
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 92 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing g at 193
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 93 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 194
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 94 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing t at 195
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 0 textCharIndex: 95 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing space at 196
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Moving Cursor to: 10
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 0 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing space at 21
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 1 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing g at 22
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 2 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 23
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 3 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing v at 24
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 4 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 25
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 5 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 26
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 6 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing g at 27
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 7 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing o at 28
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 8 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 29
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 9 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing h at 210
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 10 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing a at 211
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 11 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing v at 212
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 12 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 213
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 13 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 214
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 14 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing h at 215
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 15 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 216
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 16 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 217
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 17 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing h at 218
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 18 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 219
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 19 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing r at 220
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 20 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 221
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 21 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing h at 222
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 22 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 223
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 23 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing r at 224
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 24 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 225
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 25 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 226
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 26 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing h at 227
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 27 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 228
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 28 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing m at 229
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 29 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 230
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 30 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing h at 231
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 31 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 232
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 32 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing s at 233
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 33 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 234
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 34 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing h at 235
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 35 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing o at 236
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 36 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing w at 237
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 37 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 238
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 38 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing I at 239
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 39 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 240
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 40 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 241
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 41 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing f at 242
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 42 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 243
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 43 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 244
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 44 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing n at 245
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 45 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 246
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 46 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 247
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 47 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing n at 248
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 48 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing t at 249
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 49 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing o at 250
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 50 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 251
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 51 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 252
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 52 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing t at 253
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 53 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 254
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 54 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 255
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 55 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing t at 256
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 56 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing s at 257
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 57 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 258
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 58 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing j at 259
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 59 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing u at 260
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 60 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing s at 261
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 61 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing t at 262
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 62 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 263
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 63 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing k at 264
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 64 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing n at 265
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 65 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing o at 266
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 66 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing w at 267
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 67 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 268
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 68 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing l at 269
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 69 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing i at 270
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 70 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing k at 271
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 71 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 272
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 72 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 273
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 73 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing l at 274
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 74 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing o at 275
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 75 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing o at 276
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 76 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing k at 277
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 77 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 278
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 78 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing m at 279
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 79 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing a at 280
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 80 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing k at 281
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 81 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 282
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 82 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 283
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 83 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing m at 284
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 84 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing a at 285
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 85 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing n at 286
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 86 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 287
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 87 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing m at 288
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 88 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing a at 289
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 89 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing n at 290
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 90 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing y at 291
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 91 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing   at 292
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 92 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing m at 293
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 93 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing e at 294
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 94 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing space at 295
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] TextlineIndex: 1 textCharIndex: 95 textLines Size: 2 textLine particular size
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Printing space at 296
-[2025-11-11 11:22:02.958] [my_app_logger] [debug] Moving Cursor to: 11
-[2025-11-11 11:22:02.959] [my_app_logger] [info] Render Gradient Setup complete
-[2025-11-11 11:22:02.959] [my_app_logger] [info] Initial Screen Rendering Complete
+[2025-11-11 15:37:53.803] [my_app_logger] [info] Starting Code
+[2025-11-11 15:37:53.803] [my_app_logger] [info] Total Time: 10 Remaining Time: 10
+[2025-11-11 15:37:53.803] [my_app_logger] [debug] Height of terminal: 30,windowWidth of terminal: 120
+[2025-11-11 15:37:53.803] [my_app_logger] [debug] Height of Window: 25windowWidth of Window: 100 Start Position: 1,1
+[2025-11-11 15:37:53.803] [my_app_logger] [info] terminal cleared
+[2025-11-11 15:37:53.811] [my_app_logger] [info] Text Lines: Terminal Typing Test
+[2025-11-11 15:37:53.812] [my_app_logger] [info] Text Lines: Time: 10 | Level: 0
+[2025-11-11 15:37:53.813] [my_app_logger] [warning] Text too long, will be truncated to fit in box
+[2025-11-11 15:37:53.813] [my_app_logger] [info] Text Lines: a about all also and as at be because but by can come could day do even find first for from get
+[2025-11-11 15:37:53.815] [my_app_logger] [info] Render Gradient Setup complete
+[2025-11-11 15:37:53.815] [my_app_logger] [info] Initial Screen Rendering Complete
+[2025-11-11 15:37:54.436] [my_app_logger] [info] a key Correct. Correct Count: 1
+[2025-11-11 15:37:54.436] [my_app_logger] [info] Character Count: 1
+[2025-11-11 15:37:54.436] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:54.676] [my_app_logger] [info]   key Correct. Correct Count: 2
+[2025-11-11 15:37:54.676] [my_app_logger] [info] Character Count: 2
+[2025-11-11 15:37:54.676] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:37:54.676] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:55.005] [my_app_logger] [info] a key Correct. Correct Count: 3
+[2025-11-11 15:37:55.005] [my_app_logger] [info] Character Count: 3
+[2025-11-11 15:37:55.005] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:55.129] [my_app_logger] [info] b key Correct. Correct Count: 4
+[2025-11-11 15:37:55.129] [my_app_logger] [info] Character Count: 4
+[2025-11-11 15:37:55.129] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:55.294] [my_app_logger] [info] o key Correct. Correct Count: 5
+[2025-11-11 15:37:55.294] [my_app_logger] [info] Character Count: 5
+[2025-11-11 15:37:55.294] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:55.407] [my_app_logger] [info] u key Correct. Correct Count: 6
+[2025-11-11 15:37:55.407] [my_app_logger] [info] Character Count: 6
+[2025-11-11 15:37:55.407] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:55.578] [my_app_logger] [info] t key Correct. Correct Count: 7
+[2025-11-11 15:37:55.578] [my_app_logger] [info] Character Count: 7
+[2025-11-11 15:37:55.578] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:55.686] [my_app_logger] [info]   key Correct. Correct Count: 8
+[2025-11-11 15:37:55.686] [my_app_logger] [info] Character Count: 8
+[2025-11-11 15:37:55.686] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:37:55.686] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.025] [my_app_logger] [info] a key Correct. Correct Count: 9
+[2025-11-11 15:37:56.025] [my_app_logger] [info] Character Count: 9
+[2025-11-11 15:37:56.025] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.143] [my_app_logger] [info] l key Correct. Correct Count: 10
+[2025-11-11 15:37:56.143] [my_app_logger] [info] Character Count: 10
+[2025-11-11 15:37:56.143] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.283] [my_app_logger] [info] l key Correct. Correct Count: 11
+[2025-11-11 15:37:56.283] [my_app_logger] [info] Character Count: 11
+[2025-11-11 15:37:56.283] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.391] [my_app_logger] [info]   key Correct. Correct Count: 12
+[2025-11-11 15:37:56.391] [my_app_logger] [info] Character Count: 12
+[2025-11-11 15:37:56.391] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:37:56.391] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.560] [my_app_logger] [info] a key Correct. Correct Count: 13
+[2025-11-11 15:37:56.560] [my_app_logger] [info] Character Count: 13
+[2025-11-11 15:37:56.560] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.648] [my_app_logger] [info] l key Correct. Correct Count: 14
+[2025-11-11 15:37:56.648] [my_app_logger] [info] Character Count: 14
+[2025-11-11 15:37:56.648] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.803] [my_app_logger] [info] s key Correct. Correct Count: 15
+[2025-11-11 15:37:56.803] [my_app_logger] [info] Character Count: 15
+[2025-11-11 15:37:56.803] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.910] [my_app_logger] [info] o key Correct. Correct Count: 16
+[2025-11-11 15:37:56.910] [my_app_logger] [info] Character Count: 16
+[2025-11-11 15:37:56.910] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:56.992] [my_app_logger] [info]   key Correct. Correct Count: 17
+[2025-11-11 15:37:56.992] [my_app_logger] [info] Character Count: 17
+[2025-11-11 15:37:56.992] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:37:56.992] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:57.116] [my_app_logger] [info] a key Correct. Correct Count: 18
+[2025-11-11 15:37:57.116] [my_app_logger] [info] Character Count: 18
+[2025-11-11 15:37:57.116] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:57.197] [my_app_logger] [info] n key Correct. Correct Count: 19
+[2025-11-11 15:37:57.197] [my_app_logger] [info] Character Count: 19
+[2025-11-11 15:37:57.198] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:57.347] [my_app_logger] [info] d key Correct. Correct Count: 20
+[2025-11-11 15:37:57.347] [my_app_logger] [info] Character Count: 20
+[2025-11-11 15:37:57.347] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:57.393] [my_app_logger] [info]   key Correct. Correct Count: 21
+[2025-11-11 15:37:57.393] [my_app_logger] [info] Character Count: 21
+[2025-11-11 15:37:57.393] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:37:57.393] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:57.517] [my_app_logger] [info] a key Correct. Correct Count: 22
+[2025-11-11 15:37:57.517] [my_app_logger] [info] Character Count: 22
+[2025-11-11 15:37:57.517] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:57.593] [my_app_logger] [info] s key Correct. Correct Count: 23
+[2025-11-11 15:37:57.593] [my_app_logger] [info] Character Count: 23
+[2025-11-11 15:37:57.593] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:57.737] [my_app_logger] [info]   key Correct. Correct Count: 24
+[2025-11-11 15:37:57.737] [my_app_logger] [info] Character Count: 24
+[2025-11-11 15:37:57.737] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:37:57.737] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:58.650] [my_app_logger] [info] a key Correct. Correct Count: 25
+[2025-11-11 15:37:58.650] [my_app_logger] [info] Character Count: 25
+[2025-11-11 15:37:58.650] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:58.768] [my_app_logger] [info] t key Correct. Correct Count: 26
+[2025-11-11 15:37:58.768] [my_app_logger] [info] Character Count: 26
+[2025-11-11 15:37:58.768] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:58.886] [my_app_logger] [info]   key Correct. Correct Count: 27
+[2025-11-11 15:37:58.886] [my_app_logger] [info] Character Count: 27
+[2025-11-11 15:37:58.886] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:37:58.886] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.093] [my_app_logger] [info] b key Correct. Correct Count: 28
+[2025-11-11 15:37:59.093] [my_app_logger] [info] Character Count: 28
+[2025-11-11 15:37:59.094] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.206] [my_app_logger] [info] e key Correct. Correct Count: 29
+[2025-11-11 15:37:59.206] [my_app_logger] [info] Character Count: 29
+[2025-11-11 15:37:59.206] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.278] [my_app_logger] [info]   key Correct. Correct Count: 30
+[2025-11-11 15:37:59.278] [my_app_logger] [info] Character Count: 30
+[2025-11-11 15:37:59.278] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:37:59.279] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.470] [my_app_logger] [info] b key Correct. Correct Count: 31
+[2025-11-11 15:37:59.470] [my_app_logger] [info] Character Count: 31
+[2025-11-11 15:37:59.470] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.557] [my_app_logger] [info] e key Correct. Correct Count: 32
+[2025-11-11 15:37:59.557] [my_app_logger] [info] Character Count: 32
+[2025-11-11 15:37:59.557] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.628] [my_app_logger] [info] c key Correct. Correct Count: 33
+[2025-11-11 15:37:59.628] [my_app_logger] [info] Character Count: 33
+[2025-11-11 15:37:59.628] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.716] [my_app_logger] [info] a key Correct. Correct Count: 34
+[2025-11-11 15:37:59.716] [my_app_logger] [info] Character Count: 34
+[2025-11-11 15:37:59.716] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.855] [my_app_logger] [info] u key Correct. Correct Count: 35
+[2025-11-11 15:37:59.855] [my_app_logger] [info] Character Count: 35
+[2025-11-11 15:37:59.855] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:37:59.958] [my_app_logger] [info] s key Correct. Correct Count: 36
+[2025-11-11 15:37:59.958] [my_app_logger] [info] Character Count: 36
+[2025-11-11 15:37:59.958] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:00.025] [my_app_logger] [info] s key Incorrect. Does not match: e. Incorrect Count: 1
+[2025-11-11 15:38:00.025] [my_app_logger] [info] Character Count: 37
+[2025-11-11 15:38:00.025] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:00.050] [my_app_logger] [info] e key incorrect. Incorrect Count: 2
+[2025-11-11 15:38:00.050] [my_app_logger] [info] Character Count: 38
+[2025-11-11 15:38:00.050] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:00.122] [my_app_logger] [info]   key incorrect. Incorrect Count: 3
+[2025-11-11 15:38:00.122] [my_app_logger] [info] Character Count: 39
+[2025-11-11 15:38:00.122] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:00.293] [my_app_logger] [info] b key incorrect. Incorrect Count: 4
+[2025-11-11 15:38:00.293] [my_app_logger] [info] Character Count: 40
+[2025-11-11 15:38:00.294] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:00.475] [my_app_logger] [info] u key incorrect. Incorrect Count: 5
+[2025-11-11 15:38:00.475] [my_app_logger] [info] Character Count: 41
+[2025-11-11 15:38:00.475] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:00.812] [my_app_logger] [info] Back Key Pressed
+[2025-11-11 15:38:00.812] [my_app_logger] [info] IncorrectCount decreased to: 4
+[2025-11-11 15:38:00.812] [my_app_logger] [info] Character Count decreased to: 40
+[2025-11-11 15:38:00.812] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:00.965] [my_app_logger] [info] Back Key Pressed
+[2025-11-11 15:38:00.965] [my_app_logger] [info] IncorrectCount decreased to: 3
+[2025-11-11 15:38:00.965] [my_app_logger] [info] Character Count decreased to: 39
+[2025-11-11 15:38:00.966] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:01.108] [my_app_logger] [info] Back Key Pressed
+[2025-11-11 15:38:01.108] [my_app_logger] [info] IncorrectCount decreased to: 2
+[2025-11-11 15:38:01.108] [my_app_logger] [info] Character Count decreased to: 38
+[2025-11-11 15:38:01.108] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:01.256] [my_app_logger] [info] Back Key Pressed
+[2025-11-11 15:38:01.256] [my_app_logger] [info] IncorrectCount decreased to: 1
+[2025-11-11 15:38:01.256] [my_app_logger] [info] Character Count decreased to: 37
+[2025-11-11 15:38:01.256] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:01.389] [my_app_logger] [info] Back Key Pressed
+[2025-11-11 15:38:01.389] [my_app_logger] [info] IncorrectCount decreased to: 0
+[2025-11-11 15:38:01.389] [my_app_logger] [info] Character Count decreased to: 36
+[2025-11-11 15:38:01.389] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:01.513] [my_app_logger] [info] e key Correct. Correct Count: 37
+[2025-11-11 15:38:01.513] [my_app_logger] [info] Character Count: 37
+[2025-11-11 15:38:01.513] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:01.605] [my_app_logger] [info]   key Correct. Correct Count: 38
+[2025-11-11 15:38:01.605] [my_app_logger] [info] Character Count: 38
+[2025-11-11 15:38:01.605] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:38:01.605] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:01.801] [my_app_logger] [info] b key Correct. Correct Count: 39
+[2025-11-11 15:38:01.801] [my_app_logger] [info] Character Count: 39
+[2025-11-11 15:38:01.801] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:01.982] [my_app_logger] [info] u key Correct. Correct Count: 40
+[2025-11-11 15:38:01.982] [my_app_logger] [info] Character Count: 40
+[2025-11-11 15:38:01.982] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.085] [my_app_logger] [info] t key Correct. Correct Count: 41
+[2025-11-11 15:38:02.085] [my_app_logger] [info] Character Count: 41
+[2025-11-11 15:38:02.085] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.162] [my_app_logger] [info]   key Correct. Correct Count: 42
+[2025-11-11 15:38:02.162] [my_app_logger] [info] Character Count: 42
+[2025-11-11 15:38:02.162] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:38:02.162] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.328] [my_app_logger] [info] b key Correct. Correct Count: 43
+[2025-11-11 15:38:02.328] [my_app_logger] [info] Character Count: 43
+[2025-11-11 15:38:02.328] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.504] [my_app_logger] [info] y key Correct. Correct Count: 44
+[2025-11-11 15:38:02.504] [my_app_logger] [info] Character Count: 44
+[2025-11-11 15:38:02.504] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.601] [my_app_logger] [info]   key Correct. Correct Count: 45
+[2025-11-11 15:38:02.601] [my_app_logger] [info] Character Count: 45
+[2025-11-11 15:38:02.601] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:38:02.601] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.709] [my_app_logger] [info] c key Correct. Correct Count: 46
+[2025-11-11 15:38:02.709] [my_app_logger] [info] Character Count: 46
+[2025-11-11 15:38:02.709] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.785] [my_app_logger] [info] a key Correct. Correct Count: 47
+[2025-11-11 15:38:02.785] [my_app_logger] [info] Character Count: 47
+[2025-11-11 15:38:02.785] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.888] [my_app_logger] [info] n key Correct. Correct Count: 48
+[2025-11-11 15:38:02.888] [my_app_logger] [info] Character Count: 48
+[2025-11-11 15:38:02.888] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:02.960] [my_app_logger] [info]   key Correct. Correct Count: 49
+[2025-11-11 15:38:02.960] [my_app_logger] [info] Character Count: 49
+[2025-11-11 15:38:02.960] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:38:02.960] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.032] [my_app_logger] [info] c key Correct. Correct Count: 50
+[2025-11-11 15:38:03.032] [my_app_logger] [info] Character Count: 50
+[2025-11-11 15:38:03.032] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.129] [my_app_logger] [info] o key Correct. Correct Count: 51
+[2025-11-11 15:38:03.129] [my_app_logger] [info] Character Count: 51
+[2025-11-11 15:38:03.129] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.211] [my_app_logger] [info] m key Correct. Correct Count: 52
+[2025-11-11 15:38:03.211] [my_app_logger] [info] Character Count: 52
+[2025-11-11 15:38:03.211] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.314] [my_app_logger] [info] e key Correct. Correct Count: 53
+[2025-11-11 15:38:03.314] [my_app_logger] [info] Character Count: 53
+[2025-11-11 15:38:03.314] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.406] [my_app_logger] [info]   key Correct. Correct Count: 54
+[2025-11-11 15:38:03.406] [my_app_logger] [info] Character Count: 54
+[2025-11-11 15:38:03.406] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:38:03.406] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.508] [my_app_logger] [info] c key Correct. Correct Count: 55
+[2025-11-11 15:38:03.508] [my_app_logger] [info] Character Count: 55
+[2025-11-11 15:38:03.509] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.601] [my_app_logger] [info] o key Correct. Correct Count: 56
+[2025-11-11 15:38:03.601] [my_app_logger] [info] Character Count: 56
+[2025-11-11 15:38:03.601] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.694] [my_app_logger] [info] u key Correct. Correct Count: 57
+[2025-11-11 15:38:03.694] [my_app_logger] [info] Character Count: 57
+[2025-11-11 15:38:03.694] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.802] [my_app_logger] [info] l key Correct. Correct Count: 58
+[2025-11-11 15:38:03.802] [my_app_logger] [info] Character Count: 58
+[2025-11-11 15:38:03.802] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.884] [my_app_logger] [info] d key Correct. Correct Count: 59
+[2025-11-11 15:38:03.884] [my_app_logger] [info] Character Count: 59
+[2025-11-11 15:38:03.884] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:03.966] [my_app_logger] [info]   key Correct. Correct Count: 60
+[2025-11-11 15:38:03.966] [my_app_logger] [info] Character Count: 60
+[2025-11-11 15:38:03.966] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:38:03.966] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:04.058] [my_app_logger] [info] d key Correct. Correct Count: 61
+[2025-11-11 15:38:04.058] [my_app_logger] [info] Character Count: 61
+[2025-11-11 15:38:04.058] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:04.104] [my_app_logger] [info] a key Correct. Correct Count: 62
+[2025-11-11 15:38:04.104] [my_app_logger] [info] Character Count: 62
+[2025-11-11 15:38:04.104] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:04.181] [my_app_logger] [info] y key Correct. Correct Count: 63
+[2025-11-11 15:38:04.181] [my_app_logger] [info] Character Count: 63
+[2025-11-11 15:38:04.181] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:04.268] [my_app_logger] [info]   key Correct. Correct Count: 64
+[2025-11-11 15:38:04.268] [my_app_logger] [info] Character Count: 64
+[2025-11-11 15:38:04.268] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-11 15:38:04.268] [my_app_logger] [info] Text Render progress complete
+[2025-11-11 15:38:04.360] [my_app_logger] [info] d key Correct. Correct Count: 65
+[2025-11-11 15:38:04.360] [my_app_logger] [info] Character Count: 65
+[2025-11-11 15:38:04.360] [my_app_logger] [info] Text Render progress complete

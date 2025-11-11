@@ -29,6 +29,10 @@ public:
   void appendToBuffer(std::vector<char> &buffer, const std::string &data);
 
 private:
+  uiWidget mainScreen;
+  uiWidget header;
+  uiWidget stats;
+  uiWidget mainTextBox;
   int terminalHeight;
   int terminalWidth;
 
