@@ -1,6 +1,7 @@
 #include "design.h"
 #include <ostream>
 #include <spdlog/spdlog.h>
+#include <string>
 #define BORDER_COLOR BCYAN
 #define DIVIDER_COLOR BBLACK
 #define TEXT_COLOR WHITE
@@ -11,117 +12,31 @@
 using namespace std::chrono;
 
 screenState::screenState(terminalCtrl &terminalManager)
-    : terminalManager(terminalManager), initialSetupComplete(false) {
+    : terminalManager(terminalManager) {
   clearTerminal();
-  height = terminalManager.getTerminalHeight();
-  width = terminalManager.getTerminalWidth();
-  spdlog::info("Height of terminal: {}, width of terminal: {}", height, width);
-  outerCommonPaddingLR = 4;
-  inputBoxPaddingLR = 3;
-  linSpacing = 1;
-  textStartLine = 6;
-  statsRow = 5;
+  terminalHeight = terminalManager.getTerminalHeight();
+  terminalWidth = terminalManager.getTerminalWidth();
+
+  windowWidth = terminalWidth - 20;
+  windowHeight = terminalHeight - 5;
+
+  windowStartRow = 1;
+  windowStartCol = 1;
+
+  headerStartRow = windowStartRow + 1;
+  StatsStartRow = headerStartRow + 3;
+  displayTextStartRow = StatsStartRow + 3;
+  spdlog::debug("Height of terminal: {},windowWidth of terminal: {}",
+                terminalHeight, terminalWidth);
+  spdlog::debug(
+      "Height of Window: {}windowWidth of Window: {} Start Position: {},{}",
+      windowHeight, windowWidth, windowStartRow, windowStartCol);
 }
 
 screenState::~screenState() {}
 
 void screenState::clearTerminal() {
   terminalManager.writeToTerminal((char *)CLS, strlen(CLS));
-}
-
-void screenState::drawHeader(std::string content) {
-  int contentLength = content.size();
-  int remainingLength = (width - contentLength - 2) / 2; // -2 for borders
-  std::vector<char> buffer;
-  buffer.reserve(width * 3 + contentLength + 100);
-  // Top line
-  appendToBuffer(buffer, BORDER_COLOR);
-  appendToBuffer(buffer, BoxChars::TOP_LEFT_ROUND);
-  for (int i = 0; i < width - 2; i++) {
-    appendToBuffer(buffer, BoxChars::HORIZONTAL);
-  }
-  appendToBuffer(buffer, BoxChars::TOP_RIGHT_ROUND);
-  appendToBuffer(buffer, CRESET);
-  appendToBuffer(buffer, "\r\n"); // Use \r\n for terminal newlines
-
-  // --- Content line ---
-  appendToBuffer(buffer, BORDER_COLOR);
-  appendToBuffer(buffer, BoxChars::VERTICAL);
-  appendToBuffer(buffer, CRESET);
-  appendToBuffer(buffer, std::string(remainingLength, ' '));
-  appendToBuffer(buffer, BWHITE);
-  appendToBuffer(buffer, content);
-  appendToBuffer(buffer, CRESET);
-  appendToBuffer(buffer, std::string(remainingLength, ' '));
-  appendToBuffer(buffer, BORDER_COLOR);
-  appendToBuffer(buffer, BoxChars::VERTICAL);
-  appendToBuffer(buffer, CRESET);
-  appendToBuffer(buffer, "\r\n");
-
-  // --- Divider line ---
-  appendToBuffer(buffer, DIVIDER_COLOR);
-  appendToBuffer(buffer, BoxChars::T_LEFT);
-  for (int i = 0; i < width - 2; i++) {
-    appendToBuffer(buffer, BoxChars::HORIZONTAL);
-  }
-  appendToBuffer(buffer, BoxChars::T_RIGHT);
-  appendToBuffer(buffer, CRESET);
-  appendToBuffer(buffer, "\r\n");
-
-  terminalManager.moveCursor(0, 0);
-  spdlog::info("Moved Cursor to position 0 0");
-  terminalManager.writeToTerminal(buffer.data(), buffer.size());
-}
-
-void screenState::drawStats(int timeRemaining, int speed, int level) {
-  int padding = 4;
-  int innerPadding = 6;
-  int actualWidth = width - (padding * 2);
-
-  std::string left = "Time Remaining: " + std::to_string(timeRemaining) + "s";
-  std::string right = "Level: " + std::to_string(level);
-  std::string middle = "|";
-
-  int totalContentWidth =
-      left.size() + middle.size() + right.size() + innerPadding * 2;
-  int sideSpace = (actualWidth - totalContentWidth) / 2;
-
-  std::vector<char> buffer;
-
-  // Build the strings first
-  std::string sideSpaceStr = std::string(sideSpace, ' ');
-  std::string innerPadStr = std::string(innerPadding, ' ');
-
-  // Append to the vector
-  appendToBuffer(buffer, sideSpaceStr);
-  appendToBuffer(buffer, left);
-  appendToBuffer(buffer, innerPadStr);
-  appendToBuffer(buffer, middle);
-  appendToBuffer(buffer, innerPadStr);
-  appendToBuffer(buffer, right);
-  appendToBuffer(buffer, "\r\n");
-
-  terminalManager.moveCursor(statsRow, 0);
-  spdlog::info("Moved Cursor to position: {} 0", statsRow);
-  terminalManager.writeToTerminal(buffer.data(), buffer.size());
-}
-
-void screenState::drawEmptyLine() {
-  std::vector<char> buffer;
-  buffer.reserve(width + 20); // Pre-allocate
-
-  appendToBuffer(buffer, BORDER_COLOR);
-  appendToBuffer(buffer, BoxChars::VERTICAL);
-  appendToBuffer(buffer, CRESET);
-  appendToBuffer(buffer, std::string(width - 2, ' '));
-  appendToBuffer(buffer, BORDER_COLOR);
-  appendToBuffer(buffer, BoxChars::VERTICAL);
-  appendToBuffer(buffer, CRESET);
-  appendToBuffer(buffer, "\r\n");
-
-  terminalManager.moveCursor(3, 0);
-  spdlog::info("Moved Cursor to position: 3 0");
-  terminalManager.writeToTerminal(buffer.data(), buffer.size());
 }
 
 void screenState::updateStats(state_t &state) {
@@ -136,7 +51,7 @@ void screenState::updateStats(state_t &state) {
     // Recreate the same formatting as drawStats()
     int padding = 4;
     int innerPadding = 6;
-    int actualWidth = width - (padding * 2);
+    int actualWidth = windowWidth - (padding * 2);
 
     std::string left =
         "Time Remaining: " + std::to_string(state.remainingTimeSeconds) + "s";
@@ -153,15 +68,15 @@ void screenState::updateStats(state_t &state) {
                             std::string(innerPadding, ' ') + right;
 
     int displayIndex = state.charCount;
-    int rem = displayIndex / width;
-    int inputRow = textStartLine + rem;
-    int inputCol = displayIndex % width;
+    int rem = displayIndex / windowWidth;
+    int inputRow = 6 + rem;
+    int inputCol = displayIndex % windowWidth;
 
     // Move to stats line
     terminalManager.hideCursor();
-    terminalManager.moveCursor(statsRow, 0);
+    terminalManager.moveCursor(StatsStartRow, 0);
     terminalManager.writeToTerminal((char *)"\033[2K", 4); // Clear entire line
-    spdlog::info("Moved Cursor to position: {} 0", statsRow);
+    spdlog::info("Moved Cursor to position: {} 0", StatsStartRow);
     terminalManager.writeToTerminal((char *)statsLine.c_str(),
                                     statsLine.length());
     terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
@@ -176,25 +91,22 @@ void screenState::renderGradientBox(state_t &state) {
   spdlog::info("terminal cleared");
 
   std::string headerTitle = "Terminal Typing Test";
+  std::string statsContent =
+      "Time: " + std::to_string(state.totalTimeSeconds) + "    |    Level: 0";
 
-  uiWidget header(width, height, terminalManager);
-  header.drawBox(2, 1, 30, 10, headerTitle, true, borderShape::SHARP_SINGLE,
-                 (char *)WHITE, true);
-  // drawHeader("Terminal Typing Test");
-  spdlog::info("Header drawing complete");
-  // drawEmptyLine();
-  // spdlog::info("Empty line drawing complete");
-  // drawStats(0, 0, 0);
-  // spdlog::info("Stats line drawing complete");
+  uiWidget mainScreen(terminalWidth, terminalHeight, terminalManager);
+  uiWidget header(windowWidth, windowHeight, terminalManager);
+  uiWidget stats(windowWidth, windowHeight, terminalManager);
 
-  // terminalManager.moveCursor(textStartLine, 0);
+  mainScreen.drawBox(windowStartCol, windowStartRow, windowWidth, windowHeight,
+                     true, borderShape::SHARP_SINGLE, (char *)BLUE, false);
+  header.drawBoxWithText(windowStartCol + 1, headerStartRow, windowWidth - 2, 3,
+                         headerTitle, true, borderShape::SHARP_SINGLE,
+                         (char *)WHITE, (char *)WHITE, true);
+  stats.drawBoxWithText(windowStartCol + 1, StatsStartRow, windowWidth - 2, 3,
+                        statsContent, true, borderShape::SHARP_SINGLE,
+                        (char *)WHITE, (char *)WHITE, true);
 
-  // spdlog::info("Moved cursor to position {} 0", textStartLine);
-  // terminalManager.writeToTerminal((char *)WHITE, strlen(WHITE));
-  // terminalManager.writeToTerminal((char *)state.targetSequence.data(),
-  //                                 state.targetSequence.size());
-  // terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
-  //
   spdlog::info("Render Gradient Setup complete");
 }
 
@@ -213,9 +125,9 @@ void screenState::renderTextProgress(state_t &state) {
     return;
   }
 
-  int rem = displayIndex / width;
-  int row = textStartLine + rem;
-  int col = displayIndex % width;
+  int rem = displayIndex / StatsStartRow;
+  int row = 6 + rem;
+  int col = displayIndex % windowWidth;
   terminalManager.moveCursor(row, col);
   spdlog::info("Moved to position {} {}", row, col);
   if (state.currentKeyStatus == keyStroke::CORRECT) {

@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     }
   }
   try {
-    init_logger("my_app_logger", "logs/logTest.log", spdlog::level::info);
+    init_logger("my_app_logger", "logs/logTest.log", spdlog::level::debug);
   } catch (const spdlog::spdlog_ex &ex) {
     return 1;
   }

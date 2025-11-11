@@ -1,7 +1,9 @@
-[2025-11-10 12:16:53.292] [my_app_logger] [info] Starting Code
-[2025-11-10 12:16:53.292] [my_app_logger] [info] Total Time: 10 Remaining Time: 10
-[2025-11-10 12:16:53.293] [my_app_logger] [info] Height of terminal: 30, width of terminal: 120
-[2025-11-10 12:16:53.293] [my_app_logger] [info] terminal cleared
-[2025-11-10 12:16:53.294] [my_app_logger] [info] Header drawing complete
-[2025-11-10 12:16:53.294] [my_app_logger] [info] Render Gradient Setup complete
-[2025-11-10 12:16:53.294] [my_app_logger] [info] Initial Screen Rendering Complete
+[2025-11-11 10:53:31.558] [my_app_logger] [info] Starting Code
+[2025-11-11 10:53:31.558] [my_app_logger] [info] Total Time: 10 Remaining Time: 10
+[2025-11-11 10:53:31.559] [my_app_logger] [debug] Height of terminal: 30,windowWidth of terminal: 120
+[2025-11-11 10:53:31.559] [my_app_logger] [debug] Height of Window: 25windowWidth of Window: 100 Start Position: 1,1
+[2025-11-11 10:53:31.559] [my_app_logger] [info] terminal cleared
+[2025-11-11 10:53:31.570] [my_app_logger] [info] Text Lines: Terminal Typing Test
+[2025-11-11 10:53:31.572] [my_app_logger] [info] Text Lines: Time: 10 | Level: 0
+[2025-11-11 10:53:31.573] [my_app_logger] [info] Render Gradient Setup complete
+[2025-11-11 10:53:31.573] [my_app_logger] [info] Initial Screen Rendering Complete

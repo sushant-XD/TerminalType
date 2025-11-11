@@ -29,17 +29,19 @@ public:
   void appendToBuffer(std::vector<char> &buffer, const std::string &data);
 
 private:
-  void moveCursor(int row, int col);
-  int height;
-  int statsRow;
-  int width;
-  int textStartLine;
+  int terminalHeight;
+  int terminalWidth;
+
+  int windowWidth;
+  int windowHeight;
+  int windowStartRow;
+  int windowStartCol;
+
+  int headerStartRow;
+  int StatsStartRow;
+  int displayTextStartRow;
+
   terminalCtrl &terminalManager;
 
-  bool initialSetupComplete;
-
-  int outerCommonPaddingLR;
-  int linSpacing;
-  int inputBoxPaddingLR;
   std::vector<std::string> wrapText(state_t &state);
 };

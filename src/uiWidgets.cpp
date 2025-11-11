@@ -1,4 +1,5 @@
 #include "uiWidgets.h"
+#include <spdlog/spdlog.h>
 #include <sstream>
 
 uiWidget::uiWidget(int windowWidth, int windowHeight, terminalCtrl &terminalMgr)
@@ -7,8 +8,8 @@ uiWidget::uiWidget(int windowWidth, int windowHeight, terminalCtrl &terminalMgr)
   widgetDrawn = false;
   isStatic = false;
   isTextBox = false;
-  x = 0;
-  y = 0;
+  initialPosCol = 0;
+  initialPosRow = 0;
   width = 0;
   height = 0;
 }
@@ -27,17 +28,20 @@ uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
   int endCol = startCol + width;
   int endRow = startRow + height;
   if (endRow > windowHeight || endCol > windowWidth) {
+    spdlog::error("Given dimension don't fit inside the screen");
     return uiError::DRAW_DIM_ERROR;
   }
   borderChars border = getBorderChars(shape);
 
-  this->x = startCol;
-  this->y = startRow;
+  this->initialPosCol = startCol;
+  this->initialPosRow = startRow;
   this->width = width;
   this->height = height;
   this->textStartCol = -1;
+  this->endRow = startRow + height;
   terminalManager.hideCursor();
   terminalManager.moveCursor(startRow, startCol);
+  terminalManager.writeToTerminal(borderColor, strlen(borderColor));
   for (int i = 0; i < height; i++) {
     terminalManager.moveCursor(startRow + i, startCol);
     for (int j = 0; j < width; j++) {
@@ -77,9 +81,11 @@ uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
   return uiError::OK;
 }
 
-uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
-                          std::string text, bool centerAlign, borderShape shape,
-                          char *borderColor, char *textColor, bool isStatic) {
+uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
+                                  int height, std::string text,
+                                  bool centerAlign, borderShape shape,
+                                  char *borderColor, char *textColor,
+                                  bool isStatic) {
   if (widgetDrawn) {
     spdlog::error("Box already drawn. Not drawing at {} {}", startCol,
                   startRow);
@@ -89,35 +95,40 @@ uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
   int endCol = startCol + width;
   int endRow = startRow + height;
   if (endRow > windowHeight || endCol > windowWidth) {
+    spdlog::error("Dimensions os not compatible. End Rows and columns: {}{} "
+                  "WindowDimensions: {}{}",
+                  endRow, endCol, windowHeight, windowWidth);
     return uiError::DRAW_DIM_ERROR;
   }
 
   int innerWidth = width - 2;
   int innerHeight = height - 2;
 
-  if (text.size() > innerWidth || height < 3) {
-    spdlog::error(
-        "Text is too big to be drawn inside the box. Text: {}, box width: {}",
-        text.size(), innerWidth);
+  if (innerWidth <= 0 || innerHeight <= 0) {
+    spdlog::error("Box too small for borders and text");
     return uiError::DRAW_DIM_ERROR;
   }
 
-  int leftMargin = 0;
-  if (centerAlign == true) {
-    int availablePaddingWidth = innerWidth - text.size();
-    leftMargin = availablePaddingWidth / 2;
+  // Wrap text to fit within the box
+  std::vector<std::string> textLines;
+  if (!text.empty()) {
+    textLines = wrapText(text, innerWidth);
+
+    if (textLines.size() > innerHeight) {
+      spdlog::warn("Text too long, will be truncated to fit in box");
+      textLines.resize(innerHeight);
+    }
   }
+  spdlog::info("Text Lines: {}", textLines[0]);
 
-  int textRow = height / 2;
-
-  int textLen = text.size();
-
-  this->x = startCol;
-  this->y = startRow;
+  this->initialPosCol = startCol;
+  this->initialPosRow = startRow;
   this->width = width;
   this->height = height;
-  this->textStartRow = textRow;
-  this->textStartCol = leftMargin;
+  this->textStartRow = startRow + 1;
+  this->textStartCol = 2;
+  this->endRow = startRow + height;
+  this->initialText = text;
 
   borderChars border = getBorderChars(shape);
   terminalManager.hideCursor();
@@ -151,14 +162,29 @@ uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
           terminalManager.writeToTerminal((char *)border.vertical,
                                           strlen(border.vertical));
         } else {
-          if (i == textRow && j >= (1 + leftMargin) &&
-              j < (1 + leftMargin + textLen)) {
-            int textIndex = j - (1 + leftMargin);
-            char ch = text[textIndex];
+          // This is the interior space - print text if available
+          int textLineIndex = i - 1; // Adjust for top border
+          int textCharIndex = j - 1; // Adjust for left border
 
-            terminalManager.writeToTerminal(&ch, 1);
+          if (textLineIndex < textLines.size() &&
+              textCharIndex < textLines[textLineIndex].length()) {
+            // Calculate padding for center alignment
+            int padding = 0;
+            if (centerAlign) {
+              padding = (innerWidth - textLines[textLineIndex].length()) / 2;
+            }
+
+            if (textCharIndex >= padding &&
+                textCharIndex < padding + textLines[textLineIndex].length()) {
+              std::string chStr(
+                  1, textLines[textLineIndex][textCharIndex - padding]);
+              terminalManager.writeToTerminal((char *)chStr.c_str(),
+                                              chStr.length());
+            } else {
+              terminalManager.writeToTerminal(" ", 1);
+            }
           } else {
-            terminalManager.writeToTerminal((char *)" ", 1);
+            terminalManager.writeToTerminal(" ", 1);
           }
         }
       }
@@ -166,6 +192,54 @@ uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
   }
   widgetDrawn = true;
   isTextBox = true;
+  terminalManager.showCursor();
+  return uiError::OK;
+}
+
+// refresh() refreshes the whole content (including the outer stuff)
+uiError uiWidget::refresh() { return uiError::OK; }
+
+// removes the element entirely
+uiError uiWidget::erase() {
+  char emptyChar = {' '};
+  terminalManager.moveCursor(initialPosRow, initialPosCol);
+  terminalManager.hideCursor();
+  for (int i = initialPosRow; i < (initialPosRow + height); i++) {
+    for (int j = initialPosCol; j < (initialPosCol + width); j++) {
+      terminalManager.writeToTerminal(&emptyChar, 1);
+    }
+  }
+  reset_vars();
+  return uiError::OK;
+}
+
+void uiWidget::reset_vars() {
+  spdlog::info("All variables reset for widget");
+  return;
+}
+
+uiError uiWidget::updateText(char *ch, int startingIndexRow,
+                             int startingIndexCol, int size, char *color) {
+  if (isStatic) {
+    spdlog::error("Cannot modify static Text");
+    return uiError::STATIC_WIDGET;
+  }
+  if (!isTextBox) {
+    spdlog::error("Is not a textBox. Cannot update Text.");
+    return uiError::REFRESH_ERROR;
+  }
+  if (!widgetDrawn) {
+    spdlog::error("Widget not drawn yet, cannot update Text");
+    return uiError::REFRESH_ERROR;
+  }
+  if (ch == nullptr || size <= 0) {
+    spdlog::error("Invalid parameters to function");
+    return uiError::UNKNOWN_ERROR;
+  }
+  terminalManager.hideCursor();
+  terminalManager.moveCursor(startingIndexRow, startingIndexCol);
+  terminalManager.writeToTerminal(color, strlen(color));
+  terminalManager.writeToTerminal(ch, size);
   terminalManager.showCursor();
   return uiError::OK;
 }
@@ -185,7 +259,7 @@ std::vector<std::string> uiWidget::wrapText(std::string &text, int maxWidth) {
       }
       currentLine = word;
     } else if (currentLine.length() + 1 + word.length() <= maxWidth) {
-      currentLine + " " + word;
+      currentLine += " " + word;
     } else {
       lines.push_back(currentLine);
       if (word.length() > maxWidth) {
