@@ -2,6 +2,7 @@
 #include "box_chars.h"
 #include "configurations.h"
 #include "terminal_ctrl.h"
+#include <optional>
 #include <spdlog/spdlog.h>
 #include <string>
 #include <vector>
@@ -38,10 +39,11 @@ public:
   ~uiWidget();
   uiError drawBox(int startCol, int startRow, int width, int height,
                   bool centerAlign, borderShape shape, char *borderColor,
-                  bool isStatic);
+                  bool isStatic, std::optional<char *> bgColor = std::nullopt);
   uiError drawBoxWithText(int startCol, int startRow, int width, int height,
                           std::string text, bool centerAlign, borderShape shape,
-                          char *borderColor, char *textColor, bool isStatic);
+                          char *borderColor, char *textColor, bool isStatic,
+                          std::optional<char *> backgroundColor = std::nullopt);
 
   uiError drawLine(int x, int y, int width, int height, bool centerAlign,
                    char *linShape, char *linColor, bool isStatic);
@@ -76,7 +78,7 @@ private:
   int endRow;
 
   std::string initialText;
-
+  char *backgroundColor;
   std::vector<std::string> wrapText(std::string &text, int maxWidth);
   borderChars getBorderChars(borderShape shape);
 

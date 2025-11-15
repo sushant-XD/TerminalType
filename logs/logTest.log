@@ -1,256 +1,256 @@
-[2025-11-11 15:37:53.803] [my_app_logger] [info] Starting Code
-[2025-11-11 15:37:53.803] [my_app_logger] [info] Total Time: 10 Remaining Time: 10
-[2025-11-11 15:37:53.803] [my_app_logger] [debug] Height of terminal: 30,windowWidth of terminal: 120
-[2025-11-11 15:37:53.803] [my_app_logger] [debug] Height of Window: 25windowWidth of Window: 100 Start Position: 1,1
-[2025-11-11 15:37:53.803] [my_app_logger] [info] terminal cleared
-[2025-11-11 15:37:53.811] [my_app_logger] [info] Text Lines: Terminal Typing Test
-[2025-11-11 15:37:53.812] [my_app_logger] [info] Text Lines: Time: 10 | Level: 0
-[2025-11-11 15:37:53.813] [my_app_logger] [warning] Text too long, will be truncated to fit in box
-[2025-11-11 15:37:53.813] [my_app_logger] [info] Text Lines: a about all also and as at be because but by can come could day do even find first for from get
-[2025-11-11 15:37:53.815] [my_app_logger] [info] Render Gradient Setup complete
-[2025-11-11 15:37:53.815] [my_app_logger] [info] Initial Screen Rendering Complete
-[2025-11-11 15:37:54.436] [my_app_logger] [info] a key Correct. Correct Count: 1
-[2025-11-11 15:37:54.436] [my_app_logger] [info] Character Count: 1
-[2025-11-11 15:37:54.436] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:54.676] [my_app_logger] [info]   key Correct. Correct Count: 2
-[2025-11-11 15:37:54.676] [my_app_logger] [info] Character Count: 2
-[2025-11-11 15:37:54.676] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:37:54.676] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:55.005] [my_app_logger] [info] a key Correct. Correct Count: 3
-[2025-11-11 15:37:55.005] [my_app_logger] [info] Character Count: 3
-[2025-11-11 15:37:55.005] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:55.129] [my_app_logger] [info] b key Correct. Correct Count: 4
-[2025-11-11 15:37:55.129] [my_app_logger] [info] Character Count: 4
-[2025-11-11 15:37:55.129] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:55.294] [my_app_logger] [info] o key Correct. Correct Count: 5
-[2025-11-11 15:37:55.294] [my_app_logger] [info] Character Count: 5
-[2025-11-11 15:37:55.294] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:55.407] [my_app_logger] [info] u key Correct. Correct Count: 6
-[2025-11-11 15:37:55.407] [my_app_logger] [info] Character Count: 6
-[2025-11-11 15:37:55.407] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:55.578] [my_app_logger] [info] t key Correct. Correct Count: 7
-[2025-11-11 15:37:55.578] [my_app_logger] [info] Character Count: 7
-[2025-11-11 15:37:55.578] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:55.686] [my_app_logger] [info]   key Correct. Correct Count: 8
-[2025-11-11 15:37:55.686] [my_app_logger] [info] Character Count: 8
-[2025-11-11 15:37:55.686] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:37:55.686] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.025] [my_app_logger] [info] a key Correct. Correct Count: 9
-[2025-11-11 15:37:56.025] [my_app_logger] [info] Character Count: 9
-[2025-11-11 15:37:56.025] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.143] [my_app_logger] [info] l key Correct. Correct Count: 10
-[2025-11-11 15:37:56.143] [my_app_logger] [info] Character Count: 10
-[2025-11-11 15:37:56.143] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.283] [my_app_logger] [info] l key Correct. Correct Count: 11
-[2025-11-11 15:37:56.283] [my_app_logger] [info] Character Count: 11
-[2025-11-11 15:37:56.283] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.391] [my_app_logger] [info]   key Correct. Correct Count: 12
-[2025-11-11 15:37:56.391] [my_app_logger] [info] Character Count: 12
-[2025-11-11 15:37:56.391] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:37:56.391] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.560] [my_app_logger] [info] a key Correct. Correct Count: 13
-[2025-11-11 15:37:56.560] [my_app_logger] [info] Character Count: 13
-[2025-11-11 15:37:56.560] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.648] [my_app_logger] [info] l key Correct. Correct Count: 14
-[2025-11-11 15:37:56.648] [my_app_logger] [info] Character Count: 14
-[2025-11-11 15:37:56.648] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.803] [my_app_logger] [info] s key Correct. Correct Count: 15
-[2025-11-11 15:37:56.803] [my_app_logger] [info] Character Count: 15
-[2025-11-11 15:37:56.803] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.910] [my_app_logger] [info] o key Correct. Correct Count: 16
-[2025-11-11 15:37:56.910] [my_app_logger] [info] Character Count: 16
-[2025-11-11 15:37:56.910] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:56.992] [my_app_logger] [info]   key Correct. Correct Count: 17
-[2025-11-11 15:37:56.992] [my_app_logger] [info] Character Count: 17
-[2025-11-11 15:37:56.992] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:37:56.992] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:57.116] [my_app_logger] [info] a key Correct. Correct Count: 18
-[2025-11-11 15:37:57.116] [my_app_logger] [info] Character Count: 18
-[2025-11-11 15:37:57.116] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:57.197] [my_app_logger] [info] n key Correct. Correct Count: 19
-[2025-11-11 15:37:57.197] [my_app_logger] [info] Character Count: 19
-[2025-11-11 15:37:57.198] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:57.347] [my_app_logger] [info] d key Correct. Correct Count: 20
-[2025-11-11 15:37:57.347] [my_app_logger] [info] Character Count: 20
-[2025-11-11 15:37:57.347] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:57.393] [my_app_logger] [info]   key Correct. Correct Count: 21
-[2025-11-11 15:37:57.393] [my_app_logger] [info] Character Count: 21
-[2025-11-11 15:37:57.393] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:37:57.393] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:57.517] [my_app_logger] [info] a key Correct. Correct Count: 22
-[2025-11-11 15:37:57.517] [my_app_logger] [info] Character Count: 22
-[2025-11-11 15:37:57.517] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:57.593] [my_app_logger] [info] s key Correct. Correct Count: 23
-[2025-11-11 15:37:57.593] [my_app_logger] [info] Character Count: 23
-[2025-11-11 15:37:57.593] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:57.737] [my_app_logger] [info]   key Correct. Correct Count: 24
-[2025-11-11 15:37:57.737] [my_app_logger] [info] Character Count: 24
-[2025-11-11 15:37:57.737] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:37:57.737] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:58.650] [my_app_logger] [info] a key Correct. Correct Count: 25
-[2025-11-11 15:37:58.650] [my_app_logger] [info] Character Count: 25
-[2025-11-11 15:37:58.650] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:58.768] [my_app_logger] [info] t key Correct. Correct Count: 26
-[2025-11-11 15:37:58.768] [my_app_logger] [info] Character Count: 26
-[2025-11-11 15:37:58.768] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:58.886] [my_app_logger] [info]   key Correct. Correct Count: 27
-[2025-11-11 15:37:58.886] [my_app_logger] [info] Character Count: 27
-[2025-11-11 15:37:58.886] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:37:58.886] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.093] [my_app_logger] [info] b key Correct. Correct Count: 28
-[2025-11-11 15:37:59.093] [my_app_logger] [info] Character Count: 28
-[2025-11-11 15:37:59.094] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.206] [my_app_logger] [info] e key Correct. Correct Count: 29
-[2025-11-11 15:37:59.206] [my_app_logger] [info] Character Count: 29
-[2025-11-11 15:37:59.206] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.278] [my_app_logger] [info]   key Correct. Correct Count: 30
-[2025-11-11 15:37:59.278] [my_app_logger] [info] Character Count: 30
-[2025-11-11 15:37:59.278] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:37:59.279] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.470] [my_app_logger] [info] b key Correct. Correct Count: 31
-[2025-11-11 15:37:59.470] [my_app_logger] [info] Character Count: 31
-[2025-11-11 15:37:59.470] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.557] [my_app_logger] [info] e key Correct. Correct Count: 32
-[2025-11-11 15:37:59.557] [my_app_logger] [info] Character Count: 32
-[2025-11-11 15:37:59.557] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.628] [my_app_logger] [info] c key Correct. Correct Count: 33
-[2025-11-11 15:37:59.628] [my_app_logger] [info] Character Count: 33
-[2025-11-11 15:37:59.628] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.716] [my_app_logger] [info] a key Correct. Correct Count: 34
-[2025-11-11 15:37:59.716] [my_app_logger] [info] Character Count: 34
-[2025-11-11 15:37:59.716] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.855] [my_app_logger] [info] u key Correct. Correct Count: 35
-[2025-11-11 15:37:59.855] [my_app_logger] [info] Character Count: 35
-[2025-11-11 15:37:59.855] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:37:59.958] [my_app_logger] [info] s key Correct. Correct Count: 36
-[2025-11-11 15:37:59.958] [my_app_logger] [info] Character Count: 36
-[2025-11-11 15:37:59.958] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:00.025] [my_app_logger] [info] s key Incorrect. Does not match: e. Incorrect Count: 1
-[2025-11-11 15:38:00.025] [my_app_logger] [info] Character Count: 37
-[2025-11-11 15:38:00.025] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:00.050] [my_app_logger] [info] e key incorrect. Incorrect Count: 2
-[2025-11-11 15:38:00.050] [my_app_logger] [info] Character Count: 38
-[2025-11-11 15:38:00.050] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:00.122] [my_app_logger] [info]   key incorrect. Incorrect Count: 3
-[2025-11-11 15:38:00.122] [my_app_logger] [info] Character Count: 39
-[2025-11-11 15:38:00.122] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:00.293] [my_app_logger] [info] b key incorrect. Incorrect Count: 4
-[2025-11-11 15:38:00.293] [my_app_logger] [info] Character Count: 40
-[2025-11-11 15:38:00.294] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:00.475] [my_app_logger] [info] u key incorrect. Incorrect Count: 5
-[2025-11-11 15:38:00.475] [my_app_logger] [info] Character Count: 41
-[2025-11-11 15:38:00.475] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:00.812] [my_app_logger] [info] Back Key Pressed
-[2025-11-11 15:38:00.812] [my_app_logger] [info] IncorrectCount decreased to: 4
-[2025-11-11 15:38:00.812] [my_app_logger] [info] Character Count decreased to: 40
-[2025-11-11 15:38:00.812] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:00.965] [my_app_logger] [info] Back Key Pressed
-[2025-11-11 15:38:00.965] [my_app_logger] [info] IncorrectCount decreased to: 3
-[2025-11-11 15:38:00.965] [my_app_logger] [info] Character Count decreased to: 39
-[2025-11-11 15:38:00.966] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:01.108] [my_app_logger] [info] Back Key Pressed
-[2025-11-11 15:38:01.108] [my_app_logger] [info] IncorrectCount decreased to: 2
-[2025-11-11 15:38:01.108] [my_app_logger] [info] Character Count decreased to: 38
-[2025-11-11 15:38:01.108] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:01.256] [my_app_logger] [info] Back Key Pressed
-[2025-11-11 15:38:01.256] [my_app_logger] [info] IncorrectCount decreased to: 1
-[2025-11-11 15:38:01.256] [my_app_logger] [info] Character Count decreased to: 37
-[2025-11-11 15:38:01.256] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:01.389] [my_app_logger] [info] Back Key Pressed
-[2025-11-11 15:38:01.389] [my_app_logger] [info] IncorrectCount decreased to: 0
-[2025-11-11 15:38:01.389] [my_app_logger] [info] Character Count decreased to: 36
-[2025-11-11 15:38:01.389] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:01.513] [my_app_logger] [info] e key Correct. Correct Count: 37
-[2025-11-11 15:38:01.513] [my_app_logger] [info] Character Count: 37
-[2025-11-11 15:38:01.513] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:01.605] [my_app_logger] [info]   key Correct. Correct Count: 38
-[2025-11-11 15:38:01.605] [my_app_logger] [info] Character Count: 38
-[2025-11-11 15:38:01.605] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:38:01.605] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:01.801] [my_app_logger] [info] b key Correct. Correct Count: 39
-[2025-11-11 15:38:01.801] [my_app_logger] [info] Character Count: 39
-[2025-11-11 15:38:01.801] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:01.982] [my_app_logger] [info] u key Correct. Correct Count: 40
-[2025-11-11 15:38:01.982] [my_app_logger] [info] Character Count: 40
-[2025-11-11 15:38:01.982] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.085] [my_app_logger] [info] t key Correct. Correct Count: 41
-[2025-11-11 15:38:02.085] [my_app_logger] [info] Character Count: 41
-[2025-11-11 15:38:02.085] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.162] [my_app_logger] [info]   key Correct. Correct Count: 42
-[2025-11-11 15:38:02.162] [my_app_logger] [info] Character Count: 42
-[2025-11-11 15:38:02.162] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:38:02.162] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.328] [my_app_logger] [info] b key Correct. Correct Count: 43
-[2025-11-11 15:38:02.328] [my_app_logger] [info] Character Count: 43
-[2025-11-11 15:38:02.328] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.504] [my_app_logger] [info] y key Correct. Correct Count: 44
-[2025-11-11 15:38:02.504] [my_app_logger] [info] Character Count: 44
-[2025-11-11 15:38:02.504] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.601] [my_app_logger] [info]   key Correct. Correct Count: 45
-[2025-11-11 15:38:02.601] [my_app_logger] [info] Character Count: 45
-[2025-11-11 15:38:02.601] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:38:02.601] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.709] [my_app_logger] [info] c key Correct. Correct Count: 46
-[2025-11-11 15:38:02.709] [my_app_logger] [info] Character Count: 46
-[2025-11-11 15:38:02.709] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.785] [my_app_logger] [info] a key Correct. Correct Count: 47
-[2025-11-11 15:38:02.785] [my_app_logger] [info] Character Count: 47
-[2025-11-11 15:38:02.785] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.888] [my_app_logger] [info] n key Correct. Correct Count: 48
-[2025-11-11 15:38:02.888] [my_app_logger] [info] Character Count: 48
-[2025-11-11 15:38:02.888] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:02.960] [my_app_logger] [info]   key Correct. Correct Count: 49
-[2025-11-11 15:38:02.960] [my_app_logger] [info] Character Count: 49
-[2025-11-11 15:38:02.960] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:38:02.960] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.032] [my_app_logger] [info] c key Correct. Correct Count: 50
-[2025-11-11 15:38:03.032] [my_app_logger] [info] Character Count: 50
-[2025-11-11 15:38:03.032] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.129] [my_app_logger] [info] o key Correct. Correct Count: 51
-[2025-11-11 15:38:03.129] [my_app_logger] [info] Character Count: 51
-[2025-11-11 15:38:03.129] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.211] [my_app_logger] [info] m key Correct. Correct Count: 52
-[2025-11-11 15:38:03.211] [my_app_logger] [info] Character Count: 52
-[2025-11-11 15:38:03.211] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.314] [my_app_logger] [info] e key Correct. Correct Count: 53
-[2025-11-11 15:38:03.314] [my_app_logger] [info] Character Count: 53
-[2025-11-11 15:38:03.314] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.406] [my_app_logger] [info]   key Correct. Correct Count: 54
-[2025-11-11 15:38:03.406] [my_app_logger] [info] Character Count: 54
-[2025-11-11 15:38:03.406] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:38:03.406] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.508] [my_app_logger] [info] c key Correct. Correct Count: 55
-[2025-11-11 15:38:03.508] [my_app_logger] [info] Character Count: 55
-[2025-11-11 15:38:03.509] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.601] [my_app_logger] [info] o key Correct. Correct Count: 56
-[2025-11-11 15:38:03.601] [my_app_logger] [info] Character Count: 56
-[2025-11-11 15:38:03.601] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.694] [my_app_logger] [info] u key Correct. Correct Count: 57
-[2025-11-11 15:38:03.694] [my_app_logger] [info] Character Count: 57
-[2025-11-11 15:38:03.694] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.802] [my_app_logger] [info] l key Correct. Correct Count: 58
-[2025-11-11 15:38:03.802] [my_app_logger] [info] Character Count: 58
-[2025-11-11 15:38:03.802] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.884] [my_app_logger] [info] d key Correct. Correct Count: 59
-[2025-11-11 15:38:03.884] [my_app_logger] [info] Character Count: 59
-[2025-11-11 15:38:03.884] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:03.966] [my_app_logger] [info]   key Correct. Correct Count: 60
-[2025-11-11 15:38:03.966] [my_app_logger] [info] Character Count: 60
-[2025-11-11 15:38:03.966] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:38:03.966] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:04.058] [my_app_logger] [info] d key Correct. Correct Count: 61
-[2025-11-11 15:38:04.058] [my_app_logger] [info] Character Count: 61
-[2025-11-11 15:38:04.058] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:04.104] [my_app_logger] [info] a key Correct. Correct Count: 62
-[2025-11-11 15:38:04.104] [my_app_logger] [info] Character Count: 62
-[2025-11-11 15:38:04.104] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:04.181] [my_app_logger] [info] y key Correct. Correct Count: 63
-[2025-11-11 15:38:04.181] [my_app_logger] [info] Character Count: 63
-[2025-11-11 15:38:04.181] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:04.268] [my_app_logger] [info]   key Correct. Correct Count: 64
-[2025-11-11 15:38:04.268] [my_app_logger] [info] Character Count: 64
-[2025-11-11 15:38:04.268] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
-[2025-11-11 15:38:04.268] [my_app_logger] [info] Text Render progress complete
-[2025-11-11 15:38:04.360] [my_app_logger] [info] d key Correct. Correct Count: 65
-[2025-11-11 15:38:04.360] [my_app_logger] [info] Character Count: 65
-[2025-11-11 15:38:04.360] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:07.777] [my_app_logger] [info] Starting Code
+[2025-11-15 00:23:07.777] [my_app_logger] [info] Total Time: 10 Remaining Time: 10
+[2025-11-15 00:23:07.778] [my_app_logger] [debug] Height of terminal: 38,windowWidth of terminal: 169
+[2025-11-15 00:23:07.778] [my_app_logger] [debug] Height of Window: 33windowWidth of Window: 149 Start Position: 1,1
+[2025-11-15 00:23:07.778] [my_app_logger] [info] terminal cleared
+[2025-11-15 00:23:07.800] [my_app_logger] [info] Text Lines: Terminal Typing Test
+[2025-11-15 00:23:07.803] [my_app_logger] [info] Text Lines: Time: 10 | Level: 0
+[2025-11-15 00:23:07.807] [my_app_logger] [info] Text Lines: a about all also and as at be because but by can come could day do even find first for from get give go have he her here him his how I if in into
+[2025-11-15 00:23:07.816] [my_app_logger] [info] Render Gradient Setup complete
+[2025-11-15 00:23:07.816] [my_app_logger] [info] Initial Screen Rendering Complete
+[2025-11-15 00:23:08.489] [my_app_logger] [info] a key Correct. Correct Count: 1
+[2025-11-15 00:23:08.489] [my_app_logger] [info] Character Count: 1
+[2025-11-15 00:23:08.489] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:08.571] [my_app_logger] [info]   key Correct. Correct Count: 2
+[2025-11-15 00:23:08.571] [my_app_logger] [info] Character Count: 2
+[2025-11-15 00:23:08.571] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:08.571] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:09.440] [my_app_logger] [info] d key Incorrect. Does not match: a. Incorrect Count: 1
+[2025-11-15 00:23:09.440] [my_app_logger] [info] Character Count: 3
+[2025-11-15 00:23:09.440] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:09.987] [my_app_logger] [info]   key incorrect. Incorrect Count: 2
+[2025-11-15 00:23:09.987] [my_app_logger] [info] Character Count: 4
+[2025-11-15 00:23:09.987] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:10.409] [my_app_logger] [info] Back Key Pressed
+[2025-11-15 00:23:10.409] [my_app_logger] [info] IncorrectCount decreased to: 1
+[2025-11-15 00:23:10.409] [my_app_logger] [info] Character Count decreased to: 3
+[2025-11-15 00:23:10.409] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:10.570] [my_app_logger] [info] Back Key Pressed
+[2025-11-15 00:23:10.570] [my_app_logger] [info] IncorrectCount decreased to: 0
+[2025-11-15 00:23:10.570] [my_app_logger] [info] Character Count decreased to: 2
+[2025-11-15 00:23:10.570] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:10.809] [my_app_logger] [info] a key Correct. Correct Count: 3
+[2025-11-15 00:23:10.809] [my_app_logger] [info] Character Count: 3
+[2025-11-15 00:23:10.809] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:10.936] [my_app_logger] [info] b key Correct. Correct Count: 4
+[2025-11-15 00:23:10.936] [my_app_logger] [info] Character Count: 4
+[2025-11-15 00:23:10.937] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:11.140] [my_app_logger] [info] o key Correct. Correct Count: 5
+[2025-11-15 00:23:11.140] [my_app_logger] [info] Character Count: 5
+[2025-11-15 00:23:11.140] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:11.231] [my_app_logger] [info] u key Correct. Correct Count: 6
+[2025-11-15 00:23:11.231] [my_app_logger] [info] Character Count: 6
+[2025-11-15 00:23:11.231] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:11.353] [my_app_logger] [info] t key Correct. Correct Count: 7
+[2025-11-15 00:23:11.353] [my_app_logger] [info] Character Count: 7
+[2025-11-15 00:23:11.353] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:11.486] [my_app_logger] [info]   key Correct. Correct Count: 8
+[2025-11-15 00:23:11.486] [my_app_logger] [info] Character Count: 8
+[2025-11-15 00:23:11.486] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:11.486] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:11.786] [my_app_logger] [info] a key Correct. Correct Count: 9
+[2025-11-15 00:23:11.786] [my_app_logger] [info] Character Count: 9
+[2025-11-15 00:23:11.786] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:11.860] [my_app_logger] [info] l key Correct. Correct Count: 10
+[2025-11-15 00:23:11.860] [my_app_logger] [info] Character Count: 10
+[2025-11-15 00:23:11.861] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.021] [my_app_logger] [info] l key Correct. Correct Count: 11
+[2025-11-15 00:23:12.021] [my_app_logger] [info] Character Count: 11
+[2025-11-15 00:23:12.021] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.127] [my_app_logger] [info]   key Correct. Correct Count: 12
+[2025-11-15 00:23:12.127] [my_app_logger] [info] Character Count: 12
+[2025-11-15 00:23:12.127] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:12.127] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.265] [my_app_logger] [info] a key Correct. Correct Count: 13
+[2025-11-15 00:23:12.265] [my_app_logger] [info] Character Count: 13
+[2025-11-15 00:23:12.265] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.333] [my_app_logger] [info] l key Correct. Correct Count: 14
+[2025-11-15 00:23:12.333] [my_app_logger] [info] Character Count: 14
+[2025-11-15 00:23:12.333] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.487] [my_app_logger] [info] s key Correct. Correct Count: 15
+[2025-11-15 00:23:12.488] [my_app_logger] [info] Character Count: 15
+[2025-11-15 00:23:12.488] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.577] [my_app_logger] [info] o key Correct. Correct Count: 16
+[2025-11-15 00:23:12.577] [my_app_logger] [info] Character Count: 16
+[2025-11-15 00:23:12.577] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.635] [my_app_logger] [info]   key Correct. Correct Count: 17
+[2025-11-15 00:23:12.635] [my_app_logger] [info] Character Count: 17
+[2025-11-15 00:23:12.635] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:12.635] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.736] [my_app_logger] [info] a key Correct. Correct Count: 18
+[2025-11-15 00:23:12.736] [my_app_logger] [info] Character Count: 18
+[2025-11-15 00:23:12.736] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.809] [my_app_logger] [info] n key Correct. Correct Count: 19
+[2025-11-15 00:23:12.809] [my_app_logger] [info] Character Count: 19
+[2025-11-15 00:23:12.809] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:12.932] [my_app_logger] [info] d key Correct. Correct Count: 20
+[2025-11-15 00:23:12.932] [my_app_logger] [info] Character Count: 20
+[2025-11-15 00:23:12.932] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.033] [my_app_logger] [info]   key Correct. Correct Count: 21
+[2025-11-15 00:23:13.033] [my_app_logger] [info] Character Count: 21
+[2025-11-15 00:23:13.033] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:13.033] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.150] [my_app_logger] [info] a key Correct. Correct Count: 22
+[2025-11-15 00:23:13.150] [my_app_logger] [info] Character Count: 22
+[2025-11-15 00:23:13.150] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.234] [my_app_logger] [info] s key Correct. Correct Count: 23
+[2025-11-15 00:23:13.234] [my_app_logger] [info] Character Count: 23
+[2025-11-15 00:23:13.234] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.297] [my_app_logger] [info]   key Correct. Correct Count: 24
+[2025-11-15 00:23:13.297] [my_app_logger] [info] Character Count: 24
+[2025-11-15 00:23:13.297] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:13.297] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.431] [my_app_logger] [info] a key Correct. Correct Count: 25
+[2025-11-15 00:23:13.431] [my_app_logger] [info] Character Count: 25
+[2025-11-15 00:23:13.431] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.589] [my_app_logger] [info] t key Correct. Correct Count: 26
+[2025-11-15 00:23:13.589] [my_app_logger] [info] Character Count: 26
+[2025-11-15 00:23:13.590] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.669] [my_app_logger] [info]   key Correct. Correct Count: 27
+[2025-11-15 00:23:13.669] [my_app_logger] [info] Character Count: 27
+[2025-11-15 00:23:13.669] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:13.669] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.851] [my_app_logger] [info] b key Correct. Correct Count: 28
+[2025-11-15 00:23:13.851] [my_app_logger] [info] Character Count: 28
+[2025-11-15 00:23:13.851] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:13.941] [my_app_logger] [info] e key Correct. Correct Count: 29
+[2025-11-15 00:23:13.941] [my_app_logger] [info] Character Count: 29
+[2025-11-15 00:23:13.941] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.058] [my_app_logger] [info]   key Correct. Correct Count: 30
+[2025-11-15 00:23:14.058] [my_app_logger] [info] Character Count: 30
+[2025-11-15 00:23:14.058] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:14.058] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.186] [my_app_logger] [info] b key Correct. Correct Count: 31
+[2025-11-15 00:23:14.186] [my_app_logger] [info] Character Count: 31
+[2025-11-15 00:23:14.186] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.232] [my_app_logger] [info] e key Correct. Correct Count: 32
+[2025-11-15 00:23:14.232] [my_app_logger] [info] Character Count: 32
+[2025-11-15 00:23:14.232] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.359] [my_app_logger] [info] c key Correct. Correct Count: 33
+[2025-11-15 00:23:14.359] [my_app_logger] [info] Character Count: 33
+[2025-11-15 00:23:14.359] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.428] [my_app_logger] [info] a key Correct. Correct Count: 34
+[2025-11-15 00:23:14.428] [my_app_logger] [info] Character Count: 34
+[2025-11-15 00:23:14.428] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.518] [my_app_logger] [info] u key Correct. Correct Count: 35
+[2025-11-15 00:23:14.518] [my_app_logger] [info] Character Count: 35
+[2025-11-15 00:23:14.518] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.651] [my_app_logger] [info] s key Correct. Correct Count: 36
+[2025-11-15 00:23:14.651] [my_app_logger] [info] Character Count: 36
+[2025-11-15 00:23:14.651] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.714] [my_app_logger] [info] e key Correct. Correct Count: 37
+[2025-11-15 00:23:14.714] [my_app_logger] [info] Character Count: 37
+[2025-11-15 00:23:14.714] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.783] [my_app_logger] [info]   key Correct. Correct Count: 38
+[2025-11-15 00:23:14.783] [my_app_logger] [info] Character Count: 38
+[2025-11-15 00:23:14.783] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:14.783] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:14.889] [my_app_logger] [info] b key Correct. Correct Count: 39
+[2025-11-15 00:23:14.889] [my_app_logger] [info] Character Count: 39
+[2025-11-15 00:23:14.889] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.082] [my_app_logger] [info] u key Correct. Correct Count: 40
+[2025-11-15 00:23:15.082] [my_app_logger] [info] Character Count: 40
+[2025-11-15 00:23:15.082] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.172] [my_app_logger] [info] t key Correct. Correct Count: 41
+[2025-11-15 00:23:15.172] [my_app_logger] [info] Character Count: 41
+[2025-11-15 00:23:15.172] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.316] [my_app_logger] [info]   key Correct. Correct Count: 42
+[2025-11-15 00:23:15.316] [my_app_logger] [info] Character Count: 42
+[2025-11-15 00:23:15.316] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:15.316] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.411] [my_app_logger] [info] b key Correct. Correct Count: 43
+[2025-11-15 00:23:15.411] [my_app_logger] [info] Character Count: 43
+[2025-11-15 00:23:15.411] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.624] [my_app_logger] [info] y key Correct. Correct Count: 44
+[2025-11-15 00:23:15.624] [my_app_logger] [info] Character Count: 44
+[2025-11-15 00:23:15.624] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.730] [my_app_logger] [info]   key Correct. Correct Count: 45
+[2025-11-15 00:23:15.730] [my_app_logger] [info] Character Count: 45
+[2025-11-15 00:23:15.730] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:15.730] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.782] [my_app_logger] [info] c key Correct. Correct Count: 46
+[2025-11-15 00:23:15.782] [my_app_logger] [info] Character Count: 46
+[2025-11-15 00:23:15.782] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.958] [my_app_logger] [info] a key Correct. Correct Count: 47
+[2025-11-15 00:23:15.958] [my_app_logger] [info] Character Count: 47
+[2025-11-15 00:23:15.958] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:15.989] [my_app_logger] [info] n key Correct. Correct Count: 48
+[2025-11-15 00:23:15.989] [my_app_logger] [info] Character Count: 48
+[2025-11-15 00:23:15.989] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.121] [my_app_logger] [info]   key Correct. Correct Count: 49
+[2025-11-15 00:23:16.121] [my_app_logger] [info] Character Count: 49
+[2025-11-15 00:23:16.121] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:16.121] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.254] [my_app_logger] [info] c key Correct. Correct Count: 50
+[2025-11-15 00:23:16.254] [my_app_logger] [info] Character Count: 50
+[2025-11-15 00:23:16.254] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.382] [my_app_logger] [info] o key Correct. Correct Count: 51
+[2025-11-15 00:23:16.382] [my_app_logger] [info] Character Count: 51
+[2025-11-15 00:23:16.382] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.429] [my_app_logger] [info] m key Correct. Correct Count: 52
+[2025-11-15 00:23:16.429] [my_app_logger] [info] Character Count: 52
+[2025-11-15 00:23:16.429] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.582] [my_app_logger] [info] e key Correct. Correct Count: 53
+[2025-11-15 00:23:16.582] [my_app_logger] [info] Character Count: 53
+[2025-11-15 00:23:16.582] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.662] [my_app_logger] [info]   key Correct. Correct Count: 54
+[2025-11-15 00:23:16.662] [my_app_logger] [info] Character Count: 54
+[2025-11-15 00:23:16.662] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:16.662] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.763] [my_app_logger] [info] c key Correct. Correct Count: 55
+[2025-11-15 00:23:16.763] [my_app_logger] [info] Character Count: 55
+[2025-11-15 00:23:16.763] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.880] [my_app_logger] [info] o key Correct. Correct Count: 56
+[2025-11-15 00:23:16.880] [my_app_logger] [info] Character Count: 56
+[2025-11-15 00:23:16.880] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:16.975] [my_app_logger] [info] u key Correct. Correct Count: 57
+[2025-11-15 00:23:16.975] [my_app_logger] [info] Character Count: 57
+[2025-11-15 00:23:16.975] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:17.097] [my_app_logger] [info] l key Correct. Correct Count: 58
+[2025-11-15 00:23:17.097] [my_app_logger] [info] Character Count: 58
+[2025-11-15 00:23:17.097] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:17.180] [my_app_logger] [info] d key Correct. Correct Count: 59
+[2025-11-15 00:23:17.180] [my_app_logger] [info] Character Count: 59
+[2025-11-15 00:23:17.180] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:17.253] [my_app_logger] [info]   key Correct. Correct Count: 60
+[2025-11-15 00:23:17.253] [my_app_logger] [info] Character Count: 60
+[2025-11-15 00:23:17.253] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:17.253] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:17.369] [my_app_logger] [info] d key Correct. Correct Count: 61
+[2025-11-15 00:23:17.369] [my_app_logger] [info] Character Count: 61
+[2025-11-15 00:23:17.369] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:17.453] [my_app_logger] [info] a key Correct. Correct Count: 62
+[2025-11-15 00:23:17.453] [my_app_logger] [info] Character Count: 62
+[2025-11-15 00:23:17.454] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:17.580] [my_app_logger] [info]   key Incorrect. Does not match: y. Incorrect Count: 1
+[2025-11-15 00:23:17.580] [my_app_logger] [info] Character Count: 63
+[2025-11-15 00:23:17.580] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:17.994] [my_app_logger] [info] Back Key Pressed
+[2025-11-15 00:23:17.994] [my_app_logger] [info] IncorrectCount decreased to: 0
+[2025-11-15 00:23:17.994] [my_app_logger] [info] Character Count decreased to: 62
+[2025-11-15 00:23:17.995] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:18.225] [my_app_logger] [info] y key Correct. Correct Count: 63
+[2025-11-15 00:23:18.225] [my_app_logger] [info] Character Count: 63
+[2025-11-15 00:23:18.225] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:18.294] [my_app_logger] [info]   key Correct. Correct Count: 64
+[2025-11-15 00:23:18.294] [my_app_logger] [info] Character Count: 64
+[2025-11-15 00:23:18.294] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-11-15 00:23:18.294] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:18.437] [my_app_logger] [info] d key Correct. Correct Count: 65
+[2025-11-15 00:23:18.437] [my_app_logger] [info] Character Count: 65
+[2025-11-15 00:23:18.437] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:18.490] [my_app_logger] [error] Box already drawn. Not drawing at 1 1
+[2025-11-15 00:23:18.490] [my_app_logger] [info] Text Lines: *** TEST COMPLETE ***
+[2025-11-15 00:23:18.493] [my_app_logger] [info] Text Lines: 
+[2025-11-15 00:23:18.510] [my_app_logger] [info] Results screen rendered successfully
+[2025-11-15 00:23:19.510] [my_app_logger] [info]   key Incorrect. Does not match: o. Incorrect Count: 1
+[2025-11-15 00:23:19.510] [my_app_logger] [info] Character Count: 66
+[2025-11-15 00:23:19.510] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:26.301] [my_app_logger] [info] Back Key Pressed
+[2025-11-15 00:23:26.301] [my_app_logger] [info] IncorrectCount decreased to: 0
+[2025-11-15 00:23:26.301] [my_app_logger] [info] Character Count decreased to: 65
+[2025-11-15 00:23:26.302] [my_app_logger] [info] Text Render progress complete
+[2025-11-15 00:23:27.019] [my_app_logger] [info] Back Key Pressed
+[2025-11-15 00:23:27.019] [my_app_logger] [info] CorrectCount decreased to: 64
+[2025-11-15 00:23:27.019] [my_app_logger] [info] Character Count decreased to: 64
+[2025-11-15 00:23:27.019] [my_app_logger] [info] Text Render progress complete

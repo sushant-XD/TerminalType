@@ -1,7 +1,6 @@
 #include "design.h"
-#include <ostream>
 #include <spdlog/spdlog.h>
-#include <string>
+
 #define BORDER_COLOR BCYAN
 #define DIVIDER_COLOR BBLACK
 #define TEXT_COLOR WHITE
@@ -14,16 +13,21 @@ using namespace std::chrono;
 screenState::screenState(terminalCtrl &terminalManager)
     : terminalManager(terminalManager),
       mainScreen(terminalManager.getTerminalWidth(),
-                 terminalManager.getTerminalWidth(), terminalManager),
+                 terminalManager.getTerminalHeight(), terminalManager),
       header(terminalManager.getTerminalWidth(),
-             terminalManager.getTerminalWidth(), terminalManager),
+             terminalManager.getTerminalHeight(), terminalManager),
       stats(terminalManager.getTerminalWidth(),
-            terminalManager.getTerminalWidth(), terminalManager),
+            terminalManager.getTerminalHeight(), terminalManager),
       mainTextBox(terminalManager.getTerminalWidth(),
-                  terminalManager.getTerminalWidth(), terminalManager) {
+                  terminalManager.getTerminalHeight(), terminalManager),
+      resultsContent(terminalManager.getTerminalWidth(),
+                     terminalManager.getTerminalHeight(), terminalManager),
+      resultsHeader(terminalManager.getTerminalWidth(),
+                    terminalManager.getTerminalHeight(), terminalManager) {
+
   clearTerminal();
-  terminalHeight = terminalManager.getTerminalHeight();
   terminalWidth = terminalManager.getTerminalWidth();
+  terminalHeight = terminalManager.getTerminalHeight();
 
   windowWidth = terminalWidth - 20;
   windowHeight = terminalHeight - 5;
@@ -34,6 +38,8 @@ screenState::screenState(terminalCtrl &terminalManager)
   headerStartRow = windowStartRow + 1;
   StatsStartRow = headerStartRow + 3;
   displayTextStartRow = StatsStartRow + 3;
+  resultsStartRow = headerStartRow + 3;
+
   spdlog::debug("Height of terminal: {},windowWidth of terminal: {}",
                 terminalHeight, terminalWidth);
   spdlog::debug(
@@ -123,10 +129,85 @@ void screenState::renderTextProgress(state_t &state) {
 }
 
 void screenState::testComplete() {}
+//
+// void screenState::get_and_print_result(state_t &state) {
+//   clearTerminal();
+//   updateStats(state);
+//   std::string resultsHeaderTitle = " **** Test Complete **** ";
+//
+//   mainScreen.drawBox(windowStartCol, windowStartRow, windowWidth,
+//   windowHeight,
+//                      true, borderShape::SHARP_SINGLE, (char *)BLUE, true);
+//   resultsBox.drawBoxWithText(windowStartCol + 1, headerStartRow,
+//                              windowWidth - 2, 3, resultsHeaderTitle, true,
+//                              borderShape::SHARP_SINGLE, (char *)WHITE,
+//                              (char *)WHITE, true);
+//   //
+//   results.drawBoxWithText(windowStartCol+1,resultsStartRow,windowWidth-2,);
+// }
 
 void screenState::get_and_print_result(state_t &state) {
   clearTerminal();
-  updateStats(state);
+
+  // Calculate stats
+  auto elapsed = duration_cast<seconds>(steady_clock::now() - state.startTime);
+  float timeInMinutes = elapsed.count() / 60.0f;
+  int wpm = timeInMinutes > 0 ? (state.correctCount / 5) / timeInMinutes : 0;
+
+  int totalChars = state.correctCount + state.incorrectCount;
+  float accuracy =
+      totalChars > 0
+          ? (static_cast<float>(state.correctCount) / totalChars * 100.0f)
+          : 0.0f;
+
+  int minutes = elapsed.count() / 60;
+  int seconds = elapsed.count() % 60;
+
+  // Build results content string
+  std::string resultsText = "\nWords Per Minute: " + std::to_string(wpm) +
+                            "\n WPM    "
+                            "\nAccuracy: " +
+                            std::to_string((int)accuracy) +
+                            "%    "
+                            "\nTime: " +
+                            std::to_string(minutes) + "m " +
+                            std::to_string(seconds) +
+                            "s    "
+                            "\nTotal Chars: " +
+                            std::to_string(totalChars) +
+                            "    "
+                            "\nCorrect: " +
+                            std::to_string(state.correctCount) +
+                            "    "
+                            "Incorrect: " +
+                            std::to_string(state.incorrectCount) +
+                            "    "
+                            "\nLevel: Easy\n";
+
+  std::string resultsHeaderTitle = "*** TEST COMPLETE ***";
+
+  // Draw using YOUR widget system
+  mainScreen.drawBox(windowStartCol, windowStartRow, windowWidth, windowHeight,
+                     true, borderShape::SHARP_SINGLE, (char *)BLUE, true);
+
+  resultsHeader.drawBoxWithText(windowStartCol + 1, headerStartRow,
+                                windowWidth - 2, 3, resultsHeaderTitle, true,
+                                borderShape::SHARP_SINGLE, (char *)GREEN,
+                                (char *)GREEN, true);
+
+  resultsContent.drawBoxWithText(
+      windowStartCol + 1, resultsStartRow, windowWidth - 2, 10, resultsText,
+      false, // left align
+      borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
+
+  spdlog::info("Results screen rendered successfully");
+}
+
+void screenState::showMenu(state_t &state) {
+  if (state.isRunning) {
+    spdlog::warn("Cannot Show menu items when not running");
+    return;
+  }
 }
 
 void screenState::appendToBuffer(std::vector<char> &buffer, const char *data) {

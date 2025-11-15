@@ -27,12 +27,19 @@ public:
 
   void appendToBuffer(std::vector<char> &buffer, const char *data);
   void appendToBuffer(std::vector<char> &buffer, const std::string &data);
+  std::string formatResultsContent(state_t &state);
 
 private:
   uiWidget mainScreen;
   uiWidget header;
   uiWidget stats;
   uiWidget mainTextBox;
+
+  uiWidget resultsContent;
+  uiWidget resultsHeader;
+
+  uiWidget footerContent;
+
   int terminalHeight;
   int terminalWidth;
 
@@ -44,6 +51,7 @@ private:
   int headerStartRow;
   int StatsStartRow;
   int displayTextStartRow;
+  int resultsStartRow;
 
   terminalCtrl &terminalManager;
 
