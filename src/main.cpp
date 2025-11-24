@@ -44,46 +44,49 @@ int main(int argc, char *argv[]) {
   inputValidator inputValidator(terminalManager);
   screenState renderManager(terminalManager);
 
-  renderManager.renderGradientBox(state);
+  // renderManager.renderStartScreen(state);
+  renderManager.renderMenuScreen(state);
   spdlog::info("Initial Screen Rendering Complete");
 
   std::chrono::steady_clock::time_point statsUpdateTime;
   char tempChar;
   while (true) {
-    while (true) {
-      tempChar = terminalManager.getCharacter();
-      while (!state.isRunning) {
+    if (state.)
+      // renderManager.renderMenuScreen(state);
+      while (true) {
         tempChar = terminalManager.getCharacter();
-        if (tempChar != '\0') {
-          spdlog::debug("Got character: {}, starting the game", tempChar);
-          state.startTime = steady_clock::now();
-          statsUpdateTime = steady_clock::now();
-          state.isRunning = true;
+        while (!state.isRunning) {
+          tempChar = terminalManager.getCharacter();
+          if (tempChar != '\0') {
+            spdlog::debug("Got character: {}, starting the game", tempChar);
+            state.startTime = steady_clock::now();
+            statsUpdateTime = steady_clock::now();
+            state.isRunning = true;
+          }
         }
+        if (tempChar != '\0') {
+          inputValidator.getInputAndCompare(state, tempChar);
+        }
+        // // Only calculate elapsed time if the timer has started
+        auto elapsed =
+            duration_cast<seconds>(steady_clock::now() - state.startTime);
+        state.remainingTimeSeconds = state.totalTimeSeconds - elapsed.count();
+        //
+        // // Check if time is up BEFORE rendering
+        if (elapsed.count() >= state.totalTimeSeconds) {
+          break;
+        }
+        //
+        if (tempChar != '\0') {
+          renderManager.renderTextProgress(state);
+        }
+        if (duration_cast<seconds>(steady_clock::now() - statsUpdateTime) >=
+            duration(1s)) {
+          renderManager.updateStats(state);
+          statsUpdateTime = steady_clock::now();
+        }
+        std::this_thread::sleep_for(5ms);
       }
-      if (tempChar != '\0') {
-        inputValidator.getInputAndCompare(state, tempChar);
-      }
-      // // Only calculate elapsed time if the timer has started
-      auto elapsed =
-          duration_cast<seconds>(steady_clock::now() - state.startTime);
-      state.remainingTimeSeconds = state.totalTimeSeconds - elapsed.count();
-      //
-      // // Check if time is up BEFORE rendering
-      if (elapsed.count() >= state.totalTimeSeconds) {
-        break;
-      }
-      //
-      if (tempChar != '\0') {
-        renderManager.renderTextProgress(state);
-      }
-      if (duration_cast<seconds>(steady_clock::now() - statsUpdateTime) >=
-          duration(1s)) {
-        renderManager.updateStats(state);
-        statsUpdateTime = steady_clock::now();
-      }
-      std::this_thread::sleep_for(5ms);
-    }
     state.isRunning = false;
     renderManager.get_and_print_result(state);
     std::this_thread::sleep_for(duration(3s));

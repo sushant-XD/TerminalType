@@ -39,6 +39,7 @@ typedef struct result_s {
 } result_t;
 
 enum class keyStroke { BACKSPACE = 0, BACK_WORD, CORRECT, INCORRECT };
+enum class testState { RUNNING = 0, MENU, SETTINGS, RESULTS };
 
 typedef struct screen_s {
   int width;
@@ -46,7 +47,7 @@ typedef struct screen_s {
 } screen_t;
 
 typedef struct state_s {
-  bool isRunning;
+  testState currentState;
   result_t result;
   int correctCount;
   int charCount;

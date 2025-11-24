@@ -23,7 +23,13 @@ screenState::screenState(terminalCtrl &terminalManager)
       resultsContent(terminalManager.getTerminalWidth(),
                      terminalManager.getTerminalHeight(), terminalManager),
       resultsHeader(terminalManager.getTerminalWidth(),
-                    terminalManager.getTerminalHeight(), terminalManager) {
+                    terminalManager.getTerminalHeight(), terminalManager),
+      resultsOptions(terminalManager.getTerminalWidth(),
+                     terminalManager.getTerminalHeight(), terminalManager),
+      menuUserSettings(terminalManager.getTerminalWidth(),
+                       terminalManager.getTerminalHeight(), terminalManager),
+      menuOptions(terminalManager.getTerminalWidth(),
+                  terminalManager.getTerminalHeight(), terminalManager) {
 
   clearTerminal();
   terminalWidth = terminalManager.getTerminalWidth();
@@ -39,6 +45,9 @@ screenState::screenState(terminalCtrl &terminalManager)
   StatsStartRow = headerStartRow + 3;
   displayTextStartRow = StatsStartRow + 3;
   resultsStartRow = headerStartRow + 3;
+
+  menuOptionsStartRow = headerStartRow + 3;
+  menuUserSettingsStartRow = headerStartRow + 3;
 
   spdlog::debug("Height of terminal: {},windowWidth of terminal: {}",
                 terminalHeight, terminalWidth);
@@ -71,7 +80,7 @@ void screenState::updateStats(state_t &state) {
 }
 
 // Complete gradient box render function
-void screenState::renderGradientBox(state_t &state) {
+void screenState::renderStartScreen(state_t &state) {
   clearTerminal();
   spdlog::info("terminal cleared");
 
@@ -94,6 +103,51 @@ void screenState::renderGradientBox(state_t &state) {
       windowStartCol + 1, displayTextStartRow, windowWidth - 2, 6, displayText,
       true, borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
   spdlog::info("Render Gradient Setup complete");
+}
+
+// Complete gradient box render function
+void screenState::renderMenuScreen(state_t &state) {
+  clearTerminal();
+  spdlog::info("terminal cleared");
+
+  std::string headerTitle = "Terminal Typing Test";
+  std::string statsContent =
+      "Time: " + std::to_string(state.totalTimeSeconds) + "    |    Level: 0";
+  std::string displayText(state.targetSequence.begin(),
+                          state.targetSequence.end());
+
+  mainScreen.drawBox(windowStartCol, windowStartRow, windowWidth, windowHeight,
+                     true, borderShape::SHARP_SINGLE, (char *)BLUE, true);
+  header.drawBoxWithText(windowStartCol + 1, headerStartRow, windowWidth - 2, 3,
+                         headerTitle, true, borderShape::SHARP_SINGLE,
+                         (char *)WHITE, (char *)WHITE, true);
+  menuOptions.drawBoxWithText(windowStartCol + 1, menuOptionsStartRow,
+                              windowWidth - 2, 5, getMenuString(0), true,
+                              borderShape::SHARP_SINGLE, (char *)WHITE,
+                              (char *)WHITE, true);
+}
+
+void screenState::updateMenuScreen(int option){menuOptions.updateText()}
+
+std::string screenState::getMenuString(int option) {
+  std::vector<std::string> options;
+  options.push_back("Start Typing Test");
+  options.push_back("Select Options");
+  options.push_back("Quit");
+  if (option >= options.size() - 1) {
+    options[options.size() - 1] = " > " + options[options.size() - 1];
+  } else if (option <= 0) {
+    options[0] = " > " + options[0];
+  } else {
+    options[option] = " > " + options[option];
+  }
+
+  std::string menuString = "";
+  for (const auto &line : options) {
+    menuString += line + "\n"; // Add a newline after every option
+  }
+
+  return menuString;
 }
 
 void screenState::renderTextProgress(state_t &state) {

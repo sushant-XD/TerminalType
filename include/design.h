@@ -19,7 +19,7 @@ public:
 
   // Main render function
   void updateStats(state_t &state);
-  void renderGradientBox(state_t &state);
+  void renderStartScreen(state_t &state);
   void renderTextProgress(state_t &state);
   void testComplete();
   void setTerminalBackground();
@@ -29,16 +29,21 @@ public:
   void appendToBuffer(std::vector<char> &buffer, const std::string &data);
   std::string formatResultsContent(state_t &state);
 
+  void renderMenuScreen(state_t &state);
+
 private:
-  uiWidget mainScreen;
-  uiWidget header;
-  uiWidget stats;
-  uiWidget mainTextBox;
+  uiWidget mainScreen;  // main screen with the outer box
+  uiWidget header;      // header "Terminal Type Test"
+  uiWidget stats;       // stats during test
+  uiWidget mainTextBox; // main text box
 
-  uiWidget resultsContent;
-  uiWidget resultsHeader;
+  uiWidget resultsContent; // results content after the game is over
+  uiWidget resultsHeader;  // results header
 
-  // uiWidget footerContent;
+  uiWidget resultsOptions; // options: Play again, go to home
+
+  uiWidget menuUserSettings;
+  uiWidget menuOptions;
 
   int terminalHeight;
   int terminalWidth;
@@ -53,7 +58,12 @@ private:
   int displayTextStartRow;
   int resultsStartRow;
 
+  int menuUserSettingsStartRow;
+  int menuOptionsStartRow;
+
   terminalCtrl &terminalManager;
 
   std::vector<std::string> wrapText(state_t &state);
+
+  std::string getMenuString(int option);
 };
