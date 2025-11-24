@@ -100,6 +100,8 @@ void screenState::renderTextProgress(state_t &state) {
   int displayIndex;
   if (state.currentKeyStatus == keyStroke::BACKSPACE) {
     displayIndex = state.charCount;
+  } else if (state.currentKeyStatus == keyStroke::BACK_WORD) {
+    displayIndex = state.charCount;
   } else {
     displayIndex = state.charCount - 1;
   }
@@ -121,9 +123,25 @@ void screenState::renderTextProgress(state_t &state) {
 
     mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
                            currentTextRow, currentTextCol, 1, (char *)RED);
-  } else if (state.currentKeyStatus == keyStroke::BACKSPACE) {
-    mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
-                           currentTextRow, currentTextCol, 1, (char *)WHITE);
+  } else if (state.currentKeyStatus == keyStroke::BACKSPACE ||
+             state.currentKeyStatus == keyStroke::BACK_WORD) {
+    for (int i = 0; i < state.backspaceCount; ++i) {
+      // The characters to whitewash start at the new, lower charCount
+      displayIndex = state.charCount + i;
+
+      if (displayIndex < 0 ||
+          displayIndex >= static_cast<int>(state.targetSequence.size())) {
+        spdlog::warn("Backspace displayIndex {} out of bounds (size: {})",
+                     displayIndex, state.targetSequence.size());
+        continue; // Skip this char if it's out of bounds
+      }
+
+      int currentTextCol = mainTextBox.getTextStartColumn() + displayIndex + 1;
+
+      // Update this single character to WHITE
+      mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
+                             currentTextRow, currentTextCol, 1, (char *)WHITE);
+    }
   }
   spdlog::info("Text Render progress complete");
 }
@@ -203,12 +221,12 @@ void screenState::get_and_print_result(state_t &state) {
   spdlog::info("Results screen rendered successfully");
 }
 
-void screenState::showMenu(state_t &state) {
-  if (state.isRunning) {
-    spdlog::warn("Cannot Show menu items when not running");
-    return;
-  }
-}
+// void screenState::showMenu(state_t &state) {
+//   if (state.isRunning) {
+//     spdlog::warn("Cannot Show menu items when not running");
+//     return;
+//   }
+// }
 
 void screenState::appendToBuffer(std::vector<char> &buffer, const char *data) {
   if (data) {

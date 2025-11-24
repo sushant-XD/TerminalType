@@ -33,6 +33,8 @@ public:
   void showCursor();
   void hideCursor();
 
+  char *getAllCharacters();
+
 private:
   int bufSize = 1;
   int input_fd;  // used to set terminal characteristics

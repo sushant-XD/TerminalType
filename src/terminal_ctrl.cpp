@@ -42,6 +42,15 @@ char terminalCtrl::getCharacter() {
   return '\0';
 }
 
+char *terminalCtrl::getAllCharacters() {
+  char tmpBuf[1024];
+  size_t bytesRead = read(input_fd, tmpBuf, sizeof(tmpBuf));
+  if (bytesRead > 0) {
+    return tmpBuf;
+  }
+  return nullptr;
+}
+
 void terminalCtrl::writeToTerminal(char *ch, int size) {
   write(input_fd, ch, size);
 }

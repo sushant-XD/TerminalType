@@ -3,6 +3,7 @@
 #include <chrono>
 #include <spdlog/spdlog.h>
 #include <thread>
+
 using namespace std::chrono_literals;
 using namespace std::chrono;
 
@@ -54,6 +55,7 @@ int main(int argc, char *argv[]) {
       while (!state.isRunning) {
         tempChar = terminalManager.getCharacter();
         if (tempChar != '\0') {
+          spdlog::debug("Got character: {}, starting the game", tempChar);
           state.startTime = steady_clock::now();
           statsUpdateTime = steady_clock::now();
           state.isRunning = true;
@@ -84,7 +86,14 @@ int main(int argc, char *argv[]) {
     }
     state.isRunning = false;
     renderManager.get_and_print_result(state);
-    std::this_thread::sleep_for(duration(1s));
+    std::this_thread::sleep_for(duration(3s));
+    // clear any terminal key that might accidentally trigger the game again
+    char *tmpBuf = terminalManager.getAllCharacters();
+    if (tmpBuf != nullptr) {
+      spdlog::debug("Cleared {} characters to flush", sizeof(tmpBuf));
+    } else {
+      spdlog::debug("Nothing to clear in the terminal Buffer");
+    }
   }
   renderManager.clearTerminal();
   return 0;

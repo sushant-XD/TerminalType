@@ -38,7 +38,7 @@ private:
   uiWidget resultsContent;
   uiWidget resultsHeader;
 
-  uiWidget footerContent;
+  // uiWidget footerContent;
 
   int terminalHeight;
   int terminalWidth;

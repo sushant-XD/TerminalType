@@ -12,29 +12,72 @@ inputValidator::~inputValidator() {}
  * as wrong
  * */
 int inputValidator::getInputAndCompare(state_t &state, char ch) {
-  if (ch == '\b' || ch == 127) {
+  if (ch == BACKSPACE_KEY) {
     spdlog::info("Back Key Pressed");
     if (!state.userInputSequence.empty()) {
       state.userInputSequence.pop_back();
 
       if (state.incorrectCount > 0) {
         state.incorrectCount--;
-        spdlog::info("IncorrectCount decreased to: {}", state.incorrectCount);
       } else if (state.correctCount > 0) {
         state.correctCount--;
-        spdlog::info("CorrectCount decreased to: {}", state.correctCount);
       }
 
       if (state.charCount > 0) {
         state.charCount--;
-        spdlog::info("Character Count decreased to: {}", state.charCount);
       }
-
+      state.backspaceCount = 1;
+      spdlog::debug("Correct Count: {} Incorrect Count: {} Char Count: {}",
+                    state.correctCount, state.incorrectCount, state.charCount);
       state.currentKeyStatus = keyStroke::BACKSPACE;
+    } else {
+      state.backspaceCount = 0;
     }
     return 0;
   }
+  // Ctrl+W
+  if (ch == BACK_WORD_KEY) {
+    spdlog::info("Back Word Pressed. Before erasing word: {}",
+                 std::string(state.userInputSequence.begin(),
+                             state.userInputSequence.end()));
+    int deletedChars = 0;
+    while ((!state.userInputSequence.empty()) &&
+           (state.userInputSequence.back() == ' ')) {
+      state.userInputSequence.pop_back();
+      if (state.incorrectCount > 0) {
+        state.incorrectCount--;
+      } else if (state.correctCount > 0) {
+        state.correctCount--;
+      }
+      if (state.charCount > 0) {
+        state.charCount--;
+      }
+      deletedChars++;
+    }
 
+    while ((!state.userInputSequence.empty()) &&
+           (state.userInputSequence.back() != ' ')) {
+      state.userInputSequence.pop_back();
+      if (state.incorrectCount > 0) {
+        state.incorrectCount--;
+      } else if (state.correctCount > 0) {
+        state.correctCount--;
+      }
+      if (state.charCount > 0) {
+        state.charCount--;
+      }
+      deletedChars++;
+    }
+    state.backspaceCount = deletedChars;
+    spdlog::debug("After erasing word: {}",
+                  std::string(state.userInputSequence.begin(),
+                              state.userInputSequence.end()));
+    spdlog::debug("Correct Count: {} Incorrect Count: {} Char Count: {}",
+                  state.correctCount, state.incorrectCount, state.charCount);
+    state.currentKeyStatus = keyStroke::BACK_WORD;
+    return 0;
+  }
+  state.backspaceCount = 0;
   state.userInputSequence.push_back(ch);
   if (state.incorrectCount > 0) {
     state.incorrectCount++;

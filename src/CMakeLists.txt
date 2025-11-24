@@ -14,3 +14,7 @@ if(NOT TARGET spdlog)
 endif()
 
 target_link_libraries(termtype PRIVATE spdlog::spdlog $<$<BOOL:${MINGW}>:ws2_32>)
+include(GNUInstallDirs)
+install(TARGETS termtype
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)

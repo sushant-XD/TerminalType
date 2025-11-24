@@ -38,7 +38,7 @@ typedef struct result_s {
   int accuracy;
 } result_t;
 
-enum class keyStroke { BACKSPACE = 0, CORRECT, INCORRECT };
+enum class keyStroke { BACKSPACE = 0, BACK_WORD, CORRECT, INCORRECT };
 
 typedef struct screen_s {
   int width;
@@ -59,6 +59,8 @@ typedef struct state_s {
   std::chrono::steady_clock::time_point startTime;
   int totalTimeSeconds;
   int remainingTimeSeconds;
+
+  int backspaceCount;
 } state_t;
 
 /* Constants */
