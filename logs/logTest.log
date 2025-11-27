@@ -1,30 +1,42 @@
-[2025-11-24 11:48:51.626] [my_app_logger] [info] Starting Code
-[2025-11-24 11:48:51.626] [my_app_logger] [info] Total Time: 10 Remaining Time: 10
-[2025-11-24 11:48:51.627] [my_app_logger] [debug] Height of terminal: 30,windowWidth of terminal: 120
-[2025-11-24 11:48:51.627] [my_app_logger] [debug] Height of Window: 25windowWidth of Window: 100 Start Position: 1,1
-[2025-11-24 11:48:51.627] [my_app_logger] [info] terminal cleared
-[2025-11-24 11:48:51.638] [my_app_logger] [info] Text Lines: Terminal Typing Test
-[2025-11-24 11:48:51.641] [my_app_logger] [info] Text Lines: > Start Typing Test (Enter)
-[2025-11-24 11:48:51.646] [my_app_logger] [info] Initial Screen Rendering Complete
-[2025-11-24 11:48:53.160] [my_app_logger] [debug] Got character: , starting the game
-[2025-11-24 11:48:53.161] [my_app_logger] [info]  key Incorrect. Does not match: a. Incorrect Count: 1
-[2025-11-24 11:48:53.161] [my_app_logger] [info] Character Count: 1
-[2025-11-24 11:48:53.161] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:48:53.161] [my_app_logger] [info] Text Render progress complete
-[2025-11-24 11:48:53.166] [my_app_logger] [info] [ key incorrect. Incorrect Count: 2
-[2025-11-24 11:48:53.166] [my_app_logger] [info] Character Count: 2
-[2025-11-24 11:48:53.166] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:48:53.166] [my_app_logger] [info] Text Render progress complete
-[2025-11-24 11:48:53.171] [my_app_logger] [info] B key incorrect. Incorrect Count: 3
-[2025-11-24 11:48:53.171] [my_app_logger] [info] Character Count: 3
-[2025-11-24 11:48:53.171] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:48:53.171] [my_app_logger] [info] Text Render progress complete
-[2025-11-24 11:48:54.164] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:48:55.167] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:48:56.169] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:48:57.173] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:48:58.173] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:48:59.179] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:49:00.184] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:49:01.186] [my_app_logger] [error] Is not a textBox. Cannot update Text.
-[2025-11-24 11:49:02.189] [my_app_logger] [error] Is not a textBox. Cannot update Text.
+[2025-11-26 21:57:05.078] [my_app_logger] [info] Initializing Terminal Typing Program
+[2025-11-26 21:57:05.078] [my_app_logger] [info] Total Time: 10 
+[2025-11-26 21:57:05.079] [my_app_logger] [debug] Height of terminal: 30,windowWidth of terminal: 120
+[2025-11-26 21:57:05.079] [my_app_logger] [debug] Height of Window: 25windowWidth of Window: 100 Start Position: 1,1
+[2025-11-26 21:57:05.079] [my_app_logger] [info] terminal cleared
+[2025-11-26 21:57:05.089] [my_app_logger] [info] Text Lines: Terminal Typing Test
+[2025-11-26 21:57:05.092] [my_app_logger] [info] Text Lines: > Start Typing Test
+[2025-11-26 21:57:05.096] [my_app_logger] [info] Moving cursor to position: 5 3
+[2025-11-26 21:57:05.106] [my_app_logger] [info] Current Cursor Position: 2 2
+[2025-11-26 21:57:05.106] [my_app_logger] [info] Initial Screen Rendering Complete
+[2025-11-26 21:57:06.172] [my_app_logger] [info] Current Cursor Position: 3 2
+[2025-11-26 21:57:06.172] [my_app_logger] [info] Selected Option: 0 CurrentRow: 3 menuFirst Option Row: 6
+[2025-11-26 21:57:06.175] [my_app_logger] [info] All variables reset for widget
+[2025-11-26 21:57:06.175] [my_app_logger] [info] Text Lines: > Start Typing Test
+[2025-11-26 21:57:06.401] [my_app_logger] [info] Current Cursor Position: 7 1
+[2025-11-26 21:57:06.401] [my_app_logger] [info] Selected Option: 1 CurrentRow: 7 menuFirst Option Row: 6
+[2025-11-26 21:57:06.403] [my_app_logger] [info] All variables reset for widget
+[2025-11-26 21:57:06.403] [my_app_logger] [info] Text Lines: Start Typing Test
+[2025-11-26 21:57:06.780] [my_app_logger] [info] Current Cursor Position: 6 1
+[2025-11-26 21:57:06.780] [my_app_logger] [info] Selected Option: 0 CurrentRow: 6 menuFirst Option Row: 6
+[2025-11-26 21:57:06.782] [my_app_logger] [info] All variables reset for widget
+[2025-11-26 21:57:06.782] [my_app_logger] [info] Text Lines: > Start Typing Test
+[2025-11-26 21:57:06.954] [my_app_logger] [info] Current Cursor Position: 7 1
+[2025-11-26 21:57:06.954] [my_app_logger] [info] Selected Option: 1 CurrentRow: 7 menuFirst Option Row: 6
+[2025-11-26 21:57:06.956] [my_app_logger] [info] All variables reset for widget
+[2025-11-26 21:57:06.956] [my_app_logger] [info] Text Lines: Start Typing Test
+[2025-11-26 21:57:07.074] [my_app_logger] [info] Current Cursor Position: 6 1
+[2025-11-26 21:57:07.074] [my_app_logger] [info] Selected Option: 0 CurrentRow: 6 menuFirst Option Row: 6
+[2025-11-26 21:57:07.077] [my_app_logger] [info] All variables reset for widget
+[2025-11-26 21:57:07.077] [my_app_logger] [info] Text Lines: > Start Typing Test
+[2025-11-26 21:57:07.189] [my_app_logger] [info] Current Cursor Position: 7 1
+[2025-11-26 21:57:07.189] [my_app_logger] [info] Selected Option: 1 CurrentRow: 7 menuFirst Option Row: 6
+[2025-11-26 21:57:07.191] [my_app_logger] [info] All variables reset for widget
+[2025-11-26 21:57:07.191] [my_app_logger] [info] Text Lines: Start Typing Test
+[2025-11-26 21:57:07.304] [my_app_logger] [info] Current Cursor Position: 6 1
+[2025-11-26 21:57:07.304] [my_app_logger] [info] Selected Option: 0 CurrentRow: 6 menuFirst Option Row: 6
+[2025-11-26 21:57:07.305] [my_app_logger] [info] All variables reset for widget
+[2025-11-26 21:57:07.305] [my_app_logger] [info] Text Lines: > Start Typing Test
+[2025-11-26 21:57:07.428] [my_app_logger] [info] Current Cursor Position: 7 1
+[2025-11-26 21:57:07.428] [my_app_logger] [info] Selected Option: 1 CurrentRow: 7 menuFirst Option Row: 6
+[2025-11-26 21:57:07.430] [my_app_logger] [info] All variables reset for widget
+[2025-11-26 21:57:07.431] [my_app_logger] [info] Text Lines: Start Typing Test

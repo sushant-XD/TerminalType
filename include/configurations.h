@@ -40,6 +40,7 @@ typedef struct result_s {
 
 enum class keyStroke { BACKSPACE = 0, BACK_WORD, CORRECT, INCORRECT };
 enum class testState { RUNNING = 0, MENU, SETTINGS, RESULTS };
+enum class selectedMenuOption { START = 0, SETTINGS, QUIT };
 
 typedef struct screen_s {
   int width;

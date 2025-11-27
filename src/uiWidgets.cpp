@@ -211,22 +211,50 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
 uiError uiWidget::refresh() { return uiError::OK; }
 
 // removes the element entirely
+// removes the element entirely
 uiError uiWidget::erase() {
-  char emptyChar = {' '};
-  terminalManager.moveCursor(initialPosRow, initialPosCol);
+  if (!widgetDrawn) {
+    spdlog::warn("Widget not drawn yet, nothing to erase");
+    return uiError::ERASE_ERROR;
+  }
+
+  char emptyChar = ' ';
   terminalManager.hideCursor();
-  for (int i = initialPosRow; i < (initialPosRow + height); i++) {
-    for (int j = initialPosCol; j < (initialPosCol + width); j++) {
+
+  // Clear each row of the widget
+  for (int i = 0; i < height; i++) {
+    terminalManager.moveCursor(initialPosRow + i, initialPosCol);
+    // Write spaces to clear the entire width
+    for (int j = 0; j < width; j++) {
       terminalManager.writeToTerminal(&emptyChar, 1);
     }
   }
+
+  // Reset terminal colors
+  terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
+  terminalManager.showCursor();
+
+  // Reset all variables
   reset_vars();
+
   return uiError::OK;
 }
 
 void uiWidget::reset_vars() {
+  widgetDrawn = false;
+  isStatic = false;
+  isTextBox = false;
+  initialPosCol = 0;
+  initialPosRow = 0;
+  width = 0;
+  height = 0;
+  textStartRow = 0;
+  textStartCol = -1;
+  endRow = 0;
+  initialText.clear();
+  backgroundColor = nullptr;
+
   spdlog::info("All variables reset for widget");
-  return;
 }
 
 uiError uiWidget::updateText(char *ch, int startingIndexRow,

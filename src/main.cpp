@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
   std::fstream inFile;
   state_t state;
 
-  state.isRunning = false;
+  state.currentState = testState::MENU;
   if (argc == 1) {
     if (!configure(config)) {
       return 1;
@@ -30,53 +30,50 @@ int main(int argc, char *argv[]) {
   }
 
   initializeState(state);
-  spdlog::info("Starting Code");
+
+  spdlog::info("Initializing Terminal Typing Program");
   state.totalTimeSeconds = config.time;
   state.remainingTimeSeconds = config.time;
 
-  spdlog::info("Total Time: {} Remaining Time: {}", config.time, config.time);
-
+  spdlog::info("Total Time: {} ", config.time);
   fileOps fileManager(config.filePathAbs);
   terminalCtrl terminalManager;
-
   fileManager.setup(state);
 
   inputValidator inputValidator(terminalManager);
-  screenState renderManager(terminalManager);
+  // screenState renderManager(terminalManager);
 
-  // renderManager.renderStartScreen(state);
-  renderManager.renderMenuScreen(state);
+  // renderManager.renderMenuScreen(state);
   spdlog::info("Initial Screen Rendering Complete");
 
   std::chrono::steady_clock::time_point statsUpdateTime;
-  char tempChar;
+  char tempChar = '\0';
+  selectedMenuOption selectedSetting;
   while (true) {
-    if (state.)
-      // renderManager.renderMenuScreen(state);
-      while (true) {
-        tempChar = terminalManager.getCharacter();
-        while (!state.isRunning) {
-          tempChar = terminalManager.getCharacter();
-          if (tempChar != '\0') {
-            spdlog::debug("Got character: {}, starting the game", tempChar);
-            state.startTime = steady_clock::now();
-            statsUpdateTime = steady_clock::now();
-            state.isRunning = true;
-          }
-        }
-        if (tempChar != '\0') {
-          inputValidator.getInputAndCompare(state, tempChar);
-        }
-        // // Only calculate elapsed time if the timer has started
-        auto elapsed =
-            duration_cast<seconds>(steady_clock::now() - state.startTime);
-        state.remainingTimeSeconds = state.totalTimeSeconds - elapsed.count();
-        //
-        // // Check if time is up BEFORE rendering
-        if (elapsed.count() >= state.totalTimeSeconds) {
-          break;
-        }
-        //
+
+    tempChar = terminalManager.getCharacter();
+
+    if (state.currentState == testState::RUNNING) {
+      if (state.startTime == std::chrono::steady_clock::time_point()) {
+        state.startTime = steady_clock::now();
+        statsUpdateTime = steady_clock::now();
+        renderManager.renderStartScreen(state);
+      }
+
+      // if there's no input, then tempChar is '\0'
+      if (tempChar != '\0') {
+        inputValidator.getInputAndCompare(state, tempChar);
+      }
+
+      auto elapsed =
+          duration_cast<seconds>(steady_clock::now() - state.startTime);
+      state.remainingTimeSeconds = state.totalTimeSeconds - elapsed.count();
+
+      // time up, set currentState to Results and exit
+      if (elapsed.count() >= state.totalTimeSeconds) {
+        state.currentState = testState::RESULTS;
+      } else {
+        // if there's no input, then tempChar is '\0'
         if (tempChar != '\0') {
           renderManager.renderTextProgress(state);
         }
@@ -87,23 +84,51 @@ int main(int argc, char *argv[]) {
         }
         std::this_thread::sleep_for(5ms);
       }
-    state.isRunning = false;
-    renderManager.get_and_print_result(state);
-    std::this_thread::sleep_for(duration(3s));
-    // clear any terminal key that might accidentally trigger the game again
-    char *tmpBuf = terminalManager.getAllCharacters();
-    if (tmpBuf != nullptr) {
-      spdlog::debug("Cleared {} characters to flush", sizeof(tmpBuf));
+    } else if (state.currentState == testState::MENU) {
+      renderManager.renderMenuScreen(state);
+      if (tempChar == 'j' || tempChar == 'J') {
+        terminalManager.moveCursorDown();
+        selectedSetting = renderManager.updateMenuScreen();
+      } else if (tempChar == 'k' || tempChar == 'K') {
+        terminalManager.moveCursorUp();
+        selectedSetting = renderManager.updateMenuScreen();
+      } else if (tempChar == '\n') {
+        spdlog::info("Enter key pressed. Selected Option: {}",
+                     (int)selectedSetting);
+        if (selectedSetting == selectedMenuOption::START) {
+          state.currentState = testState::RUNNING;
+          terminalManager.getAllCharacters();
+        } else if (selectedSetting == selectedMenuOption::SETTINGS) {
+          state.currentState = testState::SETTINGS;
+        } else if (selectedSetting == selectedMenuOption::QUIT) {
+          spdlog::info("Qutting...");
+          break;
+        }
+      }
+    } else if (state.currentState == testState::RESULTS) {
+      renderManager.get_and_print_result(state);
+      std::this_thread::sleep_for(duration(3s));
+      // clear any terminal key that might accidentally trigger the game again
+      char *tmpBuf = terminalManager.getAllCharacters();
+      if (tmpBuf != nullptr) {
+        spdlog::debug("Cleared {} characters to flush", sizeof(tmpBuf));
+      } else {
+        spdlog::debug("Nothing to clear in the terminal Buffer");
+      }
+    } else if (state.currentState == testState::SETTINGS) {
+      spdlog::info("Inside Settings Menu");
     } else {
-      spdlog::debug("Nothing to clear in the terminal Buffer");
+      spdlog::error("Invalid State");
+      break;
     }
+    std::this_thread::sleep_for(5ms);
   }
   renderManager.clearTerminal();
   return 0;
 }
 
 void initializeState(state_t &state) {
-  state.isRunning = false;
+  state.currentState = testState::MENU;
   state.result = {};
   state.correctCount = 0;
   state.incorrectCount = 0;

@@ -6,7 +6,12 @@ input_validation.cpp
 design.cpp 
 logging.cpp
 uiWidgets.cpp
+canvas.cpp
+menuScreen.cpp
+gameScreen.cpp
+screenManager.cpp
 )
+
 target_include_directories(termtype PRIVATE "${CMAKE_SOURCE_DIR}/include")
 if(NOT TARGET spdlog)
     # Stand-alone build

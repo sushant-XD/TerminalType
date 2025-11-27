@@ -28,6 +28,9 @@ public:
 
   void moveCursor(int row, int col);
 
+  void moveCursorDown();
+  void moveCursorUp();
+
   void saveCursor();
   void restoreCursor();
   void showCursor();

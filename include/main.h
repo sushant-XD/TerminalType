@@ -1,6 +1,6 @@
 #pragma once
-
 #include "ansi_color_codes.h"
+#include "canvas.h"
 #include "design.h"
 #include "file_source.h"
 #include "input_validation.h"

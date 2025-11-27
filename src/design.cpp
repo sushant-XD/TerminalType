@@ -49,6 +49,9 @@ screenState::screenState(terminalCtrl &terminalManager)
   menuOptionsStartRow = headerStartRow + 3;
   menuUserSettingsStartRow = headerStartRow + 3;
 
+  menuRendered = false;
+  screenCleared = false;
+
   spdlog::debug("Height of terminal: {},windowWidth of terminal: {}",
                 terminalHeight, terminalWidth);
   spdlog::debug(
@@ -63,25 +66,25 @@ void screenState::clearTerminal() {
 }
 
 void screenState::updateStats(state_t &state) {
-  if (state.isRunning) {
-    auto elapsed =
-        duration_cast<seconds>(steady_clock::now() - state.startTime);
-    float timeInMinutes = elapsed.count() / 60.0f;
-    int wpm = timeInMinutes > 0 ? (state.correctCount / 5) / timeInMinutes : 0;
+  auto elapsed = duration_cast<seconds>(steady_clock::now() - state.startTime);
+  float timeInMinutes = elapsed.count() / 60.0f;
+  int wpm = timeInMinutes > 0 ? (state.correctCount / 5) / timeInMinutes : 0;
 
-    std::string statsContent =
-        "Time Remaining: " + std::to_string(state.remainingTimeSeconds) +
-        "    |    WPM: " + std::to_string(wpm);
-    int StatsStartRow = stats.getTextStartRow();
-    int StatsStartCol = stats.getTextStartColumn();
-    stats.updateText((char *)statsContent.c_str(), StatsStartRow, StatsStartCol,
-                     statsContent.size(), (char *)WHITE);
-  }
+  std::string statsContent =
+      "Time Remaining: " + std::to_string(state.remainingTimeSeconds) +
+      "    |    WPM: " + std::to_string(wpm);
+  int StatsStartRow = stats.getTextStartRow();
+  int StatsStartCol = stats.getTextStartColumn();
+  stats.updateText((char *)statsContent.c_str(), StatsStartRow, StatsStartCol,
+                   statsContent.size(), (char *)WHITE);
 }
 
 // Complete gradient box render function
 void screenState::renderStartScreen(state_t &state) {
-  clearTerminal();
+  if (!screenCleared) {
+    clearTerminal();
+    screenCleared = true;
+  }
   spdlog::info("terminal cleared");
 
   std::string headerTitle = "Terminal Typing Test";
@@ -107,6 +110,9 @@ void screenState::renderStartScreen(state_t &state) {
 
 // Complete gradient box render function
 void screenState::renderMenuScreen(state_t &state) {
+  if (menuRendered) {
+    return;
+  }
   clearTerminal();
   spdlog::info("terminal cleared");
 
@@ -122,101 +128,44 @@ void screenState::renderMenuScreen(state_t &state) {
                          headerTitle, true, borderShape::SHARP_SINGLE,
                          (char *)WHITE, (char *)WHITE, true);
   menuOptions.drawBoxWithText(windowStartCol + 1, menuOptionsStartRow,
-                              windowWidth - 2, 5, getMenuString(0), true,
+                              windowWidth - 2, 5, getMenuString(0), false,
                               borderShape::SHARP_SINGLE, (char *)WHITE,
-                              (char *)WHITE, true);
+                              (char *)WHITE, false);
+  spdlog::info("Moving cursor to position: {} {}", menuOptionsStartRow, 3);
+  terminalManager.moveCursor(2, 2);
+
+  int currentRow = 0, currentCol = 0;
+  terminalManager.getCurrentCursorPosition(currentRow, currentCol);
+  spdlog::info("Current Cursor Position: {} {}", currentRow, currentCol);
+  menuRendered = true;
 }
 
-void screenState::updateMenuScreen(int option){menuOptions.updateText()}
+selectedMenuOption screenState::updateMenuScreen() {
+  int currentRow = 0, currentCol = 0;
 
-std::string screenState::getMenuString(int option) {
-  std::vector<std::string> options;
-  options.push_back("Start Typing Test");
-  options.push_back("Select Options");
-  options.push_back("Quit");
-  if (option >= options.size() - 1) {
-    options[options.size() - 1] = " > " + options[options.size() - 1];
-  } else if (option <= 0) {
-    options[0] = " > " + options[0];
+  terminalManager.getCurrentCursorPosition(currentRow, currentCol);
+  spdlog::info("Current Cursor Position: {} {}", currentRow, currentCol);
+
+  int menuFirstOptRow = menuOptions.getTextStartRow();
+  int menuFirstOptCol = 3;
+  int selectedOption = currentRow % 3;
+
+  spdlog::info("Selected Option: {} CurrentRow: {} menuFirst Option Row: {}",
+               selectedOption, currentRow, menuFirstOptRow);
+  menuOptions.erase();
+  menuOptions.drawBoxWithText(windowStartCol + 1, menuOptionsStartRow,
+                              windowWidth - 2, 5, getMenuString(selectedOption),
+                              false, borderShape::SHARP_SINGLE, (char *)WHITE,
+                              (char *)WHITE, false);
+  terminalManager.moveCursor(menuFirstOptRow + selectedOption, 0);
+  if (selectedOption == 0) {
+    return selectedMenuOption::START;
+  } else if (selectedOption == 1) {
+    return selectedMenuOption::SETTINGS;
   } else {
-    options[option] = " > " + options[option];
+    return selectedMenuOption::QUIT;
   }
-
-  std::string menuString = "";
-  for (const auto &line : options) {
-    menuString += line + "\n"; // Add a newline after every option
-  }
-
-  return menuString;
 }
-
-void screenState::renderTextProgress(state_t &state) {
-  int displayIndex;
-  if (state.currentKeyStatus == keyStroke::BACKSPACE) {
-    displayIndex = state.charCount;
-  } else if (state.currentKeyStatus == keyStroke::BACK_WORD) {
-    displayIndex = state.charCount;
-  } else {
-    displayIndex = state.charCount - 1;
-  }
-
-  if (displayIndex < 0 ||
-      displayIndex >= static_cast<int>(state.targetSequence.size())) {
-    spdlog::warn("displayIndex {} out of bounds (size: {})", displayIndex,
-                 state.targetSequence.size());
-    return;
-  }
-
-  int currentTextRow = mainTextBox.getTextStartRow();
-  int currentTextCol = mainTextBox.getTextStartColumn() + displayIndex + 1;
-
-  if (state.currentKeyStatus == keyStroke::CORRECT) {
-    mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
-                           currentTextRow, currentTextCol, 1, (char *)GREEN);
-  } else if (state.currentKeyStatus == keyStroke::INCORRECT) {
-
-    mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
-                           currentTextRow, currentTextCol, 1, (char *)RED);
-  } else if (state.currentKeyStatus == keyStroke::BACKSPACE ||
-             state.currentKeyStatus == keyStroke::BACK_WORD) {
-    for (int i = 0; i < state.backspaceCount; ++i) {
-      // The characters to whitewash start at the new, lower charCount
-      displayIndex = state.charCount + i;
-
-      if (displayIndex < 0 ||
-          displayIndex >= static_cast<int>(state.targetSequence.size())) {
-        spdlog::warn("Backspace displayIndex {} out of bounds (size: {})",
-                     displayIndex, state.targetSequence.size());
-        continue; // Skip this char if it's out of bounds
-      }
-
-      int currentTextCol = mainTextBox.getTextStartColumn() + displayIndex + 1;
-
-      // Update this single character to WHITE
-      mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
-                             currentTextRow, currentTextCol, 1, (char *)WHITE);
-    }
-  }
-  spdlog::info("Text Render progress complete");
-}
-
-void screenState::testComplete() {}
-//
-// void screenState::get_and_print_result(state_t &state) {
-//   clearTerminal();
-//   updateStats(state);
-//   std::string resultsHeaderTitle = " **** Test Complete **** ";
-//
-//   mainScreen.drawBox(windowStartCol, windowStartRow, windowWidth,
-//   windowHeight,
-//                      true, borderShape::SHARP_SINGLE, (char *)BLUE, true);
-//   resultsBox.drawBoxWithText(windowStartCol + 1, headerStartRow,
-//                              windowWidth - 2, 3, resultsHeaderTitle, true,
-//                              borderShape::SHARP_SINGLE, (char *)WHITE,
-//                              (char *)WHITE, true);
-//   //
-//   results.drawBoxWithText(windowStartCol+1,resultsStartRow,windowWidth-2,);
-// }
 
 void screenState::get_and_print_result(state_t &state) {
   clearTerminal();
@@ -258,7 +207,7 @@ void screenState::get_and_print_result(state_t &state) {
 
   std::string resultsHeaderTitle = "*** TEST COMPLETE ***";
 
-  // Draw using YOUR widget system
+  // Draw using widget system
   mainScreen.drawBox(windowStartCol, windowStartRow, windowWidth, windowHeight,
                      true, borderShape::SHARP_SINGLE, (char *)BLUE, true);
 
@@ -275,25 +224,19 @@ void screenState::get_and_print_result(state_t &state) {
   spdlog::info("Results screen rendered successfully");
 }
 
-// void screenState::showMenu(state_t &state) {
-//   if (state.isRunning) {
-//     spdlog::warn("Cannot Show menu items when not running");
-//     return;
+// void screenState::appendToBuffer(std::vector<char> &buffer, const char *data)
+// {
+//   if (data) {
+//     size_t len = strlen(data);
+//     if (len > 0) {
+//       buffer.insert(buffer.end(), data, data + len);
+//     }
 //   }
 // }
-
-void screenState::appendToBuffer(std::vector<char> &buffer, const char *data) {
-  if (data) {
-    size_t len = strlen(data);
-    if (len > 0) {
-      buffer.insert(buffer.end(), data, data + len);
-    }
-  }
-}
-
-void screenState::appendToBuffer(std::vector<char> &buffer,
-                                 const std::string &data) {
-  if (!data.empty()) {
-    buffer.insert(buffer.end(), data.begin(), data.end());
-  }
-}
+//
+// void screenState::appendToBuffer(std::vector<char> &buffer,
+//                                  const std::string &data) {
+//   if (!data.empty()) {
+//     buffer.insert(buffer.end(), data.begin(), data.end());
+//   }
+// }

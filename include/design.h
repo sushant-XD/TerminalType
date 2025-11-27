@@ -29,8 +29,6 @@ public:
   void appendToBuffer(std::vector<char> &buffer, const std::string &data);
   std::string formatResultsContent(state_t &state);
 
-  void renderMenuScreen(state_t &state);
-
 private:
   uiWidget mainScreen;  // main screen with the outer box
   uiWidget header;      // header "Terminal Type Test"
@@ -61,9 +59,8 @@ private:
   int menuUserSettingsStartRow;
   int menuOptionsStartRow;
 
+  bool menuRendered;
+  bool screenCleared;
+
   terminalCtrl &terminalManager;
-
-  std::vector<std::string> wrapText(state_t &state);
-
-  std::string getMenuString(int option);
 };
