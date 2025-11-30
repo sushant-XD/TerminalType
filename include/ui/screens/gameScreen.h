@@ -1,6 +1,5 @@
 #pragma once
-#include "canvas.h"
-#include "uiWidgets.h"
+#include "ui/screens/canvas.h"
 
 class gameScreen : public Canvas {
 private:
@@ -27,8 +26,8 @@ public:
   gameScreen(terminalCtrl &terminal);
   ~gameScreen();
 
-  void render(state_t &state) override;
-  void update(state_t &state) override;
+  void render(const state_t &state) override;
+  void update(const state_t &state) override;
   void clear() override;
 
   void updateStats(state_t &state);

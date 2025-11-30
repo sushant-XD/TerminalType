@@ -1,4 +1,4 @@
-#include "uiWidgets.h"
+#include "ui/widgets/uiWidgets.h"
 #include <spdlog/spdlog.h>
 #include <sstream>
 
@@ -85,6 +85,7 @@ uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
   return uiError::OK;
 }
 
+// NOTE: there's no vertical padding for align=center available
 uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
                                   int height, std::string text,
                                   bool centerAlign, borderShape shape,
@@ -99,9 +100,10 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
   this->isStatic = isStatic;
   int endCol = startCol + width;
   int endRow = startRow + height;
-  if (endRow > windowHeight || endCol > windowWidth) {
-    spdlog::error("Dimensions os not compatible. End Rows and columns: {}{} "
-                  "WindowDimensions: {}{}",
+  if ((endRow > windowHeight) || (endCol > windowWidth)) {
+    spdlog::error("Dimensions for Box with Text not compatible. End Rows and "
+                  "columns: {},{} "
+                  "WindowDimensions: {},{}",
                   endRow, endCol, windowHeight, windowWidth);
     return uiError::DRAW_DIM_ERROR;
   }
@@ -124,18 +126,22 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
       textLines.resize(innerHeight);
     }
   }
-  spdlog::info("Text Lines: {}", textLines[0]);
 
   this->initialPosCol = startCol;
   this->initialPosRow = startRow;
   this->width = width;
   this->height = height;
-  if (textLines.size() > 1) {
-    this->textStartCol = startCol;
+  if (!textLines.empty()) {
+    if (textLines.size() > 1) {
+      this->textStartCol = startCol;
+    } else {
+      int padding = (innerWidth - textLines[0].length()) / 2;
+      this->textStartCol = padding;
+    }
   } else {
-    int padding = (innerWidth - textLines[0].length()) / 2;
-    this->textStartCol = padding;
+    this->textStartCol = startCol + 1; // Default padding for empty text
   }
+
   this->textStartRow = startRow + 1;
   this->endRow = startRow + height;
   this->initialText = text;

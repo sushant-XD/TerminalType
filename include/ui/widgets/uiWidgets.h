@@ -1,7 +1,7 @@
 #pragma once
-#include "box_chars.h"
-#include "configurations.h"
-#include "terminal_ctrl.h"
+#include "gameEngine/terminal_ctrl.h"
+#include "utils/box_chars.h"
+#include "utils/configurations.h"
 #include <optional>
 #include <spdlog/spdlog.h>
 #include <string>

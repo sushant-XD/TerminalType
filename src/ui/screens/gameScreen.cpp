@@ -1,8 +1,9 @@
-#include "gameScreen.h"
+#include "ui/screens/gameScreen.h"
 
-gameScreen::gameScreen(terminalctrl &terminal)
-    : Canvas(terminal), stats(canvasWidth, canvasHeight, terminal),
-      mainTextBox(canvasWidth, canvasHeight, terminal) {
+gameScreen::gameScreen(terminalCtrl &terminal)
+    : Canvas(terminal),
+      stats(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
+      mainTextBox(canvasWidth + canvasX, canvasHeight + canvasY, terminal) {
 
   statsWidth = canvasWidth - 2;
   statsHeight = 3;
@@ -10,18 +11,18 @@ gameScreen::gameScreen(terminalctrl &terminal)
   statsStartX = canvasX + 1;
   statsStartY = canvasY + 1;
 
-  maintextBoxWidth = canvasWidth - 2;
-  maintextBoxHeight = 12;
+  mainTextBoxWidth = canvasWidth - 2;
+  mainTextBoxHeight = 12;
 
-  maintextBoxStartX = statsStartX;
-  maintextBoxStartY = statsStartY + statsHeight + 1;
+  mainTextBoxStartX = statsStartX;
+  mainTextBoxStartY = statsStartY + statsHeight + 1;
 
   isRendered = false;
 }
 
 gameScreen::~gameScreen() {}
 
-void gameScreen::render(state_t &state) {
+void gameScreen::render(const state_t &state) {
   if (isRendered)
     return;
 
@@ -35,14 +36,14 @@ void gameScreen::render(state_t &state) {
   stats.drawBoxWithText(statsStartX, statsStartY, statsWidth, statsHeight,
                         statsContent, true, borderShape::SHARP_SINGLE,
                         (char *)WHITE, (char *)WHITE, false);
-  mainTextBox.drawBoxWithText(maintextBoxStartX, maintextBoxStartY,
-                              maintextBoxWidth, maintextBoxHeight, displayText,
+  mainTextBox.drawBoxWithText(mainTextBoxStartX, mainTextBoxStartY,
+                              mainTextBoxWidth, mainTextBoxHeight, displayText,
                               true, borderShape::SHARP_SINGLE, (char *)WHITE,
                               (char *)WHITE, false);
   spdlog::info("Render Gradient Setup complete");
 }
 
-void gameScreen::update(state_t &state) {
+void gameScreen::update(const state_t &state) {
   int displayIndex;
 
   if (state.currentKeyStatus == keyStroke::BACKSPACE) {
@@ -94,7 +95,8 @@ void gameScreen::update(state_t &state) {
 }
 
 void gameScreen::updateStats(state_t &state) {
-  auto elapsed = duration_cast<seconds>(steady_clock::now() - state.startTime);
+  auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(
+      std::chrono::steady_clock::now() - state.startTime);
   float timeInMinutes = elapsed.count() / 60.0f;
   int wpm = timeInMinutes > 0 ? (state.correctCount / 5) / timeInMinutes : 0;
 
@@ -106,3 +108,5 @@ void gameScreen::updateStats(state_t &state) {
   stats.updateText((char *)statsContent.c_str(), StatsStartRow, StatsStartCol,
                    statsContent.size(), (char *)WHITE);
 }
+
+void gameScreen::clear() {}

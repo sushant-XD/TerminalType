@@ -1,6 +1,6 @@
 #pragma once
 
-#include "configurations.h"
+#include "utils/configurations.h"
 #include <fstream>
 #include <stdexcept>
 #include <string>

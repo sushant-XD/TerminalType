@@ -1,6 +1,5 @@
 #pragma once
-#include "terminal_ctrl.h"
-#include "uiWidgets.h"
+#include "ui/widgets/uiWidgets.h"
 #include <string>
 #include <vector>
 
@@ -11,8 +10,8 @@ public:
 
   void drawCanvas();
 
-  virtual void render(state_t &state) = 0;
-  virtual void update(state_t &state) = 0;
+  virtual void render(const state_t &state) = 0;
+  virtual void update(const state_t &state) = 0;
   virtual void clear() { terminal.writeToTerminal((char *)CLS, strlen(CLS)); }
 
 protected:

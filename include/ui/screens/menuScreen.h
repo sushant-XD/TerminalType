@@ -1,10 +1,11 @@
 #pragma once
 
-#include "canvas.h"
+#include "ui/screens/canvas.h"
 
 class menuScreen : public Canvas {
 private:
   bool isRendered;
+  selectedMenuOption currentSelected;
 
   std::vector<std::string> menuOptionList;
   int menuOptionsNum;
@@ -29,8 +30,8 @@ private:
 public:
   menuScreen(terminalCtrl &terminal);
 
-  void render(state_t &state) override;
-  void update(state_t &state) override;
+  void render(const state_t &state) override;
+  void update(const state_t &state) override;
   void clear() override;
-  selectedMenuOption updateSelection();
+  selectedMenuOption updateSelection(bool up);
 };

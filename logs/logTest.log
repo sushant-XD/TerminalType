@@ -1,42 +1,39 @@
-[2025-11-26 21:57:05.078] [my_app_logger] [info] Initializing Terminal Typing Program
-[2025-11-26 21:57:05.078] [my_app_logger] [info] Total Time: 10 
-[2025-11-26 21:57:05.079] [my_app_logger] [debug] Height of terminal: 30,windowWidth of terminal: 120
-[2025-11-26 21:57:05.079] [my_app_logger] [debug] Height of Window: 25windowWidth of Window: 100 Start Position: 1,1
-[2025-11-26 21:57:05.079] [my_app_logger] [info] terminal cleared
-[2025-11-26 21:57:05.089] [my_app_logger] [info] Text Lines: Terminal Typing Test
-[2025-11-26 21:57:05.092] [my_app_logger] [info] Text Lines: > Start Typing Test
-[2025-11-26 21:57:05.096] [my_app_logger] [info] Moving cursor to position: 5 3
-[2025-11-26 21:57:05.106] [my_app_logger] [info] Current Cursor Position: 2 2
-[2025-11-26 21:57:05.106] [my_app_logger] [info] Initial Screen Rendering Complete
-[2025-11-26 21:57:06.172] [my_app_logger] [info] Current Cursor Position: 3 2
-[2025-11-26 21:57:06.172] [my_app_logger] [info] Selected Option: 0 CurrentRow: 3 menuFirst Option Row: 6
-[2025-11-26 21:57:06.175] [my_app_logger] [info] All variables reset for widget
-[2025-11-26 21:57:06.175] [my_app_logger] [info] Text Lines: > Start Typing Test
-[2025-11-26 21:57:06.401] [my_app_logger] [info] Current Cursor Position: 7 1
-[2025-11-26 21:57:06.401] [my_app_logger] [info] Selected Option: 1 CurrentRow: 7 menuFirst Option Row: 6
-[2025-11-26 21:57:06.403] [my_app_logger] [info] All variables reset for widget
-[2025-11-26 21:57:06.403] [my_app_logger] [info] Text Lines: Start Typing Test
-[2025-11-26 21:57:06.780] [my_app_logger] [info] Current Cursor Position: 6 1
-[2025-11-26 21:57:06.780] [my_app_logger] [info] Selected Option: 0 CurrentRow: 6 menuFirst Option Row: 6
-[2025-11-26 21:57:06.782] [my_app_logger] [info] All variables reset for widget
-[2025-11-26 21:57:06.782] [my_app_logger] [info] Text Lines: > Start Typing Test
-[2025-11-26 21:57:06.954] [my_app_logger] [info] Current Cursor Position: 7 1
-[2025-11-26 21:57:06.954] [my_app_logger] [info] Selected Option: 1 CurrentRow: 7 menuFirst Option Row: 6
-[2025-11-26 21:57:06.956] [my_app_logger] [info] All variables reset for widget
-[2025-11-26 21:57:06.956] [my_app_logger] [info] Text Lines: Start Typing Test
-[2025-11-26 21:57:07.074] [my_app_logger] [info] Current Cursor Position: 6 1
-[2025-11-26 21:57:07.074] [my_app_logger] [info] Selected Option: 0 CurrentRow: 6 menuFirst Option Row: 6
-[2025-11-26 21:57:07.077] [my_app_logger] [info] All variables reset for widget
-[2025-11-26 21:57:07.077] [my_app_logger] [info] Text Lines: > Start Typing Test
-[2025-11-26 21:57:07.189] [my_app_logger] [info] Current Cursor Position: 7 1
-[2025-11-26 21:57:07.189] [my_app_logger] [info] Selected Option: 1 CurrentRow: 7 menuFirst Option Row: 6
-[2025-11-26 21:57:07.191] [my_app_logger] [info] All variables reset for widget
-[2025-11-26 21:57:07.191] [my_app_logger] [info] Text Lines: Start Typing Test
-[2025-11-26 21:57:07.304] [my_app_logger] [info] Current Cursor Position: 6 1
-[2025-11-26 21:57:07.304] [my_app_logger] [info] Selected Option: 0 CurrentRow: 6 menuFirst Option Row: 6
-[2025-11-26 21:57:07.305] [my_app_logger] [info] All variables reset for widget
-[2025-11-26 21:57:07.305] [my_app_logger] [info] Text Lines: > Start Typing Test
-[2025-11-26 21:57:07.428] [my_app_logger] [info] Current Cursor Position: 7 1
-[2025-11-26 21:57:07.428] [my_app_logger] [info] Selected Option: 1 CurrentRow: 7 menuFirst Option Row: 6
-[2025-11-26 21:57:07.430] [my_app_logger] [info] All variables reset for widget
-[2025-11-26 21:57:07.431] [my_app_logger] [info] Text Lines: Start Typing Test
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Initializing Terminal Typing Program
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Total Time: 10 
+[2025-11-30 11:29:04.429] [my_app_logger] [debug] screenManager constructor called
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Terminal WIdth and Height: 120,30
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Created Canvas Successfully. Canvas Dimensions: 100X25 Canvas Initial Position: (10,2)
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Number of menu options: 3
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Header Starting Position: 11,3
+ Header Size: 98x3
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Menu Options Starting Position: 11,6
+ Menu Options Size: 98x5
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Initial Screen Rendering Complete
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Menu Screen needs re-render
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Switching to screen: 1
+[2025-11-30 11:29:04.429] [my_app_logger] [debug] Rendering screen: 1
+[2025-11-30 11:29:04.429] [my_app_logger] [info] Cleared Main Screen
+[2025-11-30 11:29:05.255] [my_app_logger] [info] Moving Cursor Down
+[2025-11-30 11:29:05.257] [my_app_logger] [info] All variables reset for widget
+[2025-11-30 11:29:05.263] [my_app_logger] [info] Selected Menu Option: 1
+[2025-11-30 11:29:05.440] [my_app_logger] [info] Moving Cursor Down
+[2025-11-30 11:29:05.442] [my_app_logger] [info] All variables reset for widget
+[2025-11-30 11:29:05.447] [my_app_logger] [info] Selected Menu Option: 2
+[2025-11-30 11:29:05.689] [my_app_logger] [info] Moving Cursor Up
+[2025-11-30 11:29:05.691] [my_app_logger] [info] All variables reset for widget
+[2025-11-30 11:29:05.696] [my_app_logger] [info] Selected Menu Option: 1
+[2025-11-30 11:29:05.874] [my_app_logger] [info] Moving Cursor Up
+[2025-11-30 11:29:05.876] [my_app_logger] [info] All variables reset for widget
+[2025-11-30 11:29:05.881] [my_app_logger] [info] Selected Menu Option: 0
+[2025-11-30 11:29:06.099] [my_app_logger] [info] Moving Cursor Down
+[2025-11-30 11:29:06.101] [my_app_logger] [info] All variables reset for widget
+[2025-11-30 11:29:06.106] [my_app_logger] [info] Selected Menu Option: 1
+[2025-11-30 11:29:06.262] [my_app_logger] [info] Moving Cursor Down
+[2025-11-30 11:29:06.265] [my_app_logger] [info] All variables reset for widget
+[2025-11-30 11:29:06.270] [my_app_logger] [info] Selected Menu Option: 2
+[2025-11-30 11:29:06.420] [my_app_logger] [info] Moving Cursor Up
+[2025-11-30 11:29:06.423] [my_app_logger] [info] All variables reset for widget
+[2025-11-30 11:29:06.428] [my_app_logger] [info] Selected Menu Option: 1
+[2025-11-30 11:29:06.617] [my_app_logger] [info] Moving Cursor Up
+[2025-11-30 11:29:06.619] [my_app_logger] [info] All variables reset for widget
+[2025-11-30 11:29:06.624] [my_app_logger] [info] Selected Menu Option: 0

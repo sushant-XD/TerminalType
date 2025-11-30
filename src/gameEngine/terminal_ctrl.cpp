@@ -1,4 +1,4 @@
-#include "terminal_ctrl.h"
+#include "gameEngine/terminal_ctrl.h"
 #include <cstdio>
 #include <termios.h>
 
@@ -52,7 +52,7 @@ char *terminalCtrl::getAllCharacters() {
 }
 
 void terminalCtrl::writeToTerminal(char *ch, int size) {
-  write(input_fd, ch, size);
+  write(output_fd, ch, size);
 }
 
 void terminalCtrl::resetTerminal() {
@@ -95,6 +95,10 @@ void terminalCtrl::getCurrentCursorPosition(int &row, int &col) {
     row = 0;
     col = 0;
   }
+}
+
+void terminalCtrl::clearTerminal() {
+  writeToTerminal((char *)CLS, strlen(CLS));
 }
 
 void terminalCtrl::moveCursor(int row, int col) {

@@ -1,4 +1,4 @@
-#include "canvas.h"
+#include "ui/screens/canvas.h"
 
 Canvas::Canvas(terminalCtrl &term)
     : terminal(term), mainBox(terminal.getTerminalWidth(),
@@ -11,9 +11,12 @@ Canvas::Canvas(terminalCtrl &term)
                      : terminal.getTerminalHeight();
 
   canvasX = (terminal.getTerminalWidth() - canvasWidth) / 2;
+
   canvasY = (terminal.getTerminalHeight() - canvasHeight) / 2;
 
   isRendered = false;
+  spdlog::info("Terminal WIdth and Height: {},{}", terminal.getTerminalWidth(),
+               terminal.getTerminalHeight());
   spdlog::info("Created Canvas Successfully. Canvas Dimensions: {}X{} Canvas "
                "Initial Position: ({},{})",
                canvasWidth, canvasHeight, canvasX, canvasY);

@@ -1,6 +1,6 @@
 #pragma once
-#include "configurations.h"
-#include "terminal_ctrl.h"
+#include "gameEngine/terminal_ctrl.h"
+#include "utils/configurations.h"
 
 static constexpr int BACKSPACE_KEY = 127;
 static constexpr int BACK_WORD_KEY = 23;

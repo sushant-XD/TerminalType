@@ -1,13 +1,15 @@
 #pragma once
-#include "configurations.h"
+#include "utils/configurations.h"
 
 extern "C" {
 #include "termios.h"
 #include "unistd.h"
 }
-#include "ansi_color_codes.h"
+#include "utils/ansi_color_codes.h"
 #include <cstring>
 #include <sys/ioctl.h>
+
+#define CLS "\033[2J\033[1;1H"
 
 static constexpr std::string_view SHOW_CURSOR = "\033[?25h";
 static constexpr std::string_view HIDE_CURSOR = "\033[?25l";
@@ -36,6 +38,7 @@ public:
   void showCursor();
   void hideCursor();
 
+  void clearTerminal();
   char *getAllCharacters();
 
 private:
