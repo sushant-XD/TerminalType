@@ -5,6 +5,7 @@ add_library(ui STATIC
     screens/gameScreen.cpp
     screens/menuScreen.cpp
     screens/resultScreen.cpp
+    screens/settingsScreen.cpp
     widgets/uiWidgets.cpp
 )
 

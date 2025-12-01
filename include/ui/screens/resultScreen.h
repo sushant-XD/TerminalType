@@ -29,7 +29,7 @@ public:
   resultScreen(terminalCtrl &terminal);
   ~resultScreen();
 
-  void render(const State &state);
+  void render(State &state);
   void update(const State &state);
   void clear();
   ResultOpts updateSelection(bool up);

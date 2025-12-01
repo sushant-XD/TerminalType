@@ -30,4 +30,6 @@ void handleResultsState(State &state, char tempChar,
                         screenManager &renderManager, terminalCtrl &terminal,
                         fileOps &fileManager, ResultOpts &selectedOption);
 
-void handleSettingsState(State &state);
+void handleSettingsState(State &state, char tempChar,
+                         screenManager &renderManager,
+                         SettingOption &selectedOption);

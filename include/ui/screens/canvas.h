@@ -11,7 +11,7 @@ public:
 
   void drawCanvas();
 
-  virtual void render(const State &state) = 0;
+  virtual void render(State &state) = 0;
   virtual void update(const State &state) = 0;
   virtual void clear() { terminal.writeToTerminal((char *)CLS, strlen(CLS)); }
 

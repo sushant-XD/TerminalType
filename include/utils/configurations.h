@@ -61,6 +61,8 @@ struct State {
   KeyStroke currentKeyStatus;
 
   std::vector<char> targetSequence;
+  std::vector<std::string> wrappedLines;
+
   std::vector<char> userInputSequence;
 
   Screen ws; // window size

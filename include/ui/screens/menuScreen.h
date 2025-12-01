@@ -30,7 +30,7 @@ private:
 public:
   menuScreen(terminalCtrl &terminal);
 
-  void render(const State &state) override;
+  void render(State &state) override;
   void update(const State &state) override;
   void clear() override;
   MenuOpts updateSelection(bool up);

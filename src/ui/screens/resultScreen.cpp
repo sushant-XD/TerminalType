@@ -36,7 +36,7 @@ resultScreen::resultScreen(terminalCtrl &terminal)
 
 resultScreen::~resultScreen() { clear(); }
 
-void resultScreen::render(const State &state) {
+void resultScreen::render(State &state) {
   if (isRendered) {
     return;
   }

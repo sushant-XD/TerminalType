@@ -1,411 +1,1689 @@
-[2025-11-30 23:50:52.906] [my_app_logger] [info] State Reset. All variables Reset.
-[2025-11-30 23:50:52.906] [my_app_logger] [info] Initializing Terminal Typing Program
-[2025-11-30 23:50:52.906] [my_app_logger] [info] Total Time: 10 
-[2025-11-30 23:50:52.907] [my_app_logger] [debug] screenManager constructor called
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Terminal WIdth and Height: 120,30
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Created Canvas Successfully. Canvas Dimensions: 100X25 Canvas Initial Position: (10,2)
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Number of menu options: 3
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Header Starting Position: 11,3
+[2025-12-01 00:56:28.999] [my_app_logger] [info] State Reset. All variables Reset.
+[2025-12-01 00:56:28.999] [my_app_logger] [info] Initializing Terminal Typing Program
+[2025-12-01 00:56:28.999] [my_app_logger] [info] Total Time: 10 
+[2025-12-01 00:56:29.000] [my_app_logger] [debug] screenManager constructor called
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Terminal WIdth and Height: 120,30
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Created Canvas Successfully. Canvas Dimensions: 100X25 Canvas Initial Position: (10,2)
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Number of menu options: 3
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Header Starting Position: 11,3
  Header Size: 98x3
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Menu Options Starting Position: 11,6
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Menu Options Starting Position: 11,6
  Menu Options Size: 98x5
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Initial Screen Rendering Complete
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Menu Screen needs re-render
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Switching to screen: 1
-[2025-11-30 23:50:52.907] [my_app_logger] [debug] Rendering screen: 1
-[2025-11-30 23:50:52.907] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
-[2025-11-30 23:50:52.907] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
-[2025-11-30 23:50:52.907] [my_app_logger] [info] Cleared Main Screen
-[2025-11-30 23:50:52.920] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.925] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.930] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.935] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.940] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.945] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.951] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.956] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.961] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.966] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.972] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.977] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.982] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.988] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.993] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:52.998] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.003] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.009] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.014] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.019] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.025] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.030] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.035] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.041] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.046] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.051] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.057] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.062] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.067] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.073] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.078] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.083] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.088] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.094] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.099] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.104] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.110] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.115] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.120] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.126] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.131] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.136] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.141] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.147] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.152] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.157] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.163] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.168] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.173] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.178] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.183] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.189] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.194] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.199] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.205] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.210] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.215] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.220] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.226] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.231] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.236] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.242] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.247] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.252] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.258] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.263] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.268] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.274] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.279] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.284] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.290] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.295] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.300] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.306] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.311] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.316] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.322] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.327] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.332] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.338] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.343] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.348] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.353] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.358] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.363] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.369] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.374] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.379] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.385] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.390] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.395] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.400] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.406] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.411] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.416] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.421] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.427] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.432] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.437] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.442] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.448] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.453] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.458] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.464] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.469] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.474] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.480] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.485] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.490] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.495] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.500] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.505] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.511] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.516] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.521] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.526] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.531] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.536] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.541] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.546] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.552] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.557] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.562] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.567] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.572] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.577] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.582] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.587] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.592] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.598] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.603] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.608] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.613] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.618] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.623] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.628] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.633] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.638] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.644] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.649] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.654] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.659] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.664] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.669] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.674] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.679] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.685] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.690] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.695] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.700] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.705] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.710] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.715] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.720] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.725] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.731] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.736] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.741] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.746] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.751] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.756] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.761] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.767] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.772] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.777] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.782] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.788] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.793] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.798] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.804] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.809] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.815] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.820] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.825] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.831] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.836] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.841] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.847] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.852] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.857] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.863] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.868] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.873] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.879] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.884] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.889] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.895] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.900] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.905] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.911] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.916] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.921] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.926] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.932] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.937] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.942] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.948] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.953] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.958] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.964] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.969] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.974] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.980] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.985] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.990] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:53.995] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.001] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.006] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.011] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.016] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.022] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.027] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.032] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.038] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.043] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.048] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.053] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.059] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.064] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.069] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.074] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.079] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.085] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.090] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.095] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.100] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.106] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.111] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.116] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.121] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.127] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.132] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.137] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.143] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.148] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.153] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.158] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.164] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.169] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.174] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.179] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.179] [my_app_logger] [info] Moving Cursor Down
-[2025-11-30 23:50:54.182] [my_app_logger] [info] All variables reset for widget
-[2025-11-30 23:50:54.187] [my_app_logger] [info] Selected Menu Option: 1
-[2025-11-30 23:50:54.192] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.197] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.202] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.207] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.213] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.218] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.223] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.228] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.233] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.238] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.244] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.249] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.254] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.260] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.265] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.270] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.276] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.281] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.286] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.291] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.297] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.302] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.307] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.313] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.318] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.323] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.328] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.334] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.339] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.344] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.350] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.355] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.360] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.366] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.371] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.376] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.382] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.387] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.392] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.397] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.403] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.408] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.413] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.419] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.424] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.429] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.435] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.440] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.445] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.451] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.456] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.461] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.466] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.472] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.477] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.483] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.488] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.493] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.498] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.504] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.509] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.515] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.520] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.525] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.531] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.536] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.541] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.547] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.552] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.557] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.563] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.568] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.573] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.579] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.584] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.589] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.594] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.600] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.605] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.611] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.616] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.621] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.626] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.632] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.637] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.642] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.648] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.653] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.658] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.664] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.669] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.674] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.679] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.684] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.690] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.695] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.700] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.705] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.711] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.716] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.721] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.727] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.732] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.738] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.743] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.748] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.753] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.759] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.764] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.769] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.774] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.780] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.785] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.790] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.796] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.801] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.806] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.811] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.816] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.822] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.827] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.832] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.837] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.842] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.847] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.853] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.858] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.864] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.869] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.874] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.880] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.885] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.890] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.895] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.900] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.905] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.910] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.916] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.921] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.926] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.932] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.937] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.942] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.948] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.953] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.958] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.964] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.969] [my_app_logger] [info] Menu didn't need re-render
-[2025-11-30 23:50:54.974] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Initial Screen Rendering Complete
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Menu Screen needs re-render
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Switching to screen: 1
+[2025-12-01 00:56:29.000] [my_app_logger] [debug] Rendering screen: 1
+[2025-12-01 00:56:29.000] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:56:29.000] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:56:29.000] [my_app_logger] [info] Cleared Main Screen
+[2025-12-01 00:56:29.013] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.018] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.023] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.028] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.033] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.038] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.044] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.049] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.054] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.059] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.065] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.070] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.075] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.080] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.086] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.091] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.096] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.102] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.107] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.112] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.118] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.123] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.128] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.133] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.138] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.144] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.149] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.155] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.160] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.165] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.170] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.176] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.181] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.186] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.192] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.197] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.202] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.208] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.213] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.218] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.224] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.229] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.234] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.240] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.245] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.250] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.255] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.261] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.266] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.271] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.277] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.282] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.287] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.293] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.298] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.303] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.309] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.314] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.319] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.325] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.330] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.335] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.340] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.345] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.351] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.356] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.362] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.367] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.372] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.377] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.382] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.388] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.393] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.399] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.404] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.409] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.414] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.420] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.425] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.430] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.436] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.441] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.446] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.452] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.457] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.462] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.468] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.473] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.478] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.484] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.489] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.494] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.500] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.505] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.510] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.516] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.521] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.526] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.532] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.537] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.542] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.547] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.552] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.558] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.563] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.568] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.573] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.579] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.584] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.589] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.594] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.599] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.605] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.610] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.615] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.620] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.626] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.631] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.636] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.642] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.647] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.652] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.657] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.663] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.668] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.673] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.678] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.678] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:56:29.681] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:29.686] [my_app_logger] [info] Selected Menu Option: 1
+[2025-12-01 00:56:29.691] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.696] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.701] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.707] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.712] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.717] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.722] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.727] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.732] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.738] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.743] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.748] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.753] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.759] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.764] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.769] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.774] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.780] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.785] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.790] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.795] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.800] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.806] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.811] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.816] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.822] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.827] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.832] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.837] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.842] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.848] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.853] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.858] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.864] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.869] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.874] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.880] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.885] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.890] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.895] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.900] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.906] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.911] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.911] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:56:29.913] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:29.919] [my_app_logger] [info] Selected Menu Option: 2
+[2025-12-01 00:56:29.924] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.929] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.934] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.939] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.944] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.950] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.955] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.960] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.965] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.970] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.975] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.981] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.986] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.991] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:29.997] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.002] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.007] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.012] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.017] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.022] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.028] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.033] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.039] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.044] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.049] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.054] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.059] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.065] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.070] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.075] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.080] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.086] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.091] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.097] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.102] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.107] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.112] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.118] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.123] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.129] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.134] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.139] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.145] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.150] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.155] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.160] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.160] [my_app_logger] [info] Moving Cursor Up
+[2025-12-01 00:56:30.162] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:30.167] [my_app_logger] [info] Selected Menu Option: 1
+[2025-12-01 00:56:30.173] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.178] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.183] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.188] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.193] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.198] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.203] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.209] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.214] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.219] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.225] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.230] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.235] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.240] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.246] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.251] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.256] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.262] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.267] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.272] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.277] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.283] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.288] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.293] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.298] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.304] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.309] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.314] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.319] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.319] [my_app_logger] [info] Moving Cursor Up
+[2025-12-01 00:56:30.322] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:30.327] [my_app_logger] [info] Selected Menu Option: 0
+[2025-12-01 00:56:30.333] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.338] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.343] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.348] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.353] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.358] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.363] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.369] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.374] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.379] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.385] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.390] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.395] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.400] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.405] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.411] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.416] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.421] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.427] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.432] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.437] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.442] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.447] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.453] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.458] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.463] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.469] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.474] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.479] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.484] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.490] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.495] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.500] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.506] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.511] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.516] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.522] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.527] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.532] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.538] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.543] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.548] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.554] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.559] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.564] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.570] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.575] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.580] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.585] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.590] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.595] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.601] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.606] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.611] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.616] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.621] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.627] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.632] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.637] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.642] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.648] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.653] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.658] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.663] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.669] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.674] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.679] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.684] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.690] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.695] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.700] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.705] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.711] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.716] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.721] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.727] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.732] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.732] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:56:30.734] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:30.740] [my_app_logger] [info] Selected Menu Option: 1
+[2025-12-01 00:56:30.745] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.750] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.755] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.760] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.765] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.771] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.776] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.781] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.786] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.791] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.797] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.802] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.808] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.813] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.818] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.823] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.828] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.833] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.839] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.844] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.849] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.855] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.860] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.865] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.870] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.876] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.881] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.886] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.892] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.897] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.902] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.908] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.913] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.918] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.924] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.929] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.935] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.940] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.945] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.950] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.956] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.961] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.966] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.971] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.976] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:30.976] [my_app_logger] [info] Enter key pressed. Selected Option: 1
+[2025-12-01 00:56:30.976] [my_app_logger] [info] Switching to screen: 2
+[2025-12-01 00:56:30.976] [my_app_logger] [debug] Clearing current screen: 1
+[2025-12-01 00:56:30.978] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:30.980] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:30.980] [my_app_logger] [info] Cleared Main Screen
+[2025-12-01 00:56:30.980] [my_app_logger] [info] Terminal WIdth and Height: 120,30
+[2025-12-01 00:56:30.980] [my_app_logger] [info] Created Canvas Successfully. Canvas Dimensions: 100X25 Canvas Initial Position: (10,2)
+[2025-12-01 00:56:30.980] [my_app_logger] [info] Settings screen initialized with 3 options
+[2025-12-01 00:56:30.980] [my_app_logger] [info] Switching from Menu to settings.
+[2025-12-01 00:56:30.986] [my_app_logger] [info] Settings Screen needs render
+[2025-12-01 00:56:30.986] [my_app_logger] [info] Switching to screen: 2
+[2025-12-01 00:56:30.986] [my_app_logger] [debug] Rendering screen: 2
+[2025-12-01 00:56:30.986] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:56:30.986] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:56:30.986] [my_app_logger] [info] Cleared Settings Screen
+[2025-12-01 00:56:31.331] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:56:31.331] [my_app_logger] [info] Selected Setting Option: 1
+[2025-12-01 00:56:31.334] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:31.653] [my_app_logger] [info] Moving Cursor Up
+[2025-12-01 00:56:31.653] [my_app_logger] [info] Selected Setting Option: 0
+[2025-12-01 00:56:31.657] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:32.546] [my_app_logger] [info] Increasing value
+[2025-12-01 00:56:32.546] [my_app_logger] [info] Time changed to: 20
+[2025-12-01 00:56:32.550] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:32.762] [my_app_logger] [info] Increasing value
+[2025-12-01 00:56:32.762] [my_app_logger] [info] Time changed to: 30
+[2025-12-01 00:56:32.765] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:33.333] [my_app_logger] [info] Increasing value
+[2025-12-01 00:56:33.333] [my_app_logger] [info] Time changed to: 40
+[2025-12-01 00:56:33.337] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:34.843] [my_app_logger] [info] Enter key pressed. Selected Option: 0
+[2025-12-01 00:56:35.094] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:56:35.094] [my_app_logger] [info] Selected Setting Option: 1
+[2025-12-01 00:56:35.097] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:35.283] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:56:35.283] [my_app_logger] [info] Selected Setting Option: 2
+[2025-12-01 00:56:35.287] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:35.841] [my_app_logger] [info] Enter key pressed. Selected Option: 2
+[2025-12-01 00:56:35.841] [my_app_logger] [info] Switching to screen: 1
+[2025-12-01 00:56:35.841] [my_app_logger] [debug] Clearing current screen: 2
+[2025-12-01 00:56:35.842] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:35.846] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:35.846] [my_app_logger] [info] Cleared Settings Screen
+[2025-12-01 00:56:35.846] [my_app_logger] [info] Returning to Menu from Settings
+[2025-12-01 00:56:35.851] [my_app_logger] [info] Menu Screen needs re-render
+[2025-12-01 00:56:35.851] [my_app_logger] [info] Switching to screen: 1
+[2025-12-01 00:56:35.851] [my_app_logger] [debug] Rendering screen: 1
+[2025-12-01 00:56:35.851] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:56:35.851] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:56:35.851] [my_app_logger] [info] Cleared Main Screen
+[2025-12-01 00:56:35.864] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.869] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.874] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.879] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.884] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.890] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.895] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.900] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.905] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.910] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.916] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.921] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.926] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.931] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.937] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.942] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.947] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.952] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.958] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.963] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.968] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.974] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.979] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.984] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.990] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:35.995] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.000] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.006] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.011] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.016] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.022] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.027] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.032] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.037] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.043] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.048] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.053] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.059] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.064] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.069] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.075] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.080] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.085] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.090] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.096] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.096] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:56:36.098] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:36.103] [my_app_logger] [info] Selected Menu Option: 2
+[2025-12-01 00:56:36.108] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.113] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.118] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.124] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.129] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.134] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.139] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.144] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.149] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.155] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.160] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.165] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.170] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.175] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.181] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.186] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.191] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.197] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.202] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.207] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.212] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.218] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.223] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.228] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.233] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.239] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.244] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.249] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.254] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.260] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.265] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.270] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.276] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.281] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.286] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.291] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.296] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.302] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.307] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.312] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.317] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.322] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.327] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.332] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.337] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.342] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.348] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.353] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.359] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.364] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.369] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.374] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.380] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.385] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.390] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.396] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.401] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.407] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.412] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.417] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.422] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.428] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.433] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.438] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.443] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.448] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.454] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.459] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.464] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.464] [my_app_logger] [info] Moving Cursor Up
+[2025-12-01 00:56:36.466] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:36.471] [my_app_logger] [info] Selected Menu Option: 1
+[2025-12-01 00:56:36.476] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.481] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.487] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.492] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.497] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.502] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.507] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.512] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.517] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.523] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.528] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.533] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.539] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.544] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.549] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.555] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.560] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.565] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.570] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.576] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.581] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.586] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.591] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.596] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.602] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.607] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.612] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.618] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.623] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.628] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.634] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.639] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.644] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.650] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.655] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.660] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.665] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.671] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.676] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.681] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.686] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.692] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.697] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.702] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.708] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.713] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.718] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.723] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.728] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.734] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.739] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.745] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.750] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.755] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.760] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.765] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.771] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.776] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.782] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.787] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.792] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.797] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.802] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.802] [my_app_logger] [info] Moving Cursor Up
+[2025-12-01 00:56:36.805] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:36.810] [my_app_logger] [info] Selected Menu Option: 0
+[2025-12-01 00:56:36.815] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.820] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.825] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.830] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.835] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.840] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.846] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.851] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.856] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.861] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.867] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.872] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.877] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.882] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.888] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.893] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.898] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.904] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.909] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.914] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.920] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.925] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.930] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.935] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.941] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.946] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.952] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.957] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.962] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.967] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.973] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.978] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.983] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.988] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.994] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:36.999] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.004] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.009] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.014] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.019] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.024] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.029] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.034] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.040] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.045] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.050] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.055] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.060] [my_app_logger] [info] Menu didn't need re-render
+[2025-12-01 00:56:37.060] [my_app_logger] [info] Enter key pressed. Selected Option: 0
+[2025-12-01 00:56:37.060] [my_app_logger] [info] Switching to screen: 0
+[2025-12-01 00:56:37.060] [my_app_logger] [debug] Clearing current screen: 1
+[2025-12-01 00:56:37.062] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:37.064] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:56:37.064] [my_app_logger] [info] Cleared Main Screen
+[2025-12-01 00:56:37.064] [my_app_logger] [info] Terminal WIdth and Height: 120,30
+[2025-12-01 00:56:37.064] [my_app_logger] [info] Created Canvas Successfully. Canvas Dimensions: 100X25 Canvas Initial Position: (10,2)
+[2025-12-01 00:56:37.064] [my_app_logger] [info] Starting Game from Menu.
+[2025-12-01 00:56:37.069] [my_app_logger] [info] Switching to screen: 0
+[2025-12-01 00:56:37.069] [my_app_logger] [debug] Rendering screen: 0
+[2025-12-01 00:56:37.069] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:56:37.069] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:56:37.069] [my_app_logger] [info] Cleared Game Screen
+[2025-12-01 00:56:37.086] [my_app_logger] [info] Render Gradient Setup complete
+[2025-12-01 00:56:37.825] [my_app_logger] [info] i key Correct. Correct Count: 1
+[2025-12-01 00:56:37.825] [my_app_logger] [info] Character Count: 1
+[2025-12-01 00:56:37.825] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:37.917] [my_app_logger] [info] n key Correct. Correct Count: 2
+[2025-12-01 00:56:37.917] [my_app_logger] [info] Character Count: 2
+[2025-12-01 00:56:37.917] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:38.123] [my_app_logger] [info]   key Correct. Correct Count: 3
+[2025-12-01 00:56:38.123] [my_app_logger] [info] Character Count: 3
+[2025-12-01 00:56:38.123] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:38.123] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:38.540] [my_app_logger] [info] c key Correct. Correct Count: 4
+[2025-12-01 00:56:38.540] [my_app_logger] [info] Character Count: 4
+[2025-12-01 00:56:38.540] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:38.632] [my_app_logger] [info] a key Correct. Correct Count: 5
+[2025-12-01 00:56:38.632] [my_app_logger] [info] Character Count: 5
+[2025-12-01 00:56:38.632] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:38.709] [my_app_logger] [info] n key Correct. Correct Count: 6
+[2025-12-01 00:56:38.709] [my_app_logger] [info] Character Count: 6
+[2025-12-01 00:56:38.709] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:38.786] [my_app_logger] [info]   key Correct. Correct Count: 7
+[2025-12-01 00:56:38.786] [my_app_logger] [info] Character Count: 7
+[2025-12-01 00:56:38.786] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:38.786] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:38.879] [my_app_logger] [info] w key Correct. Correct Count: 8
+[2025-12-01 00:56:38.879] [my_app_logger] [info] Character Count: 8
+[2025-12-01 00:56:38.879] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:38.996] [my_app_logger] [info] a key Correct. Correct Count: 9
+[2025-12-01 00:56:38.996] [my_app_logger] [info] Character Count: 9
+[2025-12-01 00:56:38.996] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:39.109] [my_app_logger] [info]   key Incorrect. Does not match: y. Incorrect Count: 1
+[2025-12-01 00:56:39.109] [my_app_logger] [info] Character Count: 10
+[2025-12-01 00:56:39.109] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:39.449] [my_app_logger] [info] Back Key Pressed
+[2025-12-01 00:56:39.449] [my_app_logger] [debug] Correct Count: 9 Incorrect Count: 0 Char Count: 9
+[2025-12-01 00:56:39.449] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:39.656] [my_app_logger] [info] y key Correct. Correct Count: 10
+[2025-12-01 00:56:39.656] [my_app_logger] [info] Character Count: 10
+[2025-12-01 00:56:39.656] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:39.780] [my_app_logger] [info]   key Correct. Correct Count: 11
+[2025-12-01 00:56:39.780] [my_app_logger] [info] Character Count: 11
+[2025-12-01 00:56:39.780] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:39.780] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:40.013] [my_app_logger] [info] w key Correct. Correct Count: 12
+[2025-12-01 00:56:40.013] [my_app_logger] [info] Character Count: 12
+[2025-12-01 00:56:40.014] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:40.090] [my_app_logger] [info] e key Correct. Correct Count: 13
+[2025-12-01 00:56:40.090] [my_app_logger] [info] Character Count: 13
+[2025-12-01 00:56:40.090] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:40.178] [my_app_logger] [info]   key Correct. Correct Count: 14
+[2025-12-01 00:56:40.178] [my_app_logger] [info] Character Count: 14
+[2025-12-01 00:56:40.178] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:40.178] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:40.703] [my_app_logger] [info] w key Correct. Correct Count: 15
+[2025-12-01 00:56:40.703] [my_app_logger] [info] Character Count: 15
+[2025-12-01 00:56:40.703] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:40.841] [my_app_logger] [info] o key Correct. Correct Count: 16
+[2025-12-01 00:56:40.841] [my_app_logger] [info] Character Count: 16
+[2025-12-01 00:56:40.842] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:40.918] [my_app_logger] [info] u key Correct. Correct Count: 17
+[2025-12-01 00:56:40.918] [my_app_logger] [info] Character Count: 17
+[2025-12-01 00:56:40.918] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:41.031] [my_app_logger] [info] l key Correct. Correct Count: 18
+[2025-12-01 00:56:41.031] [my_app_logger] [info] Character Count: 18
+[2025-12-01 00:56:41.031] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:41.145] [my_app_logger] [info] d key Correct. Correct Count: 19
+[2025-12-01 00:56:41.145] [my_app_logger] [info] Character Count: 19
+[2025-12-01 00:56:41.145] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:41.598] [my_app_logger] [info]   key Correct. Correct Count: 20
+[2025-12-01 00:56:41.598] [my_app_logger] [info] Character Count: 20
+[2025-12-01 00:56:41.598] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:41.598] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:41.763] [my_app_logger] [info] b key Correct. Correct Count: 21
+[2025-12-01 00:56:41.763] [my_app_logger] [info] Character Count: 21
+[2025-12-01 00:56:41.763] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:41.992] [my_app_logger] [info] y key Correct. Correct Count: 22
+[2025-12-01 00:56:41.992] [my_app_logger] [info] Character Count: 22
+[2025-12-01 00:56:41.992] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:42.095] [my_app_logger] [info]   key Correct. Correct Count: 23
+[2025-12-01 00:56:42.095] [my_app_logger] [info] Character Count: 23
+[2025-12-01 00:56:42.095] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:42.095] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:42.531] [my_app_logger] [info] f key Correct. Correct Count: 24
+[2025-12-01 00:56:42.531] [my_app_logger] [info] Character Count: 24
+[2025-12-01 00:56:42.531] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:42.607] [my_app_logger] [info] i key Correct. Correct Count: 25
+[2025-12-01 00:56:42.608] [my_app_logger] [info] Character Count: 25
+[2025-12-01 00:56:42.608] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:42.700] [my_app_logger] [info] n key Correct. Correct Count: 26
+[2025-12-01 00:56:42.700] [my_app_logger] [info] Character Count: 26
+[2025-12-01 00:56:42.700] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:42.850] [my_app_logger] [info] d key Correct. Correct Count: 27
+[2025-12-01 00:56:42.850] [my_app_logger] [info] Character Count: 27
+[2025-12-01 00:56:42.850] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:42.928] [my_app_logger] [info]   key Correct. Correct Count: 28
+[2025-12-01 00:56:42.928] [my_app_logger] [info] Character Count: 28
+[2025-12-01 00:56:42.928] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:42.928] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:43.005] [my_app_logger] [info] w key Correct. Correct Count: 29
+[2025-12-01 00:56:43.005] [my_app_logger] [info] Character Count: 29
+[2025-12-01 00:56:43.005] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:43.122] [my_app_logger] [info] o key Incorrect. Does not match: h. Incorrect Count: 1
+[2025-12-01 00:56:43.122] [my_app_logger] [info] Character Count: 30
+[2025-12-01 00:56:43.122] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:43.163] [my_app_logger] [info] h key incorrect. Incorrect Count: 2
+[2025-12-01 00:56:43.163] [my_app_logger] [info] Character Count: 31
+[2025-12-01 00:56:43.163] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:43.472] [my_app_logger] [info] Back Key Pressed
+[2025-12-01 00:56:43.472] [my_app_logger] [debug] Correct Count: 29 Incorrect Count: 1 Char Count: 30
+[2025-12-01 00:56:43.472] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:43.632] [my_app_logger] [info] Back Key Pressed
+[2025-12-01 00:56:43.632] [my_app_logger] [debug] Correct Count: 29 Incorrect Count: 0 Char Count: 29
+[2025-12-01 00:56:43.632] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:43.793] [my_app_logger] [info] h key Correct. Correct Count: 30
+[2025-12-01 00:56:43.793] [my_app_logger] [info] Character Count: 30
+[2025-12-01 00:56:43.793] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:43.885] [my_app_logger] [info] o key Correct. Correct Count: 31
+[2025-12-01 00:56:43.885] [my_app_logger] [info] Character Count: 31
+[2025-12-01 00:56:43.885] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:44.077] [my_app_logger] [info]   key Correct. Correct Count: 32
+[2025-12-01 00:56:44.077] [my_app_logger] [info] Character Count: 32
+[2025-12-01 00:56:44.077] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:44.077] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:44.248] [my_app_logger] [info] a key Correct. Correct Count: 33
+[2025-12-01 00:56:44.248] [my_app_logger] [info] Character Count: 33
+[2025-12-01 00:56:44.248] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:44.300] [my_app_logger] [info] s key Correct. Correct Count: 34
+[2025-12-01 00:56:44.300] [my_app_logger] [info] Character Count: 34
+[2025-12-01 00:56:44.300] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:44.428] [my_app_logger] [info]   key Correct. Correct Count: 35
+[2025-12-01 00:56:44.429] [my_app_logger] [info] Character Count: 35
+[2025-12-01 00:56:44.429] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:44.429] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:44.819] [my_app_logger] [info] o key Correct. Correct Count: 36
+[2025-12-01 00:56:44.819] [my_app_logger] [info] Character Count: 36
+[2025-12-01 00:56:44.819] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:44.922] [my_app_logger] [info] n key Correct. Correct Count: 37
+[2025-12-01 00:56:44.922] [my_app_logger] [info] Character Count: 37
+[2025-12-01 00:56:44.922] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:44.963] [my_app_logger] [info] e key Correct. Correct Count: 38
+[2025-12-01 00:56:44.963] [my_app_logger] [info] Character Count: 38
+[2025-12-01 00:56:44.963] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.061] [my_app_logger] [info]   key Correct. Correct Count: 39
+[2025-12-01 00:56:45.061] [my_app_logger] [info] Character Count: 39
+[2025-12-01 00:56:45.061] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:45.061] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.205] [my_app_logger] [info] t key Correct. Correct Count: 40
+[2025-12-01 00:56:45.205] [my_app_logger] [info] Character Count: 40
+[2025-12-01 00:56:45.205] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.282] [my_app_logger] [info] i key Correct. Correct Count: 41
+[2025-12-01 00:56:45.282] [my_app_logger] [info] Character Count: 41
+[2025-12-01 00:56:45.282] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.358] [my_app_logger] [info] m key Correct. Correct Count: 42
+[2025-12-01 00:56:45.358] [my_app_logger] [info] Character Count: 42
+[2025-12-01 00:56:45.358] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.435] [my_app_logger] [info] e key Correct. Correct Count: 43
+[2025-12-01 00:56:45.435] [my_app_logger] [info] Character Count: 43
+[2025-12-01 00:56:45.435] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.528] [my_app_logger] [info]   key Correct. Correct Count: 44
+[2025-12-01 00:56:45.528] [my_app_logger] [info] Character Count: 44
+[2025-12-01 00:56:45.528] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:45.528] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.682] [my_app_logger] [info] u key Correct. Correct Count: 45
+[2025-12-01 00:56:45.682] [my_app_logger] [info] Character Count: 45
+[2025-12-01 00:56:45.682] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.764] [my_app_logger] [info] s key Correct. Correct Count: 46
+[2025-12-01 00:56:45.764] [my_app_logger] [info] Character Count: 46
+[2025-12-01 00:56:45.764] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.810] [my_app_logger] [info] e key Correct. Correct Count: 47
+[2025-12-01 00:56:45.810] [my_app_logger] [info] Character Count: 47
+[2025-12-01 00:56:45.810] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:45.934] [my_app_logger] [info]   key Correct. Correct Count: 48
+[2025-12-01 00:56:45.934] [my_app_logger] [info] Character Count: 48
+[2025-12-01 00:56:45.934] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:45.934] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.062] [my_app_logger] [info] c key Correct. Correct Count: 49
+[2025-12-01 00:56:46.062] [my_app_logger] [info] Character Count: 49
+[2025-12-01 00:56:46.062] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.139] [my_app_logger] [info] o key Correct. Correct Count: 50
+[2025-12-01 00:56:46.139] [my_app_logger] [info] Character Count: 50
+[2025-12-01 00:56:46.139] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.211] [my_app_logger] [info] m key Correct. Correct Count: 51
+[2025-12-01 00:56:46.211] [my_app_logger] [info] Character Count: 51
+[2025-12-01 00:56:46.211] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.282] [my_app_logger] [info] e key Correct. Correct Count: 52
+[2025-12-01 00:56:46.282] [my_app_logger] [info] Character Count: 52
+[2025-12-01 00:56:46.282] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.380] [my_app_logger] [info]   key Correct. Correct Count: 53
+[2025-12-01 00:56:46.380] [my_app_logger] [info] Character Count: 53
+[2025-12-01 00:56:46.380] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:46.380] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.472] [my_app_logger] [info] t key Correct. Correct Count: 54
+[2025-12-01 00:56:46.472] [my_app_logger] [info] Character Count: 54
+[2025-12-01 00:56:46.472] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.600] [my_app_logger] [info] o key Correct. Correct Count: 55
+[2025-12-01 00:56:46.600] [my_app_logger] [info] Character Count: 55
+[2025-12-01 00:56:46.600] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.713] [my_app_logger] [info]   key Correct. Correct Count: 56
+[2025-12-01 00:56:46.713] [my_app_logger] [info] Character Count: 56
+[2025-12-01 00:56:46.713] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:46.713] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.800] [my_app_logger] [info] t key Correct. Correct Count: 57
+[2025-12-01 00:56:46.800] [my_app_logger] [info] Character Count: 57
+[2025-12-01 00:56:46.800] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.882] [my_app_logger] [info] a key Correct. Correct Count: 58
+[2025-12-01 00:56:46.882] [my_app_logger] [info] Character Count: 58
+[2025-12-01 00:56:46.882] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:46.985] [my_app_logger] [info] k key Correct. Correct Count: 59
+[2025-12-01 00:56:46.985] [my_app_logger] [info] Character Count: 59
+[2025-12-01 00:56:46.985] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.119] [my_app_logger] [info] e key Correct. Correct Count: 60
+[2025-12-01 00:56:47.119] [my_app_logger] [info] Character Count: 60
+[2025-12-01 00:56:47.119] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.191] [my_app_logger] [info]   key Correct. Correct Count: 61
+[2025-12-01 00:56:47.191] [my_app_logger] [info] Character Count: 61
+[2025-12-01 00:56:47.191] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:47.191] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.314] [my_app_logger] [info] s key Correct. Correct Count: 62
+[2025-12-01 00:56:47.314] [my_app_logger] [info] Character Count: 62
+[2025-12-01 00:56:47.314] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.386] [my_app_logger] [info] a key Correct. Correct Count: 63
+[2025-12-01 00:56:47.386] [my_app_logger] [info] Character Count: 63
+[2025-12-01 00:56:47.386] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.473] [my_app_logger] [info] y key Correct. Correct Count: 64
+[2025-12-01 00:56:47.473] [my_app_logger] [info] Character Count: 64
+[2025-12-01 00:56:47.473] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.555] [my_app_logger] [info]   key Correct. Correct Count: 65
+[2025-12-01 00:56:47.555] [my_app_logger] [info] Character Count: 65
+[2025-12-01 00:56:47.555] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:47.555] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.768] [my_app_logger] [info] y key Correct. Correct Count: 66
+[2025-12-01 00:56:47.768] [my_app_logger] [info] Character Count: 66
+[2025-12-01 00:56:47.768] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.902] [my_app_logger] [info] o key Correct. Correct Count: 67
+[2025-12-01 00:56:47.902] [my_app_logger] [info] Character Count: 67
+[2025-12-01 00:56:47.902] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:47.999] [my_app_logger] [info] u key Correct. Correct Count: 68
+[2025-12-01 00:56:47.999] [my_app_logger] [info] Character Count: 68
+[2025-12-01 00:56:47.999] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.081] [my_app_logger] [info]   key Correct. Correct Count: 69
+[2025-12-01 00:56:48.081] [my_app_logger] [info] Character Count: 69
+[2025-12-01 00:56:48.081] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:48.081] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.199] [my_app_logger] [info] t key Correct. Correct Count: 70
+[2025-12-01 00:56:48.199] [my_app_logger] [info] Character Count: 70
+[2025-12-01 00:56:48.199] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.271] [my_app_logger] [info] h key Correct. Correct Count: 71
+[2025-12-01 00:56:48.271] [my_app_logger] [info] Character Count: 71
+[2025-12-01 00:56:48.271] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.343] [my_app_logger] [info] o key Correct. Correct Count: 72
+[2025-12-01 00:56:48.343] [my_app_logger] [info] Character Count: 72
+[2025-12-01 00:56:48.343] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.435] [my_app_logger] [info] s key Correct. Correct Count: 73
+[2025-12-01 00:56:48.435] [my_app_logger] [info] Character Count: 73
+[2025-12-01 00:56:48.435] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.527] [my_app_logger] [info] e key Correct. Correct Count: 74
+[2025-12-01 00:56:48.527] [my_app_logger] [info] Character Count: 74
+[2025-12-01 00:56:48.527] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.614] [my_app_logger] [info]   key Correct. Correct Count: 75
+[2025-12-01 00:56:48.614] [my_app_logger] [info] Character Count: 75
+[2025-12-01 00:56:48.614] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:48.614] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.768] [my_app_logger] [info] h key Correct. Correct Count: 76
+[2025-12-01 00:56:48.768] [my_app_logger] [info] Character Count: 76
+[2025-12-01 00:56:48.768] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.850] [my_app_logger] [info] o key Correct. Correct Count: 77
+[2025-12-01 00:56:48.850] [my_app_logger] [info] Character Count: 77
+[2025-12-01 00:56:48.850] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:48.937] [my_app_logger] [info] w key Correct. Correct Count: 78
+[2025-12-01 00:56:48.937] [my_app_logger] [info] Character Count: 78
+[2025-12-01 00:56:48.937] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:49.070] [my_app_logger] [info]   key Correct. Correct Count: 79
+[2025-12-01 00:56:49.070] [my_app_logger] [info] Character Count: 79
+[2025-12-01 00:56:49.070] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:49.070] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:49.229] [my_app_logger] [info] e key Correct. Correct Count: 80
+[2025-12-01 00:56:49.229] [my_app_logger] [info] Character Count: 80
+[2025-12-01 00:56:49.229] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:49.389] [my_app_logger] [info] v key Correct. Correct Count: 81
+[2025-12-01 00:56:49.389] [my_app_logger] [info] Character Count: 81
+[2025-12-01 00:56:49.389] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:49.491] [my_app_logger] [info] e key Correct. Correct Count: 82
+[2025-12-01 00:56:49.491] [my_app_logger] [info] Character Count: 82
+[2025-12-01 00:56:49.491] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:49.573] [my_app_logger] [info] n key Correct. Correct Count: 83
+[2025-12-01 00:56:49.573] [my_app_logger] [info] Character Count: 83
+[2025-12-01 00:56:49.573] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:49.650] [my_app_logger] [info]   key Correct. Correct Count: 84
+[2025-12-01 00:56:49.650] [my_app_logger] [info] Character Count: 84
+[2025-12-01 00:56:49.650] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:49.650] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:49.783] [my_app_logger] [info] a key Correct. Correct Count: 85
+[2025-12-01 00:56:49.783] [my_app_logger] [info] Character Count: 85
+[2025-12-01 00:56:49.783] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:49.855] [my_app_logger] [info] n key Correct. Correct Count: 86
+[2025-12-01 00:56:49.855] [my_app_logger] [info] Character Count: 86
+[2025-12-01 00:56:49.855] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:50.000] [my_app_logger] [info] d key Correct. Correct Count: 87
+[2025-12-01 00:56:50.000] [my_app_logger] [info] Character Count: 87
+[2025-12-01 00:56:50.000] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:50.081] [my_app_logger] [info]   key Correct. Correct Count: 88
+[2025-12-01 00:56:50.081] [my_app_logger] [info] Character Count: 88
+[2025-12-01 00:56:50.081] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:50.081] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:50.205] [my_app_logger] [info] m key Correct. Correct Count: 89
+[2025-12-01 00:56:50.205] [my_app_logger] [info] Character Count: 89
+[2025-12-01 00:56:50.205] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:50.334] [my_app_logger] [info] e key Correct. Correct Count: 90
+[2025-12-01 00:56:50.334] [my_app_logger] [info] Character Count: 90
+[2025-12-01 00:56:50.334] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:50.473] [my_app_logger] [info]   key Correct. Correct Count: 91
+[2025-12-01 00:56:50.473] [my_app_logger] [info] Character Count: 91
+[2025-12-01 00:56:50.473] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:50.473] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:50.653] [my_app_logger] [info] t key Correct. Correct Count: 92
+[2025-12-01 00:56:50.653] [my_app_logger] [info] Character Count: 92
+[2025-12-01 00:56:50.653] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:50.725] [my_app_logger] [info] h key Correct. Correct Count: 93
+[2025-12-01 00:56:50.725] [my_app_logger] [info] Character Count: 93
+[2025-12-01 00:56:50.725] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:50.927] [my_app_logger] [info] e key Correct. Correct Count: 94
+[2025-12-01 00:56:50.927] [my_app_logger] [info] Character Count: 94
+[2025-12-01 00:56:50.927] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.025] [my_app_logger] [info] m key Correct. Correct Count: 95
+[2025-12-01 00:56:51.025] [my_app_logger] [info] Character Count: 95
+[2025-12-01 00:56:51.025] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.148] [my_app_logger] [info]   key Correct. Correct Count: 96
+[2025-12-01 00:56:51.148] [my_app_logger] [info] Character Count: 96
+[2025-12-01 00:56:51.148] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:51.148] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.307] [my_app_logger] [info] i key Correct. Correct Count: 97
+[2025-12-01 00:56:51.307] [my_app_logger] [info] Character Count: 97
+[2025-12-01 00:56:51.307] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.430] [my_app_logger] [info] f key Correct. Correct Count: 98
+[2025-12-01 00:56:51.430] [my_app_logger] [info] Character Count: 98
+[2025-12-01 00:56:51.430] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.507] [my_app_logger] [info]   key Correct. Correct Count: 99
+[2025-12-01 00:56:51.507] [my_app_logger] [info] Character Count: 99
+[2025-12-01 00:56:51.507] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:51.507] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.646] [my_app_logger] [info] h key Correct. Correct Count: 100
+[2025-12-01 00:56:51.646] [my_app_logger] [info] Character Count: 100
+[2025-12-01 00:56:51.646] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.723] [my_app_logger] [info] a key Correct. Correct Count: 101
+[2025-12-01 00:56:51.723] [my_app_logger] [info] Character Count: 101
+[2025-12-01 00:56:51.723] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.825] [my_app_logger] [info] v key Correct. Correct Count: 102
+[2025-12-01 00:56:51.825] [my_app_logger] [info] Character Count: 102
+[2025-12-01 00:56:51.825] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:51.928] [my_app_logger] [info] e key Correct. Correct Count: 103
+[2025-12-01 00:56:51.928] [my_app_logger] [info] Character Count: 103
+[2025-12-01 00:56:51.928] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:52.005] [my_app_logger] [info]   key Correct. Correct Count: 104
+[2025-12-01 00:56:52.005] [my_app_logger] [info] Character Count: 104
+[2025-12-01 00:56:52.005] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:52.005] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:52.605] [my_app_logger] [info] o key Correct. Correct Count: 105
+[2025-12-01 00:56:52.605] [my_app_logger] [info] Character Count: 105
+[2025-12-01 00:56:52.605] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:52.702] [my_app_logger] [info] u key Correct. Correct Count: 106
+[2025-12-01 00:56:52.702] [my_app_logger] [info] Character Count: 106
+[2025-12-01 00:56:52.702] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:52.779] [my_app_logger] [info] r key Correct. Correct Count: 107
+[2025-12-01 00:56:52.779] [my_app_logger] [info] Character Count: 107
+[2025-12-01 00:56:52.779] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:52.918] [my_app_logger] [info]   key Correct. Correct Count: 108
+[2025-12-01 00:56:52.918] [my_app_logger] [info] Character Count: 108
+[2025-12-01 00:56:52.918] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:52.918] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:53.105] [my_app_logger] [info] b key Correct. Correct Count: 109
+[2025-12-01 00:56:53.105] [my_app_logger] [info] Character Count: 109
+[2025-12-01 00:56:53.105] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:53.239] [my_app_logger] [info] e key Correct. Correct Count: 110
+[2025-12-01 00:56:53.239] [my_app_logger] [info] Character Count: 110
+[2025-12-01 00:56:53.239] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:53.317] [my_app_logger] [info]   key Correct. Correct Count: 111
+[2025-12-01 00:56:53.317] [my_app_logger] [info] Character Count: 111
+[2025-12-01 00:56:53.317] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:53.317] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.085] [my_app_logger] [info] h key Correct. Correct Count: 112
+[2025-12-01 00:56:54.085] [my_app_logger] [info] Character Count: 112
+[2025-12-01 00:56:54.085] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.194] [my_app_logger] [info] i key Correct. Correct Count: 113
+[2025-12-01 00:56:54.194] [my_app_logger] [info] Character Count: 113
+[2025-12-01 00:56:54.194] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.271] [my_app_logger] [info] s key Correct. Correct Count: 114
+[2025-12-01 00:56:54.271] [my_app_logger] [info] Character Count: 114
+[2025-12-01 00:56:54.271] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.378] [my_app_logger] [info]   key Correct. Correct Count: 115
+[2025-12-01 00:56:54.378] [my_app_logger] [info] Character Count: 115
+[2025-12-01 00:56:54.378] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:54.378] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.512] [my_app_logger] [info] t key Correct. Correct Count: 116
+[2025-12-01 00:56:54.512] [my_app_logger] [info] Character Count: 116
+[2025-12-01 00:56:54.512] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.594] [my_app_logger] [info] h key Correct. Correct Count: 117
+[2025-12-01 00:56:54.594] [my_app_logger] [info] Character Count: 117
+[2025-12-01 00:56:54.594] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.702] [my_app_logger] [info] a key Correct. Correct Count: 118
+[2025-12-01 00:56:54.702] [my_app_logger] [info] Character Count: 118
+[2025-12-01 00:56:54.702] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.799] [my_app_logger] [info] t key Correct. Correct Count: 119
+[2025-12-01 00:56:54.799] [my_app_logger] [info] Character Count: 119
+[2025-12-01 00:56:54.799] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:54.881] [my_app_logger] [info]   key Correct. Correct Count: 120
+[2025-12-01 00:56:54.881] [my_app_logger] [info] Character Count: 120
+[2025-12-01 00:56:54.881] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:54.881] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:55.047] [my_app_logger] [info] h key Correct. Correct Count: 121
+[2025-12-01 00:56:55.047] [my_app_logger] [info] Character Count: 121
+[2025-12-01 00:56:55.047] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:55.150] [my_app_logger] [info] i key Correct. Correct Count: 122
+[2025-12-01 00:56:55.150] [my_app_logger] [info] Character Count: 122
+[2025-12-01 00:56:55.150] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:55.337] [my_app_logger] [info] m key Correct. Correct Count: 123
+[2025-12-01 00:56:55.337] [my_app_logger] [info] Character Count: 123
+[2025-12-01 00:56:55.338] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:55.471] [my_app_logger] [info]   key Correct. Correct Count: 124
+[2025-12-01 00:56:55.471] [my_app_logger] [info] Character Count: 124
+[2025-12-01 00:56:55.471] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:55.471] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:55.611] [my_app_logger] [info] d key Correct. Correct Count: 125
+[2025-12-01 00:56:55.611] [my_app_logger] [info] Character Count: 125
+[2025-12-01 00:56:55.611] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:55.703] [my_app_logger] [info] a key Correct. Correct Count: 126
+[2025-12-01 00:56:55.703] [my_app_logger] [info] Character Count: 126
+[2025-12-01 00:56:55.703] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:55.755] [my_app_logger] [info] y key Correct. Correct Count: 127
+[2025-12-01 00:56:55.755] [my_app_logger] [info] Character Count: 127
+[2025-12-01 00:56:55.755] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:55.847] [my_app_logger] [info]   key Correct. Correct Count: 128
+[2025-12-01 00:56:55.847] [my_app_logger] [info] Character Count: 128
+[2025-12-01 00:56:55.847] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:55.847] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.027] [my_app_logger] [info] s key Correct. Correct Count: 129
+[2025-12-01 00:56:56.027] [my_app_logger] [info] Character Count: 129
+[2025-12-01 00:56:56.027] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.145] [my_app_logger] [info] o key Correct. Correct Count: 130
+[2025-12-01 00:56:56.145] [my_app_logger] [info] Character Count: 130
+[2025-12-01 00:56:56.145] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.285] [my_app_logger] [info] m key Correct. Correct Count: 131
+[2025-12-01 00:56:56.285] [my_app_logger] [info] Character Count: 131
+[2025-12-01 00:56:56.285] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.372] [my_app_logger] [info] e key Correct. Correct Count: 132
+[2025-12-01 00:56:56.372] [my_app_logger] [info] Character Count: 132
+[2025-12-01 00:56:56.372] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.542] [my_app_logger] [info]   key Correct. Correct Count: 133
+[2025-12-01 00:56:56.542] [my_app_logger] [info] Character Count: 133
+[2025-12-01 00:56:56.542] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:56.542] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.614] [my_app_logger] [info] t key Correct. Correct Count: 134
+[2025-12-01 00:56:56.614] [my_app_logger] [info] Character Count: 134
+[2025-12-01 00:56:56.614] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.722] [my_app_logger] [info] h key Correct. Correct Count: 135
+[2025-12-01 00:56:56.722] [my_app_logger] [info] Character Count: 135
+[2025-12-01 00:56:56.722] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.809] [my_app_logger] [info] i key Correct. Correct Count: 136
+[2025-12-01 00:56:56.809] [my_app_logger] [info] Character Count: 136
+[2025-12-01 00:56:56.809] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.911] [my_app_logger] [info] n key Correct. Correct Count: 137
+[2025-12-01 00:56:56.911] [my_app_logger] [info] Character Count: 137
+[2025-12-01 00:56:56.911] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:56.984] [my_app_logger] [info] g key Correct. Correct Count: 138
+[2025-12-01 00:56:56.984] [my_app_logger] [info] Character Count: 138
+[2025-12-01 00:56:56.984] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:57.081] [my_app_logger] [info]   key Correct. Correct Count: 139
+[2025-12-01 00:56:57.081] [my_app_logger] [info] Character Count: 139
+[2025-12-01 00:56:57.081] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:57.081] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:57.225] [my_app_logger] [info] n key Correct. Correct Count: 140
+[2025-12-01 00:56:57.225] [my_app_logger] [info] Character Count: 140
+[2025-12-01 00:56:57.225] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:57.327] [my_app_logger] [info] o key Correct. Correct Count: 141
+[2025-12-01 00:56:57.327] [my_app_logger] [info] Character Count: 141
+[2025-12-01 00:56:57.327] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:57.435] [my_app_logger] [info]   key Correct. Correct Count: 142
+[2025-12-01 00:56:57.435] [my_app_logger] [info] Character Count: 142
+[2025-12-01 00:56:57.435] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:57.435] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:57.552] [my_app_logger] [info] a key Correct. Correct Count: 143
+[2025-12-01 00:56:57.552] [my_app_logger] [info] Character Count: 143
+[2025-12-01 00:56:57.552] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:57.680] [my_app_logger] [info] l key Correct. Correct Count: 144
+[2025-12-01 00:56:57.680] [my_app_logger] [info] Character Count: 144
+[2025-12-01 00:56:57.680] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:57.851] [my_app_logger] [info] l key Correct. Correct Count: 145
+[2025-12-01 00:56:57.851] [my_app_logger] [info] Character Count: 145
+[2025-12-01 00:56:57.851] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:57.932] [my_app_logger] [info]   key Correct. Correct Count: 146
+[2025-12-01 00:56:57.932] [my_app_logger] [info] Character Count: 146
+[2025-12-01 00:56:57.932] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:57.933] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.004] [my_app_logger] [info] t key Correct. Correct Count: 147
+[2025-12-01 00:56:58.004] [my_app_logger] [info] Character Count: 147
+[2025-12-01 00:56:58.004] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.127] [my_app_logger] [info] e key Correct. Correct Count: 148
+[2025-12-01 00:56:58.127] [my_app_logger] [info] Character Count: 148
+[2025-12-01 00:56:58.127] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.198] [my_app_logger] [info] l key Correct. Correct Count: 149
+[2025-12-01 00:56:58.198] [my_app_logger] [info] Character Count: 149
+[2025-12-01 00:56:58.198] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.347] [my_app_logger] [info] l key Correct. Correct Count: 150
+[2025-12-01 00:56:58.347] [my_app_logger] [info] Character Count: 150
+[2025-12-01 00:56:58.347] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.424] [my_app_logger] [info]   key Correct. Correct Count: 151
+[2025-12-01 00:56:58.424] [my_app_logger] [info] Character Count: 151
+[2025-12-01 00:56:58.424] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:58.424] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.563] [my_app_logger] [info] m key Correct. Correct Count: 152
+[2025-12-01 00:56:58.563] [my_app_logger] [info] Character Count: 152
+[2025-12-01 00:56:58.563] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.686] [my_app_logger] [info] a key Correct. Correct Count: 153
+[2025-12-01 00:56:58.686] [my_app_logger] [info] Character Count: 153
+[2025-12-01 00:56:58.686] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.758] [my_app_logger] [info] n key Correct. Correct Count: 154
+[2025-12-01 00:56:58.758] [my_app_logger] [info] Character Count: 154
+[2025-12-01 00:56:58.758] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:58.949] [my_app_logger] [info] y key Correct. Correct Count: 155
+[2025-12-01 00:56:58.949] [my_app_logger] [info] Character Count: 155
+[2025-12-01 00:56:58.949] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:59.037] [my_app_logger] [info]   key Correct. Correct Count: 156
+[2025-12-01 00:56:59.037] [my_app_logger] [info] Character Count: 156
+[2025-12-01 00:56:59.037] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:59.037] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:59.337] [my_app_logger] [info] f key Correct. Correct Count: 157
+[2025-12-01 00:56:59.337] [my_app_logger] [info] Character Count: 157
+[2025-12-01 00:56:59.337] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:59.414] [my_app_logger] [info] i key Correct. Correct Count: 158
+[2025-12-01 00:56:59.414] [my_app_logger] [info] Character Count: 158
+[2025-12-01 00:56:59.414] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:59.538] [my_app_logger] [info] r key Correct. Correct Count: 159
+[2025-12-01 00:56:59.538] [my_app_logger] [info] Character Count: 159
+[2025-12-01 00:56:59.538] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:59.630] [my_app_logger] [info] s key Correct. Correct Count: 160
+[2025-12-01 00:56:59.630] [my_app_logger] [info] Character Count: 160
+[2025-12-01 00:56:59.630] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:59.758] [my_app_logger] [info] t key Correct. Correct Count: 161
+[2025-12-01 00:56:59.758] [my_app_logger] [info] Character Count: 161
+[2025-12-01 00:56:59.758] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:59.855] [my_app_logger] [info]   key Correct. Correct Count: 162
+[2025-12-01 00:56:59.855] [my_app_logger] [info] Character Count: 162
+[2025-12-01 00:56:59.855] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:56:59.855] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:56:59.973] [my_app_logger] [info] a key Correct. Correct Count: 163
+[2025-12-01 00:56:59.973] [my_app_logger] [info] Character Count: 163
+[2025-12-01 00:56:59.973] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.054] [my_app_logger] [info] b key Correct. Correct Count: 164
+[2025-12-01 00:57:00.054] [my_app_logger] [info] Character Count: 164
+[2025-12-01 00:57:00.054] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.213] [my_app_logger] [info] o key Correct. Correct Count: 165
+[2025-12-01 00:57:00.213] [my_app_logger] [info] Character Count: 165
+[2025-12-01 00:57:00.213] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.290] [my_app_logger] [info] u key Correct. Correct Count: 166
+[2025-12-01 00:57:00.290] [my_app_logger] [info] Character Count: 166
+[2025-12-01 00:57:00.290] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.362] [my_app_logger] [info] t key Correct. Correct Count: 167
+[2025-12-01 00:57:00.362] [my_app_logger] [info] Character Count: 167
+[2025-12-01 00:57:00.362] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.470] [my_app_logger] [info]   key Correct. Correct Count: 168
+[2025-12-01 00:57:00.470] [my_app_logger] [info] Character Count: 168
+[2025-12-01 00:57:00.470] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:00.470] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.556] [my_app_logger] [info] s key Correct. Correct Count: 169
+[2025-12-01 00:57:00.556] [my_app_logger] [info] Character Count: 169
+[2025-12-01 00:57:00.557] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.674] [my_app_logger] [info] h key Correct. Correct Count: 170
+[2025-12-01 00:57:00.674] [my_app_logger] [info] Character Count: 170
+[2025-12-01 00:57:00.674] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.797] [my_app_logger] [info] e key Correct. Correct Count: 171
+[2025-12-01 00:57:00.797] [my_app_logger] [info] Character Count: 171
+[2025-12-01 00:57:00.797] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:00.905] [my_app_logger] [info]   key Correct. Correct Count: 172
+[2025-12-01 00:57:00.906] [my_app_logger] [info] Character Count: 172
+[2025-12-01 00:57:00.906] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:00.906] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:01.158] [my_app_logger] [info] v key Correct. Correct Count: 173
+[2025-12-01 00:57:01.158] [my_app_logger] [info] Character Count: 173
+[2025-12-01 00:57:01.158] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:01.256] [my_app_logger] [info] e key Correct. Correct Count: 174
+[2025-12-01 00:57:01.256] [my_app_logger] [info] Character Count: 174
+[2025-12-01 00:57:01.256] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:01.427] [my_app_logger] [info] r key Correct. Correct Count: 175
+[2025-12-01 00:57:01.427] [my_app_logger] [info] Character Count: 175
+[2025-12-01 00:57:01.427] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:01.555] [my_app_logger] [info] y key Correct. Correct Count: 176
+[2025-12-01 00:57:01.555] [my_app_logger] [info] Character Count: 176
+[2025-12-01 00:57:01.555] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:01.602] [my_app_logger] [info]   key Correct. Correct Count: 177
+[2025-12-01 00:57:01.602] [my_app_logger] [info] Character Count: 177
+[2025-12-01 00:57:01.602] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:01.602] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:01.735] [my_app_logger] [info] g key Correct. Correct Count: 178
+[2025-12-01 00:57:01.735] [my_app_logger] [info] Character Count: 178
+[2025-12-01 00:57:01.735] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:01.827] [my_app_logger] [info] i key Correct. Correct Count: 179
+[2025-12-01 00:57:01.827] [my_app_logger] [info] Character Count: 179
+[2025-12-01 00:57:01.827] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:01.992] [my_app_logger] [info] v key Correct. Correct Count: 180
+[2025-12-01 00:57:01.992] [my_app_logger] [info] Character Count: 180
+[2025-12-01 00:57:01.992] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:02.074] [my_app_logger] [info] e key Correct. Correct Count: 181
+[2025-12-01 00:57:02.074] [my_app_logger] [info] Character Count: 181
+[2025-12-01 00:57:02.074] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:02.161] [my_app_logger] [info]   key Correct. Correct Count: 182
+[2025-12-01 00:57:02.161] [my_app_logger] [info] Character Count: 182
+[2025-12-01 00:57:02.161] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:02.161] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:02.269] [my_app_logger] [info] w key Correct. Correct Count: 183
+[2025-12-01 00:57:02.269] [my_app_logger] [info] Character Count: 183
+[2025-12-01 00:57:02.269] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:02.361] [my_app_logger] [info] e key Correct. Correct Count: 184
+[2025-12-01 00:57:02.361] [my_app_logger] [info] Character Count: 184
+[2025-12-01 00:57:02.361] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:02.433] [my_app_logger] [info] l key Correct. Correct Count: 185
+[2025-12-01 00:57:02.433] [my_app_logger] [info] Character Count: 185
+[2025-12-01 00:57:02.433] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:02.588] [my_app_logger] [info] l key Correct. Correct Count: 186
+[2025-12-01 00:57:02.588] [my_app_logger] [info] Character Count: 186
+[2025-12-01 00:57:02.588] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:02.680] [my_app_logger] [info]   key Correct. Correct Count: 187
+[2025-12-01 00:57:02.680] [my_app_logger] [info] Character Count: 187
+[2025-12-01 00:57:02.680] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:02.680] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:02.925] [my_app_logger] [info] a key Correct. Correct Count: 188
+[2025-12-01 00:57:02.925] [my_app_logger] [info] Character Count: 188
+[2025-12-01 00:57:02.925] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:03.002] [my_app_logger] [info] l key Correct. Correct Count: 189
+[2025-12-01 00:57:03.002] [my_app_logger] [info] Character Count: 189
+[2025-12-01 00:57:03.002] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:03.176] [my_app_logger] [info] s key Correct. Correct Count: 190
+[2025-12-01 00:57:03.177] [my_app_logger] [info] Character Count: 190
+[2025-12-01 00:57:03.177] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:03.258] [my_app_logger] [info] o key Correct. Correct Count: 191
+[2025-12-01 00:57:03.258] [my_app_logger] [info] Character Count: 191
+[2025-12-01 00:57:03.258] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:03.376] [my_app_logger] [info]   key Correct. Correct Count: 192
+[2025-12-01 00:57:03.376] [my_app_logger] [info] Character Count: 192
+[2025-12-01 00:57:03.376] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:03.376] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:03.668] [my_app_logger] [info] m key Correct. Correct Count: 193
+[2025-12-01 00:57:03.668] [my_app_logger] [info] Character Count: 193
+[2025-12-01 00:57:03.668] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:03.750] [my_app_logger] [info] a key Correct. Correct Count: 194
+[2025-12-01 00:57:03.750] [my_app_logger] [info] Character Count: 194
+[2025-12-01 00:57:03.750] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:03.869] [my_app_logger] [info] k key Correct. Correct Count: 195
+[2025-12-01 00:57:03.869] [my_app_logger] [info] Character Count: 195
+[2025-12-01 00:57:03.869] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:03.992] [my_app_logger] [info] e key Correct. Correct Count: 196
+[2025-12-01 00:57:03.992] [my_app_logger] [info] Character Count: 196
+[2025-12-01 00:57:03.992] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:04.121] [my_app_logger] [info]   key Correct. Correct Count: 197
+[2025-12-01 00:57:04.121] [my_app_logger] [info] Character Count: 197
+[2025-12-01 00:57:04.121] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:04.121] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:04.493] [my_app_logger] [info] t key Correct. Correct Count: 198
+[2025-12-01 00:57:04.493] [my_app_logger] [info] Character Count: 198
+[2025-12-01 00:57:04.493] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:04.539] [my_app_logger] [info] h key Correct. Correct Count: 199
+[2025-12-01 00:57:04.539] [my_app_logger] [info] Character Count: 199
+[2025-12-01 00:57:04.539] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:04.657] [my_app_logger] [info] i key Correct. Correct Count: 200
+[2025-12-01 00:57:04.657] [my_app_logger] [info] Character Count: 200
+[2025-12-01 00:57:04.658] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:04.828] [my_app_logger] [info] s key Correct. Correct Count: 201
+[2025-12-01 00:57:04.828] [my_app_logger] [info] Character Count: 201
+[2025-12-01 00:57:04.828] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:04.962] [my_app_logger] [info]   key Correct. Correct Count: 202
+[2025-12-01 00:57:04.962] [my_app_logger] [info] Character Count: 202
+[2025-12-01 00:57:04.962] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:04.963] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:05.129] [my_app_logger] [info] p key Correct. Correct Count: 203
+[2025-12-01 00:57:05.129] [my_app_logger] [info] Character Count: 203
+[2025-12-01 00:57:05.129] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:05.255] [my_app_logger] [info] e key Correct. Correct Count: 204
+[2025-12-01 00:57:05.255] [my_app_logger] [info] Character Count: 204
+[2025-12-01 00:57:05.255] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:05.332] [my_app_logger] [info] o key Correct. Correct Count: 205
+[2025-12-01 00:57:05.332] [my_app_logger] [info] Character Count: 205
+[2025-12-01 00:57:05.332] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:05.461] [my_app_logger] [info] p key Correct. Correct Count: 206
+[2025-12-01 00:57:05.461] [my_app_logger] [info] Character Count: 206
+[2025-12-01 00:57:05.461] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:05.621] [my_app_logger] [info] l key Correct. Correct Count: 207
+[2025-12-01 00:57:05.621] [my_app_logger] [info] Character Count: 207
+[2025-12-01 00:57:05.621] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:05.698] [my_app_logger] [info] e key Correct. Correct Count: 208
+[2025-12-01 00:57:05.698] [my_app_logger] [info] Character Count: 208
+[2025-12-01 00:57:05.698] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:05.786] [my_app_logger] [info]   key Correct. Correct Count: 209
+[2025-12-01 00:57:05.786] [my_app_logger] [info] Character Count: 209
+[2025-12-01 00:57:05.786] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:05.786] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:05.878] [my_app_logger] [info] a key Correct. Correct Count: 210
+[2025-12-01 00:57:05.878] [my_app_logger] [info] Character Count: 210
+[2025-12-01 00:57:05.878] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.006] [my_app_logger] [info]   key Correct. Correct Count: 211
+[2025-12-01 00:57:06.006] [my_app_logger] [info] Character Count: 211
+[2025-12-01 00:57:06.006] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:06.006] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.129] [my_app_logger] [info] f key Correct. Correct Count: 212
+[2025-12-01 00:57:06.129] [my_app_logger] [info] Character Count: 212
+[2025-12-01 00:57:06.129] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.206] [my_app_logger] [info] o key Correct. Correct Count: 213
+[2025-12-01 00:57:06.206] [my_app_logger] [info] Character Count: 213
+[2025-12-01 00:57:06.206] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.429] [my_app_logger] [info] r key Correct. Correct Count: 214
+[2025-12-01 00:57:06.429] [my_app_logger] [info] Character Count: 214
+[2025-12-01 00:57:06.429] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.521] [my_app_logger] [info]   key Correct. Correct Count: 215
+[2025-12-01 00:57:06.521] [my_app_logger] [info] Character Count: 215
+[2025-12-01 00:57:06.521] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:06.521] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.702] [my_app_logger] [info] s key Correct. Correct Count: 216
+[2025-12-01 00:57:06.702] [my_app_logger] [info] Character Count: 216
+[2025-12-01 00:57:06.702] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.779] [my_app_logger] [info] o key Correct. Correct Count: 217
+[2025-12-01 00:57:06.779] [my_app_logger] [info] Character Count: 217
+[2025-12-01 00:57:06.779] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.866] [my_app_logger] [info]   key Correct. Correct Count: 218
+[2025-12-01 00:57:06.866] [my_app_logger] [info] Character Count: 218
+[2025-12-01 00:57:06.866] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:06.866] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:06.994] [my_app_logger] [info] t key Correct. Correct Count: 219
+[2025-12-01 00:57:06.994] [my_app_logger] [info] Character Count: 219
+[2025-12-01 00:57:06.994] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:07.066] [my_app_logger] [info] h key Correct. Correct Count: 220
+[2025-12-01 00:57:07.066] [my_app_logger] [info] Character Count: 220
+[2025-12-01 00:57:07.066] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:07.266] [my_app_logger] [info] e key Correct. Correct Count: 221
+[2025-12-01 00:57:07.266] [my_app_logger] [info] Character Count: 221
+[2025-12-01 00:57:07.266] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:07.343] [my_app_logger] [info] i key Correct. Correct Count: 222
+[2025-12-01 00:57:07.343] [my_app_logger] [info] Character Count: 222
+[2025-12-01 00:57:07.343] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:07.513] [my_app_logger] [info] r key Correct. Correct Count: 223
+[2025-12-01 00:57:07.513] [my_app_logger] [info] Character Count: 223
+[2025-12-01 00:57:07.514] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:07.632] [my_app_logger] [info]   key Correct. Correct Count: 224
+[2025-12-01 00:57:07.632] [my_app_logger] [info] Character Count: 224
+[2025-12-01 00:57:07.632] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:07.632] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:07.802] [my_app_logger] [info] h key Correct. Correct Count: 225
+[2025-12-01 00:57:07.802] [my_app_logger] [info] Character Count: 225
+[2025-12-01 00:57:07.802] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:07.899] [my_app_logger] [info] e key Correct. Correct Count: 226
+[2025-12-01 00:57:07.899] [my_app_logger] [info] Character Count: 226
+[2025-12-01 00:57:07.899] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:08.018] [my_app_logger] [info]   key Correct. Correct Count: 227
+[2025-12-01 00:57:08.018] [my_app_logger] [info] Character Count: 227
+[2025-12-01 00:57:08.018] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:08.018] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:08.192] [my_app_logger] [info] o key Incorrect. Does not match: d. Incorrect Count: 1
+[2025-12-01 00:57:08.192] [my_app_logger] [info] Character Count: 228
+[2025-12-01 00:57:08.192] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:08.331] [my_app_logger] [info]   key incorrect. Incorrect Count: 2
+[2025-12-01 00:57:08.331] [my_app_logger] [info] Character Count: 229
+[2025-12-01 00:57:08.331] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:08.429] [my_app_logger] [info] a key incorrect. Incorrect Count: 3
+[2025-12-01 00:57:08.429] [my_app_logger] [info] Character Count: 230
+[2025-12-01 00:57:08.429] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:08.557] [my_app_logger] [info] t key incorrect. Incorrect Count: 4
+[2025-12-01 00:57:08.557] [my_app_logger] [info] Character Count: 231
+[2025-12-01 00:57:08.558] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:09.061] [my_app_logger] [info] Back Word Pressed. Before erasing word: o at
+[2025-12-01 00:57:09.061] [my_app_logger] [debug] After erasing word: o 
+[2025-12-01 00:57:09.061] [my_app_logger] [debug] Correct Count: 227 Incorrect Count: 2 Char Count: 229
+[2025-12-01 00:57:09.061] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:09.264] [my_app_logger] [info] Back Word Pressed. Before erasing word: o 
+[2025-12-01 00:57:09.264] [my_app_logger] [debug] After erasing word: 
+[2025-12-01 00:57:09.264] [my_app_logger] [debug] Correct Count: 227 Incorrect Count: 0 Char Count: 227
+[2025-12-01 00:57:09.264] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:09.508] [my_app_logger] [info] a key Incorrect. Does not match: d. Incorrect Count: 1
+[2025-12-01 00:57:09.508] [my_app_logger] [info] Character Count: 228
+[2025-12-01 00:57:09.508] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:09.978] [my_app_logger] [info] Back Key Pressed
+[2025-12-01 00:57:09.978] [my_app_logger] [debug] Correct Count: 227 Incorrect Count: 0 Char Count: 227
+[2025-12-01 00:57:09.978] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:10.145] [my_app_logger] [info] d key Correct. Correct Count: 228
+[2025-12-01 00:57:10.145] [my_app_logger] [info] Character Count: 228
+[2025-12-01 00:57:10.145] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:10.237] [my_app_logger] [info] o key Correct. Correct Count: 229
+[2025-12-01 00:57:10.237] [my_app_logger] [info] Character Count: 229
+[2025-12-01 00:57:10.237] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:10.377] [my_app_logger] [info]   key Correct. Correct Count: 230
+[2025-12-01 00:57:10.377] [my_app_logger] [info] Character Count: 230
+[2025-12-01 00:57:10.377] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:10.377] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:10.574] [my_app_logger] [info] a key Correct. Correct Count: 231
+[2025-12-01 00:57:10.574] [my_app_logger] [info] Character Count: 231
+[2025-12-01 00:57:10.575] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:10.750] [my_app_logger] [info] t key Correct. Correct Count: 232
+[2025-12-01 00:57:10.750] [my_app_logger] [info] Character Count: 232
+[2025-12-01 00:57:10.750] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:10.864] [my_app_logger] [info]   key Correct. Correct Count: 233
+[2025-12-01 00:57:10.864] [my_app_logger] [info] Character Count: 233
+[2025-12-01 00:57:10.864] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:10.864] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.114] [my_app_logger] [info] o key Correct. Correct Count: 234
+[2025-12-01 00:57:11.114] [my_app_logger] [info] Character Count: 234
+[2025-12-01 00:57:11.114] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.223] [my_app_logger] [info] n key Correct. Correct Count: 235
+[2025-12-01 00:57:11.223] [my_app_logger] [info] Character Count: 235
+[2025-12-01 00:57:11.223] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.347] [my_app_logger] [info] l key Correct. Correct Count: 236
+[2025-12-01 00:57:11.347] [my_app_logger] [info] Character Count: 236
+[2025-12-01 00:57:11.347] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.492] [my_app_logger] [info] y key Correct. Correct Count: 237
+[2025-12-01 00:57:11.492] [my_app_logger] [info] Character Count: 237
+[2025-12-01 00:57:11.492] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.574] [my_app_logger] [info]   key Correct. Correct Count: 238
+[2025-12-01 00:57:11.574] [my_app_logger] [info] Character Count: 238
+[2025-12-01 00:57:11.574] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:11.574] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.677] [my_app_logger] [info] c key Correct. Correct Count: 239
+[2025-12-01 00:57:11.677] [my_app_logger] [info] Character Count: 239
+[2025-12-01 00:57:11.677] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.713] [my_app_logger] [info] o key Correct. Correct Count: 240
+[2025-12-01 00:57:11.713] [my_app_logger] [info] Character Count: 240
+[2025-12-01 00:57:11.713] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.831] [my_app_logger] [info] u key Correct. Correct Count: 241
+[2025-12-01 00:57:11.831] [my_app_logger] [info] Character Count: 241
+[2025-12-01 00:57:11.831] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:11.923] [my_app_logger] [info] l key Correct. Correct Count: 242
+[2025-12-01 00:57:11.923] [my_app_logger] [info] Character Count: 242
+[2025-12-01 00:57:11.923] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:12.031] [my_app_logger] [info] d key Correct. Correct Count: 243
+[2025-12-01 00:57:12.031] [my_app_logger] [info] Character Count: 243
+[2025-12-01 00:57:12.031] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:12.124] [my_app_logger] [info]   key Correct. Correct Count: 244
+[2025-12-01 00:57:12.124] [my_app_logger] [info] Character Count: 244
+[2025-12-01 00:57:12.124] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:12.124] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:12.283] [my_app_logger] [info] t key Correct. Correct Count: 245
+[2025-12-01 00:57:12.283] [my_app_logger] [info] Character Count: 245
+[2025-12-01 00:57:12.283] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:12.355] [my_app_logger] [info] h key Correct. Correct Count: 246
+[2025-12-01 00:57:12.355] [my_app_logger] [info] Character Count: 246
+[2025-12-01 00:57:12.355] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:12.515] [my_app_logger] [info] e key Correct. Correct Count: 247
+[2025-12-01 00:57:12.515] [my_app_logger] [info] Character Count: 247
+[2025-12-01 00:57:12.515] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:12.597] [my_app_logger] [info] n key Correct. Correct Count: 248
+[2025-12-01 00:57:12.597] [my_app_logger] [info] Character Count: 248
+[2025-12-01 00:57:12.597] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:12.705] [my_app_logger] [info]   key Correct. Correct Count: 249
+[2025-12-01 00:57:12.705] [my_app_logger] [info] Character Count: 249
+[2025-12-01 00:57:12.705] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:12.705] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:12.912] [my_app_logger] [info] j key Correct. Correct Count: 250
+[2025-12-01 00:57:12.912] [my_app_logger] [info] Character Count: 250
+[2025-12-01 00:57:12.912] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.072] [my_app_logger] [info] u key Correct. Correct Count: 251
+[2025-12-01 00:57:13.072] [my_app_logger] [info] Character Count: 251
+[2025-12-01 00:57:13.072] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.154] [my_app_logger] [info] s key Correct. Correct Count: 252
+[2025-12-01 00:57:13.154] [my_app_logger] [info] Character Count: 252
+[2025-12-01 00:57:13.154] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.251] [my_app_logger] [info] t key Correct. Correct Count: 253
+[2025-12-01 00:57:13.251] [my_app_logger] [info] Character Count: 253
+[2025-12-01 00:57:13.251] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.343] [my_app_logger] [info]   key Correct. Correct Count: 254
+[2025-12-01 00:57:13.343] [my_app_logger] [info] Character Count: 254
+[2025-12-01 00:57:13.343] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:13.343] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.456] [my_app_logger] [info] w key Correct. Correct Count: 255
+[2025-12-01 00:57:13.456] [my_app_logger] [info] Character Count: 255
+[2025-12-01 00:57:13.456] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.575] [my_app_logger] [info] a key Correct. Correct Count: 256
+[2025-12-01 00:57:13.575] [my_app_logger] [info] Character Count: 256
+[2025-12-01 00:57:13.575] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.616] [my_app_logger] [info] n key Correct. Correct Count: 257
+[2025-12-01 00:57:13.616] [my_app_logger] [info] Character Count: 257
+[2025-12-01 00:57:13.616] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.759] [my_app_logger] [info] t key Correct. Correct Count: 258
+[2025-12-01 00:57:13.759] [my_app_logger] [info] Character Count: 258
+[2025-12-01 00:57:13.759] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:13.893] [my_app_logger] [info]   key Correct. Correct Count: 259
+[2025-12-01 00:57:13.893] [my_app_logger] [info] Character Count: 259
+[2025-12-01 00:57:13.893] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:13.893] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.037] [my_app_logger] [info] g key Correct. Correct Count: 260
+[2025-12-01 00:57:14.037] [my_app_logger] [info] Character Count: 260
+[2025-12-01 00:57:14.037] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.145] [my_app_logger] [info] o key Correct. Correct Count: 261
+[2025-12-01 00:57:14.145] [my_app_logger] [info] Character Count: 261
+[2025-12-01 00:57:14.145] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.237] [my_app_logger] [info]   key Correct. Correct Count: 262
+[2025-12-01 00:57:14.237] [my_app_logger] [info] Character Count: 262
+[2025-12-01 00:57:14.237] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:14.237] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.340] [my_app_logger] [info] f key Correct. Correct Count: 263
+[2025-12-01 00:57:14.340] [my_app_logger] [info] Character Count: 263
+[2025-12-01 00:57:14.340] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.537] [my_app_logger] [info] r key Correct. Correct Count: 264
+[2025-12-01 00:57:14.537] [my_app_logger] [info] Character Count: 264
+[2025-12-01 00:57:14.537] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.624] [my_app_logger] [info] o key Correct. Correct Count: 265
+[2025-12-01 00:57:14.624] [my_app_logger] [info] Character Count: 265
+[2025-12-01 00:57:14.624] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.706] [my_app_logger] [info] m key Correct. Correct Count: 266
+[2025-12-01 00:57:14.706] [my_app_logger] [info] Character Count: 266
+[2025-12-01 00:57:14.706] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.804] [my_app_logger] [info]   key Correct. Correct Count: 267
+[2025-12-01 00:57:14.804] [my_app_logger] [info] Character Count: 267
+[2025-12-01 00:57:14.804] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:14.804] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:14.911] [my_app_logger] [info] o key Correct. Correct Count: 268
+[2025-12-01 00:57:14.911] [my_app_logger] [info] Character Count: 268
+[2025-12-01 00:57:14.911] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:15.014] [my_app_logger] [info] r key Correct. Correct Count: 269
+[2025-12-01 00:57:15.014] [my_app_logger] [info] Character Count: 269
+[2025-12-01 00:57:15.014] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:15.142] [my_app_logger] [info]   key Correct. Correct Count: 270
+[2025-12-01 00:57:15.142] [my_app_logger] [info] Character Count: 270
+[2025-12-01 00:57:15.142] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:15.142] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:15.343] [my_app_logger] [info] t key Correct. Correct Count: 271
+[2025-12-01 00:57:15.343] [my_app_logger] [info] Character Count: 271
+[2025-12-01 00:57:15.344] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:15.430] [my_app_logger] [info] h key Correct. Correct Count: 272
+[2025-12-01 00:57:15.430] [my_app_logger] [info] Character Count: 272
+[2025-12-01 00:57:15.430] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:15.600] [my_app_logger] [info] e key Correct. Correct Count: 273
+[2025-12-01 00:57:15.600] [my_app_logger] [info] Character Count: 273
+[2025-12-01 00:57:15.600] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:15.698] [my_app_logger] [info]   key Correct. Correct Count: 274
+[2025-12-01 00:57:15.698] [my_app_logger] [info] Character Count: 274
+[2025-12-01 00:57:15.698] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:15.698] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:15.831] [my_app_logger] [info] w key Correct. Correct Count: 275
+[2025-12-01 00:57:15.831] [my_app_logger] [info] Character Count: 275
+[2025-12-01 00:57:15.831] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:15.938] [my_app_logger] [info] h key Correct. Correct Count: 276
+[2025-12-01 00:57:15.938] [my_app_logger] [info] Character Count: 276
+[2025-12-01 00:57:15.938] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:16.015] [my_app_logger] [info] i key Correct. Correct Count: 277
+[2025-12-01 00:57:16.015] [my_app_logger] [info] Character Count: 277
+[2025-12-01 00:57:16.015] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:16.112] [my_app_logger] [info] c key Correct. Correct Count: 278
+[2025-12-01 00:57:16.112] [my_app_logger] [info] Character Count: 278
+[2025-12-01 00:57:16.112] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:16.215] [my_app_logger] [info] h key Correct. Correct Count: 279
+[2025-12-01 00:57:16.215] [my_app_logger] [info] Character Count: 279
+[2025-12-01 00:57:16.215] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:16.307] [my_app_logger] [info]   key Correct. Correct Count: 280
+[2025-12-01 00:57:16.307] [my_app_logger] [info] Character Count: 280
+[2025-12-01 00:57:16.307] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:16.307] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:16.473] [my_app_logger] [info] u key Correct. Correct Count: 281
+[2025-12-01 00:57:16.473] [my_app_logger] [info] Character Count: 281
+[2025-12-01 00:57:16.473] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:16.586] [my_app_logger] [info] p key Correct. Correct Count: 282
+[2025-12-01 00:57:16.586] [my_app_logger] [info] Character Count: 282
+[2025-12-01 00:57:16.586] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:16.688] [my_app_logger] [info]   key Correct. Correct Count: 283
+[2025-12-01 00:57:16.688] [my_app_logger] [info] Character Count: 283
+[2025-12-01 00:57:16.688] [my_app_logger] [info] Cleared userInputSequence. Correct word detected.
+[2025-12-01 00:57:16.688] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:16.883] [my_app_logger] [info] m key Correct. Correct Count: 284
+[2025-12-01 00:57:16.883] [my_app_logger] [info] Character Count: 284
+[2025-12-01 00:57:16.883] [my_app_logger] [info] Text Render progress complete
+[2025-12-01 00:57:17.073] [my_app_logger] [info] Time up. Switching to Results
+[2025-12-01 00:57:17.073] [my_app_logger] [info] Switching to screen: 3
+[2025-12-01 00:57:17.073] [my_app_logger] [debug] Clearing current screen: 0
+[2025-12-01 00:57:17.075] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:57:17.080] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:57:17.080] [my_app_logger] [info] Cleared Game Screen
+[2025-12-01 00:57:17.080] [my_app_logger] [info] Terminal WIdth and Height: 120,30
+[2025-12-01 00:57:17.080] [my_app_logger] [info] Created Canvas Successfully. Canvas Dimensions: 100X25 Canvas Initial Position: (10,2)
+[2025-12-01 00:57:17.080] [my_app_logger] [info] Results screen initialized
+[2025-12-01 00:57:17.080] [my_app_logger] [info] Number of result options: 3
+[2025-12-01 00:57:17.080] [my_app_logger] [info] Options Starting Position: 11,16
+ Options Size: 98x5
+[2025-12-01 00:57:17.085] [my_app_logger] [info] Results Screen needs render
+[2025-12-01 00:57:17.085] [my_app_logger] [debug] Rendering screen: 3
+[2025-12-01 00:57:17.085] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:57:17.085] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:57:17.085] [my_app_logger] [warning] Widget not drawn yet, nothing to erase
+[2025-12-01 00:57:17.085] [my_app_logger] [info] Cleared Results Screen
+[2025-12-01 00:57:17.103] [my_app_logger] [info] Results screen rendered successfully
+[2025-12-01 00:57:19.116] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:57:19.118] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:57:19.124] [my_app_logger] [info] Selected Results Option: 1
+[2025-12-01 00:57:20.239] [my_app_logger] [info] Moving Cursor Down
+[2025-12-01 00:57:20.242] [my_app_logger] [info] All variables reset for widget
+[2025-12-01 00:57:20.247] [my_app_logger] [info] Selected Results Option: 2
+[2025-12-01 00:57:21.168] [my_app_logger] [info] Enter key pressed. Selected Option: 2
+[2025-12-01 00:57:21.168] [my_app_logger] [info] Quitting...
+[2025-12-01 00:57:21.168] [my_app_logger] [debug] Clearing entire terminal

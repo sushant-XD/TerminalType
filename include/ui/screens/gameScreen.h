@@ -21,12 +21,15 @@ private:
   int mainTextBoxHeight;
 
   std::vector<std::string> wrapText(State &state);
+  std::pair<int, int> calculateCharacterPosition(int charIndex,
+                                                 const State &state);
+  void updateCharacterColor(int charIndex, const State &state, char *color);
 
 public:
   gameScreen(terminalCtrl &terminal);
   ~gameScreen();
 
-  void render(const State &state) override;
+  void render(State &state) override;
   void update(const State &state) override;
   void clear() override;
 

@@ -48,7 +48,9 @@ void screenManager::switchToScreen(TestState newScreen) {
     break;
 
   case TestState::SETTINGS:
-    // Settings screen not yet implemented
+    if (!settings) {
+      settings = std::make_unique<settingsScreen>(terminal);
+    }
     needRender = true;
     break;
 
@@ -58,7 +60,7 @@ void screenManager::switchToScreen(TestState newScreen) {
   }
 }
 
-void screenManager::render(const State &state) {
+void screenManager::render(State &state) {
   spdlog::debug("Rendering screen: {}", static_cast<int>(currentScreen));
 
   switch (currentScreen) {
@@ -81,8 +83,9 @@ void screenManager::render(const State &state) {
     break;
 
   case TestState::SETTINGS:
-    // TODO: Implement settings screen rendering
-    spdlog::warn("Settings screen rendering not yet implemented");
+    if (settings) {
+      settings->render(state);
+    }
     break;
 
   default:
@@ -115,7 +118,9 @@ void screenManager::update(const State &state) {
     break;
 
   case TestState::SETTINGS:
-    // TODO: Implement settings screen update
+    if (settings) {
+      settings->update(state);
+    }
     break;
 
   default:
@@ -147,6 +152,52 @@ ResultOpts screenManager::updateResultsSelection(bool up) {
   return ResultOpts::MENU; // Default return
 }
 
+SettingOption screenManager::updateSettingsSelection(bool up) {
+  if (currentScreen == TestState::SETTINGS && settings) {
+    return settings->updateSelection(up);
+  }
+  spdlog::warn("updateSettingsSelection called but not in SETTINGS screen");
+  return SettingOption::TIME;
+}
+
+void screenManager::modifySettingValue(State &state, bool increase) {
+  if (currentScreen != TestState::SETTINGS || !settings) {
+    return;
+  }
+
+  SettingOption current = settings->getCurrentSelection();
+
+  switch (current) {
+  case SettingOption::TIME:
+    if (increase) {
+      state.config.time = std::min(state.config.time + 10, 300); // Max 300s
+    } else {
+      state.config.time = std::max(state.config.time - 10, 10); // Min 10s
+    }
+    spdlog::info("Time changed to: {}", state.config.time);
+    break;
+
+  case SettingOption::LEVEL:
+    if (increase) {
+      int level = static_cast<int>(state.config.level);
+      level = (level + 1) % 3; // Cycle through 0, 1, 2
+      state.config.level = static_cast<Level>(level);
+    } else {
+      int level = static_cast<int>(state.config.level);
+      level = (level - 1 + 3) % 3;
+      state.config.level = static_cast<Level>(level);
+    }
+    spdlog::info("Level changed to: {}", static_cast<int>(state.config.level));
+    break;
+
+  case SettingOption::BACK:
+    // Do nothing for back option
+    break;
+  }
+
+  settings->update(state);
+}
+
 void screenManager::clearCurrentScreen() {
   spdlog::debug("Clearing current screen: {}", static_cast<int>(currentScreen));
 
@@ -168,7 +219,9 @@ void screenManager::clearCurrentScreen() {
     }
     break;
   case TestState::SETTINGS:
-    // TODO: Clear settings screen
+    if (settings) {
+      settings->clear();
+    }
     break;
 
   default:

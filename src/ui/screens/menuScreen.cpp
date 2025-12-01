@@ -38,7 +38,7 @@ void menuScreen::clear() {
   spdlog::info("Cleared Main Screen");
 }
 
-void menuScreen::render(const State &state) {
+void menuScreen::render(State &state) {
   if (isRendered)
     return;
 
@@ -61,7 +61,9 @@ void menuScreen::render(const State &state) {
   isRendered = true;
 }
 
-void menuScreen::update(const State &state) { render(state); }
+void menuScreen::update(const State &state) {
+  render(const_cast<State &>(state));
+}
 
 MenuOpts menuScreen::updateSelection(bool up) {
   terminal.hideCursor();

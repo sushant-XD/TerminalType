@@ -52,6 +52,8 @@ int main(int argc, char *argv[]) {
   char tempChar = '\0';
   MenuOpts selectedSetting;
   ResultOpts selectedResultOption;
+  SettingOption selectedSettingOption;
+
   while (true) {
     tempChar = terminalManager.getCharacter();
 
@@ -72,7 +74,8 @@ int main(int argc, char *argv[]) {
       break;
 
     case TestState::SETTINGS:
-      handleSettingsState(state);
+      handleSettingsState(state, tempChar, renderManager,
+                          selectedSettingOption);
       break;
 
     default:
@@ -154,6 +157,10 @@ void handleMenuState(State &state, char tempChar, screenManager &renderManager,
       state.currentState = TestState::RUNNING;
       renderManager.switchToScreen(TestState::RUNNING);
       terminal.getAllCharacters(); // Clear input buffer
+
+      state.totalTimeSeconds = state.config.time;
+      state.remainingTimeSeconds = state.config.time;
+
       fileManager.refresh(state);
       spdlog::info("Starting Game from Menu.");
       break;
@@ -198,7 +205,6 @@ void handleResultsState(State &state, char tempChar,
       // Clear input buffer
       terminal.getAllCharacters();
       // Reset state and return to menu
-      configure(state.config);
       initializeState(state, state.config);
       state.currentState = TestState::MENU;
       renderManager.switchToScreen(TestState::MENU);
@@ -209,7 +215,6 @@ void handleResultsState(State &state, char tempChar,
       // Clear input buffer
       terminal.getAllCharacters();
       // Reset state and restart test
-      configure(state.config);
       initializeState(state, state.config);
       fileManager.refresh(state);
 
@@ -227,16 +232,48 @@ void handleResultsState(State &state, char tempChar,
   }
 }
 
-void handleSettingsState(State &state) {
-  spdlog::info("Inside Settings Menu");
-  // TODO: Implement settings screen logic
+void handleSettingsState(State &state, char tempChar,
+                         screenManager &renderManager,
+                         SettingOption &selectedOption) {
+  // Render settings if needed
+  if (renderManager.needsRender()) {
+    spdlog::info("Settings Screen needs render");
+    renderManager.switchToScreen(TestState::SETTINGS);
+    renderManager.render(state);
+  }
+
+  // Handle navigation
+  if (tempChar == 'j' || tempChar == 'J') {
+    spdlog::info("Moving Cursor Down");
+    selectedOption = renderManager.updateSettingsSelection(false);
+    renderManager.update(state);
+  } else if (tempChar == 'k' || tempChar == 'K') {
+    spdlog::info("Moving Cursor Up");
+    selectedOption = renderManager.updateSettingsSelection(true);
+    renderManager.update(state);
+  } else if (tempChar == 'h' || tempChar == 'H') {
+    spdlog::info("Decreasing value");
+    renderManager.modifySettingValue(state, false);
+  } else if (tempChar == 'l' || tempChar == 'L') {
+    spdlog::info("Increasing value");
+    renderManager.modifySettingValue(state, true);
+  } else if (tempChar == '\n') {
+    spdlog::info("Enter key pressed. Selected Option: {}",
+                 static_cast<int>(selectedOption));
+
+    if (selectedOption == SettingOption::BACK) {
+      state.currentState = TestState::MENU;
+      renderManager.switchToScreen(TestState::MENU);
+      spdlog::info("Returning to Menu from Settings");
+    }
+  }
 }
 
 void initializeState(State &state, Config config) {
   state.currentState = TestState::MENU;
   state.result = {};
-  state.config.time = 10;
-  state.config.level = Level::EASY;
+  state.config.time = config.time;
+  state.config.level = config.level;
   state.correctCount = 0;
   state.incorrectCount = 0;
   state.charCount = 0;

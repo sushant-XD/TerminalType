@@ -59,6 +59,8 @@ public:
   int getInitialPositionRow() { return initialPosRow; }
   int getInitialPositionColumn() { return initialPosCol; }
 
+  std::vector<std::string> wrapText(std::string &text, int maxWidth);
+
 private:
   bool widgetDrawn;
   bool isStatic;
@@ -79,7 +81,6 @@ private:
 
   std::string initialText;
   char *backgroundColor;
-  std::vector<std::string> wrapText(std::string &text, int maxWidth);
   borderChars getBorderChars(borderShape shape);
 
   void reset_vars();
