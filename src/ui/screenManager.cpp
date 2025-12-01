@@ -2,8 +2,8 @@
 #include <spdlog/spdlog.h>
 
 screenManager::screenManager(terminalCtrl &term)
-    : terminal(term), needRender(true), currentScreen(testState::MENU),
-      game(nullptr), menu(nullptr) {
+    : terminal(term), needRender(true), currentScreen(TestState::MENU),
+      game(nullptr), menu(nullptr), result(nullptr) {
   spdlog::debug("screenManager constructor called");
   // Initialize with menu screen
   menu = std::make_unique<menuScreen>(terminal);
@@ -14,7 +14,7 @@ screenManager::~screenManager() {
   clearTerminal();
 }
 
-void screenManager::switchToScreen(testState newScreen) {
+void screenManager::switchToScreen(TestState newScreen) {
   spdlog::info("Switching to screen: {}", static_cast<int>(newScreen));
 
   // Clear current screen if different
@@ -26,26 +26,28 @@ void screenManager::switchToScreen(testState newScreen) {
 
   // Initialize the appropriate screen
   switch (newScreen) {
-  case testState::MENU:
+  case TestState::MENU:
     if (!menu) {
       menu = std::make_unique<menuScreen>(terminal);
     }
     needRender = true;
     break;
 
-  case testState::RUNNING:
+  case TestState::RUNNING:
     if (!game) {
       game = std::make_unique<gameScreen>(terminal);
     }
     needRender = true;
     break;
 
-  case testState::RESULTS:
-    // Results can reuse game screen or have its own
+  case TestState::RESULTS:
+    if (!result) {
+      result = std::make_unique<resultScreen>(terminal);
+    }
     needRender = true;
     break;
 
-  case testState::SETTINGS:
+  case TestState::SETTINGS:
     // Settings screen not yet implemented
     needRender = true;
     break;
@@ -56,29 +58,29 @@ void screenManager::switchToScreen(testState newScreen) {
   }
 }
 
-void screenManager::render(const state_t &state) {
+void screenManager::render(const State &state) {
   spdlog::debug("Rendering screen: {}", static_cast<int>(currentScreen));
 
   switch (currentScreen) {
-  case testState::MENU:
+  case TestState::MENU:
     if (menu) {
       menu->render(state);
     }
     break;
 
-  case testState::RUNNING:
+  case TestState::RUNNING:
     if (game) {
       game->render(state);
     }
     break;
 
-  case testState::RESULTS:
-    if (game) {
-      game->render(state);
+  case TestState::RESULTS:
+    if (result) {
+      result->render(state);
     }
     break;
 
-  case testState::SETTINGS:
+  case TestState::SETTINGS:
     // TODO: Implement settings screen rendering
     spdlog::warn("Settings screen rendering not yet implemented");
     break;
@@ -92,27 +94,27 @@ void screenManager::render(const state_t &state) {
   needRender = false;
 }
 
-void screenManager::update(const state_t &state) {
+void screenManager::update(const State &state) {
   switch (currentScreen) {
-  case testState::MENU:
+  case TestState::MENU:
     if (menu) {
       menu->update(state);
     }
     break;
 
-  case testState::RUNNING:
+  case TestState::RUNNING:
     if (game) {
       game->update(state);
     }
     break;
 
-  case testState::RESULTS:
-    if (game) {
-      game->update(state);
+  case TestState::RESULTS:
+    if (result) {
+      result->update(state);
     }
     break;
 
-  case testState::SETTINGS:
+  case TestState::SETTINGS:
     // TODO: Implement settings screen update
     break;
 
@@ -123,38 +125,49 @@ void screenManager::update(const state_t &state) {
   }
 }
 
-void screenManager::updateStats(state_t &state) {
-  if (currentScreen == testState::RUNNING && game) {
+void screenManager::updateStats(State &state) {
+  if (currentScreen == TestState::RUNNING && game) {
     game->updateStats(state);
   }
 }
 
-selectedMenuOption screenManager::updateMenuSelection(bool up) {
-  if (currentScreen == testState::MENU && menu) {
+MenuOpts screenManager::updateMenuSelection(bool up) {
+  if (currentScreen == TestState::MENU && menu) {
     return menu->updateSelection(up);
   }
   spdlog::warn("updateMenuSelection called but not in MENU screen");
-  return selectedMenuOption::START; // Default return
+  return MenuOpts::START; // Default return
+}
+
+ResultOpts screenManager::updateResultsSelection(bool up) {
+  if (currentScreen == TestState::RESULTS && result) {
+    return result->updateSelection(up);
+  }
+  spdlog::warn("updateResultsSelection called but not in RESULTS screen");
+  return ResultOpts::MENU; // Default return
 }
 
 void screenManager::clearCurrentScreen() {
   spdlog::debug("Clearing current screen: {}", static_cast<int>(currentScreen));
 
   switch (currentScreen) {
-  case testState::MENU:
+  case TestState::MENU:
     if (menu) {
       menu->clear();
     }
     break;
 
-  case testState::RUNNING:
-  case testState::RESULTS:
+  case TestState::RUNNING:
     if (game) {
       game->clear();
     }
     break;
-
-  case testState::SETTINGS:
+  case TestState::RESULTS:
+    if (result) {
+      result->clear();
+    }
+    break;
+  case TestState::SETTINGS:
     // TODO: Clear settings screen
     break;
 
@@ -176,4 +189,4 @@ void screenManager::markForRender() {
 
 bool screenManager::needsRender() const { return needRender; }
 
-testState screenManager::getCurrentScreen() const { return currentScreen; }
+TestState screenManager::getCurrentScreen() const { return currentScreen; }

@@ -11,7 +11,7 @@ inputValidator::~inputValidator() {}
  * wrong 2) Backspace clicked when incorrect chracter was pressed should count
  * as wrong
  * */
-int inputValidator::getInputAndCompare(state_t &state, char ch) {
+int inputValidator::getInputAndCompare(State &state, char ch) {
   if (ch == BACKSPACE_KEY) {
     spdlog::info("Back Key Pressed");
     if (!state.userInputSequence.empty()) {
@@ -29,7 +29,7 @@ int inputValidator::getInputAndCompare(state_t &state, char ch) {
       state.backspaceCount = 1;
       spdlog::debug("Correct Count: {} Incorrect Count: {} Char Count: {}",
                     state.correctCount, state.incorrectCount, state.charCount);
-      state.currentKeyStatus = keyStroke::BACKSPACE;
+      state.currentKeyStatus = KeyStroke::BACKSPACE;
     } else {
       state.backspaceCount = 0;
     }
@@ -74,7 +74,7 @@ int inputValidator::getInputAndCompare(state_t &state, char ch) {
                               state.userInputSequence.end()));
     spdlog::debug("Correct Count: {} Incorrect Count: {} Char Count: {}",
                   state.correctCount, state.incorrectCount, state.charCount);
-    state.currentKeyStatus = keyStroke::BACK_WORD;
+    state.currentKeyStatus = KeyStroke::BACK_WORD;
     return 0;
   }
   state.backspaceCount = 0;
@@ -83,19 +83,19 @@ int inputValidator::getInputAndCompare(state_t &state, char ch) {
     state.incorrectCount++;
     spdlog::info("{} key incorrect. Incorrect Count: {}", ch,
                  state.incorrectCount);
-    state.currentKeyStatus = keyStroke::INCORRECT;
+    state.currentKeyStatus = KeyStroke::INCORRECT;
   } else {
     if (ch == state.targetSequence[state.charCount]) {
       state.correctCount++;
 
       spdlog::info("{} key Correct. Correct Count: {}", ch, state.correctCount);
-      state.currentKeyStatus = keyStroke::CORRECT;
+      state.currentKeyStatus = KeyStroke::CORRECT;
     } else {
       state.incorrectCount++;
       spdlog::info("{} key Incorrect. Does not match: {}. Incorrect Count: {}",
                    ch, state.targetSequence[state.charCount],
                    state.incorrectCount);
-      state.currentKeyStatus = keyStroke::INCORRECT;
+      state.currentKeyStatus = KeyStroke::INCORRECT;
     }
   }
   state.charCount++;

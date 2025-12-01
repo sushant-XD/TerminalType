@@ -9,11 +9,11 @@ using namespace std::chrono;
 
 int main(int argc, char *argv[]) {
 
-  config_t config;
+  Config config;
   std::fstream inFile;
-  state_t state;
+  State state;
 
-  state.currentState = testState::MENU;
+  state.currentState = TestState::MENU;
   if (argc == 1) {
     if (!configure(config)) {
       return 1;
@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  initializeState(state);
+  initializeState(state, config);
 
   spdlog::info("Initializing Terminal Typing Program");
   state.totalTimeSeconds = config.time;
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
   spdlog::info("Total Time: {} ", config.time);
   fileOps fileManager(config.filePathAbs);
   terminalCtrl terminalManager;
-  if (fileManager.setup(state) != error_e::OK) {
+  if (fileManager.setup(state) != FileError::OK) {
     spdlog::error("Couldn't read file contents.");
     return 1;
   }
@@ -50,27 +50,28 @@ int main(int argc, char *argv[]) {
 
   std::chrono::steady_clock::time_point statsUpdateTime;
   char tempChar = '\0';
-  selectedMenuOption selectedSetting;
-
+  MenuOpts selectedSetting;
+  ResultOpts selectedResultOption;
   while (true) {
     tempChar = terminalManager.getCharacter();
 
     switch (state.currentState) {
-    case testState::RUNNING:
+    case TestState::RUNNING:
       handleRunningState(state, tempChar, renderManager, inputValidator,
                          terminalManager, statsUpdateTime);
       break;
 
-    case testState::MENU:
+    case TestState::MENU:
       handleMenuState(state, tempChar, renderManager, terminalManager,
-                      selectedSetting);
+                      fileManager, selectedSetting);
       break;
 
-    case testState::RESULTS:
-      handleResultsState(state, renderManager, terminalManager);
+    case TestState::RESULTS:
+      handleResultsState(state, tempChar, renderManager, terminalManager,
+                         fileManager, selectedResultOption);
       break;
 
-    case testState::SETTINGS:
+    case TestState::SETTINGS:
       handleSettingsState(state);
       break;
 
@@ -88,14 +89,14 @@ int main(int argc, char *argv[]) {
 }
 
 void handleRunningState(
-    state_t &state, char tempChar, screenManager &renderManager,
+    State &state, char tempChar, screenManager &renderManager,
     inputValidator &validator, terminalCtrl &terminal,
     std::chrono::steady_clock::time_point &statsUpdateTime) {
   // Initialize start time on first entry
   if (state.startTime == std::chrono::steady_clock::time_point()) {
     state.startTime = steady_clock::now();
     statsUpdateTime = steady_clock::now();
-    renderManager.switchToScreen(testState::RUNNING);
+    renderManager.switchToScreen(TestState::RUNNING);
     renderManager.render(state);
   }
 
@@ -111,8 +112,10 @@ void handleRunningState(
 
   // Check if time is up
   if (elapsed.count() >= state.totalTimeSeconds) {
-    state.currentState = testState::RESULTS;
-    renderManager.switchToScreen(testState::RESULTS);
+    state.currentState = TestState::RESULTS;
+    state.startTime = std::chrono::steady_clock::time_point();
+    spdlog::info("Time up. Switching to Results");
+    renderManager.switchToScreen(TestState::RESULTS);
     return;
   }
 
@@ -123,14 +126,16 @@ void handleRunningState(
   }
 }
 
-void handleMenuState(state_t &state, char tempChar,
-                     screenManager &renderManager, terminalCtrl &terminal,
-                     selectedMenuOption &selectedSetting) {
+void handleMenuState(State &state, char tempChar, screenManager &renderManager,
+                     terminalCtrl &terminal, fileOps &fileManager,
+                     MenuOpts &selectedSetting) {
   // Render menu if needed
   if (renderManager.needsRender()) {
     spdlog::info("Menu Screen needs re-render");
-    renderManager.switchToScreen(testState::MENU);
+    renderManager.switchToScreen(TestState::MENU);
     renderManager.render(state);
+  } else {
+    spdlog::info("Menu didn't need re-render");
   }
 
   // Handle navigation
@@ -145,18 +150,21 @@ void handleMenuState(state_t &state, char tempChar,
                  static_cast<int>(selectedSetting));
 
     switch (selectedSetting) {
-    case selectedMenuOption::START:
-      state.currentState = testState::RUNNING;
-      renderManager.switchToScreen(testState::RUNNING);
+    case MenuOpts::START:
+      state.currentState = TestState::RUNNING;
+      renderManager.switchToScreen(TestState::RUNNING);
       terminal.getAllCharacters(); // Clear input buffer
+      fileManager.refresh(state);
+      spdlog::info("Starting Game from Menu.");
       break;
 
-    case selectedMenuOption::SETTINGS:
-      state.currentState = testState::SETTINGS;
-      renderManager.switchToScreen(testState::SETTINGS);
+    case MenuOpts::SETTINGS:
+      state.currentState = TestState::SETTINGS;
+      renderManager.switchToScreen(TestState::SETTINGS);
+      spdlog::info("Switching from Menu to settings.");
       break;
 
-    case selectedMenuOption::QUIT:
+    case MenuOpts::QUIT:
       spdlog::info("Quitting...");
       renderManager.clearTerminal();
       exit(0);
@@ -165,43 +173,82 @@ void handleMenuState(state_t &state, char tempChar,
   }
 }
 
-void handleResultsState(state_t &state, screenManager &renderManager,
-                        terminalCtrl &terminal) {
-  renderManager.switchToScreen(testState::RESULTS);
-  renderManager.render(state);
-
-  std::this_thread::sleep_for(3s);
-
-  // Clear terminal input buffer
-  char *tmpBuf = terminal.getAllCharacters();
-  if (tmpBuf != nullptr) {
-    spdlog::debug("Cleared buffer to prevent accidental input");
+void handleResultsState(State &state, char tempChar,
+                        screenManager &renderManager, terminalCtrl &terminal,
+                        fileOps &fileManager, ResultOpts &selectedOption) {
+  // Render results if needed
+  if (renderManager.needsRender()) {
+    spdlog::info("Results Screen needs render");
+    renderManager.render(state);
   }
 
-  // Reset state and return to menu
-  initializeState(state);
-  state.currentState = testState::MENU;
-  renderManager.switchToScreen(testState::MENU);
+  // Handle navigation
+  if (tempChar == 'j' || tempChar == 'J') {
+    spdlog::info("Moving Cursor Down");
+    selectedOption = renderManager.updateResultsSelection(false);
+  } else if (tempChar == 'k' || tempChar == 'K') {
+    spdlog::info("Moving Cursor Up");
+    selectedOption = renderManager.updateResultsSelection(true);
+  } else if (tempChar == '\n') {
+    spdlog::info("Enter key pressed. Selected Option: {}",
+                 static_cast<int>(selectedOption));
+
+    switch (selectedOption) {
+    case ResultOpts::MENU:
+      // Clear input buffer
+      terminal.getAllCharacters();
+      // Reset state and return to menu
+      configure(state.config);
+      initializeState(state, state.config);
+      state.currentState = TestState::MENU;
+      renderManager.switchToScreen(TestState::MENU);
+      spdlog::info("Returning to Menu");
+      break;
+
+    case ResultOpts::RESTART:
+      // Clear input buffer
+      terminal.getAllCharacters();
+      // Reset state and restart test
+      configure(state.config);
+      initializeState(state, state.config);
+      fileManager.refresh(state);
+
+      state.currentState = TestState::RUNNING;
+      renderManager.switchToScreen(TestState::RUNNING);
+      spdlog::info("Restarting Test");
+      break;
+
+    case ResultOpts::QUIT:
+      spdlog::info("Quitting...");
+      renderManager.clearTerminal();
+      exit(0);
+      break;
+    }
+  }
 }
 
-void handleSettingsState(state_t &state) {
+void handleSettingsState(State &state) {
   spdlog::info("Inside Settings Menu");
   // TODO: Implement settings screen logic
 }
 
-void initializeState(state_t &state) {
-  state.currentState = testState::MENU;
+void initializeState(State &state, Config config) {
+  state.currentState = TestState::MENU;
   state.result = {};
+  state.config.time = 10;
+  state.config.level = Level::EASY;
   state.correctCount = 0;
   state.incorrectCount = 0;
   state.charCount = 0;
-  state.currentKeyStatus = keyStroke::CORRECT;
+  state.currentKeyStatus = KeyStroke::CORRECT;
   state.userInputSequence = std::vector<char>(10, '\0');
-  state.totalTimeSeconds = 0;
-  state.remainingTimeSeconds = 0;
+  state.totalTimeSeconds = config.time;
+  state.remainingTimeSeconds = config.time;
+  state.startTime = std::chrono::steady_clock::time_point();
+  spdlog::info("State Reset. All variables Reset.");
 }
 
-bool configure(int size, char **args, config_s &config) {
+bool configure(int size, char **args, Config &config) {
   if (size == 1) {
     return configure(config);
   }
@@ -228,13 +275,13 @@ bool configure(int size, char **args, config_s &config) {
         int tempLevel = std::stoi(args[++i]);
         switch (tempLevel) {
         case 1:
-          config.level = EASY;
+          config.level = Level::EASY;
           break;
         case 2:
-          config.level = MEDIUM;
+          config.level = Level::MEDIUM;
           break;
         case 3:
-          config.level = HARD;
+          config.level = Level::HARD;
           break;
         default:
           std::cout << "Invalid level provided. Using Medium" << std::endl;
@@ -250,18 +297,19 @@ bool configure(int size, char **args, config_s &config) {
   return true;
 }
 
-bool configure(config_s &config) {
+bool configure(Config &config) {
   config.filePathAbs = "testFile.txt";
   config.time = DEFAULT_TIME;
   config.level = DEFAULT_LEVEL;
   return true;
 }
 
-void print_config(config_s &config) {
+void print_config(Config &config) {
   std::cout << "===========User Settings Config=======" << std::endl;
   std::cout << "File Path :     " << config.filePathAbs << std::endl;
   std::cout << "Test Time :     " << config.time << std::endl;
-  std::cout << "Test Level:     " << config.level << std::endl;
+  std::cout << "Test Level:     " << static_cast<int>(config.level)
+            << std::endl;
   return;
 }
 

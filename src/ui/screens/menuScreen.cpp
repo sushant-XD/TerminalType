@@ -4,7 +4,7 @@ menuScreen::menuScreen(terminalCtrl &terminal)
     : Canvas(terminal),
       header(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
       menuOptions(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
-      isRendered(false), currentSelected(selectedMenuOption::START) {
+      isRendered(false), currentSelected(MenuOpts::START) {
 
   menuOptionList = {"\tStart Typing Test", "\tSelect Options", "\tQuit"};
   menuOptionsNum = menuOptionList.size();
@@ -31,9 +31,14 @@ menuScreen::menuScreen(terminalCtrl &terminal)
       menuOptionsHeight);
 }
 
-void menuScreen::clear() { spdlog::info("Cleared Main Screen"); }
+void menuScreen::clear() {
+  header.erase();
+  menuOptions.erase();
+  isRendered = false;
+  spdlog::info("Cleared Main Screen");
+}
 
-void menuScreen::render(const state_t &state) {
+void menuScreen::render(const State &state) {
   if (isRendered)
     return;
 
@@ -56,19 +61,18 @@ void menuScreen::render(const state_t &state) {
   isRendered = true;
 }
 
-void menuScreen::update(const state_t &state) { render(state); }
+void menuScreen::update(const State &state) { render(state); }
 
-selectedMenuOption menuScreen::updateSelection(bool up) {
+MenuOpts menuScreen::updateSelection(bool up) {
   terminal.hideCursor();
   if (up) {
     int newOption = static_cast<int>(currentSelected) - 1;
     if (newOption < 0) {
       newOption = menuOptionsNum - 1;
     }
-    currentSelected =
-        static_cast<selectedMenuOption>(newOption % menuOptionsNum);
+    currentSelected = static_cast<MenuOpts>(newOption % menuOptionsNum);
   } else {
-    currentSelected = static_cast<selectedMenuOption>(
+    currentSelected = static_cast<MenuOpts>(
         (static_cast<int>(currentSelected) + 1) % menuOptionsNum);
   }
   menuOptions.erase();

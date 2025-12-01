@@ -5,7 +5,7 @@
 class menuScreen : public Canvas {
 private:
   bool isRendered;
-  selectedMenuOption currentSelected;
+  MenuOpts currentSelected;
 
   std::vector<std::string> menuOptionList;
   int menuOptionsNum;
@@ -30,8 +30,8 @@ private:
 public:
   menuScreen(terminalCtrl &terminal);
 
-  void render(const state_t &state) override;
-  void update(const state_t &state) override;
+  void render(const State &state) override;
+  void update(const State &state) override;
   void clear() override;
-  selectedMenuOption updateSelection(bool up);
+  MenuOpts updateSelection(bool up);
 };

@@ -20,15 +20,15 @@ private:
   int mainTextBoxWidth;
   int mainTextBoxHeight;
 
-  std::vector<std::string> wrapText(state_t &state);
+  std::vector<std::string> wrapText(State &state);
 
 public:
   gameScreen(terminalCtrl &terminal);
   ~gameScreen();
 
-  void render(const state_t &state) override;
-  void update(const state_t &state) override;
+  void render(const State &state) override;
+  void update(const State &state) override;
   void clear() override;
 
-  void updateStats(state_t &state);
+  void updateStats(State &state);
 };

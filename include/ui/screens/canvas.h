@@ -1,5 +1,6 @@
 #pragma once
 #include "ui/widgets/uiWidgets.h"
+#include <cassert>
 #include <string>
 #include <vector>
 
@@ -10,8 +11,8 @@ public:
 
   void drawCanvas();
 
-  virtual void render(const state_t &state) = 0;
-  virtual void update(const state_t &state) = 0;
+  virtual void render(const State &state) = 0;
+  virtual void update(const State &state) = 0;
   virtual void clear() { terminal.writeToTerminal((char *)CLS, strlen(CLS)); }
 
 protected:

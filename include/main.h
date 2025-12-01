@@ -10,22 +10,24 @@
 #include <iostream>
 #include <string>
 #include <thread>
-void initializeState(state_t &state);
-void print_usage();
-bool configure(int size, char **args, config_s &config);
-bool configure(config_s &config);
-void print_config(config_s &config);
 
-void handleRunningState(state_t &state, char tempChar,
+void initializeState(State &state, Config config);
+void print_usage();
+bool configure(int size, char **args, Config &config);
+bool configure(Config &config);
+void print_config(Config &config);
+
+void handleRunningState(State &state, char tempChar,
                         screenManager &renderManager, inputValidator &validator,
                         terminalCtrl &terminal,
                         std::chrono::steady_clock::time_point &statsUpdateTime);
 
-void handleMenuState(state_t &state, char tempChar,
-                     screenManager &renderManager, terminalCtrl &terminal,
-                     selectedMenuOption &selectedSetting);
+void handleMenuState(State &state, char tempChar, screenManager &renderManager,
+                     terminalCtrl &terminal, fileOps &fileManager,
+                     MenuOpts &selectedSetting);
 
-void handleResultsState(state_t &state, screenManager &renderManager,
-                        terminalCtrl &terminal);
+void handleResultsState(State &state, char tempChar,
+                        screenManager &renderManager, terminalCtrl &terminal,
+                        fileOps &fileManager, ResultOpts &selectedOption);
 
-void handleSettingsState(state_t &state);
+void handleSettingsState(State &state);

@@ -22,10 +22,11 @@ gameScreen::gameScreen(terminalCtrl &terminal)
 
 gameScreen::~gameScreen() {}
 
-void gameScreen::render(const state_t &state) {
+void gameScreen::render(const State &state) {
   if (isRendered)
     return;
 
+  assert(!state.targetSequence.empty());
   clear();
 
   std::string statsContent =
@@ -43,12 +44,13 @@ void gameScreen::render(const state_t &state) {
   spdlog::info("Render Gradient Setup complete");
 }
 
-void gameScreen::update(const state_t &state) {
+void gameScreen::update(const State &state) {
+  assert(!state.targetSequence.empty());
   int displayIndex;
 
-  if (state.currentKeyStatus == keyStroke::BACKSPACE) {
+  if (state.currentKeyStatus == KeyStroke::BACKSPACE) {
     displayIndex = state.charCount;
-  } else if (state.currentKeyStatus == keyStroke::BACK_WORD) {
+  } else if (state.currentKeyStatus == KeyStroke::BACK_WORD) {
     displayIndex = state.charCount;
   } else {
     displayIndex = state.charCount - 1;
@@ -64,15 +66,15 @@ void gameScreen::update(const state_t &state) {
   int currentTextRow = mainTextBox.getTextStartRow();
   int currentTextCol = mainTextBox.getTextStartColumn() + displayIndex + 1;
 
-  if (state.currentKeyStatus == keyStroke::CORRECT) {
+  if (state.currentKeyStatus == KeyStroke::CORRECT) {
     mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
                            currentTextRow, currentTextCol, 1, (char *)GREEN);
-  } else if (state.currentKeyStatus == keyStroke::INCORRECT) {
+  } else if (state.currentKeyStatus == KeyStroke::INCORRECT) {
 
     mainTextBox.updateText((char *)&state.targetSequence[displayIndex],
                            currentTextRow, currentTextCol, 1, (char *)RED);
-  } else if (state.currentKeyStatus == keyStroke::BACKSPACE ||
-             state.currentKeyStatus == keyStroke::BACK_WORD) {
+  } else if (state.currentKeyStatus == KeyStroke::BACKSPACE ||
+             state.currentKeyStatus == KeyStroke::BACK_WORD) {
     for (int i = 0; i < state.backspaceCount; ++i) {
       // The characters to whitewash start at the new, lower charCount
       displayIndex = state.charCount + i;
@@ -94,7 +96,7 @@ void gameScreen::update(const state_t &state) {
   spdlog::info("Text Render progress complete");
 }
 
-void gameScreen::updateStats(state_t &state) {
+void gameScreen::updateStats(State &state) {
   auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(
       std::chrono::steady_clock::now() - state.startTime);
   float timeInMinutes = elapsed.count() / 60.0f;
@@ -109,4 +111,9 @@ void gameScreen::updateStats(state_t &state) {
                    statsContent.size(), (char *)WHITE);
 }
 
-void gameScreen::clear() {}
+void gameScreen::clear() {
+  stats.erase();
+  mainTextBox.erase();
+  isRendered = false;
+  spdlog::info("Cleared Game Screen");
+}
