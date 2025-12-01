@@ -1,4 +1,4 @@
-#include "terminal_ctrl.h"
+#include "gameEngine/terminal_ctrl.h"
 #include <cstdio>
 #include <termios.h>
 
@@ -42,8 +42,17 @@ char terminalCtrl::getCharacter() {
   return '\0';
 }
 
+char *terminalCtrl::getAllCharacters() {
+  char tmpBuf[1024];
+  size_t bytesRead = read(input_fd, tmpBuf, sizeof(tmpBuf));
+  if (bytesRead > 0) {
+    return tmpBuf;
+  }
+  return nullptr;
+}
+
 void terminalCtrl::writeToTerminal(char *ch, int size) {
-  write(input_fd, ch, size);
+  write(output_fd, ch, size);
 }
 
 void terminalCtrl::resetTerminal() {
@@ -63,19 +72,50 @@ int terminalCtrl::getTerminalHeight() {
 }
 
 void terminalCtrl::getCurrentCursorPosition(int &row, int &col) {
-  char inp[] = "\033[6n";
-  writeToTerminal(inp, sizeof(inp));
+  // Write to stdout, not stdin
+  const char inp[] = "\033[6n";
+  write(output_fd, inp, sizeof(inp) - 1); // -1 to exclude null terminator
+
+  // Small delay to allow terminal to respond
+  usleep(10000); // 10ms delay
+
   char buffer[32];
-  int bytes_read = read(STDIN_FILENO, buffer, sizeof(buffer));
-  if (bytes_read != 0) {
+  memset(buffer, 0, sizeof(buffer));
+
+  int bytes_read = read(input_fd, buffer, sizeof(buffer) - 1);
+
+  if (bytes_read > 0) {
     buffer[bytes_read] = '\0';
-    sscanf(buffer, "\033[%d;%dR", &row, &col);
+    // Parse the response: ESC[row;colR
+    if (sscanf(buffer, "\033[%d;%dR", &row, &col) != 2) {
+      row = 0;
+      col = 0;
+    }
+  } else {
+    row = 0;
+    col = 0;
   }
+}
+
+void terminalCtrl::clearTerminal() {
+  writeToTerminal((char *)CLS, strlen(CLS));
 }
 
 void terminalCtrl::moveCursor(int row, int col) {
   char buffer[32];
   int len = snprintf(buffer, sizeof(buffer), "\033[%d;%dH", row, col);
+  writeToTerminal(buffer, len);
+}
+
+void terminalCtrl::moveCursorDown() {
+  char buffer[32];
+  int len = snprintf(buffer, sizeof(buffer), "\033[1B");
+  writeToTerminal(buffer, len);
+}
+
+void terminalCtrl::moveCursorUp() {
+  char buffer[32];
+  int len = snprintf(buffer, sizeof(buffer), "\033[1A");
   writeToTerminal(buffer, len);
 }
 

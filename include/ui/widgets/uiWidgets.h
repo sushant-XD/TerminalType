@@ -1,7 +1,8 @@
 #pragma once
-#include "box_chars.h"
-#include "configurations.h"
-#include "terminal_ctrl.h"
+#include "gameEngine/terminal_ctrl.h"
+#include "utils/box_chars.h"
+#include "utils/configurations.h"
+#include <optional>
 #include <spdlog/spdlog.h>
 #include <string>
 #include <vector>
@@ -38,10 +39,11 @@ public:
   ~uiWidget();
   uiError drawBox(int startCol, int startRow, int width, int height,
                   bool centerAlign, borderShape shape, char *borderColor,
-                  bool isStatic);
+                  bool isStatic, std::optional<char *> bgColor = std::nullopt);
   uiError drawBoxWithText(int startCol, int startRow, int width, int height,
                           std::string text, bool centerAlign, borderShape shape,
-                          char *borderColor, char *textColor, bool isStatic);
+                          char *borderColor, char *textColor, bool isStatic,
+                          std::optional<char *> backgroundColor = std::nullopt);
 
   uiError drawLine(int x, int y, int width, int height, bool centerAlign,
                    char *linShape, char *linColor, bool isStatic);
@@ -56,6 +58,8 @@ public:
   int getTextStartColumn() { return textStartCol; }
   int getInitialPositionRow() { return initialPosRow; }
   int getInitialPositionColumn() { return initialPosCol; }
+
+  std::vector<std::string> wrapText(std::string &text, int maxWidth);
 
 private:
   bool widgetDrawn;
@@ -76,8 +80,7 @@ private:
   int endRow;
 
   std::string initialText;
-
-  std::vector<std::string> wrapText(std::string &text, int maxWidth);
+  char *backgroundColor;
   borderChars getBorderChars(borderShape shape);
 
   void reset_vars();

@@ -1,4 +1,4 @@
-#include "uiWidgets.h"
+#include "ui/widgets/uiWidgets.h"
 #include <spdlog/spdlog.h>
 #include <sstream>
 
@@ -18,7 +18,8 @@ uiWidget::~uiWidget() {}
 
 uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
                           bool centerAlign, borderShape shape,
-                          char *borderColor, bool isStatic) {
+                          char *borderColor, bool isStatic,
+                          std::optional<char *> bgColor) {
   if (widgetDrawn) {
     spdlog::error("Box already drawn. Not drawing at {} {}", startCol,
                   startRow);
@@ -32,18 +33,20 @@ uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
     return uiError::DRAW_DIM_ERROR;
   }
   borderChars border = getBorderChars(shape);
-
+  // set properties of this widget element
   this->initialPosCol = startCol;
   this->initialPosRow = startRow;
   this->width = width;
   this->height = height;
   this->textStartCol = -1;
   this->endRow = startRow + height;
+  backgroundColor = bgColor.value_or((char *)BLACKB);
   terminalManager.hideCursor();
   terminalManager.moveCursor(startRow, startCol);
   terminalManager.writeToTerminal(borderColor, strlen(borderColor));
   for (int i = 0; i < height; i++) {
     terminalManager.moveCursor(startRow + i, startCol);
+    terminalManager.writeToTerminal(backgroundColor, strlen(backgroundColor));
     for (int j = 0; j < width; j++) {
       if (i == 0) { // Top edge
         if (j == 0) {
@@ -78,14 +81,17 @@ uiError uiWidget::drawBox(int startCol, int startRow, int width, int height,
     }
   }
   widgetDrawn = true;
+  terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
   return uiError::OK;
 }
 
+// NOTE: there's no vertical padding for align=center available
 uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
                                   int height, std::string text,
                                   bool centerAlign, borderShape shape,
                                   char *borderColor, char *textColor,
-                                  bool isStatic) {
+                                  bool isStatic,
+                                  std::optional<char *> backgroundColor) {
   if (widgetDrawn) {
     spdlog::error("Box already drawn. Not drawing at {} {}", startCol,
                   startRow);
@@ -94,9 +100,10 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
   this->isStatic = isStatic;
   int endCol = startCol + width;
   int endRow = startRow + height;
-  if (endRow > windowHeight || endCol > windowWidth) {
-    spdlog::error("Dimensions os not compatible. End Rows and columns: {}{} "
-                  "WindowDimensions: {}{}",
+  if ((endRow > windowHeight) || (endCol > windowWidth)) {
+    spdlog::error("Dimensions for Box with Text not compatible. End Rows and "
+                  "columns: {},{} "
+                  "WindowDimensions: {},{}",
                   endRow, endCol, windowHeight, windowWidth);
     return uiError::DRAW_DIM_ERROR;
   }
@@ -119,19 +126,22 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
       textLines.resize(innerHeight);
     }
   }
-  spdlog::info("Text Lines: {}", textLines[0]);
 
   this->initialPosCol = startCol;
   this->initialPosRow = startRow;
   this->width = width;
   this->height = height;
-  if (textLines.size() > 1) {
-
-    this->textStartCol = startCol;
+  if (!textLines.empty()) {
+    if (textLines.size() > 1) {
+      this->textStartCol = startCol;
+    } else {
+      int padding = (innerWidth - textLines[0].length()) / 2;
+      this->textStartCol = padding;
+    }
   } else {
-    int padding = (innerWidth - textLines[0].length()) / 2;
-    this->textStartCol = padding;
+    this->textStartCol = startCol + 1; // Default padding for empty text
   }
+
   this->textStartRow = startRow + 1;
   this->endRow = startRow + height;
   this->initialText = text;
@@ -140,6 +150,7 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
   terminalManager.hideCursor();
   for (int i = 0; i < height; i++) {
     terminalManager.moveCursor(startRow + i, startCol);
+    terminalManager.writeToTerminal(borderColor, strlen(borderColor));
     for (int j = 0; j < width; j++) {
       if (i == 0) { // Top edge
         if (j == 0) {
@@ -169,6 +180,7 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
                                           strlen(border.vertical));
         } else {
           // This is the interior space - print text if available
+          terminalManager.writeToTerminal((char *)textColor, strlen(textColor));
           int textLineIndex = i - 1; // Adjust for top border
           int textCharIndex = j - 1; // Adjust for left border
           if (textLineIndex < textLines.size() &&
@@ -189,12 +201,14 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
           } else {
             terminalManager.writeToTerminal(" ", 1);
           }
+          terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
         }
       }
     }
   }
   widgetDrawn = true;
   isTextBox = true;
+  terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
   terminalManager.showCursor();
   return uiError::OK;
 }
@@ -203,22 +217,50 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
 uiError uiWidget::refresh() { return uiError::OK; }
 
 // removes the element entirely
+// removes the element entirely
 uiError uiWidget::erase() {
-  char emptyChar = {' '};
-  terminalManager.moveCursor(initialPosRow, initialPosCol);
+  if (!widgetDrawn) {
+    spdlog::warn("Widget not drawn yet, nothing to erase");
+    return uiError::ERASE_ERROR;
+  }
+
+  char emptyChar = ' ';
   terminalManager.hideCursor();
-  for (int i = initialPosRow; i < (initialPosRow + height); i++) {
-    for (int j = initialPosCol; j < (initialPosCol + width); j++) {
+
+  // Clear each row of the widget
+  for (int i = 0; i < height; i++) {
+    terminalManager.moveCursor(initialPosRow + i, initialPosCol);
+    // Write spaces to clear the entire width
+    for (int j = 0; j < width; j++) {
       terminalManager.writeToTerminal(&emptyChar, 1);
     }
   }
+
+  // Reset terminal colors
+  terminalManager.writeToTerminal((char *)CRESET, strlen(CRESET));
+  terminalManager.showCursor();
+
+  // Reset all variables
   reset_vars();
+
   return uiError::OK;
 }
 
 void uiWidget::reset_vars() {
+  widgetDrawn = false;
+  isStatic = false;
+  isTextBox = false;
+  initialPosCol = 0;
+  initialPosRow = 0;
+  width = 0;
+  height = 0;
+  textStartRow = 0;
+  textStartCol = -1;
+  endRow = 0;
+  initialText.clear();
+  backgroundColor = nullptr;
+
   spdlog::info("All variables reset for widget");
-  return;
 }
 
 uiError uiWidget::updateText(char *ch, int startingIndexRow,
@@ -249,35 +291,51 @@ uiError uiWidget::updateText(char *ch, int startingIndexRow,
 
 std::vector<std::string> uiWidget::wrapText(std::string &text, int maxWidth) {
   std::vector<std::string> lines;
-  std::istringstream stream(text);
-  std::string currentLine;
-  std::string word;
-  while (stream >> word) {
-    if (currentLine.empty()) {
-      if (word.length() > maxWidth) {
-        for (size_t i = 0; i < word.length(); i += maxWidth) {
-          lines.push_back(word.substr(i, maxWidth));
+
+  // First, split by explicit newlines
+  std::istringstream fullStream(text);
+  std::string line;
+
+  while (std::getline(fullStream, line)) { // Split on \n
+    // Now wrap each line if it's too long
+    if (line.empty()) {
+      lines.push_back(""); // Preserve empty lines
+      continue;
+    }
+
+    std::istringstream lineStream(line);
+    std::string currentLine;
+    std::string word;
+
+    while (lineStream >> word) {
+      if (currentLine.empty()) {
+        if (word.length() > maxWidth) {
+          for (size_t i = 0; i < word.length(); i += maxWidth) {
+            lines.push_back(word.substr(i, maxWidth));
+          }
+          continue;
         }
-        continue;
-      }
-      currentLine = word;
-    } else if (currentLine.length() + 1 + word.length() <= maxWidth) {
-      currentLine += " " + word;
-    } else {
-      lines.push_back(currentLine);
-      if (word.length() > maxWidth) {
-        for (size_t i = 0; i < word.length(); i += maxWidth) {
-          lines.push_back(word.substr(i, maxWidth));
-        }
-        currentLine.clear();
-      } else {
         currentLine = word;
+      } else if (currentLine.length() + 1 + word.length() <= maxWidth) {
+        currentLine += " " + word;
+      } else {
+        lines.push_back(currentLine);
+        if (word.length() > maxWidth) {
+          for (size_t i = 0; i < word.length(); i += maxWidth) {
+            lines.push_back(word.substr(i, maxWidth));
+          }
+          currentLine.clear();
+        } else {
+          currentLine = word;
+        }
       }
     }
+
+    if (!currentLine.empty()) {
+      lines.push_back(currentLine);
+    }
   }
-  if (!currentLine.empty()) {
-    lines.push_back(currentLine);
-  }
+
   return lines;
 }
 

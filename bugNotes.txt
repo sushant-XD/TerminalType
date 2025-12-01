@@ -1,2 +1,1 @@
-1) Number of words, if exceeded in the file before timer runs out, I don't know what happens. 
-2) Timer based and text based should be treated differently
+How do we want to read data from the file?
