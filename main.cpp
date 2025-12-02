@@ -291,7 +291,6 @@ void initializeState(State &state, Config config) {
   } else {
     state.config.filePathAbs = "EasyLevel.txt";
   }
-
   spdlog::info("State Reset. All variables Reset.");
 }
 
