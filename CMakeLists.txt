@@ -28,3 +28,11 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     utils
     spdlog::spdlog
 )
+
+install(TARGETS ${PROJECT_NAME}
+    RUNTIME DESTINATION bin
+)
+
+install(FILES EasyLevel.txt
+    DESTINATION share/${PROJECT_NAME}
+)

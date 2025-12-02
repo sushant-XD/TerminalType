@@ -1,4 +1,5 @@
 #include "main.h"
+#include "include/utils/configurations.h"
 #include "logging.h"
 #include <chrono>
 #include <spdlog/spdlog.h>
@@ -282,6 +283,15 @@ void initializeState(State &state, Config config) {
   state.totalTimeSeconds = config.time;
   state.remainingTimeSeconds = config.time;
   state.startTime = std::chrono::steady_clock::time_point();
+
+  if (state.config.level == Level::MEDIUM) {
+    state.config.filePathAbs = "MediumLevel.txt";
+  } else if (state.config.level == Level::HARD) {
+    state.config.filePathAbs = "HardLevel.txt";
+  } else {
+    state.config.filePathAbs = "EasyLevel.txt";
+  }
+
   spdlog::info("State Reset. All variables Reset.");
 }
 
@@ -329,13 +339,13 @@ bool configure(int size, char **args, Config &config) {
   }
 
   if (config.filePathAbs.empty()) {
-    config.filePathAbs = "testFile.txt";
+    config.filePathAbs = "EasyLevel.txt";
   }
   return true;
 }
 
 bool configure(Config &config) {
-  config.filePathAbs = "testFile.txt";
+  config.filePathAbs = "EasyLevel.txt";
   config.time = DEFAULT_TIME;
   config.level = DEFAULT_LEVEL;
   return true;

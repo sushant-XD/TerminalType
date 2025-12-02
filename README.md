@@ -1,0 +1,18 @@
+# Terminal Typing Speed Checker Application
+
+This is a Terminal Typing Speed Checker application built for Linux Systems. Relies on Termios for input, output, and cursor control.
+Takes in raw keyboard inputs and handles manually, ansi escape sequences used for colors and terminal UI management.
+Widget-based UI development system written up using termios and ansi escape sequences. 
+I've tried to make this modular and useful for the work that a terminal typing application needs.
+There's no terminal UI framework like BubbleTea or ink because this is meant to be a very simple application, and I wanted to have total control over the terminal (and the UI is really simple).
+
+### Running
+1) Clone the repository: ` git clone https://github.com/sushant-XD/TerminalType.git `
+2) Create a build folder: ` mkdir build`
+3) Go to build folder: `cd build`
+4) make the project: `cmake .. && make`
+5) If you want to install globally, run: `sudo make install`
+6) Run `TerminalType`(if installed globally) or run `./TerminalType` (from inside build folder)
+7) Change settings, run the test.
+
+
