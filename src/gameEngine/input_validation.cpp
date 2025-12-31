@@ -6,12 +6,9 @@ inputValidator::inputValidator(terminalCtrl &terminalManager)
 
 inputValidator::~inputValidator() {}
 
-/*TODO: Fix a few things after rudimentary implementation
- * 1) Backspace clicked when correct character was pressed shouldn't count as
- * wrong 2) Backspace clicked when incorrect chracter was pressed should count
- * as wrong
- * */
 int inputValidator::getInputAndCompare(State &state, char ch) {
+  // backspace and back word (Ctrl+backspace) handled manually because termios
+  // and raw inputs
   if (ch == BACKSPACE_KEY) {
     spdlog::info("Back Key Pressed");
     if (!state.userInputSequence.empty()) {
@@ -77,8 +74,10 @@ int inputValidator::getInputAndCompare(State &state, char ch) {
     state.currentKeyStatus = KeyStroke::BACK_WORD;
     return 0;
   }
+
   state.backspaceCount = 0;
   state.userInputSequence.push_back(ch);
+  state.totalPressed++;
   if (state.incorrectCount > 0) {
     state.incorrectCount++;
     spdlog::info("{} key incorrect. Incorrect Count: {}", ch,
@@ -87,7 +86,7 @@ int inputValidator::getInputAndCompare(State &state, char ch) {
   } else {
     if (ch == state.targetSequence[state.charCount]) {
       state.correctCount++;
-
+      state.totalCorrect++;
       spdlog::info("{} key Correct. Correct Count: {}", ch, state.correctCount);
       state.currentKeyStatus = KeyStroke::CORRECT;
     } else {

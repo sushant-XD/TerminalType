@@ -2,6 +2,7 @@
 #include "include/utils/configurations.h"
 #include "logging.h"
 #include <chrono>
+#include <filesystem>
 #include <spdlog/spdlog.h>
 #include <thread>
 
@@ -271,6 +272,14 @@ void handleSettingsState(State &state, char tempChar,
 }
 
 void initializeState(State &state, Config config) {
+
+#ifdef INSTALL_PREFIX
+  std::string dataDir =
+      std::string(INSTALL_PREFIX) + "/share/" + PROJECT_NAME + "/";
+#else
+  std::string dataDir = "";
+#endif
+
   state.currentState = TestState::MENU;
   state.result = {};
   state.config.time = config.time;
@@ -285,11 +294,11 @@ void initializeState(State &state, Config config) {
   state.startTime = std::chrono::steady_clock::time_point();
 
   if (state.config.level == Level::MEDIUM) {
-    state.config.filePathAbs = "MediumLevel.txt";
+    state.config.filePathAbs = dataDir + "MediumLevel.txt";
   } else if (state.config.level == Level::HARD) {
-    state.config.filePathAbs = "HardLevel.txt";
+    state.config.filePathAbs = dataDir + "HardLevel.txt";
   } else {
-    state.config.filePathAbs = "EasyLevel.txt";
+    state.config.filePathAbs = dataDir + "EasyLevel.txt";
   }
   spdlog::info("State Reset. All variables Reset.");
 }
@@ -298,6 +307,14 @@ bool configure(int size, char **args, Config &config) {
   if (size == 1) {
     return configure(config);
   }
+
+#ifdef INSTALL_PREFIX
+  std::string dataDir =
+      std::string(INSTALL_PREFIX) + "/share/" + PROJECT_NAME + "/";
+#else
+  std::string dataDir = "";
+#endif
+
   for (int i = 1; i < size; i++) {
     std::string arg = args[i];
 
@@ -338,13 +355,26 @@ bool configure(int size, char **args, Config &config) {
   }
 
   if (config.filePathAbs.empty()) {
-    config.filePathAbs = "EasyLevel.txt";
+    if (config.level == Level::MEDIUM) {
+      config.filePathAbs = dataDir + "MediumLevel.txt";
+    } else if (config.level == Level::HARD) {
+      config.filePathAbs = dataDir + "HardLevel.txt";
+    } else {
+      config.filePathAbs = dataDir + "EasyLevel.txt";
+    }
   }
   return true;
 }
 
 bool configure(Config &config) {
-  config.filePathAbs = "EasyLevel.txt";
+#ifdef INSTALL_PREFIX
+  std::string dataDir =
+      std::string(INSTALL_PREFIX) + "/share/" + PROJECT_NAME + "/";
+#else
+  std::string dataDir = "";
+#endif
+
+  config.filePathAbs = dataDir + "EasyLevel.txt"; // Set default here
   config.time = DEFAULT_TIME;
   config.level = DEFAULT_LEVEL;
   return true;

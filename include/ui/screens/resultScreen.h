@@ -23,8 +23,6 @@ private:
   std::vector<std::string> optionsList;
   int optionsNum;
 
-  std::string getOptionsString(int option);
-
 public:
   resultScreen(terminalCtrl &terminal);
   ~resultScreen();

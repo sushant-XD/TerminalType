@@ -72,6 +72,9 @@ struct State {
   int remainingTimeSeconds;
 
   int backspaceCount;
+
+  int totalCorrect;
+  int totalPressed;
 };
 
 /* Constants */

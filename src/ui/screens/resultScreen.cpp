@@ -72,7 +72,7 @@ void resultScreen::render(State &state) {
   // Draw options box with current selection
   optionsBox.drawBoxWithText(
       optionsStartX, optionsStartY, optionsWidth, optionsHeight,
-      getOptionsString(static_cast<int>(currentSelected)), false,
+      selectOptionInList(optionsList, static_cast<int>(currentSelected)), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
 
   // Position cursor at first option
@@ -113,22 +113,10 @@ ResultOpts resultScreen::updateSelection(bool up) {
   optionsBox.erase();
   optionsBox.drawBoxWithText(
       optionsStartX, optionsStartY, optionsWidth, optionsHeight,
-      getOptionsString(static_cast<int>(currentSelected)), false,
+      selectOptionInList(optionsList, static_cast<int>(currentSelected)), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
 
   spdlog::info("Selected Results Option: {}",
                static_cast<int>(currentSelected));
   return currentSelected;
-}
-
-std::string resultScreen::getOptionsString(int option) {
-  std::vector<std::string> options = optionsList;
-  if (option >= 0 && option < options.size()) {
-    options[option] = "\t> " + options[option];
-  }
-  std::string optionsString;
-  for (const auto &line : options) {
-    optionsString += line + "\n";
-  }
-  return optionsString;
 }

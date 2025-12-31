@@ -1,5 +1,6 @@
 #pragma once
 #include "ui/widgets/uiWidgets.h"
+#include "utils/commonFunctions.h"
 #include <cassert>
 #include <string>
 #include <vector>
