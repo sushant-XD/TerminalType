@@ -11,8 +11,16 @@ There's no terminal UI framework like BubbleTea or ink because this is meant to 
 2) Create a build folder: ` mkdir build`
 3) Go to build folder: `cd build`
 4) make the project: `cmake .. && make`
-5) If you want to install globally, run: `sudo make install`
-6) Run `TerminalType`(if installed globally) or run `./TerminalType` (from inside build folder)
+6) Run `TerminalType`([if installed globally](#To-install-globally) or run `./TerminalType` (from inside build folder)
 7) Change settings, run the test.
 
-
+### To install globally
+1) Clone the repository: ` git clone https://github.com/sushant-XD/TerminalType.git `
+2) Create a build folder go into that: ` mkdir build && cd build`
+3) Run:
+```
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+cmake --build .
+sudo cmake --install .
+TeerminalType
+```
