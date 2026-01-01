@@ -41,6 +41,8 @@ struct Result {
   int correct_characters;
   int total_characters;
   int accuracy;
+  double netWPM;
+  double rawWPM;
 };
 
 struct Screen {

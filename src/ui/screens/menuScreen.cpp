@@ -35,7 +35,6 @@ void menuScreen::clear() {
   header.erase();
   menuOptions.erase();
   isRendered = false;
-  spdlog::info("Cleared Main Screen");
 }
 
 void menuScreen::render(State &state) {

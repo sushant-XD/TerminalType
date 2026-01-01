@@ -95,9 +95,8 @@ void gameScreen::update(const State &state) {
       updateCharacterColor(charToReset, state, (char *)WHITE);
     }
   }
-
-  spdlog::info("Text Render progress complete");
 }
+
 void gameScreen::updateStats(State &state) {
   auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(
       std::chrono::steady_clock::now() - state.startTime);

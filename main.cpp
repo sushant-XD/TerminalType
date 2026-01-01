@@ -103,6 +103,7 @@ void handleRunningState(
     statsUpdateTime = steady_clock::now();
     renderManager.switchToScreen(TestState::RUNNING);
     renderManager.render(state);
+    spdlog::info("Running state started");
   }
 
   // Process input
@@ -120,6 +121,7 @@ void handleRunningState(
     state.currentState = TestState::RESULTS;
     state.startTime = std::chrono::steady_clock::time_point();
     spdlog::info("Time up. Switching to Results");
+    validator.get_results(state);
     renderManager.switchToScreen(TestState::RESULTS);
     return;
   }
@@ -136,11 +138,9 @@ void handleMenuState(State &state, char tempChar, screenManager &renderManager,
                      MenuOpts &selectedSetting) {
   // Render menu if needed
   if (renderManager.needsRender()) {
-    spdlog::info("Menu Screen needs re-render");
+    spdlog::info("Re-rendering Menu");
     renderManager.switchToScreen(TestState::MENU);
     renderManager.render(state);
-  } else {
-    spdlog::info("Menu didn't need re-render");
   }
 
   // Handle navigation
@@ -292,6 +292,10 @@ void initializeState(State &state, Config config) {
   state.totalTimeSeconds = config.time;
   state.remainingTimeSeconds = config.time;
   state.startTime = std::chrono::steady_clock::time_point();
+
+  state.totalCorrect = 0;
+  state.totalPressed = 0;
+  state.result.accuracy = 0;
 
   if (state.config.level == Level::MEDIUM) {
     state.config.filePathAbs = dataDir + "MediumLevel.txt";

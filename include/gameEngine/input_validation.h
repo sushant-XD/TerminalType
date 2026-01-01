@@ -11,6 +11,8 @@ public:
   ~inputValidator();
   int getInputAndCompare(State &state, char ch);
 
+  int get_results(State &state);
+
 private:
   Result res;
   terminalCtrl &terminalManager;

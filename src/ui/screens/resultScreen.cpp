@@ -43,13 +43,6 @@ void resultScreen::render(State &state) {
 
   clear();
 
-  // Calculate statistics
-  int totalChars = state.correctCount + state.incorrectCount;
-  int accuracy = totalChars > 0 ? (state.correctCount * 100) / totalChars : 0;
-
-  float timeInMinutes = state.totalTimeSeconds / 60.0f;
-  int wpm = timeInMinutes > 0 ? (state.correctCount / 5) / timeInMinutes : 0;
-
   // Draw header
   std::string headerText = "Test Results";
   header.drawBoxWithText(headerStartX, headerStartY, headerWidth, headerHeight,
@@ -58,11 +51,12 @@ void resultScreen::render(State &state) {
 
   // Build stats content
   std::string statsContent =
-      "Words Per Minute: " + std::to_string(wpm) + "\n" +
-      "Accuracy: " + std::to_string(accuracy) + "%\n" +
-      "Correct Characters: " + std::to_string(state.correctCount) + "\n" +
-      "Incorrect Characters: " + std::to_string(state.incorrectCount) + "\n" +
-      "Total Characters: " + std::to_string(totalChars);
+      "Words Per Minute: " + std::to_string(state.result.netWPM) + "\n" +
+      "Accuracy: " + std::to_string(state.result.accuracy) + "%\n" +
+      "Correct Characters: " + std::to_string(state.totalCorrect) + "\n" +
+      "Incorrect Characters: " +
+      std::to_string(state.totalPressed - state.totalCorrect) + "\n" +
+      "Total Characters: " + std::to_string(state.totalPressed);
 
   // Draw stats box
   statsBox.drawBoxWithText(statsStartX, statsStartY, statsWidth, statsHeight,
