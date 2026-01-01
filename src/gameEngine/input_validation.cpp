@@ -1,6 +1,8 @@
 #include "gameEngine/input_validation.h"
 #include <spdlog/spdlog.h>
 
+static constexpr bool wordByWord = true;
+
 inputValidator::inputValidator(terminalCtrl &terminalManager)
     : terminalManager(terminalManager), res() {}
 

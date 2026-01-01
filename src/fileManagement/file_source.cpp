@@ -1,5 +1,5 @@
 #include "fileManagement/file_source.h"
-
+#include <filesystem>
 fileOps::fileOps(std::string fileNameAbs) {
   assert(!fileNameAbs.empty());
   fileName = fileNameAbs;
@@ -12,16 +12,26 @@ fileOps::~fileOps() {
 }
 
 FileError fileOps::setup(State &state) {
-  inFile.open(fileName);
+  std::cerr << "Attempting to open file: '" << fileName << "'" << std::endl;
+
+  // clear flags and close the file if it was attempted to open already
+  inFile.clear();
+  if (inFile.is_open()) {
+    inFile.close();
+  }
+  inFile.open(fileName, std::ios::in);
   if (!inFile.is_open()) {
+    std::cerr << "Coulnd't open file: " << fileName << std::endl;
     return FileError::CANNOT_OPEN;
   }
 
   if (!readFileContents()) {
+    std::cerr << "Couldn't read file contents from" << fileName << std::endl;
     return FileError::CANNOT_READ;
   }
 
   if (wordCount < MIN_FILE_SIZE_WORDS) {
+    std::cerr << "File too small, not enough words" << fileName << std::endl;
     return FileError::INVALID_SIZE;
   }
   shuffle();
@@ -78,6 +88,7 @@ bool fileOps::readFileContents() {
 
 void fileOps::copyWordsToCharacters() {
   if (words.empty()) {
+    std::cerr << "No words to open" << std::endl;
     return;
   }
   if (!characters.empty()) {
