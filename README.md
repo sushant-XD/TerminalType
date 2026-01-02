@@ -24,3 +24,11 @@ cmake --build .
 sudo cmake --install .
 TeerminalType
 ```
+
+## Features to Implement 
+This is a very crude implementation, and there are a few things that will make this project actually useful. 
+
+- Let users use a text file or custom text in addition to already available ones
+- right now, if a character is wrong, all the next sequence of characters are marked as wrong. User should be able to change this and make it like normal typing games like monkeytype and 10ff
+- Create a config file to change UI and default settings easily
+- Modify/Refactor the UI drawing and updating code so that its easy to draw/maintain the UI elements
