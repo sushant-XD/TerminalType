@@ -97,6 +97,7 @@ uiError uiWidget::drawBoxWithText(int startCol, int startRow, int width,
                   startRow);
     return uiError::UI_ALREADY_DRAWN;
   }
+
   this->isStatic = isStatic;
   int endCol = startCol + width;
   int endRow = startRow + height;
@@ -289,6 +290,11 @@ uiError uiWidget::updateText(char *ch, int startingIndexRow,
   return uiError::OK;
 }
 
+/*
+ * Wraps text to fit in either maximum width, at escape character, or splits a
+ * word if it is too long to fit into one line
+ *
+ */
 std::vector<std::string> uiWidget::wrapText(std::string &text, int maxWidth) {
   std::vector<std::string> lines;
 
@@ -308,7 +314,10 @@ std::vector<std::string> uiWidget::wrapText(std::string &text, int maxWidth) {
     std::string word;
 
     while (lineStream >> word) {
-      if (currentLine.empty()) {
+      if (currentLine.empty()) { // currentline empty means we're reading a new
+                                 // line and new word. and if the word is too
+                                 // long (longer  than the width itself), it
+                                 // breaks down into multiple lines.
         if (word.length() > maxWidth) {
           for (size_t i = 0; i < word.length(); i += maxWidth) {
             lines.push_back(word.substr(i, maxWidth));
@@ -316,21 +325,28 @@ std::vector<std::string> uiWidget::wrapText(std::string &text, int maxWidth) {
           continue;
         }
         currentLine = word;
-      } else if (currentLine.length() + 1 + word.length() <= maxWidth) {
+      } else if (currentLine.length() + 1 + word.length() <=
+                 maxWidth) { // if currentline and a space fit in the current
+                             // line, just add the word to current line and an
+                             // space
         currentLine += " " + word;
-      } else {
-        lines.push_back(currentLine);
-        if (word.length() > maxWidth) {
+      } else {                          // if the word doesn't fit in the line
+        lines.push_back(currentLine);   // save the current line
+        if (word.length() > maxWidth) { // again, if a single word is bigger
+                                        // than the whole width of lines
           for (size_t i = 0; i < word.length(); i += maxWidth) {
             lines.push_back(word.substr(i, maxWidth));
           }
           currentLine.clear();
         } else {
-          currentLine = word;
+          currentLine = word; // we added "past" current line to the lines, and
+                              // this is a new current line and add word
         }
       }
     }
 
+    // if current line isn't empty, after reading a word, push it back to the
+    // lines
     if (!currentLine.empty()) {
       lines.push_back(currentLine);
     }

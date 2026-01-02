@@ -1,5 +1,6 @@
 # utils library
 add_library(utils STATIC
+    commonFunctions.cpp
     logging.cpp
 )
 

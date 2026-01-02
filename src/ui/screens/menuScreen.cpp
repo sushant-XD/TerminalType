@@ -35,7 +35,6 @@ void menuScreen::clear() {
   header.erase();
   menuOptions.erase();
   isRendered = false;
-  spdlog::info("Cleared Main Screen");
 }
 
 void menuScreen::render(State &state) {
@@ -52,8 +51,8 @@ void menuScreen::render(State &state) {
 
   menuOptions.drawBoxWithText(
       menuOptionsStartX, menuOptionsStartY, menuOptionsWidth, menuOptionsHeight,
-      getMenuString(0), false, borderShape::SHARP_SINGLE, (char *)WHITE,
-      (char *)WHITE, false);
+      selectOptionInList(menuOptionList, 0), false, borderShape::SHARP_SINGLE,
+      (char *)WHITE, (char *)WHITE, false);
 
   // move cursor to position
   terminal.moveCursor(menuOptionsStartY + 1, menuOptionsStartX + 2);
@@ -80,22 +79,8 @@ MenuOpts menuScreen::updateSelection(bool up) {
   menuOptions.erase();
   menuOptions.drawBoxWithText(
       menuOptionsStartX, menuOptionsStartY, menuOptionsWidth, menuOptionsHeight,
-      getMenuString(static_cast<int>(currentSelected)), false,
-      borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
+      selectOptionInList(menuOptionList, static_cast<int>(currentSelected)),
+      false, borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
   spdlog::info("Selected Menu Option: {}", static_cast<int>(currentSelected));
   return currentSelected;
-}
-
-std::string menuScreen::getMenuString(int option) {
-  std::vector<std::string> options = menuOptionList;
-
-  if (option >= 0 && option < options.size()) {
-    options[option] = "\t> " + options[option];
-  }
-
-  std::string menuString;
-  for (const auto &line : options) {
-    menuString += line + "\n";
-  }
-  return menuString;
 }

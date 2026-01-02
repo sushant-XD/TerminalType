@@ -8,7 +8,6 @@
 
 // File Errors for File Operations Only
 enum class FileError { OK = 0, CANNOT_OPEN, INVALID_SIZE, CANNOT_READ };
-
 enum class KeyStroke { BACKSPACE = 0, BACK_WORD, CORRECT, INCORRECT };
 enum class TestState { RUNNING = 0, MENU, SETTINGS, RESULTS };
 enum class MenuOpts { START = 0, SETTINGS, QUIT };
@@ -19,7 +18,7 @@ enum class ResultOpts { MENU = 0, RESTART, QUIT };
 enum class Level { EASY, MEDIUM, HARD, CUSTOM };
 
 static constexpr Level DEFAULT_LEVEL = Level::EASY;
-static constexpr int DEFAULT_TIME = 10;
+static constexpr int DEFAULT_TIME = 30;
 static constexpr int MIN_FILE_SIZE_WORDS = 100;
 static constexpr char BACKSPACE[3] = {'\b', ' ', '\b'};
 
@@ -42,6 +41,8 @@ struct Result {
   int correct_characters;
   int total_characters;
   int accuracy;
+  double netWPM;
+  double rawWPM;
 };
 
 struct Screen {
@@ -73,6 +74,9 @@ struct State {
   int remainingTimeSeconds;
 
   int backspaceCount;
+
+  int totalCorrect;
+  int totalPressed;
 };
 
 /* Constants */

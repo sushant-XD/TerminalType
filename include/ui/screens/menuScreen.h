@@ -25,8 +25,6 @@ private:
   uiWidget header;
   uiWidget menuOptions;
 
-  std::string getMenuString(int option);
-
 public:
   menuScreen(terminalCtrl &terminal);
 

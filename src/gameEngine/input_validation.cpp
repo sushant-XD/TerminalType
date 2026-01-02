@@ -1,19 +1,17 @@
 #include "gameEngine/input_validation.h"
 #include <spdlog/spdlog.h>
 
+static constexpr bool wordByWord = true;
+
 inputValidator::inputValidator(terminalCtrl &terminalManager)
     : terminalManager(terminalManager), res() {}
 
 inputValidator::~inputValidator() {}
 
-/*TODO: Fix a few things after rudimentary implementation
- * 1) Backspace clicked when correct character was pressed shouldn't count as
- * wrong 2) Backspace clicked when incorrect chracter was pressed should count
- * as wrong
- * */
 int inputValidator::getInputAndCompare(State &state, char ch) {
+  // backspace and back word (Ctrl+backspace) handled manually because termios
+  // and raw inputs
   if (ch == BACKSPACE_KEY) {
-    spdlog::info("Back Key Pressed");
     if (!state.userInputSequence.empty()) {
       state.userInputSequence.pop_back();
 
@@ -27,19 +25,21 @@ int inputValidator::getInputAndCompare(State &state, char ch) {
         state.charCount--;
       }
       state.backspaceCount = 1;
-      spdlog::debug("Correct Count: {} Incorrect Count: {} Char Count: {}",
-                    state.correctCount, state.incorrectCount, state.charCount);
       state.currentKeyStatus = KeyStroke::BACKSPACE;
     } else {
       state.backspaceCount = 0;
     }
+    spdlog::debug("backspace. (CoC: {},ICC: {}, CaC: {}, BC: {}, CS: {})",
+                  state.correctCount, state.incorrectCount, state.charCount,
+                  state.backspaceCount,
+                  state.userInputSequence.empty()
+                      ? "_"
+                      : std::string(state.userInputSequence.begin(),
+                                    state.userInputSequence.end()));
     return 0;
   }
   // Ctrl+W
   if (ch == BACK_WORD_KEY) {
-    spdlog::info("Back Word Pressed. Before erasing word: {}",
-                 std::string(state.userInputSequence.begin(),
-                             state.userInputSequence.end()));
     int deletedChars = 0;
     while ((!state.userInputSequence.empty()) &&
            (state.userInputSequence.back() == ' ')) {
@@ -69,41 +69,67 @@ int inputValidator::getInputAndCompare(State &state, char ch) {
       deletedChars++;
     }
     state.backspaceCount = deletedChars;
-    spdlog::debug("After erasing word: {}",
-                  std::string(state.userInputSequence.begin(),
-                              state.userInputSequence.end()));
-    spdlog::debug("Correct Count: {} Incorrect Count: {} Char Count: {}",
-                  state.correctCount, state.incorrectCount, state.charCount);
     state.currentKeyStatus = KeyStroke::BACK_WORD;
+    spdlog::debug("Ctrl+W (CoC: {},ICC: {}, CaC: {}, BC: {}, CS: {})",
+                  state.correctCount, state.incorrectCount, state.charCount,
+                  state.backspaceCount,
+                  state.userInputSequence.empty()
+                      ? "_"
+                      : std::string(state.userInputSequence.begin(),
+                                    state.userInputSequence.end()));
     return 0;
   }
+
   state.backspaceCount = 0;
   state.userInputSequence.push_back(ch);
+  state.totalPressed++;
   if (state.incorrectCount > 0) {
     state.incorrectCount++;
-    spdlog::info("{} key incorrect. Incorrect Count: {}", ch,
-                 state.incorrectCount);
     state.currentKeyStatus = KeyStroke::INCORRECT;
   } else {
     if (ch == state.targetSequence[state.charCount]) {
       state.correctCount++;
-
-      spdlog::info("{} key Correct. Correct Count: {}", ch, state.correctCount);
+      state.totalCorrect++;
       state.currentKeyStatus = KeyStroke::CORRECT;
     } else {
       state.incorrectCount++;
-      spdlog::info("{} key Incorrect. Does not match: {}. Incorrect Count: {}",
-                   ch, state.targetSequence[state.charCount],
-                   state.incorrectCount);
       state.currentKeyStatus = KeyStroke::INCORRECT;
     }
   }
   state.charCount++;
-  spdlog::info("Character Count: {}", state.charCount);
   if (ch == ' ' && state.incorrectCount == 0) {
     state.userInputSequence.clear();
-    spdlog::info("Cleared userInputSequence. Correct word detected.");
   }
+  spdlog::info("{} (CoC: {},ICC: {}, CaC: {}, BC: {}, CS: {}, TC: {}, TP: {})",
+               ch, state.correctCount, state.incorrectCount, state.charCount,
+               state.backspaceCount,
+               state.userInputSequence.empty()
+                   ? "_"
+                   : std::string(state.userInputSequence.begin(),
+                                 state.userInputSequence.end()),
+               state.totalCorrect, state.totalPressed);
+  return 0;
+}
 
+int inputValidator::get_results(State &state) {
+  // memset(&state.result, '\0', sizeof(state.result));
+  state.result.timeTaken = state.config.time;
+
+  int totalErrors = state.totalPressed - state.totalCorrect;
+  double words = state.totalCorrect / 5.0;
+
+  state.result.netWPM = 60 * (words / state.result.timeTaken);
+  state.result.rawWPM = 60 * (state.totalPressed / state.result.timeTaken);
+
+  state.result.total_characters = state.totalPressed;
+  state.result.correct_characters = state.totalCorrect;
+
+  state.result.accuracy =
+      static_cast<int>(100.0 * state.totalCorrect / state.totalPressed);
+
+  spdlog::info("Results calculated: Time: {} Total Correct: {} Total Errors: "
+               "{} WPM: {} Accuracy: {}",
+               state.config.time, state.totalCorrect, totalErrors,
+               state.result.netWPM, state.result.accuracy);
   return 0;
 }

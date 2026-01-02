@@ -1,6 +1,8 @@
 #include "main.h"
+#include "include/utils/configurations.h"
 #include "logging.h"
 #include <chrono>
+#include <filesystem>
 #include <spdlog/spdlog.h>
 #include <thread>
 
@@ -13,41 +15,76 @@ int main(int argc, char *argv[]) {
   std::fstream inFile;
   State state;
 
+  std::cerr << "=== TerminalType Starting ===" << std::endl;
+  std::cerr << "Working directory: " << std::filesystem::current_path()
+            << std::endl;
+  std::cerr.flush();
+
   state.currentState = TestState::MENU;
+  std::cerr << "Configuring..." << std::endl;
   if (argc == 1) {
     if (!configure(config)) {
-      return 1;
+      std::cerr << "configuration failed." << std::endl;
+      return 2;
     }
   } else {
     if (!configure(argc, argv, config)) {
-      return 1;
+      std::cerr << "configuration failed." << std::endl;
+      return 3;
     }
   }
+
+  std::cerr << "Initializing logger..." << std::endl;
+  std::filesystem::create_directories("logs");
   try {
     init_logger("my_app_logger", "logs/logTest.log", spdlog::level::debug);
+    std::cerr << "Logger initialized successfully" << std::endl;
   } catch (const spdlog::spdlog_ex &ex) {
+    std::cerr << "Logger Initialization failed: " << ex.what() << std::endl;
     return 1;
   }
+  std::cerr << "Initializing state..." << std::endl;
 
   initializeState(state, config);
 
-  spdlog::info("Initializing Terminal Typing Program");
+  std::cerr << "Creating file manager..." << std::endl;
+
+  // spdlog::info("Initializing Terminal Typing Program");
+
   state.totalTimeSeconds = config.time;
   state.remainingTimeSeconds = config.time;
 
-  spdlog::info("Total Time: {} ", config.time);
+  // spdlog::info("Total Time: {} ", config.time);
+  std::cerr << "Trying to read from" << config.filePathAbs << std::endl;
   fileOps fileManager(config.filePathAbs);
   terminalCtrl terminalManager;
-  if (fileManager.setup(state) != FileError::OK) {
-    spdlog::error("Couldn't read file contents.");
-    return 1;
+  std::cerr << "Creating terminal manager..." << std::endl;
+
+  std::cerr << "Configuration successful. File path: '" << config.filePathAbs
+            << "'" << std::endl;
+  std::cerr << "File path length: " << config.filePathAbs.length() << std::endl;
+
+  // Check for hidden characters
+  for (char c : config.filePathAbs) {
+    if (c < 32 || c > 126) {
+      std::cerr << "WARNING: Non-printable character found: " << (int)c
+                << std::endl;
+    }
   }
 
+  if (fileManager.setup(state) != FileError::OK) {
+    spdlog::error("Couldn't read file contents.");
+    std::cerr << "Couldn't read file contents" << std::endl;
+    return 4;
+  }
+  std::cerr << "fileManager setup complete. Creating inputValidator..."
+            << std::endl;
   inputValidator inputValidator(terminalManager);
+  std::cerr << "Creating render manager." << std::endl;
   screenManager renderManager(terminalManager);
 
-  spdlog::info("Initial Screen Rendering Complete");
-
+  // spdlog::info("Initial Screen Rendering Complete");
+  std::cerr << "Initial screen rendering complete" << std::endl;
   std::chrono::steady_clock::time_point statsUpdateTime;
   char tempChar = '\0';
   MenuOpts selectedSetting;
@@ -101,6 +138,7 @@ void handleRunningState(
     statsUpdateTime = steady_clock::now();
     renderManager.switchToScreen(TestState::RUNNING);
     renderManager.render(state);
+    spdlog::info("Running state started");
   }
 
   // Process input
@@ -118,6 +156,7 @@ void handleRunningState(
     state.currentState = TestState::RESULTS;
     state.startTime = std::chrono::steady_clock::time_point();
     spdlog::info("Time up. Switching to Results");
+    validator.get_results(state);
     renderManager.switchToScreen(TestState::RESULTS);
     return;
   }
@@ -134,11 +173,9 @@ void handleMenuState(State &state, char tempChar, screenManager &renderManager,
                      MenuOpts &selectedSetting) {
   // Render menu if needed
   if (renderManager.needsRender()) {
-    spdlog::info("Menu Screen needs re-render");
+    spdlog::info("Re-rendering Menu");
     renderManager.switchToScreen(TestState::MENU);
     renderManager.render(state);
-  } else {
-    spdlog::info("Menu didn't need re-render");
   }
 
   // Handle navigation
@@ -270,6 +307,14 @@ void handleSettingsState(State &state, char tempChar,
 }
 
 void initializeState(State &state, Config config) {
+
+#ifdef INSTALL_PREFIX
+  std::string dataDir =
+      std::string(INSTALL_PREFIX) + "/share/" + PROJECT_NAME + "/";
+#else
+  std::string dataDir = "";
+#endif
+
   state.currentState = TestState::MENU;
   state.result = {};
   state.config.time = config.time;
@@ -282,6 +327,18 @@ void initializeState(State &state, Config config) {
   state.totalTimeSeconds = config.time;
   state.remainingTimeSeconds = config.time;
   state.startTime = std::chrono::steady_clock::time_point();
+
+  state.totalCorrect = 0;
+  state.totalPressed = 0;
+  state.result.accuracy = 0;
+
+  if (state.config.level == Level::MEDIUM) {
+    state.config.filePathAbs = dataDir + "MediumLevel.txt";
+  } else if (state.config.level == Level::HARD) {
+    state.config.filePathAbs = dataDir + "HardLevel.txt";
+  } else {
+    state.config.filePathAbs = dataDir + "EasyLevel.txt";
+  }
   spdlog::info("State Reset. All variables Reset.");
 }
 
@@ -289,6 +346,14 @@ bool configure(int size, char **args, Config &config) {
   if (size == 1) {
     return configure(config);
   }
+
+#ifdef INSTALL_PREFIX
+  std::string dataDir =
+      std::string(INSTALL_PREFIX) + "/share/" + PROJECT_NAME + "/";
+#else
+  std::string dataDir = "";
+#endif
+
   for (int i = 1; i < size; i++) {
     std::string arg = args[i];
 
@@ -329,13 +394,26 @@ bool configure(int size, char **args, Config &config) {
   }
 
   if (config.filePathAbs.empty()) {
-    config.filePathAbs = "testFile.txt";
+    if (config.level == Level::MEDIUM) {
+      config.filePathAbs = dataDir + "MediumLevel.txt";
+    } else if (config.level == Level::HARD) {
+      config.filePathAbs = dataDir + "HardLevel.txt";
+    } else {
+      config.filePathAbs = dataDir + "EasyLevel.txt";
+    }
   }
   return true;
 }
 
 bool configure(Config &config) {
-  config.filePathAbs = "testFile.txt";
+#ifdef INSTALL_PREFIX
+  std::string dataDir =
+      std::string(INSTALL_PREFIX) + "/share/" + PROJECT_NAME + "/";
+#else
+  std::string dataDir = "";
+#endif
+
+  config.filePathAbs = dataDir + "EasyLevel.txt"; // Set default here
   config.time = DEFAULT_TIME;
   config.level = DEFAULT_LEVEL;
   return true;

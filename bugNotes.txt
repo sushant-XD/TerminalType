@@ -1,1 +1,0 @@
-How do we want to read data from the file?
