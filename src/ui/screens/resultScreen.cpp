@@ -32,6 +32,7 @@ resultScreen::resultScreen(terminalCtrl &terminal)
   spdlog::info("Number of result options: {}", optionsNum);
   spdlog::info("Options Starting Position: {},{}\n Options Size: {}x{}",
                optionsStartX, optionsStartY, optionsWidth, optionsHeight);
+  terminal.hideCursor();
 }
 
 resultScreen::~resultScreen() { clear(); }
@@ -42,6 +43,7 @@ void resultScreen::render(State &state) {
   }
 
   clear();
+  terminal.hideCursor();
 
   // Draw header
   std::string headerText = "Test Results";
@@ -72,6 +74,7 @@ void resultScreen::render(State &state) {
   // Position cursor at first option
   terminal.moveCursor(optionsStartY + 1, optionsStartX + 2);
 
+  terminal.hideCursor();
   isRendered = true;
   spdlog::info("Results screen rendered successfully");
 }
@@ -112,5 +115,6 @@ ResultOpts resultScreen::updateSelection(bool up) {
 
   spdlog::info("Selected Results Option: {}",
                static_cast<int>(currentSelected));
+  terminal.hideCursor();
   return currentSelected;
 }

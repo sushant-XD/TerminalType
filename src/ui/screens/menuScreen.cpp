@@ -56,12 +56,14 @@ void menuScreen::render(State &state) {
 
   // move cursor to position
   terminal.moveCursor(menuOptionsStartY + 1, menuOptionsStartX + 2);
-  // terminal.hideCursor();
+  currentSelected = MenuOpts::START;
+  terminal.hideCursor();
   isRendered = true;
 }
 
 void menuScreen::update(const State &state) {
   render(const_cast<State &>(state));
+  terminal.hideCursor();
 }
 
 MenuOpts menuScreen::updateSelection(bool up) {
@@ -82,5 +84,6 @@ MenuOpts menuScreen::updateSelection(bool up) {
       selectOptionInList(menuOptionList, static_cast<int>(currentSelected)),
       false, borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
   spdlog::info("Selected Menu Option: {}", static_cast<int>(currentSelected));
+  terminal.hideCursor();
   return currentSelected;
 }

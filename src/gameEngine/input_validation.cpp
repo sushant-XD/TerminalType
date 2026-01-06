@@ -8,6 +8,8 @@ inputValidator::inputValidator(terminalCtrl &terminalManager)
 
 inputValidator::~inputValidator() {}
 
+// NOTE: If this function returns 9, it means the word buffer to compare the
+// input text is exhausted, and result should be calculated
 int inputValidator::getInputAndCompare(State &state, char ch) {
   // backspace and back word (Ctrl+backspace) handled manually because termios
   // and raw inputs
@@ -87,6 +89,12 @@ int inputValidator::getInputAndCompare(State &state, char ch) {
     state.incorrectCount++;
     state.currentKeyStatus = KeyStroke::INCORRECT;
   } else {
+
+    if (state.targetSequence.size() <= state.charCount) {
+      spdlog::warn("Target Sequence String buffer exhausted. Printing Results");
+      return 9;
+    }
+
     if (ch == state.targetSequence[state.charCount]) {
       state.correctCount++;
       state.totalCorrect++;
@@ -111,9 +119,12 @@ int inputValidator::getInputAndCompare(State &state, char ch) {
   return 0;
 }
 
-int inputValidator::get_results(State &state) {
+int inputValidator::get_results(State &state, int elapsed_time_seconds) {
   // memset(&state.result, '\0', sizeof(state.result));
-  state.result.timeTaken = state.config.time;
+  if (elapsed_time_seconds > state.config.time) {
+    elapsed_time_seconds = state.config.time;
+  }
+  state.result.timeTaken = elapsed_time_seconds;
 
   int totalErrors = state.totalPressed - state.totalCorrect;
   double words = state.totalCorrect / 5.0;

@@ -22,6 +22,7 @@ settingsScreen::settingsScreen(terminalCtrl &terminal)
 
   spdlog::info("Settings screen initialized with {} options",
                settingOptionsNum);
+  terminal.hideCursor();
 }
 
 void settingsScreen::clear() {
@@ -49,6 +50,7 @@ void settingsScreen::render(State &state) {
 
   terminal.moveCursor(settingsOptionsStartY + 1, settingsOptionsStartX + 2);
   isRendered = true;
+  terminal.hideCursor();
 }
 
 void settingsScreen::update(const State &state) {
@@ -57,6 +59,7 @@ void settingsScreen::update(const State &state) {
       settingsOptionsStartX, settingsOptionsStartY, settingsOptionsWidth,
       settingsOptionsHeight, getSettingsString(state), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
+  terminal.hideCursor();
 }
 
 SettingOption settingsScreen::updateSelection(bool up) {
@@ -75,6 +78,7 @@ SettingOption settingsScreen::updateSelection(bool up) {
 
   spdlog::info("Selected Setting Option: {}",
                static_cast<int>(currentSelected));
+  terminal.hideCursor();
   return currentSelected;
 }
 

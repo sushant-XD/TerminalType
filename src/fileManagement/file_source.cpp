@@ -41,22 +41,28 @@ FileError fileOps::setup(State &state) {
 
 FileError fileOps::refresh(State &state) {
   if (fileName != state.config.filePathAbs) {
+    spdlog::info("Reading from File: {}", state.config.filePathAbs);
     inFile.close();
+    inFile.clear();
     fileName = state.config.filePathAbs;
-    inFile.open(fileName);
+    inFile.open(fileName, std::ios::in);
     if (!inFile.is_open()) {
       return FileError::CANNOT_OPEN;
     }
+    inFile.seekg(0, std::ios::beg);
     if (!readFileContents()) {
       return FileError::CANNOT_READ;
     }
     if (wordCount < MIN_FILE_SIZE_WORDS) {
       return FileError::INVALID_SIZE;
     }
+  } else {
+    spdlog::error("Same Filename. not refereshing: {}", fileName);
   }
   // shuffle and return
   shuffle();
   copyWordsToCharacters();
+  state.targetSequence.clear();
   state.targetSequence = characters;
   return FileError::OK;
 }
@@ -77,6 +83,7 @@ bool fileOps::readFileContents() {
     std::cout << "File Not opened to read" << std::endl;
     return false;
   }
+  words.clear();
   std::string tempWord;
   while (inFile >> tempWord) {
     words.push_back(tempWord);

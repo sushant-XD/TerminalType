@@ -162,6 +162,7 @@ void gameScreen::updateCharacterColor(int charIndex, const State &state,
 void gameScreen::clear() {
   stats.erase();
   mainTextBox.erase();
+
   isRendered = false;
   spdlog::info("Cleared Game Screen");
 }

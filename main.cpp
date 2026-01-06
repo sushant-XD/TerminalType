@@ -13,10 +13,7 @@ using namespace std::chrono;
 
 std::atomic<bool> shutdown_requested(false);
 
-void signalHandler(int signum) {
-  std::cout << "\nInterrupt signal (" << signum << ") received.\n";
-  shutdown_requested.store(true);
-}
+void signalHandler(int signum) { shutdown_requested.store(true); }
 
 int main(int argc, char *argv[]) {
 
@@ -123,30 +120,42 @@ void handleRunningState(
     inputValidator &validator, terminalCtrl &terminal,
     std::chrono::steady_clock::time_point &statsUpdateTime) {
   // Initialize start time on first entry
+  if (renderManager.needsRender()) {
+    spdlog::info("Re-rendering Running State.");
+    renderManager.switchToScreen(TestState::RUNNING);
+    renderManager.render(state);
+  }
+
   if (state.startTime == std::chrono::steady_clock::time_point()) {
     state.startTime = steady_clock::now();
     statsUpdateTime = steady_clock::now();
-    renderManager.switchToScreen(TestState::RUNNING);
     renderManager.render(state);
     spdlog::info("Running state started");
-  }
-
-  // Process input
-  if (tempChar != '\0') {
-    validator.getInputAndCompare(state, tempChar);
-    renderManager.update(state);
   }
 
   // Update time
   auto elapsed = duration_cast<seconds>(steady_clock::now() - state.startTime);
   state.remainingTimeSeconds = state.totalTimeSeconds - elapsed.count();
 
+  if (tempChar != '\0') {
+    // if the available input buffer is exhausted
+    if (validator.getInputAndCompare(state, tempChar) == 9) {
+      state.currentState = TestState::RESULTS;
+      state.startTime = std::chrono::steady_clock::time_point();
+      spdlog::info("Available String exhausted. Switching to Results");
+      validator.get_results(state, elapsed.count());
+      renderManager.switchToScreen(TestState::RESULTS);
+      return;
+    }
+    renderManager.update(state);
+  }
+
   // Check if time is up
   if (elapsed.count() >= state.totalTimeSeconds) {
     state.currentState = TestState::RESULTS;
     state.startTime = std::chrono::steady_clock::time_point();
     spdlog::info("Time up. Switching to Results");
-    validator.get_results(state);
+    validator.get_results(state, elapsed.count());
     renderManager.switchToScreen(TestState::RESULTS);
     return;
   }
@@ -181,14 +190,17 @@ void handleMenuState(State &state, char tempChar, screenManager &renderManager,
 
     switch (selectedSetting) {
     case MenuOpts::START:
+
       state.currentState = TestState::RUNNING;
-      renderManager.switchToScreen(TestState::RUNNING);
-      terminal.getAllCharacters(); // Clear input buffer
 
       state.totalTimeSeconds = state.config.time;
       state.remainingTimeSeconds = state.config.time;
 
       fileManager.refresh(state);
+
+      renderManager.switchToScreen(TestState::RUNNING);
+      terminal.getAllCharacters(); // Clear input buffer
+
       spdlog::info("Starting Game from Menu.");
       break;
 
@@ -289,6 +301,8 @@ void handleSettingsState(State &state, char tempChar,
                  static_cast<int>(selectedOption));
 
     if (selectedOption == SettingOption::BACK) {
+      // TODO: while returning to menu make sure that we refresh the files
+      initializeState(state, state.config);
       state.currentState = TestState::MENU;
       renderManager.switchToScreen(TestState::MENU);
       spdlog::info("Returning to Menu from Settings");
@@ -350,7 +364,7 @@ bool configure(int size, char **args, Config &config) {
     if (arg == "-h" || arg == "--help") {
       config.reset();
       print_usage();
-      return false;
+      signalHandler(SIGINT);
     } else {
       if (i + 1 >= size) {
         std::cout << "Invalid Configuration." << std::endl;
@@ -359,7 +373,6 @@ bool configure(int size, char **args, Config &config) {
         return false;
       }
       if (arg == "-f" || arg == "--file") {
-        // TODO: add the absolute file path here
         config.filePathAbs = args[++i];
       } else if (arg == "-t" || args[i] == "--time") {
         config.time = std::stoi(args[++i]);

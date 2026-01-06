@@ -11,7 +11,7 @@ public:
   ~inputValidator();
   int getInputAndCompare(State &state, char ch);
 
-  int get_results(State &state);
+  int get_results(State &state, int elapsed_time_seconds);
 
 private:
   Result res;

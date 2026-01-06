@@ -15,7 +15,7 @@ enum class ResultOpts { MENU = 0, RESTART, QUIT };
 
 // easy mode is top 200 words, mdium is top 500 words, hard is top 1000 words,
 // Custom is if they select their own file
-enum class Level { EASY, MEDIUM, HARD, CUSTOM };
+enum class Level { EASY = 0, MEDIUM, HARD, CUSTOM };
 
 static constexpr Level DEFAULT_LEVEL = Level::EASY;
 static constexpr int DEFAULT_TIME = 30;
