@@ -16,6 +16,9 @@ static constexpr std::string_view HIDE_CURSOR = "\033[?25l";
 static constexpr std::string_view SAVE_CURSOR = "\033[s";
 static constexpr std::string_view RESTORE_CURSOR = "\033[u";
 
+const std::string ENTER_ALT_SCREEN = "\033[?1049h"; // Enter alternate screen
+const std::string EXIT_ALT_SCREEN = "\033[?1049l";  // Exit alternate screen
+
 class terminalCtrl {
 public:
   terminalCtrl();

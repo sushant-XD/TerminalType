@@ -5,14 +5,21 @@
 terminalCtrl::terminalCtrl() {
   input_fd = STDIN_FILENO;
   output_fd = STDOUT_FILENO;
-  tcgetattr(input_fd, &terminal_original); // saving original settings
-  terminal_settings =
-      terminal_original; // set our current settings to original to not change
-                         // flags that don't need to change
+  tcgetattr(input_fd, &terminal_original);
+  terminal_settings = terminal_original;
   setTerminalNonBlocking();
+
+  // Enter alternate screen buffer
+  writeToTerminal(const_cast<char *>(ENTER_ALT_SCREEN.data()),
+                  ENTER_ALT_SCREEN.size());
+  hideCursor(); // You probably want this too
 }
 
 terminalCtrl::~terminalCtrl() {
+  showCursor();
+  // Exit alternate screen buffer - restores original terminal content
+  writeToTerminal(const_cast<char *>(EXIT_ALT_SCREEN.data()),
+                  EXIT_ALT_SCREEN.size());
   resetTerminal();
   memset(&terminal_settings, '\0', sizeof(terminal_settings));
 }
