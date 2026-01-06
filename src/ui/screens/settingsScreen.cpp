@@ -4,21 +4,11 @@ settingsScreen::settingsScreen(terminalCtrl &terminal)
     : Canvas(terminal),
       header(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
       settingsOptions(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
-      isRendered(false), currentSelected(SettingOption::TIME) {
+      isRendered(false), currentSelected(SettingOption::TIME),
+      layout(canvasX, canvasY, canvasWidth, canvasHeight, 3) {
 
   settingOptionList = {"Time", "Level", "Back to Menu"};
   settingOptionsNum = settingOptionList.size();
-
-  headerStartY = canvasY + 1;
-  headerStartX = canvasX + 1;
-  headerWidth = canvasWidth - 2;
-  headerHeight = 3;
-
-  settingsOptionsStartY = headerStartY + headerHeight;
-  settingsOptionsStartX = canvasX + 1;
-  settingsOptionsWidth = headerWidth;
-  settingsOptionsHeight =
-      settingOptionsNum * 2 + 2; // 2 lines per option + borders
 
   spdlog::info("Settings screen initialized with {} options",
                settingOptionsNum);
@@ -39,16 +29,17 @@ void settingsScreen::render(State &state) {
   clear();
 
   std::string headerTitle = "Settings";
-  header.drawBoxWithText(headerStartX, headerStartY, headerWidth, headerHeight,
-                         headerTitle, true, borderShape::SHARP_SINGLE,
-                         (char *)WHITE, (char *)WHITE, true);
+  header.drawBoxWithText(layout.header.x, layout.header.y, layout.header.width,
+                         layout.header.height, headerTitle, true,
+                         borderShape::SHARP_SINGLE, (char *)WHITE,
+                         (char *)WHITE, true);
 
   settingsOptions.drawBoxWithText(
-      settingsOptionsStartX, settingsOptionsStartY, settingsOptionsWidth,
-      settingsOptionsHeight, getSettingsString(state), false,
+      layout.options.x, layout.options.y, layout.options.width,
+      layout.options.height, getSettingsString(state), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
 
-  terminal.moveCursor(settingsOptionsStartY + 1, settingsOptionsStartX + 2);
+  terminal.moveCursor(layout.options.y + 1, layout.options.x + 2);
   isRendered = true;
   terminal.hideCursor();
 }
@@ -56,8 +47,8 @@ void settingsScreen::render(State &state) {
 void settingsScreen::update(const State &state) {
   settingsOptions.erase();
   settingsOptions.drawBoxWithText(
-      settingsOptionsStartX, settingsOptionsStartY, settingsOptionsWidth,
-      settingsOptionsHeight, getSettingsString(state), false,
+      layout.options.x, layout.options.y, layout.options.width,
+      layout.options.height, getSettingsString(state), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
   terminal.hideCursor();
 }

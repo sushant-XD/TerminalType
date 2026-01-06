@@ -5,33 +5,12 @@ resultScreen::resultScreen(terminalCtrl &terminal)
       header(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
       statsBox(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
       optionsBox(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
-      isRendered(false), currentSelected(ResultOpts::MENU) {
+      isRendered(false), currentSelected(ResultOpts::MENU),
+      layout(canvasX, canvasY, canvasWidth, canvasHeight, 3) {
 
   optionsList = {"\tReturn to Menu", "\tRestart Test", "\tQuit"};
   optionsNum = optionsList.size();
 
-  // Header dimensions
-  headerStartX = canvasX + 1;
-  headerStartY = canvasY + 1;
-  headerWidth = canvasWidth - 2;
-  headerHeight = 3;
-
-  // Stats box dimensions
-  statsStartX = canvasX + 1;
-  statsStartY = headerStartY + headerHeight + 1;
-  statsWidth = canvasWidth - 2;
-  statsHeight = 8;
-
-  // Options box dimensions
-  optionsStartX = canvasX + 1;
-  optionsStartY = statsStartY + statsHeight + 1;
-  optionsWidth = canvasWidth - 2;
-  optionsHeight = optionsNum + 2; // for top and bottom borders
-
-  spdlog::info("Results screen initialized");
-  spdlog::info("Number of result options: {}", optionsNum);
-  spdlog::info("Options Starting Position: {},{}\n Options Size: {}x{}",
-               optionsStartX, optionsStartY, optionsWidth, optionsHeight);
   terminal.hideCursor();
 }
 
@@ -47,9 +26,10 @@ void resultScreen::render(State &state) {
 
   // Draw header
   std::string headerText = "Test Results";
-  header.drawBoxWithText(headerStartX, headerStartY, headerWidth, headerHeight,
-                         headerText, true, borderShape::SHARP_SINGLE,
-                         (char *)WHITE, (char *)WHITE, true);
+  header.drawBoxWithText(layout.header.x, layout.header.y, layout.header.width,
+                         layout.header.height, headerText, true,
+                         borderShape::SHARP_SINGLE, (char *)WHITE,
+                         (char *)WHITE, true);
 
   // Build stats content
   std::string statsContent =
@@ -61,18 +41,20 @@ void resultScreen::render(State &state) {
       "Total Characters: " + std::to_string(state.totalPressed);
 
   // Draw stats box
-  statsBox.drawBoxWithText(statsStartX, statsStartY, statsWidth, statsHeight,
-                           statsContent, false, borderShape::SHARP_SINGLE,
-                           (char *)WHITE, (char *)WHITE, true);
+  statsBox.drawBoxWithText(layout.stats.x, layout.stats.y, layout.stats.width,
+                           layout.stats.height, statsContent, false,
+                           borderShape::SHARP_SINGLE, (char *)WHITE,
+                           (char *)WHITE, true);
 
   // Draw options box with current selection
   optionsBox.drawBoxWithText(
-      optionsStartX, optionsStartY, optionsWidth, optionsHeight,
+      layout.options.x, layout.options.y, layout.options.width,
+      layout.options.height,
       selectOptionInList(optionsList, static_cast<int>(currentSelected)), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
 
-  // Position cursor at first option
-  terminal.moveCursor(optionsStartY + 1, optionsStartX + 2);
+  // Position cursor at first option (inverted because row, col (y,x))
+  terminal.moveCursor(layout.options.y + 1, layout.options.x + 2);
 
   terminal.hideCursor();
   isRendered = true;
@@ -109,7 +91,8 @@ ResultOpts resultScreen::updateSelection(bool up) {
   // Redraw options box with new selection
   optionsBox.erase();
   optionsBox.drawBoxWithText(
-      optionsStartX, optionsStartY, optionsWidth, optionsHeight,
+      layout.options.x, layout.options.y, layout.options.width,
+      layout.options.height,
       selectOptionInList(optionsList, static_cast<int>(currentSelected)), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
 

@@ -5,6 +5,10 @@
 #include <string>
 #include <vector>
 
+struct Box {
+  int x, y, width, height;
+};
+
 class Canvas {
 public:
   Canvas(terminalCtrl &terminal);

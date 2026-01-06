@@ -4,6 +4,26 @@
 
 enum class SettingOption { TIME = 0, LEVEL = 1, BACK = 2 };
 
+struct SettingLayout {
+  Box header;
+  Box options;
+  SettingLayout(int canvasX, int canvasY, int canvasWidth, int canvasHeight,
+                int numOfOptions) {
+    header = {
+        .x = canvasX + 1,
+        .y = canvasY + 1,
+        .width = canvasWidth - 2,
+        .height = 3,
+    };
+    options = {
+        .x = canvasX + 1,
+        .y = header.y + header.height,
+        .width = canvasWidth - 2,
+        .height = numOfOptions * 2 + 2,
+    };
+  };
+};
+
 class settingsScreen : public Canvas {
 private:
   bool isRendered;
@@ -11,15 +31,7 @@ private:
   std::vector<std::string> settingOptionList;
   int settingOptionsNum;
 
-  int headerStartX;
-  int headerStartY;
-  int headerWidth;
-  int headerHeight;
-
-  int settingsOptionsStartX;
-  int settingsOptionsStartY;
-  int settingsOptionsWidth;
-  int settingsOptionsHeight;
+  SettingLayout layout;
 
   uiWidget header;
   uiWidget settingsOptions;

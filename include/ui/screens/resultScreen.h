@@ -3,20 +3,41 @@
 #include "ui/widgets/uiWidgets.h"
 #include <spdlog/spdlog.h>
 
+struct ResultLayout {
+  Box header;
+  Box stats;
+  Box options;
+
+  ResultLayout(int canvasX, int canvasY, int canvasWidth, int canvasHeight,
+               int numOfOptions) {
+    header = {
+        .x = canvasX + 1,
+        .y = canvasY + 1,
+        .width = canvasWidth - 2,
+        .height = 3,
+    };
+    stats = {
+        .x = canvasX + 1,
+        .y = header.y + header.height + 1,
+        .width = canvasWidth - 2,
+        .height = 8,
+    };
+    options = {
+        .x = canvasX + 1,
+        .y = stats.y + stats.height + 1,
+        .width = canvasWidth - 2,
+        .height = numOfOptions + 2,
+    };
+  };
+};
+
 class resultScreen : public Canvas {
 private:
   uiWidget header;
   uiWidget statsBox;
   uiWidget optionsBox;
 
-  int headerStartX, headerStartY;
-  int headerWidth, headerHeight;
-
-  int statsStartX, statsStartY;
-  int statsWidth, statsHeight;
-
-  int optionsStartX, optionsStartY;
-  int optionsWidth, optionsHeight;
+  ResultLayout layout;
 
   bool isRendered;
   ResultOpts currentSelected;

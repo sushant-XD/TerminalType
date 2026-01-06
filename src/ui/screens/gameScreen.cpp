@@ -3,20 +3,8 @@
 gameScreen::gameScreen(terminalCtrl &terminal)
     : Canvas(terminal),
       stats(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
-      mainTextBox(canvasWidth + canvasX, canvasHeight + canvasY, terminal) {
-
-  statsWidth = canvasWidth - 2;
-  statsHeight = 3;
-
-  statsStartX = canvasX + 1;
-  statsStartY = canvasY + 1;
-
-  mainTextBoxWidth = canvasWidth - 2;
-  mainTextBoxHeight = 12;
-
-  mainTextBoxStartX = statsStartX;
-  mainTextBoxStartY = statsStartY + statsHeight + 1;
-
+      mainTextBox(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
+      layout(canvasX, canvasY, canvasWidth, canvasHeight) {
   isRendered = false;
 }
 
@@ -34,16 +22,17 @@ void gameScreen::render(State &state) {
   std::string displayText(state.targetSequence.begin(),
                           state.targetSequence.end());
 
-  int innerWidth = mainTextBoxWidth - 2;
+  int innerWidth = layout.textBox.width - 2;
   state.wrappedLines = mainTextBox.wrapText(displayText, innerWidth);
 
-  stats.drawBoxWithText(statsStartX, statsStartY, statsWidth, statsHeight,
-                        statsContent, true, borderShape::SHARP_SINGLE,
-                        (char *)WHITE, (char *)WHITE, false);
-  mainTextBox.drawBoxWithText(mainTextBoxStartX, mainTextBoxStartY,
-                              mainTextBoxWidth, mainTextBoxHeight, displayText,
-                              false, borderShape::SHARP_SINGLE, (char *)WHITE,
-                              (char *)WHITE, false);
+  stats.drawBoxWithText(layout.stats.x, layout.stats.y, layout.stats.width,
+                        layout.stats.height, statsContent, true,
+                        borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE,
+                        false);
+  mainTextBox.drawBoxWithText(layout.textBox.x, layout.textBox.y,
+                              layout.textBox.width, layout.textBox.height,
+                              displayText, false, borderShape::SHARP_SINGLE,
+                              (char *)WHITE, (char *)WHITE, false);
   spdlog::info("Render Gradient Setup complete");
 }
 
