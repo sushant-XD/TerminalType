@@ -6,6 +6,7 @@ screenManager::screenManager(terminalCtrl &term)
       game(nullptr), menu(nullptr), result(nullptr) {
   spdlog::debug("screenManager constructor called");
   // Initialize with menu screen
+  clearTerminal();
   menu = std::make_unique<menuScreen>(terminal);
 }
 

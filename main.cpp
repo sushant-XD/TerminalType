@@ -1,7 +1,9 @@
 #include "main.h"
 #include "include/utils/configurations.h"
 #include "logging.h"
+#include <atomic>
 #include <chrono>
+#include <csignal>
 #include <filesystem>
 #include <spdlog/spdlog.h>
 #include <thread>
@@ -9,19 +11,22 @@
 using namespace std::chrono_literals;
 using namespace std::chrono;
 
+std::atomic<bool> shutdown_requested(false);
+
+void signalHandler(int signum) {
+  std::cout << "\nInterrupt signal (" << signum << ") received.\n";
+  shutdown_requested.store(true);
+}
+
 int main(int argc, char *argv[]) {
 
   Config config;
   std::fstream inFile;
   State state;
 
-  std::cerr << "=== TerminalType Starting ===" << std::endl;
-  std::cerr << "Working directory: " << std::filesystem::current_path()
-            << std::endl;
-  std::cerr.flush();
+  signal(SIGINT, signalHandler);
 
   state.currentState = TestState::MENU;
-  std::cerr << "Configuring..." << std::endl;
   if (argc == 1) {
     if (!configure(config)) {
       std::cerr << "configuration failed." << std::endl;
@@ -34,20 +39,15 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  std::cerr << "Initializing logger..." << std::endl;
   std::filesystem::create_directories("logs");
   try {
     init_logger("my_app_logger", "logs/logTest.log", spdlog::level::debug);
-    std::cerr << "Logger initialized successfully" << std::endl;
   } catch (const spdlog::spdlog_ex &ex) {
     std::cerr << "Logger Initialization failed: " << ex.what() << std::endl;
     return 1;
   }
-  std::cerr << "Initializing state..." << std::endl;
 
   initializeState(state, config);
-
-  std::cerr << "Creating file manager..." << std::endl;
 
   // spdlog::info("Initializing Terminal Typing Program");
 
@@ -55,43 +55,33 @@ int main(int argc, char *argv[]) {
   state.remainingTimeSeconds = config.time;
 
   // spdlog::info("Total Time: {} ", config.time);
-  std::cerr << "Trying to read from" << config.filePathAbs << std::endl;
   fileOps fileManager(config.filePathAbs);
   terminalCtrl terminalManager;
-  std::cerr << "Creating terminal manager..." << std::endl;
-
-  std::cerr << "Configuration successful. File path: '" << config.filePathAbs
-            << "'" << std::endl;
-  std::cerr << "File path length: " << config.filePathAbs.length() << std::endl;
 
   // Check for hidden characters
   for (char c : config.filePathAbs) {
     if (c < 32 || c > 126) {
       std::cerr << "WARNING: Non-printable character found: " << (int)c
                 << std::endl;
+      return 5;
     }
   }
 
   if (fileManager.setup(state) != FileError::OK) {
     spdlog::error("Couldn't read file contents.");
-    std::cerr << "Couldn't read file contents" << std::endl;
     return 4;
   }
-  std::cerr << "fileManager setup complete. Creating inputValidator..."
-            << std::endl;
   inputValidator inputValidator(terminalManager);
-  std::cerr << "Creating render manager." << std::endl;
   screenManager renderManager(terminalManager);
 
   // spdlog::info("Initial Screen Rendering Complete");
-  std::cerr << "Initial screen rendering complete" << std::endl;
   std::chrono::steady_clock::time_point statsUpdateTime;
   char tempChar = '\0';
   MenuOpts selectedSetting;
   ResultOpts selectedResultOption;
   SettingOption selectedSettingOption;
 
-  while (true) {
+  while (!shutdown_requested.load()) {
     tempChar = terminalManager.getCharacter();
 
     switch (state.currentState) {
@@ -124,7 +114,7 @@ int main(int argc, char *argv[]) {
     std::this_thread::sleep_for(5ms);
   }
 
-  renderManager.clearTerminal();
+  // renderManager.clearTerminal();
   return 0;
 }
 
@@ -211,7 +201,7 @@ void handleMenuState(State &state, char tempChar, screenManager &renderManager,
     case MenuOpts::QUIT:
       spdlog::info("Quitting...");
       renderManager.clearTerminal();
-      exit(0);
+      shutdown_requested.store(true);
       break;
     }
   }
@@ -263,7 +253,7 @@ void handleResultsState(State &state, char tempChar,
     case ResultOpts::QUIT:
       spdlog::info("Quitting...");
       renderManager.clearTerminal();
-      exit(0);
+      shutdown_requested.store(true);
       break;
     }
   }

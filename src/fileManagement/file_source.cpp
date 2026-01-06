@@ -12,7 +12,6 @@ fileOps::~fileOps() {
 }
 
 FileError fileOps::setup(State &state) {
-  std::cerr << "Attempting to open file: '" << fileName << "'" << std::endl;
 
   // clear flags and close the file if it was attempted to open already
   inFile.clear();

@@ -18,6 +18,7 @@ There's no terminal UI framework like BubbleTea or ink because this is meant to 
 1) Clone the repository: ` git clone https://github.com/sushant-XD/TerminalType.git `
 2) Create a build folder go into that: ` mkdir build && cd build`
 3) Run:
+
 ```
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
 cmake --build .
