@@ -5,8 +5,16 @@
 #include <string>
 #include <vector>
 
-struct Box {
-  int x, y, width, height;
+struct CanvasLayout {
+  Box main;
+  CanvasLayout(int canvasX, int canvasY, int canvasWidth, int canvasHeight) {
+    main = {
+        .x = canvasX,
+        .y = canvasY,
+        .width = canvasWidth,
+        .height = canvasHeight,
+    };
+  };
 };
 
 class Canvas {
@@ -22,10 +30,12 @@ public:
 
 protected:
   terminalCtrl &terminal;
-  int canvasX;      // initial position in X
-  int canvasY;      // initial position in Y
+
   int canvasWidth;  // canvas Width
   int canvasHeight; // canvas Height
+  int canvasX;      // initial position in X
+  int canvasY;      // initial position in Y
+  CanvasLayout mainLayout;
 
 private:
   uiWidget mainBox;

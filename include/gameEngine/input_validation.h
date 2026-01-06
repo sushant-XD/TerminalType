@@ -16,4 +16,8 @@ public:
 private:
   Result res;
   terminalCtrl &terminalManager;
+
+  int handle_word(State &state, char ch);
+  int handle_backspace(State &state);
+  int handle_back_word(State &state);
 };

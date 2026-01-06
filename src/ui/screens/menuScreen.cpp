@@ -6,13 +6,11 @@ menuScreen::menuScreen(terminalCtrl &terminal)
       menuOptions(canvasWidth + canvasX, canvasHeight + canvasY, terminal),
       isRendered(false), currentSelected(MenuOpts::START),
       layout(canvasX, canvasY, canvasWidth, canvasHeight, 3) {
-
   options = {"\tStart Typing Test", "\tSelect Options", "\tQuit"};
-
-  spdlog::debug("Menu layout - Header: ({},{}) {}x{}, Options: ({},{}) {}x{}",
-                layout.header.x, layout.header.y, layout.header.width,
-                layout.header.height, layout.options.x, layout.options.y,
-                layout.options.width, layout.options.height);
+  spdlog::info("Layout Header Dim:({},{}) {}x{}, Options Dim:({},{}) {}x{}",
+               layout.header.x, layout.header.y, layout.header.width,
+               layout.header.height, layout.options.x, layout.options.y,
+               layout.options.width, layout.options.height);
 }
 
 void menuScreen::clear() {
@@ -29,8 +27,7 @@ void menuScreen::render(State &state) {
 
   std::string headerTitle = "Terminal Typing Test";
 
-  header.drawBoxWithText(layout.header.x, layout.header.y, layout.header.width,
-                         layout.header.height, headerTitle, true,
+  header.drawBoxWithText(layout.header, headerTitle, true,
                          borderShape::SHARP_SINGLE, (char *)WHITE,
                          (char *)WHITE, true);
   drawMenuOptions();
@@ -75,12 +72,11 @@ void menuScreen::drawMenuOptions() {
   std::string optionsText =
       formatOptionsWithHighlight(options, static_cast<int>(currentSelected));
 
-  menuOptions.drawBoxWithText(
-      layout.options.x, layout.options.y, layout.options.width,
-      layout.options.height, optionsText,
-      false, // not centered
-      borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE,
-      false // not static
+  menuOptions.drawBoxWithText(layout.options, optionsText,
+                              false, // not centered
+                              borderShape::SHARP_SINGLE, (char *)WHITE,
+                              (char *)WHITE,
+                              false // not static
   );
 }
 

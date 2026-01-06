@@ -26,8 +26,7 @@ void resultScreen::render(State &state) {
 
   // Draw header
   std::string headerText = "Test Results";
-  header.drawBoxWithText(layout.header.x, layout.header.y, layout.header.width,
-                         layout.header.height, headerText, true,
+  header.drawBoxWithText(layout.header, headerText, true,
                          borderShape::SHARP_SINGLE, (char *)WHITE,
                          (char *)WHITE, true);
 
@@ -41,15 +40,13 @@ void resultScreen::render(State &state) {
       "Total Characters: " + std::to_string(state.totalPressed);
 
   // Draw stats box
-  statsBox.drawBoxWithText(layout.stats.x, layout.stats.y, layout.stats.width,
-                           layout.stats.height, statsContent, false,
+  statsBox.drawBoxWithText(layout.stats, statsContent, false,
                            borderShape::SHARP_SINGLE, (char *)WHITE,
                            (char *)WHITE, true);
 
   // Draw options box with current selection
   optionsBox.drawBoxWithText(
-      layout.options.x, layout.options.y, layout.options.width,
-      layout.options.height,
+      layout.options,
       selectOptionInList(optionsList, static_cast<int>(currentSelected)), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
 
@@ -91,8 +88,7 @@ ResultOpts resultScreen::updateSelection(bool up) {
   // Redraw options box with new selection
   optionsBox.erase();
   optionsBox.drawBoxWithText(
-      layout.options.x, layout.options.y, layout.options.width,
-      layout.options.height,
+      layout.options,
       selectOptionInList(optionsList, static_cast<int>(currentSelected)), false,
       borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
 

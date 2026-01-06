@@ -29,15 +29,13 @@ void settingsScreen::render(State &state) {
   clear();
 
   std::string headerTitle = "Settings";
-  header.drawBoxWithText(layout.header.x, layout.header.y, layout.header.width,
-                         layout.header.height, headerTitle, true,
+  header.drawBoxWithText(layout.header, headerTitle, true,
                          borderShape::SHARP_SINGLE, (char *)WHITE,
                          (char *)WHITE, true);
 
-  settingsOptions.drawBoxWithText(
-      layout.options.x, layout.options.y, layout.options.width,
-      layout.options.height, getSettingsString(state), false,
-      borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
+  settingsOptions.drawBoxWithText(layout.options, getSettingsString(state),
+                                  false, borderShape::SHARP_SINGLE,
+                                  (char *)WHITE, (char *)WHITE, false);
 
   terminal.moveCursor(layout.options.y + 1, layout.options.x + 2);
   isRendered = true;
@@ -46,10 +44,9 @@ void settingsScreen::render(State &state) {
 
 void settingsScreen::update(const State &state) {
   settingsOptions.erase();
-  settingsOptions.drawBoxWithText(
-      layout.options.x, layout.options.y, layout.options.width,
-      layout.options.height, getSettingsString(state), false,
-      borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE, false);
+  settingsOptions.drawBoxWithText(layout.options, getSettingsString(state),
+                                  false, borderShape::SHARP_SINGLE,
+                                  (char *)WHITE, (char *)WHITE, false);
   terminal.hideCursor();
 }
 

@@ -25,14 +25,12 @@ void gameScreen::render(State &state) {
   int innerWidth = layout.textBox.width - 2;
   state.wrappedLines = mainTextBox.wrapText(displayText, innerWidth);
 
-  stats.drawBoxWithText(layout.stats.x, layout.stats.y, layout.stats.width,
-                        layout.stats.height, statsContent, true,
+  stats.drawBoxWithText(layout.stats, statsContent, true,
                         borderShape::SHARP_SINGLE, (char *)WHITE, (char *)WHITE,
                         false);
-  mainTextBox.drawBoxWithText(layout.textBox.x, layout.textBox.y,
-                              layout.textBox.width, layout.textBox.height,
-                              displayText, false, borderShape::SHARP_SINGLE,
-                              (char *)WHITE, (char *)WHITE, false);
+  mainTextBox.drawBoxWithText(layout.textBox, displayText, false,
+                              borderShape::SHARP_SINGLE, (char *)WHITE,
+                              (char *)WHITE, false);
   spdlog::info("Render Gradient Setup complete");
 }
 
@@ -57,6 +55,7 @@ void gameScreen::update(const State &state) {
     return;
   }
 
+  terminal.showCursor();
   // Handle different input types
   if (state.currentKeyStatus == KeyStroke::CORRECT) {
     // User typed the correct character - color it green
@@ -87,6 +86,8 @@ void gameScreen::update(const State &state) {
 }
 
 void gameScreen::updateStats(State &state) {
+
+  terminal.hideCursor();
   auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(
       std::chrono::steady_clock::now() - state.startTime);
   float timeInMinutes = elapsed.count() / 60.0f;

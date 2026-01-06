@@ -14,73 +14,15 @@ int inputValidator::getInputAndCompare(State &state, char ch) {
   // backspace and back word (Ctrl+backspace) handled manually because termios
   // and raw inputs
   if (ch == BACKSPACE_KEY) {
-    if (!state.userInputSequence.empty()) {
-      state.userInputSequence.pop_back();
-
-      if (state.incorrectCount > 0) {
-        state.incorrectCount--;
-      } else if (state.correctCount > 0) {
-        state.correctCount--;
-      }
-
-      if (state.charCount > 0) {
-        state.charCount--;
-      }
-      state.backspaceCount = 1;
-      state.currentKeyStatus = KeyStroke::BACKSPACE;
-    } else {
-      state.backspaceCount = 0;
-    }
-    spdlog::debug("backspace. (CoC: {},ICC: {}, CaC: {}, BC: {}, CS: {})",
-                  state.correctCount, state.incorrectCount, state.charCount,
-                  state.backspaceCount,
-                  state.userInputSequence.empty()
-                      ? "_"
-                      : std::string(state.userInputSequence.begin(),
-                                    state.userInputSequence.end()));
-    return 0;
+    return handle_backspace(state);
+  } else if (ch == BACK_WORD_KEY) {
+    return handle_back_word(state);
+  } else {
+    return handle_word(state, ch);
   }
-  // Ctrl+W
-  if (ch == BACK_WORD_KEY) {
-    int deletedChars = 0;
-    while ((!state.userInputSequence.empty()) &&
-           (state.userInputSequence.back() == ' ')) {
-      state.userInputSequence.pop_back();
-      if (state.incorrectCount > 0) {
-        state.incorrectCount--;
-      } else if (state.correctCount > 0) {
-        state.correctCount--;
-      }
-      if (state.charCount > 0) {
-        state.charCount--;
-      }
-      deletedChars++;
-    }
+}
 
-    while ((!state.userInputSequence.empty()) &&
-           (state.userInputSequence.back() != ' ')) {
-      state.userInputSequence.pop_back();
-      if (state.incorrectCount > 0) {
-        state.incorrectCount--;
-      } else if (state.correctCount > 0) {
-        state.correctCount--;
-      }
-      if (state.charCount > 0) {
-        state.charCount--;
-      }
-      deletedChars++;
-    }
-    state.backspaceCount = deletedChars;
-    state.currentKeyStatus = KeyStroke::BACK_WORD;
-    spdlog::debug("Ctrl+W (CoC: {},ICC: {}, CaC: {}, BC: {}, CS: {})",
-                  state.correctCount, state.incorrectCount, state.charCount,
-                  state.backspaceCount,
-                  state.userInputSequence.empty()
-                      ? "_"
-                      : std::string(state.userInputSequence.begin(),
-                                    state.userInputSequence.end()));
-    return 0;
-  }
+int inputValidator::handle_word(State &state, char ch) {
 
   state.backspaceCount = 0;
   state.userInputSequence.push_back(ch);
@@ -108,14 +50,63 @@ int inputValidator::getInputAndCompare(State &state, char ch) {
   if (ch == ' ' && state.incorrectCount == 0) {
     state.userInputSequence.clear();
   }
-  spdlog::info("{} (CoC: {},ICC: {}, CaC: {}, BC: {}, CS: {}, TC: {}, TP: {})",
-               ch, state.correctCount, state.incorrectCount, state.charCount,
-               state.backspaceCount,
-               state.userInputSequence.empty()
-                   ? "_"
-                   : std::string(state.userInputSequence.begin(),
-                                 state.userInputSequence.end()),
-               state.totalCorrect, state.totalPressed);
+  return 0;
+}
+
+int inputValidator::handle_backspace(State &state) {
+
+  if (!state.userInputSequence.empty()) {
+    state.userInputSequence.pop_back();
+
+    if (state.incorrectCount > 0) {
+      state.incorrectCount--;
+    } else if (state.correctCount > 0) {
+      state.correctCount--;
+    }
+
+    if (state.charCount > 0) {
+      state.charCount--;
+    }
+    state.backspaceCount = 1;
+    state.currentKeyStatus = KeyStroke::BACKSPACE;
+  } else {
+    state.backspaceCount = 0;
+  }
+  return 0;
+}
+
+int inputValidator::handle_back_word(State &state) {
+
+  int deletedChars = 0;
+  while ((!state.userInputSequence.empty()) &&
+         (state.userInputSequence.back() == ' ')) {
+    state.userInputSequence.pop_back();
+    if (state.incorrectCount > 0) {
+      state.incorrectCount--;
+    } else if (state.correctCount > 0) {
+      state.correctCount--;
+    }
+    if (state.charCount > 0) {
+      state.charCount--;
+    }
+    deletedChars++;
+  }
+
+  while ((!state.userInputSequence.empty()) &&
+         (state.userInputSequence.back() != ' ')) {
+    state.userInputSequence.pop_back();
+    if (state.incorrectCount > 0) {
+      state.incorrectCount--;
+    } else if (state.correctCount > 0) {
+      state.correctCount--;
+    }
+    if (state.charCount > 0) {
+      state.charCount--;
+    }
+    deletedChars++;
+  }
+  state.backspaceCount = deletedChars;
+  state.currentKeyStatus = KeyStroke::BACK_WORD;
   return 0;
 }
 
@@ -138,9 +129,5 @@ int inputValidator::get_results(State &state, int elapsed_time_seconds) {
   state.result.accuracy =
       static_cast<int>(100.0 * state.totalCorrect / state.totalPressed);
 
-  spdlog::info("Results calculated: Time: {} Total Correct: {} Total Errors: "
-               "{} WPM: {} Accuracy: {}",
-               state.config.time, state.totalCorrect, totalErrors,
-               state.result.netWPM, state.result.accuracy);
   return 0;
 }

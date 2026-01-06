@@ -33,16 +33,20 @@ struct borderChars {
   const char *vertical;
 };
 
+struct Box {
+  int x, y, width, height;
+};
+
 class uiWidget {
 public:
   uiWidget(int windowWidth, int windowHeight, terminalCtrl &terminalManager);
   ~uiWidget();
-  uiError drawBox(int startCol, int startRow, int width, int height,
-                  bool centerAlign, borderShape shape, char *borderColor,
-                  bool isStatic, std::optional<char *> bgColor = std::nullopt);
-  uiError drawBoxWithText(int startCol, int startRow, int width, int height,
-                          std::string text, bool centerAlign, borderShape shape,
-                          char *borderColor, char *textColor, bool isStatic,
+  uiError drawBox(Box layout, bool centerAlign, borderShape shape,
+                  char *borderColor, bool isStatic,
+                  std::optional<char *> bgColor = std::nullopt);
+  uiError drawBoxWithText(Box layout, std::string text, bool centerAlign,
+                          borderShape shape, char *borderColor, char *textColor,
+                          bool isStatic,
                           std::optional<char *> backgroundColor = std::nullopt);
 
   uiError drawLine(int x, int y, int width, int height, bool centerAlign,
