@@ -37,6 +37,14 @@ struct Box {
   int x, y, width, height;
 };
 
+struct LightTheme {};
+
+struct Theme {
+  const char *borderColor;
+  const char *textColor;
+  const char *backgroundColor;
+};
+
 class uiWidget {
 public:
   uiWidget(int windowWidth, int windowHeight, terminalCtrl &terminalManager);

@@ -46,12 +46,11 @@ int main(int argc, char *argv[]) {
 
   initializeState(state, config);
 
-  // spdlog::info("Initializing Terminal Typing Program");
+  spdlog::info("Initializing Terminal Typing Program");
 
   state.totalTimeSeconds = config.time;
   state.remainingTimeSeconds = config.time;
 
-  // spdlog::info("Total Time: {} ", config.time);
   fileOps fileManager(config.filePathAbs);
   terminalCtrl terminalManager;
 
@@ -71,7 +70,6 @@ int main(int argc, char *argv[]) {
   inputValidator inputValidator(terminalManager);
   screenManager renderManager(terminalManager);
 
-  // spdlog::info("Initial Screen Rendering Complete");
   std::chrono::steady_clock::time_point statsUpdateTime;
   char tempChar = '\0';
   MenuOpts selectedSetting;
@@ -104,14 +102,13 @@ int main(int argc, char *argv[]) {
 
     default:
       spdlog::error("Invalid State");
+      shutdown_requested.store(true);
       renderManager.clearTerminal();
       return 1;
     }
 
     std::this_thread::sleep_for(5ms);
   }
-
-  // renderManager.clearTerminal();
   return 0;
 }
 
